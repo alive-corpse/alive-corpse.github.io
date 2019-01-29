@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="main.css" type="text/css" />
+<link rel="stylesheet" href="blog.css" type="text/css" />
+<link rel="stylesheet" href="assets/highlight/styles/corpse.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="" href="feed.rss" />
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+<script src="assets/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<title>Где могут пригодиться графики</title>
+</head><body>
+<div id="divbodyholder">
+<div class="headerholder">
+<a href="https://vk.com/evgeniy_shumilov" target="_blank"><img src="/images/logo.png" class="logo" height="106pt" style="float: left; margin-right: 20px;"></a>
+<div class="header">
+<div id="title">
+<h1 class="nomargin"><a class="ablack" href="https://shumiloff.ru/index.html">Зайчатки разума</a></h1>
+<div id="description">Записная книжка айтишника</div>
+</div></div>
+<ul class="full-width">
+    <li>
+        <a href="/pro-lyubov-k-minimalizmu-i-staticheskuyu-generaciyu-kontenta.html">О блоге</a>
+<!--
+        <ul>
+            <li><a href="#">Item1</a></li>
+            <li><a href="#">Item2</a></li>
+            <li><a href="#">Item3</a></li>
+        </ul>
+-->
+    </li>
+    <li><a href="/all_tags.html">Теги</a></li>
+    <li><a href="/all_posts.html">Все посты</a></li>
+    <li><a href="/tag_ностальгия.html">Ностальгическое</a></li>
+    <li><a href="/tag_мысли-вслух.html">Мысли вслух</a></li>
+</ul>
+
+<div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
+</div>
+<div id="divbody"><div class="content">
+<!-- entry begin -->
+<h3><a class="ablack" href="gde-mogut-prigoditsya-grafiki.html">
+Где могут пригодиться графики
+</a></h3>
+<!-- bashblog_timestamp: #201811212304.05# -->
+<div class="subtitle">2018-11-21 23:04:05 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<p style="text-align: center;"><img src="/images/gr1.png"></p>
+<p>&nbsp; Пару месяцев назад я нашёл для себя неожиданно полезное применение графиков в своей работе. И нет, это не мониторинг в классическом понимании этого слова. Это наколенные прогнозы.</p>
+<h4>Описание задачи</h4>
+<p>&nbsp; Есть у нас в jenkins одна джоба, которая производит довольно длительную операцию с базой данных. Размер базы около 100Гб, самый долгий этап - обработка таблицы почти в 60 миллионов записей. Иногда этот процесс проходил за 7 часов, иногда за 21 час и я пытался обнаружить причину, по которой получается такая разница во времени обработки данных. Проблема была в том, что понять, насколько быстро выполняется очередная ревизия джобы из километрового лога с цифрами было достаточно сложно. Скрипт раз в 30 секунд выдавал количество обработанных строк и приходилось брать разницу в этом количестве на каком-то временном периоде и затем сравнивать её с аналогичным прошлым, позапрошлым и, возможно, поза-поза-чёрт-знает-сколько-прошлым запуском. Ведь нет смысла ждать и нагружать мощности, если за час работы скрипта можно определить, сколько примерно он будет работать. Но всё оказалось не так просто. Зависимость количества обработанных строк за единицу времени оказалась нелинейной и чтобы понять характер работы, мне понадобился график.</p>
+<hr />
+<h4>GNUPlot</h4>
+<p>&nbsp; Я слышал раньше о <a href="http://www.gnuplot.info/" target="_blank">GNUPlot</a>, но вот как-то не доводилось с ним работать. Везде, где оказывались нужны графики (а это преимущественно мониторинг), они уже были. Пару раз рисовал графики в шелле, используя svg и awk. Получалось даже симпатично, но на этот раз мне нужно было некое уже более-менее готовое решение и я решил посмотреть в сторону GNUPlot, благо, он есть практически в любом дистрибутиве.<br /><br />&nbsp; Излишества в виде GUI нам не особо нужны, поэтому сразу ставим CLI версию:</p>
+<pre>sudo apt-get install gnuplot-nox</pre>
+<p>&nbsp; Собственно, это всё, что нам нужно для того, чтобы начать строить графики. Изучив результаты запроса "gnuplot examples" к гуглу, я получил начальное представление о возможности и синтаксисе. Если же для ваших целей будет недостаточно того, что будет приведено в скрипте ниже, то советую обратиться к туториалу на <a href="https://www.ibm.com/developerworks/ru/library/l-GnuPlot_01/index.html?ca=drs-" target="_blank">IBM</a> и на <a href="https://ru.wikibooks.org/wiki/Gnuplot" target="_blank">wikibooks.org</a>. Вообще, GNUPlot умеет на удивление многое, в том числе трёхмерные графики, гистограммы и прочее. Так же <a href="https://habr.com/post/248383/" target="_blank">вот тут</a> есть неплохая статья, как можно достаточно просто интегрировать gnuplot с web интерфейсом.</p>
+<h4>Пишем скрипт</h4>
+<p>&nbsp; Кусок лога, выгружаемый из джобы выглядит следующим образом:</p>
+<pre>...<br />06:45:34 INFO [app] processed 58927349 rows.. [] ["app" =&gt; "frontend","pid" =&gt; 313]<br />06:46:05 INFO [app] processed 58950594 rows.. [] ["app" =&gt; "frontend","pid" =&gt; 313]<br />06:46:36 INFO [app] processed 58973707 rows.. [] ["app" =&gt; "frontend","pid" =&gt; 313]<br />06:47:07 INFO [app] processed 58996974 rows.. [] ["app" =&gt; "frontend","pid" =&gt; 313]<br />06:47:39 INFO [app] processed 59020205 rows.. [] ["app" =&gt; "frontend","pid" =&gt; 313]<br />...</pre>
+<p>&nbsp; Фактически нам важна только пятая колонка с количеством обработанных записей, потому как разница в таймстемпах всегда примерно одинаковая. Если мы будем отталкиваться от времени, то графики у нас разойдутся по оси X и сравнивать их будет сложно и неудобно. Вместо таймстемпа нам нужны условные единицы, просто будем знать, что одна единица - это 30 секунд. Такое преобразование можно очень легко получить с помощью AWK - просто будем выводить номер строки лога перед значением. Логи лежат в файлах вида 123.log, где 123 - это номер запуска джобы, вместо него так же может быть какое-нибудь условное имя. При приведении логов в уодобоваримый вид, необходимо учиытвать, что если добавились новые логи, то уже обработанные трогать не нужно.</p>
+<pre><code class="bash">#!/bin/sh
+
+cd `dirname "$0"`
+
+# В этой переменой храним путь к конфигу для gnuplot
+CFG='./plot.conf'
+
+# Далее создаём сам конфиг и сохраняем его в файл
+echo 'set terminal svg size 800,600 enhanced background rgb "white"
+set title "Query counts by 30 seconds"
+set output "graph.svg"
+set xlabel "Time (1x = 30 seconds)"
+set ylabel "Count of rows processed"
+set ytics 5000000
+set format y "%s"
+set xtics 100
+set grid
+set multiplot' &gt; "$CFG"
+
+# В эту переменную будем сохранять список графиков, которые нам нужно построить.
+plots=''
+# Берём все файлы с расширением log, если нет файла с тем же именем
+# и расширением txt, то создаём его, добавляя в первую колонку номер 
+# строки и во вторую - значение.
+for f in *.log; do
+  num=`echo "$f" | cut -d "." -f 1`
+  [ -f "$num.txt" ] || awk '{ print NR" "$5 }' "$num.log" &gt; "$num.txt"
+  # В переменную plots добавляем строки вида
+  # \"123.txt\" with lines title \"123\"
+  plots="$(echo "$plots"; echo " \"$num.txt\" with lines title \"$num\"")"
+done
+
+# Склеиваем строки в одну через замятую, добавляем директиву plot
+# и убираем лишнее, затем дописываем в конфигурационный файл.
+echo "$plots" | tr '\n' ',' | sed 's/^,/plot /;s/,$//' &gt;&gt; "$CFG"
+
+# Добавляем перевод строки.
+echo &gt;&gt; "$CFG"
+
+# И директиву выхода для завершения скрипта
+echo 'quit' &gt;&gt; "$CFG"
+
+# Теперь просто запускаем gnuplot
+gnuplot -c "$CFG"</code></pre>
+
+<h4>Более подробно о директивах конфигурационного файла</h4>
+<p>Тут всё очевидно. svg - формат, далее размер и указание того, что нам нужен белый фон. Вместо svg может быть png, jpg и многое другое вплоть до вывода графика псевдографикой (простите за тавтологию).<br /><span style="color: #ff9900;">set terminal svg size 800,600 enhanced background rgb "white"</span><br /><br />Это заголовок нашего графика:<br /><span style="color: #ff9900;">set title "Query counts by 30 seconds"</span><br /><br />Имя файла для сохранения:<br />set output "graph.svg"<br /><br />Наименование осей X и Y:<br /><span style="color: #ff9900;">set xlabel "Time (1x = 30 seconds)"</span><br /><span style="color: #ff9900;">set ylabel "Count of rows processed"</span><br /><br />Указание размера условной единицы по оси Y, через это количество значений у нас будут идти отметки на оси:<br /><span style="color: #ff9900;">set ytics 5000000</span><br /><br />Задание формата вывода значений по оси Y (иначе можно получить значения в экспоненциальном формате, что неудобно):<br /><span style="color: #ff9900;">set format y "%s"</span><br /><br />Размер условной единицы для отметки по оси X:<br /><span style="color: #ff9900;">set xtics 100</span><br /><br />Указание того, что мы хотим вывести сетку (размер ячеек так же зависит от xtics и ytics):<br /><span style="color: #ff9900;">set grid</span><br /><br />И наконец, директива, которая говорит о том, что мы хотим получить несколько графиков на одном поле:<br /><span style="color: #ff9900;">set multiplot</span></p>
+<h4>Примеры графиков</h4>
+<p>&nbsp; И что же мы получаем в результате работы? Сразу оговорюсь, что графики сконвертировал в PNG, в svg они выглядят глаже и симпатичнее. Ниже приведу тот же график, что использовал вначале статьи.</p>
+<p style="text-align: center;"><img src="/images/gr1.png"></p>
+<p>&nbsp; Тут можно видеть результаты работы четырёх запусков джобы. 521-я и 522-я были запущены в момент, когда кредиты на операции ввода-вывода на инстансе были в нуле. В момент, когда 522-я джоба обрабатывала примерно 34-й миллион строк, я отскейлил блочное устройство с 500 до 750 гигабайт и базовый уровень IO соответственно вырос в полтора раза. По графикам можно примерно посчитать разницу во времени исполнения джоб. 523-я и 524-я джобы были запущены уже на полностью отскейленном блочном устройстве, нетрудно видеть, что её исполнение заняло практически в два раза меньше впремени, чем 521-й. А теперь любопытное - видите небольшой горбик после 10 миллионов 523-й джобы и после 15 миллионов 524-й? Это один из сотрудников запускал миграции на базе данных, откуда происходило считывание. Миграции были запущены в разное время относительно начала джобы, но затем графики практически снова совпали и уже не было смысле дожидаться полного окончания джобы, чтобы понять, сколько примерно времени она займет, поэтому джоба была прервана. Так же на графике отлично видна нелинейность количества обработанных запросов относительно времени. Это происходит из-за того, что база перестраивает индексы на большой таблице и каждый следующий инсерт даётся ей дольше, чем предыдущий. В самом начале график почти вертикально уходит вверх, постепенно затем становясь всё более пологим.</p>
+<p>&nbsp; Исходя из этих экспериментов я выяснил, что проблема именно в дисковой подсистеме и IO. В качестве эксперимента джоба была запущена на более мощном инстансе другого типа, но с таким же бейзлайном на операции ввода-вывода, а затем ещё раз - с выводом дампа в /dev/null вместо заполнения базы.</p>
+<p style="text-align: center;"><img src="/images/gr2.png"></p>
+<p>&nbsp; Как легко можно видеть, графики запуска джобы 529 и запуска на инстансе c5.large практически совпадают, отличия на уровне погрешности из-за воздействия внешних факторов. А вот график с записью в dev-null недалеко ушёл от вертикальной прямой. Вывод - нужно более быстрое блочное устройство. Джоба скорее всего переедет в ближайшее время на инстанс с локальным SSD стораджем.</p>
+
+<p>Теги: <a href='tag_shell.html'>shell</a>, <a href='tag_админское.html'>админское</a>, <a href='tag_aws.html'>aws</a></p>
+
+
+
+
+
+<!-- text end -->
+<!-- entry end -->
+</div>
+<div id="disqus_thread"></div>
+            <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+               var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+            /* * * DONT EDIT BELOW THIS LINE * * */
+            (function() {
+            var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+            dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+            (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<div id="footer">
+<!-- Tolstoy Comments
+<script type="text/javascript">!(function(w,d,s,l,x){w[l]=w[l]||[];var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=!0;j.src='//web.tolstoycomments.com/sitejs/app.js?i='+l+'&x='+x+'&t='+(new Date().getTime());f.parentNode.insertBefore(j,f)})(window,document,'script','tolstoycomments','1577');</script>
+-->
+<a href="https://vk.com/evgeniy_shumilov">Evgeniy Shumilov</a> &mdash; <a href="mailto:evgeniy&#46;shumilov&#64;gmail&#46;com">evgeniy&#46;shumilov&#64;gmail&#46;com</a><br/>
+Generated with <a href="https://github.com/cfenollosa/bashblog">bashblog</a>, a single bash script to easily create blogs like this one</div>
+</div></div>
+</body></html>
+</div></div>
+<script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+        /* * * DONT EDIT BELOW THIS LINE * * */
+        (function () {
+        var s = document.createElement("script"); s.async = true;
+        s.type = "text/javascript";
+        s.src = "//" + disqus_shortname + ".disqus.com/count.js";
+        (document.getElementsByTagName("HEAD")[0] || document.getElementsByTagName("BODY")[0]).appendChild(s);
+    }());
+    </script>
+</body></html>
