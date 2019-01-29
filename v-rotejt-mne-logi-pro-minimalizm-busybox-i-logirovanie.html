@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="main.css" type="text/css" />
+<link rel="stylesheet" href="blog.css" type="text/css" />
+<link rel="stylesheet" href="assets/highlight/styles/corpse.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="" href="feed.rss" />
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+<script src="assets/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<title>В ротейт мне логи! Про минимализм, busybox и логирование.</title>
+</head><body>
+<div id="divbodyholder">
+<div class="headerholder">
+<a href="https://vk.com/evgeniy_shumilov" target="_blank"><img src="/images/logo.png" class="logo" height="106pt" style="float: left; margin-right: 20px;"></a>
+<div class="header">
+<div id="title">
+<h1 class="nomargin"><a class="ablack" href="https://shumiloff.ru/index.html">Зайчатки разума</a></h1>
+<div id="description">Записная книжка айтишника</div>
+</div></div>
+<ul class="full-width">
+    <li>
+        <a href="/pro-lyubov-k-minimalizmu-i-staticheskuyu-generaciyu-kontenta.html">О блоге</a>
+<!--
+        <ul>
+            <li><a href="#">Item1</a></li>
+            <li><a href="#">Item2</a></li>
+            <li><a href="#">Item3</a></li>
+        </ul>
+-->
+    </li>
+    <li><a href="/all_tags.html">Теги</a></li>
+    <li><a href="/all_posts.html">Все посты</a></li>
+    <li><a href="/tag_ностальгия.html">Ностальгическое</a></li>
+    <li><a href="/tag_мысли-вслух.html">Мысли вслух</a></li>
+</ul>
+
+<div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
+</div>
+<div id="divbody"><div class="content">
+<!-- entry begin -->
+<h3><a class="ablack" href="v-rotejt-mne-logi-pro-minimalizm-busybox-i-logirovanie.html">
+В ротейт мне логи! Про минимализм, busybox и логирование.
+</a></h3>
+<!-- bashblog_timestamp: #201810171509.07# -->
+<div class="subtitle">2018-10-17 15:09:07 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<p>&nbsp;&nbsp;Так как я довольно много пишу на шелле, передо мной уже довольно давно встала проблема логирования в скриптах. После просмотра километровых логов начинает рябить в глазах, сложно выделить важные моменты при быстром скроллинге, например, какой-нибудь warning или внезапный error. Одним словом, терпение закончилось и я решил написать свой велосипед, по возможности функциональный, лёгкий и с минимумом зависимостей - всё, как я люблю. <br/><br/><img src="/images/eslogger.png" class="center"><br/>Традиционный список хотелок:</p>
+<ul>
+    <li>Минимальные зависимостии размер</li>
+    <li>Уровни логирования (debug/info/warinig)</li>
+    <li>Отключаемая подсветка разными цветами разных типов событий</li>
+    <li>Работоспособность под OpenWRT, Android, Alpine и т.п.</li>
+    <li>Возможность переопределять параметры переменными в основном скрипте</li>
+    <li>Возможность передать в FATAL сразу код завершения</li>
+    <li>Настраиваемый формат даты</li>
+    <li>Разделитель (очень полезно для отделения частей лога)</li>
+    <li>Краткий синтаксис вызова (не люблю длинные имена модулей)</li>
+</ul>
+<hr/>
+<h4>Смысловая нагрузка уровней логирования</h4>
+<p>&nbsp;&nbsp;Тут всё довольно просто. Это основная функция, ради котрой стоило создавать этот велосипед вместо того, чтобы пользоваться обычным echo "Здесь был Вася". Есть несколько уровней логирования, описанных выше. Приоритет уровней в порядке следования. То есть, если мы выставляем в основном скрипте LOGLEVEL='debug', то будем видеть все сообщения, если LOGLEVEL='info', то всё, кроме DEBUG, если LOGLEVEL='warning' - то увидим только WARNING, ERROR и FATAL и т.д.. Тут всё достаточно стандартно, как во множестве других библиотек подобного назначения в языках высокого уровня. Функционально отличается только FATAL. Смысловая нагрузка следующая:</p>
+<ul>
+    <li><font color="#34629D">DEBUG:</font>   то, что мы видим только при отладке, вспомогательная информация, обычно отключается после отладки</li>
+    <li><font color="#49870E">INFO:</font>    обычная информация, например, о запуске того или иного процесса</li>
+    <li><font color="#8AE234">NOTICE:</font>  то же, что и в предыдущем пункте, но отличается статусом и цветом, для выделения более важных сообщений</li>
+    <li><font color="#A98B09">WARNING:</font> что-то пошло не так, возможны несущественные негативные последствия, работа продолжается</li>
+    <li><font color="#C20303">ERROR:</font>   случилось что-то плохое, это серьёзно, дальнейшая логика действий может быть изменена</li>
+    <li><font color="#EF2929">FATAL:</font>   шеф, всё пропало, все умерли</li>
+</ul>
+<h4>Зависимости и с чем едят busybox</h4>
+<p>&nbsp;&nbsp;Далее пару слов о зависимостях и работе на OpenWRT, Alpine и тому подобном. Фактически оба эти пункта для меня говорят о том, что мы должны использовать по возможности только тот функционал, который предоставляет busybox. Если кто-то не в курсе, то busybox - это бинарный исполняемый файл, который включает в себя функционал множества GPU утилит, необходимых для построения рабочего окружения. То есть и шелл интерпретатор и всякие sed, grep, awk и утилиты работы с сетью, разделами диска и многое другое - всё это содержит внутри busybox, который занимает обычно около 700 - 900 килобайт. Если сделать симлинк на busybox с именем ping, то он будет работать как ping, если с именем netstat - то как netstat. И таких апплетов (в терминологии busybox это называется апплетом) внутри обычно от сотни с небольшим до более, чем двух сотен, так что вполне есть, где разгуляться и с помощью чего описывать логику. Да фактически, при помощи функционала busybox можно делать с системой всё, что взбредёт в голову. Это позволило сделать множество устройств с мизерным количеством флеш памяти на борту (например, два мегабайта), внутри которых бежит линукс. Минимальный образ Alpine Linux для контейнеров более, чем наполовину состоит из busybox. Если воспринимать software как тип искусства, то busybox - это однозначно шедевр мирового уровня, которым я откровенно восхищаюсь. У вас есть дома роутер? Ну вот, в 99% случаев внутри busybox. На работе стоит SIP телефон? Ну, вы уже поняли. Поэтому всё, что я пишу, я стараюсь писать используя только /bin/sh вместо /bin/bash хотя бы уже потому, что в отличие от bash, sh есть везде (для многих это почему-то является откровением). Во FreeBSD, например, по умолчанию установлен csh и скрипты, начинающиеся с #!/bin/bash просто не смогут запуститься без изменения кода.</p>
+<h4>Прочие мелочи</h4>
+<p>&nbsp;&nbsp;Про формат даты по-моему, очевидно, тут ничего объяснять не нужно. Подсветка синтаксиса - тоже. WARNING и ERROR просто обязаны бросаться в глаза, когда ты быстро пролистываешь вывод, используя PageDown. К выводу о том, что разделитель тоже нужен и важен, я пришёл со временем. Это так же удобно при поиске в больших логах - сразу видно, где у тебя закончилась обработка одного логического блока и началась обработка другого.</p>
+<h4>Синтаксис</h4>
+<p>&nbsp;&nbsp;Теперь про синтаксис вызова. Так как скрипты зачастую пишутся или редактируются на удалённой машине через ssh, а то и скорую руку с телефона, то нужно рассчитывать на то, что пишем мы их не в развесистой среде разработки с автодополнением, подсветкой синтаксиса и прочими прелестями жизни, а сурово в каком-нибудь vi (даже порою не vim, если это роутер например). Следовательно, набирать что-то вроде logging.info("blah-blah-blah") будет излишне утомительным. Поэтому синтаксис вызова я сократил до минимума. Далее будет пример использования в скрипте с комментариями.</p>
+<h4>Установка</h4>
+<p>&nbsp;&nbsp;Всё выложено на <a href="https://github.com/alive-corpse/eslogger/" target="_blank">github</a>, соответственно, можно оттуда склонировать, но если нужен только файл, то проще всего его взять через raw с того же гитхаба:</p>
+<pre><code class="bash">wget https://raw.githubusercontent.com/alive-corpse/eslogger/master/eslogger</code></pre>
+<h4>Пример использования</h4>
+<pre><code class="bash">#!/bin/sh
+
+# Для начала убедимся, что мы будем инклудить всё из той же директории.
+# Поэтому сначала переходим в директорию, откуда был запущен наш скрипт.
+cd `dirname "$0"`
+
+# Предположим, скрипт лежит в той же директории. Нужно его подгрузить.
+. ./eslogger
+
+# Теперь задаём переменные, отвечающие за отображение логов.
+# Оставляем возможность при необходимости задавать переменные не изменяя 
+# код скрипта. Вызов может выглядеть так: LOGLEVEL=info ./test.sh
+# При обычном вызове ./test.sh в нашем случае будет уровень debug.
+# Следующую строку можно пропустить, если вас устраивает уровень info.
+[ -z "$LOGLEVEL" ] &amp;&amp; LOGLEVEL='debug'
+
+# Аналогичным образом задаём формат даты. 
+[ -z "$LPREF" ] &amp;&amp; LPREF='date +%Y.%m.%d-%H:%M:%S'
+
+# Если в нашей системе отсутствует бинарник tput, который позволяет
+# получить количество строк и столбцов экрана, задаём ширину
+DEFAULT_COLS=70
+
+# Включаем или выключаем подсветку синтаксиса (0/1 соответственно)
+[ -z "$LCOLOR" ] &amp;&amp; LCOLOR=1
+
+# А теперь выводим все типы записей и разделитель:
+d # Это как раз разелитель
+l d "This is debug message"
+l i "This is info message"
+# Если не указывать тип сообщения, то по умолчанию будет тип info
+l "This is also info message"
+l n "This is notice message"
+l w "This is warning message"
+l e "This is error message"
+l f "This is fatal message"
+# Если fatal error был последним и в этом месте нам нужно завершить скрипт
+# с неким кодом возврата, нужно использовать тип fe и тогда код возврата
+# Можно будет передать третьим параметром. Если код не передавать, скрипт
+# завершится с кодом 1. После вывода основного сообщения о фатале будет
+# Выведено дополнительное, сообщающее о том, что все будущие операции
+# отменены.
+l fe "This is fatal message with exit code" 127
+</code></pre>
+<p>&nbsp;&nbsp;Результат выполнения скрипта можно увидеть на скриншоте в начале статьи.</p>
+
+
+<p>Теги: <a href='tag_logging.html'>logging</a>, <a href='tag_shell.html'>shell</a>, <a href='tag_busybox.html'>busybox</a>, <a href='tag_minimalism.html'>minimalism</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- text end -->
+<!-- entry end -->
+</div>
+<div id="disqus_thread"></div>
+            <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+               var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+            /* * * DONT EDIT BELOW THIS LINE * * */
+            (function() {
+            var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+            dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+            (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<div id="footer">
+<!-- Tolstoy Comments
+<script type="text/javascript">!(function(w,d,s,l,x){w[l]=w[l]||[];var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=!0;j.src='//web.tolstoycomments.com/sitejs/app.js?i='+l+'&x='+x+'&t='+(new Date().getTime());f.parentNode.insertBefore(j,f)})(window,document,'script','tolstoycomments','1577');</script>
+-->
+<a href="https://vk.com/evgeniy_shumilov">Evgeniy Shumilov</a> &mdash; <a href="mailto:evgeniy&#46;shumilov&#64;gmail&#46;com">evgeniy&#46;shumilov&#64;gmail&#46;com</a><br/>
+Generated with <a href="https://github.com/cfenollosa/bashblog">bashblog</a>, a single bash script to easily create blogs like this one</div>
+</div></div>
+</body></html>
+</div></div>
+<script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+        /* * * DONT EDIT BELOW THIS LINE * * */
+        (function () {
+        var s = document.createElement("script"); s.async = true;
+        s.type = "text/javascript";
+        s.src = "//" + disqus_shortname + ".disqus.com/count.js";
+        (document.getElementsByTagName("HEAD")[0] || document.getElementsByTagName("BODY")[0]).appendChild(s);
+    }());
+    </script>
+</body></html>

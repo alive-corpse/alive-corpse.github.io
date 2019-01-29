@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="main.css" type="text/css" />
+<link rel="stylesheet" href="blog.css" type="text/css" />
+<link rel="stylesheet" href="assets/highlight/styles/corpse.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="" href="feed.rss" />
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+<script src="assets/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<title>Ready for production</title>
+</head><body>
+<div id="divbodyholder">
+<div class="headerholder">
+<a href="https://vk.com/evgeniy_shumilov" target="_blank"><img src="/images/logo.png" class="logo" height="106pt" style="float: left; margin-right: 20px;"></a>
+<div class="header">
+<div id="title">
+<h1 class="nomargin"><a class="ablack" href="https://shumiloff.ru/index.html">Зайчатки разума</a></h1>
+<div id="description">Записная книжка айтишника</div>
+</div></div>
+<ul class="full-width">
+    <li>
+        <a href="/pro-lyubov-k-minimalizmu-i-staticheskuyu-generaciyu-kontenta.html">О блоге</a>
+<!--
+        <ul>
+            <li><a href="#">Item1</a></li>
+            <li><a href="#">Item2</a></li>
+            <li><a href="#">Item3</a></li>
+        </ul>
+-->
+    </li>
+    <li><a href="/all_tags.html">Теги</a></li>
+    <li><a href="/all_posts.html">Все посты</a></li>
+    <li><a href="/tag_ностальгия.html">Ностальгическое</a></li>
+    <li><a href="/tag_мысли-вслух.html">Мысли вслух</a></li>
+</ul>
+
+<div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
+</div>
+<div id="divbody"><div class="content">
+<!-- entry begin -->
+<h3><a class="ablack" href="ready-for-production.html">
+Ready for production
+</a></h3>
+<!-- bashblog_timestamp: #201811132242.34# -->
+<div class="subtitle">2018-11-13 22:42:34 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<h1 style="text-align: center;">- Ты видишь контейнер?</h1>
+<h1 style="text-align: center;">- Вижу.</h1>
+<p style="text-align: center;"><img src="images/shredinger.jpg"></p>
+<h1 style="text-align: center;">- И я вижу. А его нет!</h1>
+<p>&nbsp; Достаточно давно я заметил где-то фразу о том, что "docker is ready for production". С тех пор периодически вспоминаю её, каждый раз, когда сталкиваюсь с какими-либо проблемами разного масштаба, связанными с докером. Не поймите меня неправильно, мне нравится эта технология, но для меня странным остаётся тот набор детских заболеваний, которыми этот продукт страдает во вполне зрелом возрасте. Так же не понимаю этого дикого ажиотажа вокруг именно докера, когда всё что нужно и не нужно, пытаются затолкнуть в контейнер, не взирая на то, насколько это удобно и целесообразно в текущей ситуации. Создаётся впечатление, что во-первых, раньше не было никакой контейнеризации в принципе - ни jails на BSD, ни <a href="https://openvz.org/" target="_blank">OpenVZ</a>&nbsp;и <a href="https://linuxcontainers.org/lxc/introduction/" target="_blank">LXC</a> на линуксе, а во-вторых - и сейчас нет никаких иных технологий, кроме докера - ни <a href="https://snapcraft.io/" target="_blank">snap</a>/<a href="https://flatpak.org/" target="_blank">flatpack</a> (да-да, иксовые приложения для десктопа тоже пытаются завернуть в докер), ни virtualenv для пайтона - ничего подобного, ни пакетов, ни средств вроде puppet/ansible. Конечно, у докера есть удобные средства доставки, с этим никто не спорит, но не понятно, почему выстрелил в своё время именно он, что его сделало таким "модным, стильным, молодёжным". Скажем, OpenVZ мне нравился откровенно больше, чем LXC, но и тем и другим я пользовался задолго до того, как появился докер. Что помешало обрасти средствами доставки и прочими плюшечками тому же OpenVZ? Отсутствие нативной поддержки в ядре?</p>
+<hr/>
+<p>&nbsp; Но вернёмся к нашим китообразным. Например, ещё недавно было: маппинг файла внутрь контейнера в rw. Изменяем файл снаружи, но чтобы его содержимое изменилось внутри контейнера, нужно контейнер перезагрузить, хотя так быть по идее не должно.</p>
+<p>&nbsp; Периодически при попытке запустить новую задачу через docker run --rm в каком-то окружении, докер выдаёт, что контейнер с именем скажем, test-environment_run_26 уже существует, поэтому создан не будет. Дёргаем ту же команду руками в том же окружении ещё раз - создаётся контейнер с каким-нибудь именем test-environment_run_28 и всё работает как ни в чём не бывало. Проблема прилетает раз в несколько дней. То есть, если я захочу запустить что-то критичное, то я должен по идее дёргать докер в while и каждый раз проверять - взлетел он или не взлетел и по исчерпании N попыток слать большой и жирный алерт.</p>
+<p>&nbsp; Ещё одна замечательная проблема - это контейнер Шрёдингера. Справедливости ради могу заметить, что не встречал уже пару месяцев после недавних апдейтов. То есть, контейнер как инвертированный суслик из ДМБ: docker ps его видит, docker stop его как бы останавливает, docker kill как бы убивает, но контейнер при этом остаётся видим через docker ps. При этом любая попытка дёрнуть что угодно внутри контейнера заканчивается следующим:<br /> OCI runtime exec failed: exec failed: container_linux.go:348: starting container process caused "exec: \"sh\": executable file not found in $PATH": unknown<br /> Как в том анекдоте про кефир и сдачу:</p>
+<p class="light">- Контейнер запущен?<br /> - Запущен!<br /> - Я в него шелл ставил?<br /> - Ставил!<br /> - Запусти шелл!<br /> - Какой шелл???</p>
+<p>&nbsp; Следующий пункт: предположим, мы ставим докер из репозитория операционной системы. У меня это debian 9, но подозреваю, что и во многих других дистрибутивах проблема с высокой долей вероятности есть. Может быть мейнтейнеры пакета считают заполнение всего пространства раздела под завязку логами интересной фичей, но мне вот так не кажется. Предположим, я об этой фиче не знаю и решаю после продолжительных тестов выкатить что-то в продакшен на докере. Предположим (ну, это уже совсем сомнительный сценарий, тем не менее), у меня не настроен алерт на малое количетсво места на разделах. Что мы получаем в итоге? Накопившийся за какое-то время лог по адресу /var/lib/docker/containers/длинныйтолстыйхэш/длинныйтолстыйхеш.json. Почему трудно было добавить в пакет один конфиг для rsyslog для ротейта?</p>
+<p>&nbsp; Или, например, решил я мигрировать пофайлово с одного инстанса на другой вместе с докером и прочими контейнерами. Мало ли, что случилось - подключил два блочных устройства и выборочно переношу файловую систему. Предположим, у меня только один контейнер с жалким альпайном. При этом - сюрприз! - директория /var/lib/docker при копировании показывает, что там более 100Гб, даже если размер раздела, на котором она лежит, скажем, 50Гб. Даёшь хардлинки и магию в массы!</p>
+<p>&nbsp; И вот, сегодня очередное приключение. Упала база данных в одном из тестовых окружений. Ведёт себя странно. Некоторые операции проходят, например, удаление таблиц проходит быстро, а попытка вывести show tables за 10 минут не дала никакого результата, как и show full processlist. Ежедневная заливка дампа из бекапа так же ни к чему не привела - висела сутки, пока не снял. Так как база тестовая и окружение надо было восстановить вот прямо сейчас, я убил инстанс и создал по-новой, накатил дамп, всё заработало конечно, но как-то очень уж медленно и печально. Поставил dstat и обнаружил, что каждую секунду идёт постоянная запись в 13-20мб/с и чтение в 50-80мб/c. Проверил базу на предмет процессов восстановления индексов innodb или чего-то подобного - безрезультатно, да и база накачена свежая. Docker stats не выдаёт никакого криминала. Поставил iotop - в топе сам dockerd. Остановил для эксперимента второе окружение - не помогло. Начал останавливать в основном все контейнеры по очереди. В итоге - все контейнеры докера остановлены, чтение/запись по-прежнему на уровне 70/15мб каждую секунду. В логах докера каждую секунду появляется по паре сообщений:<p>
+<pre>time="2018-11-13T10:48:48Z" level=info msg="shim reaped" id=00d615e034c4a15030603e0d46fe5484ff15bef968aff6bdfa3611a676acb6c9 module="containerd/tasks"
+time="2018-11-13T10:48:48.184552519Z" level=info msg="ignoring event" module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"</pre>
+<p>&nbsp; Останавливаю докер, поднимаю обратно - чтение/запись нормализуется. К сожалению, разбираться в источнике проблемы было некогда, нужно было её устранить как можно быстрее.<br /> По субъективным впечатлениям, таких проблем на чистом OpenVZ и LXC не было.</p>
+
+<p>Теги: <a href='tag_docker.html'>docker</a>, <a href='tag_админское.html'>админское</a></p>
+
+
+
+
+<!-- text end -->
+<!-- entry end -->
+</div>
+<div id="disqus_thread"></div>
+            <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+               var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+            /* * * DONT EDIT BELOW THIS LINE * * */
+            (function() {
+            var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+            dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+            (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<div id="footer">
+<!-- Tolstoy Comments
+<script type="text/javascript">!(function(w,d,s,l,x){w[l]=w[l]||[];var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=!0;j.src='//web.tolstoycomments.com/sitejs/app.js?i='+l+'&x='+x+'&t='+(new Date().getTime());f.parentNode.insertBefore(j,f)})(window,document,'script','tolstoycomments','1577');</script>
+-->
+<a href="https://vk.com/evgeniy_shumilov">Evgeniy Shumilov</a> &mdash; <a href="mailto:evgeniy&#46;shumilov&#64;gmail&#46;com">evgeniy&#46;shumilov&#64;gmail&#46;com</a><br/>
+Generated with <a href="https://github.com/cfenollosa/bashblog">bashblog</a>, a single bash script to easily create blogs like this one</div>
+</div></div>
+</body></html>
+</div></div>
+<script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+        /* * * DONT EDIT BELOW THIS LINE * * */
+        (function () {
+        var s = document.createElement("script"); s.async = true;
+        s.type = "text/javascript";
+        s.src = "//" + disqus_shortname + ".disqus.com/count.js";
+        (document.getElementsByTagName("HEAD")[0] || document.getElementsByTagName("BODY")[0]).appendChild(s);
+    }());
+    </script>
+</body></html>

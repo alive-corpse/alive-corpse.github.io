@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="main.css" type="text/css" />
+<link rel="stylesheet" href="blog.css" type="text/css" />
+<link rel="stylesheet" href="assets/highlight/styles/corpse.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="" href="feed.rss" />
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+<script src="assets/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<title>Зайчатки разума</title>
+</head><body>
+<div id="divbodyholder">
+<div class="headerholder">
+<a href="https://vk.com/evgeniy_shumilov" target="_blank"><img src="/images/logo.png" class="logo" height="106pt" style="float: left; margin-right: 20px;"></a>
+<div class="header">
+<div id="title">
+<h1 class="nomargin"><a class="ablack" href="https://shumiloff.ru/index.html">Зайчатки разума</a></h1>
+<div id="description">Записная книжка айтишника</div>
+</div></div>
+<ul class="full-width">
+    <li>
+        <a href="/pro-lyubov-k-minimalizmu-i-staticheskuyu-generaciyu-kontenta.html">О блоге</a>
+<!--
+        <ul>
+            <li><a href="#">Item1</a></li>
+            <li><a href="#">Item2</a></li>
+            <li><a href="#">Item3</a></li>
+        </ul>
+-->
+    </li>
+    <li><a href="/all_tags.html">Теги</a></li>
+    <li><a href="/all_posts.html">Все посты</a></li>
+    <li><a href="/tag_ностальгия.html">Ностальгическое</a></li>
+    <li><a href="/tag_мысли-вслух.html">Мысли вслух</a></li>
+</ul>
+
+<div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
+</div>
+<div id="divbody"><div class="content">
+<h3><a class="ablack" href="dorabatyvaem-bashblog-napilnikom-chast-tretya---ispravlyaem-tajmstempy.html">
+Дорабатываем bashblog напильником, часть третья - исправляем таймстемпы
+</a></h3>
+<!-- bashblog_timestamp: #201811011554.40# -->
+<div class="subtitle">2018-11-01 15:54:40 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<p>&nbsp; Не бывает бочки мёда без пары ложек дёгтя.&nbsp;Если привкус дёгтя вам по вкусу - можно ничего не менять и наслаждаться жизнью, в противном случае требуется&nbsp;какое-то вмешательство. Проблема, которую будем сегодня решать - это даты или таймстемпы, кому как привычнее. Дело в том, что когда работа с bashblog производится на одной машине, то проблем не возникает, но как только мы уносим проект в git и делаем checkout на другой машине, то все даты создания файлов на локальной файловой системе&nbsp;будут совпадать со временем чекаута. Например:</p>
+<pre>-rw-r--r-- 1 corpse corpse 12K ноя 1 14:17 nemnogo-ob-avtomaticheskoj-generacii-parolej.html<br />-rw-r--r-- 1 corpse corpse 9,0K ноя 1 14:17 o-detalyax-i-pamyati.html<br />-rw-r--r-- 1 corpse corpse 15K ноя 1 14:17 okna-v-okne---pro-evolyuciyu-virtualizacii.html<br />-rw-r--r-- 1 corpse corpse 30K ноя 1 14:17 pro-klaviatury-gryaznye-xaki-i-podgoranie-pyatoj-tochki.html<br />-rw-r--r-- 1 corpse corpse 13K ноя 1 14:17 pro-lyubov-k-minimalizmu-i-staticheskuyu-generaciyu-kontenta.html<br />&nbsp;</pre>
+<p>&nbsp; Bashblog устроен таким образом, что он при каждом rebuild или посте переписывает&nbsp;даты и время публикации поста на время создание файла. То есть, вы сделали десяток постов, потом решили добавить ещё один, находясь за другим компьютером, сделали checkout, создали новый пост&nbsp;и все ваши посты получили сегодняшнюю дату и время, когда вы выгрузили содержимое репозитория. Нехорошо. Есть два пути решения этой проблемы - либо вмешаться в&nbsp;содержимое&nbsp;bashblog и изменить его логику работы со временем и датой постов, либо&nbsp;после выгрузки изменять дату и время создания файлов на необходимые. Путь менее очевидный, но я предпочёл его, поскольку не хочу менять код bashblog без особой на то необходимости (чтобы не было мучительно больно после обновления самого bashblog при необходимости).</p>
+<p class="readmore"><a href="./dorabatyvaem-bashblog-napilnikom-chast-tretya---ispravlyaem-tajmstempy.html">Читать дальше...</a></p>
+<p>Теги: <a href='tag_bashblog.html'>bashblog</a>, <a href='tag_shell.html'>shell</a></p>
+<h3><a class="ablack" href="pro-sobak.html">
+Про собак
+</a></h3>
+<!-- bashblog_timestamp: #201810311154.50# -->
+<div class="subtitle">2018-10-31 11:54:50 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<p style="text-align: center;"><img src="/images/veo.jpg"></p>
+<p>&nbsp;&nbsp;У нас с женой постоянные "качели" в отношении собак. И она и я хотим собаку. Периодически это желание приобретает острые формы и мы бьём друг-друга по рукам. У неё был когда-то русский спаниель, у меня - серьёзная восточноевропейская овчарка. Мы долго думали над вопросом заведения питомца, сошлись на том, что собака должна быть маленькой, иначе каждый день с ней придётся наматывать лишних +5 - +7 км (что совершенно замечательно в отношении здоровья при сидячем образе жизни, но совершенно паршиво в отношении времени, которого постоянно не хватает и на то, чтобы нормально высыпаться). Мы решили, что собака появится после того, как появятся дети и вырастут до сознательных лет 7-10, чтобы воспитывать в них ответственность, а заодно и выгул переложить на них. Ну и чтобы собан не утягивал ребёнка - опять таки он должен быть небольшой. Овчарку дитё (да и жена, которая весит меньше хорошей овчарки) в критической ситуации не удержит. Одним словом, решили, что у нас будет корги. :)<p>
+<p class="readmore"><a href="./pro-sobak.html">Читать дальше...</a></p>
+<p>Теги: <a href='tag_собаки.html'>собаки</a></p>
+<h3><a class="ablack" href="pro-klaviatury-gryaznye-xaki-i-podgoranie-pyatoj-tochki.html">
+Про клавиатуры, грязные хаки и подгорание пятой точки
+</a></h3>
+<!-- bashblog_timestamp: #201810290058.20# -->
+<div class="subtitle">2018-10-29 00:58:20 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<img src="/images/keyboard-hyper.jpg">
+
+<p>Крайне редко что-то в этом мире вызывает у меня раздражение близкое к негодованию. И то, что я изложу ниже - как раз такой случай.</p>
+
+<p>&nbsp;&nbsp;В последнее время меня очень сильно огорчает тенденция, касающаяся функциональных и некоторых других клавиш на клавиатуре. Складывается стойкое впечатление, что дизайн клавиатур разрабатывают или инопланетяне или люди, которые с клавиатурой никогда не работали, а ведь это основное устройство ввода уже на протяжении многих лет и от удобства работы с ним зависит в целом удобство работы с комьютером и то, насколько часто вы будете вспоминать чью-то маму в контексте действий сексуального характера.</p>
+
+<p>&nbsp;&nbsp;Начну историю с плюсов, затем продолжу с наименьшего коэффициента подгорания и закончу самым высоким.</p>
+
+<p class="readmore"><a href="./pro-klaviatury-gryaznye-xaki-i-podgoranie-pyatoj-tochki.html">Читать дальше...</a></p>
+<p>Теги: <a href='tag_keyboards.html'>keyboards</a></p>
+<h3><a class="ablack" href="sam-sebe-xosting-ili-o-nedoocenyonnyx-utilitax.html">
+Сам себе хостинг или о недооценённых утилитах
+</a></h3>
+<!-- bashblog_timestamp: #201810210049.04# -->
+<div class="subtitle">2018-10-21 00:49:04 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<i>- Та-ак, а вы что, ещё и права на файлы за меня выдавать будете?<br/>
+- Ага-а-а!</i>
+<br/>
+<img src="/images/mss.png" class="rightimg">
+<p>&nbsp;&nbsp;О чём вы думаете, когда слышите аббревиатуру FTP? На меня накатывает ностальгия. Сразу вспоминаются всякие уютные ламповые локалочки, сетевые карты rtl8139, серенькие восьмипортовые коммутаторы D-Link в пластиковых корпусах, папки Public и Private, полные варезом - фильмы, музыка, софт, игры... Одним словом, машинка времени в моей голове телепортирует меня куда-то лет на 15 назад. Много воды утекло с тех пор, но когда кто-то просит совета, как построить себе миниатюрный хостинг, часто в числе прочего я в том или ином виде получаю вопрос: "как поднять FTP"? И каждый раз меня это удивляет. А чем sftp не угодил? Да, это медленнее, но во-первых, скорость интернет соединения сейчас уже не та, что была 15 лет тому, во-вторых, у sftp на борту шифрование и в-третьих, sftp практически всегда уже есть там, где присутствует openssh.</p>
+<p>&nbsp;&nbsp;Да, sftp, реализованный средствами OpenSSH не лишён ряда недостатков. Хотелось найти некое решение, которое бы позволило быстро и просто реализовать доступ к машине для разных пользователей, для каждого в свою папку, желательно с chroot. Всё заканчивалось длинными ролями на ансибле, которые переписывали конфиги openssh, добавляли пользователей в нужные гргуппы, ставили пакет управления расширенными правами доступа, дёргали всякие setfacl и прочее. И тут меня попросил мой хороший друг (Иван, спасибо тебе!) помочь ему настроить сервер, а пользователям в качестве шелла поставить MySecureShell. Ранее я с таким зверем не сталкивался, да и ни от кого из моих знакомых за те почти 15 лет, что я общаюсь с linux, не слышал. Судя по всему, это не особо популярное решение. Я бы сказал, незаслуженно обойдённое вниманием. Да вы только посмотрите на их логотип! Похоже, это пингвин, прямо поверх которого начали разводить печатную плату (что похоже, сказалось на его настроении), при этом он ещё кому-то угражает двумя логотипами OpenBSD! Интересно, на каких веществах сидел автор? Ладно, этот вопрос оставим наркологам. Лучше посмотрим в конфигурационный файл. Почитав, что там написано, я понял, что эта штука умеет всё, о чём я мечтал и многое из того, о чём я мечтать не смел.</p>
+<p class="readmore"><a href="./sam-sebe-xosting-ili-o-nedoocenyonnyx-utilitax.html">Читать дальше...</a></p>
+<p>Теги: <a href='tag_ssh.html'>ssh</a>, <a href='tag_shell.html'>shell</a>, <a href='tag_sftp.html'>sftp</a>, <a href='tag_админское.html'>админское</a></p>
+<h3><a class="ablack" href="nemnogo-ob-avtomaticheskoj-generacii-parolej.html">
+Немного об автоматической генерации паролей
+</a></h3>
+<!-- bashblog_timestamp: #201810191505.32# -->
+<div class="subtitle">2018-10-19 15:05:32 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<p>&nbsp;&nbsp;Зачастую возникает необходимость сгенерировать для какой-то цели пароль. Преимущественно это пароль, состоящий из некоторого количества цифр и букв разного регистра.Иногда требуется сгенерировать несколько паролей сразу. Например, для обновления паролей для целой группы пользователей в скрипте или просто хочется выбрать наиболее удобный для набора. Пересмотрев несколько решений, я решил снова ездить на своих велосипедах, так как они имеют минимум зависимостей.</p>
+<p class="readmore"><a href="./nemnogo-ob-avtomaticheskoj-generacii-parolej.html">Читать дальше...</a></p>
+<p>Теги: <a href='tag_shell.html'>shell</a>, <a href='tag_automatization.html'>automatization</a>, <a href='tag_админское.html'>админское</a></p>
+<h3><a class="ablack" href="v-rotejt-mne-logi-pro-minimalizm-busybox-i-logirovanie.html">
+В ротейт мне логи! Про минимализм, busybox и логирование.
+</a></h3>
+<!-- bashblog_timestamp: #201810171509.07# -->
+<div class="subtitle">2018-10-17 15:09:07 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<p>&nbsp;&nbsp;Так как я довольно много пишу на шелле, передо мной уже довольно давно встала проблема логирования в скриптах. После просмотра километровых логов начинает рябить в глазах, сложно выделить важные моменты при быстром скроллинге, например, какой-нибудь warning или внезапный error. Одним словом, терпение закончилось и я решил написать свой велосипед, по возможности функциональный, лёгкий и с минимумом зависимостей - всё, как я люблю. <br/><br/><img src="/images/eslogger.png" class="center"><br/>Традиционный список хотелок:</p>
+<ul>
+    <li>Минимальные зависимостии размер</li>
+    <li>Уровни логирования (debug/info/warinig)</li>
+    <li>Отключаемая подсветка разными цветами разных типов событий</li>
+    <li>Работоспособность под OpenWRT, Android, Alpine и т.п.</li>
+    <li>Возможность переопределять параметры переменными в основном скрипте</li>
+    <li>Возможность передать в FATAL сразу код завершения</li>
+    <li>Настраиваемый формат даты</li>
+    <li>Разделитель (очень полезно для отделения частей лога)</li>
+    <li>Краткий синтаксис вызова (не люблю длинные имена модулей)</li>
+</ul>
+<p class="readmore"><a href="./v-rotejt-mne-logi-pro-minimalizm-busybox-i-logirovanie.html">Читать дальше...</a></p>
+<p>Теги: <a href='tag_logging.html'>logging</a>, <a href='tag_shell.html'>shell</a>, <a href='tag_busybox.html'>busybox</a>, <a href='tag_minimalism.html'>minimalism</a></p>
+<h3><a class="ablack" href="aspekty-nastrojki-seti-v-qemu-obedinenie-interfejsov-na-kanalnom-urovne.html">
+АСПЕКТЫ НАСТРОЙКИ СЕТИ В QEMU. ОБЪЕДИНЕНИЕ ИНТЕРФЕЙСОВ НА КАНАЛЬНОМ УРОВНЕ.
+</a></h3>
+<!-- bashblog_timestamp: #201810162150.30# -->
+<div class="subtitle">2018-10-16 21:50:30 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<p class="light">Это репост статьи от новогодней ночи 31 декабря 2008г. - 1 января 2009г.</p>
+
+<p>&nbsp;&nbsp;Доброго времени суток. Вечер. 31 декабря 2008 года. Чем заняться человеку в такое время? Правильно! Начать писать статью на permlug, чтобы поделиться опытом. :)</p>
+
+<p class="readmore"><a href="./aspekty-nastrojki-seti-v-qemu-obedinenie-interfejsov-na-kanalnom-urovne.html">Читать дальше...</a></p>
+<p>Теги: <a href='tag_virtualization.html'>virtualization</a>, <a href='tag_qemu.html'>qemu</a>, <a href='tag_networking.html'>networking</a>, <a href='tag_админское.html'>админское</a></p>
+<h3><a class="ablack" href="okna-v-okne---pro-evolyuciyu-virtualizacii.html">
+Окна в окне - про эволюцию виртуализации
+</a></h3>
+<!-- bashblog_timestamp: #201810161635.23# -->
+<div class="subtitle">2018-10-16 16:35:23 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<img src="/images/proxmox.png" class="leftimg">
+<p>&nbsp;&nbsp;Как гласит старая айтишная шутка - "чтобы понять, что такое рекурсия, сначала нужно понять, что такое рекурсия". Куча открытых окон одной операционной системы в окне другой уже очень давно перестали выглядеть фантастикой. Про виртуализацию сейчас знают все, кто так или иначе связан с IT. Но вот виртуализация чего-либо в окне браузера всё ещё выглядит как нечто особенное. Когда-то давно я наткнулся на один интересный <a href="https://copy.sh/v86/" target="_blank">ресурс</a>, который позволял запускать через эмулятор x86 различные некогда популярные и не очень операционные системы прямо в окне браузера. С этим можно развлекаться, но не долго. Есть возможность управлять размером выделяемой основной и видео памяти, возможность самому подгрузить образы CD/FDD/HDD или выбрать один из уже предустановленных. В том числе есть обрезанные версии Windows 1.01, 95, 98, Linux, пара BSD систем, ReactOS конечно же и несколько версий старых линуксов. Но так же присутствует и несколько более редких вещей. Самое интересное - всё это распространяется по одной из версий лицензии BSD, лежит на гитхабе и доступно для скачивания и установки. Конечно, такие комбаины как VirtualBox оно никогда не заменит в силу скорости и количества настроек, но как нечто, созданное в рамках proof of concept - вполне имеет право на жизнь, не более того. К сожалению, в силу неторопливости, практического применения оно не имеет.</p>
+<p>&nbsp;&nbsp;Недавно из <a href="https://telegra.ph/Haker---WWW-windows95--operacionka-iz-nashego-detstva-v-vide-desktopnogo-prilozheniya-10-12-2" target="_blank">телеграм рассылки Xakep</a> я узнал, что один товарищ ко всему вышеописанному добавил образ Windows 95, <a href="https://github.com/felixrieseberg/windows95" target="_blank">заботливо завернул это в электрон и выложил в виде приложения</a>. Я не особо надеялся, что это даст какой-то прирост в производительности, но ради эксперимента попробовал поставить на debian. Вообще, я достаточно предвзято отношусь ко всему, что заворачивают в электрон - зачастую веб приложение ест на порядок меньше ресурсов, чем его обёртка. Подобные решения вызывают у меня аллергию. Тем не менее, приложение я поставил и попробовал. На удивление всё работает ощутимо быстрее, но всё-же недостаточно. На рабочем столе с момента запуска открыто окно блокнота с приветствием и солитёр. Конечно, зачем же ещё вы могли запустить Windows 95, если не собираетесь играть в солитёр? Ну и столкнулся с рядом глюков. В числе прочего при попытке запустить консоль ms dos, обнаружил, что видимая область в электроне сжалась до размера пары кнопок пуск в центре окна, всё остальное - чёрное поле. Одним словом - неюзабельно.</p>
+<p>&nbsp;&nbsp;На том же ресурсе натолкнулся на статью о <a href="https://xakep.ru/2017/02/10/www-top5-browser-emulators/" target="_blank">эмуляции в вебинтерфейсе других платформ</a>. Лично для меня особый интерес представляет разве что эмуляция MESS (Multi Emulator Super System) - JS версия эмулятора множества старых игровых консолей и не только. Обязательно посмотрю, когда будет на то время, правда в текущий момент домен archive.org у меня недоступен, видимо, в связи с аллергией нашего государства на telegram (кого это останавливет?). Но вообще, MAME (Multiple Arcade Machine Emulator), MESS, как её часть, RetroArch и сборки вроде RetroPie в моих глазах являются вершиной эволюции в области эмуляции старых игровых платформ - за каких-нибудь 25$ можно получить всё и намного больше, об этом как-нибудь потом и отдельно.</p>
+
+<p>&nbsp;&nbsp;Но это всё развлечения, а что, если вам нужно иметь доступ к какой-то запущенной операционной системе, отличной от linux через браузер без установки дополнительных плагинов, приложений и всего прочего и чтобы при этом оно ещё и работало с приемлимой скоростью? Или вам нужен аналог облака на вашем железе для более рационального использования ресурсов и возможность управлять объединением вируальных машин в сети и прочее?</p>
+<p class="readmore"><a href="./okna-v-okne---pro-evolyuciyu-virtualizacii.html">Читать дальше...</a></p>
+<p>Теги: <a href='tag_virtualization.html'>virtualization</a>, <a href='tag_containers.html'>containers</a>, <a href='tag_qemu.html'>qemu</a>, <a href='tag_kvm.html'>kvm</a>, <a href='tag_lxc.html'>lxc</a>, <a href='tag_proxmox.html'>proxmox</a></p>
+<h3><a class="ablack" href="o-detalyax-i-pamyati.html">
+О деталях и памяти
+</a></h3>
+<!-- bashblog_timestamp: #201810120159.48# -->
+<div class="subtitle">2018-10-12 01:59:48 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<h4>Это репост от 27 мая 2008 г. 17:54</h4>
+<p>&nbsp;&nbsp;Интересно, оказывается, в жизни бывают такие моменты, когда детали какого-то события оказываются важнее для тебя, чем само это событие. Но редко когда детали самой жизни оказываются ценны. Ан нет, получается, что и такое тоже может быть.</p>
+
+<p>&nbsp;&nbsp;Когда-то, я вёл дневник. И обычно я записывал туда не какие-то события, которые происходили в моей жизни, а именно мелкие и незначительные её детали, которые ни для кого кроме меня не представляли никакого интереса. И как ни странно, эти детали помогают вернуться в прошлое лучше любой машины времени.</p>
+<p class="readmore"><a href="./o-detalyax-i-pamyati.html">Читать дальше...</a></p>
+<p>Теги: <a href='tag_ностальгия.html'>ностальгия</a>, <a href='tag_старое.html'>старое</a>, <a href='tag_мысли-вслух.html'>мысли-вслух</a></p>
+<h3><a class="ablack" href="dorabatyvaem-bashblog-napilnikom-chast-vtoraya---podsvetka-sintaksisa.html">
+Дорабатываем bashblog напильником, часть вторая - подсветка синтаксиса
+</a></h3>
+<!-- bashblog_timestamp: #201810120041.54# -->
+<div class="subtitle">2018-10-12 00:41:54 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<p>&nbsp;&nbsp;Думаю, следует сразу предупредить, что я далеко не специалист в html, вёрстке по сетке, css, javascript и прочем кунг-фу из области визуализации веб контента, так что всё, что здесь изложено может оказаться далёким от best practice. Итак, есть задача - получить возможность добавлять в посты блога секции с кодом. Из хотелок - подсветка синтаксиса для разных языков и опциональный скроллбар, если текст не входит в поле по ширине.</p>
+<p class="readmore"><a href="./dorabatyvaem-bashblog-napilnikom-chast-vtoraya---podsvetka-sintaksisa.html">Читать дальше...</a></p>
+<p>Теги: <a href='tag_bashblog.html'>bashblog</a>, <a href='tag_web.html'>web</a>, <a href='tag_shell.html'>shell</a></p>
+<div id="all_posts">
+<a href="index5.html">&lt;&lt; В прошлое</a> &mdash; 
+<a href="all_posts.html">Все записи</a> &mdash; <a href="all_tags.html">Все теги</a> &mdash; <a href="">RSS</a>
+ &mdash; <a href="index3.html">В будущее &gt;&gt;</a>
+</div>
+</div>
+<div id="footer">
+<!-- Tolstoy Comments
+<script type="text/javascript">!(function(w,d,s,l,x){w[l]=w[l]||[];var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=!0;j.src='//web.tolstoycomments.com/sitejs/app.js?i='+l+'&x='+x+'&t='+(new Date().getTime());f.parentNode.insertBefore(j,f)})(window,document,'script','tolstoycomments','1577');</script>
+-->
+<a href="https://vk.com/evgeniy_shumilov">Evgeniy Shumilov</a> &mdash; <a href="mailto:evgeniy&#46;shumilov&#64;gmail&#46;com">evgeniy&#46;shumilov&#64;gmail&#46;com</a><br/>
+Generated with <a href="https://github.com/cfenollosa/bashblog">bashblog</a>, a single bash script to easily create blogs like this one</div>
+</div></div>
+</body></html>
+</div></div>
+</body></html>
