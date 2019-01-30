@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="main.css" type="text/css" />
+<link rel="stylesheet" href="blog.css" type="text/css" />
+<link rel="stylesheet" href="assets/highlight/styles/corpse.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="" href="feed.rss" />
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+<script src="assets/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<title>Про внезапный переезд на GitHub Pages</title>
+</head><body>
+<div id="divbodyholder">
+<div class="headerholder">
+<a href="https://vk.com/evgeniy_shumilov" target="_blank"><img src="/images/logo.png" class="logo" height="106pt" style="float: left; margin-right: 20px;"></a>
+<div class="header">
+<div id="title">
+<h1 class="nomargin"><a class="ablack" href="https://shumiloff.ru/index.html">Зайчатки разума</a></h1>
+<div id="description">Записная книжка айтишника</div>
+</div></div>
+<ul class="full-width">
+    <li>
+        <a href="/pro-lyubov-k-minimalizmu-i-staticheskuyu-generaciyu-kontenta.html">О блоге</a>
+<!--
+        <ul>
+            <li><a href="#">Item1</a></li>
+            <li><a href="#">Item2</a></li>
+            <li><a href="#">Item3</a></li>
+        </ul>
+-->
+    </li>
+    <li><a href="/all_tags.html">Теги</a></li>
+    <li><a href="/all_posts.html">Все посты</a></li>
+    <li><a href="/tag_ностальгия.html">Ностальгическое</a></li>
+    <li><a href="/tag_мысли-вслух.html">Мысли вслух</a></li>
+</ul>
+
+<div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
+</div>
+<div id="divbody"><div class="content">
+<!-- entry begin -->
+<h3><a class="ablack" href="pro-vnezapnyj-pereezd-na-github-pages.html">
+Про внезапный переезд на GitHub Pages
+</a></h3>
+<!-- bashblog_timestamp: #201901301406.59# -->
+<div class="subtitle">2019-01-30 14:06:59 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<p style="text-align: center;"><img src="images/ghpageslogo.png"></p>
+<p>&nbsp; Сегодня ночью случилось сразу несколько событий. Яндекс мигрировал мой домен в <a href="https://connect.yandex.ru/" target="_blank">Яндекс.Коннект</a>, у меня дома отвалился интернет, а затем выключили и электропитание. Нередкий случай проявления заботы со стороны нашего ТСЖ - нечего ночами сидеть в сети, ложись спать давай, родной. Вот, мы и свет уже тебе погасили. Логичным продолжением было бы отключение воды, отопления, газа и, чего уж там, сразу воздуха, но этого, что меня радует, не последовало.</p>
+<p>&nbsp; Через какое-то время мой хороший друг написал в телеграм - мол, блог твой недоступен, на что ласково был обозван "мониторингом мониторинговичем" и примерно в этот же миг снизошло на меня озарение свыше - включили свет и увидел я мир вокруг. И понял я, что это хорошо. Интернет тоже не заставил себя ждать, а вот блог так и остался недоступен. Раньше я бы плюнул на всё и лёг спать, но с мыслью о 52х постах, которые кто-то читает, кто-то даже комментирует, а кому-то, о чудо, и вовсе нравится, я уже уснуть спокойно не мог. Надо было чинить.</p>
+<hr/>
+<p>&nbsp; Суть проблемы заключалась в том, что <a href="https://github.com/alive-corpse/ydns" target="_blank">мой скрипт</a>&nbsp;не мог обновить DNS записи. Попробовал в качестве эксперимента обновить их вручную и получил ошибку доступа в PDD (Почта для домена от яндекса). Покопался ещё немного и обнаружил, что домен мой благополучно переехал в Яндекс.Коннект и через апи PDD перестал быть доступен. Пришлось после 12 часов на работе изучать ночью документацию API для Яндекс.Коннект. Теперь никаких токенов - авторизация реализована через OAuth 2.0. Переписать быстро и хорошо не получилось бы, там есть свои тонкости. Нужен был альтернативный вариант. Вариантов оказалось три, но изучать их пришлось параллельно, что процесс решения проблемы не ускоряло в текущий момент, но позволяло сделать наиболее оптимальный выбор в перспективе.</p>
+<p>&nbsp; Самым простым вариантом, который приходил в голову сразу, было поднять виртуалку и перенести блог туда, просто руками завернув корневую запись домена на белый адрес инстанса. Далее нужно было бы поднять и настроить Nginx, добавить сертификаты от Let's Encrypt, настроить их обновление. Это конечно, надёжнее домашнего сервера на балконе, но мне хотелось чего-то такого, о чём можно было забыть на годы и оно бы не отвалилось. В случае с виртуалкой можно как минимум забыть произвести вовремя оплату. Да и платить каждый месяц дополнительные деньги за то, что работало бесплатно долгое время как-то уже не хотелось принципиально.</p>
+<p>&nbsp; Вторым очевидным вариантом было делегирование домена другому DNS хостеру. По вышеупомянутой причине DNS хостинг должен был быть бесплатным и с возможностью изменения записей через API. В ходе поверхностного поиска мне попалась статья на хабре <a href="https://habr.com/ru/post/203292/" target="_blank" rel="nofollow">https://habr.com/ru/post/203292/</a> от ноября 2013го года. Да, статья старая, но с удивлением для себя я обнаружил, что многие хостеры из того списка всё ещё предоставляют свои услуги, а многие из них даже на всё тех же условиях. Так что в этом отношении альтернативы яндексу есть. А ценность статьи за 5 лет пожалуй только увеличилась, потому как даёт представление о том, какие хостеры за этот период успели кануть в лету, а какие прожили 5 лет, что даёт надежду на некоторую стабильность. Впрочем, вариант со сменой DNS так же не был самым удобным - делегирование домена добавляет мороки, а сам процесс может занимать больше суток. А с новым API придётся разбираться всё равно, после чего писать новый скрипт, обновляющий зону.</p>
+<p>&nbsp; Ну и третий вариант, на котором я остановился - это так называемый <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. Я знал о его существовании, видел страницы, которые хостились таким образом, но не имел ни малейшего представления о деталях. Как оказалось, это самый лёгкий, оптимальный и простой вариант, который вообще можно найти. Я эту статью писал в три раза дольше, чем разбирался с переездом&nbsp;блога на GitHub Pages. Конечно, он поддерживает только статический контент, но это как раз мой случай. Кроме статики на моём блоге нет ничего. Для деплоя необходим только git. Собственно, git push для меня фактически является деплоем. И, что самое приятное, достаточно просто прикручивается свой домен, а https вообще работает из коробки - сам запрашивает и, видимо, поддерживает актуальным Let's Encrypt сертификат. Что вообще нужно для того, чтобы создать свой блог бесплатно без рекламы и смс, не платить за это ни копейки?</p>
+<p>0. Регистрируемся на <a href="https://github.com" target="_blank">GitHub</a>, если мы ещё этого не сделали.</p>
+<p>1. Создаём репозиторий с именем username.github.io, где username - это имя вашей учётной записи на github.</p>
+<p>2. Клонируем этот репозиторий куда-нибудь себе:</p>
+<pre>git clone git@github.com:username/username.github.io.git mysite</pre>
+<p>Естественно, заменяем username на имя&nbsp;свой, а вместо mysite можно задать любое другое валидное имя директории на ваш вкус.</p>
+<p>3. Добавляем контент:</p>
+<p>cd mysite</p>
+<pre><code>echo '&lt;html&gt;&lt;head&gt;
+&nbsp; &lt;title&gt;Under construction&lt;/title&gt;
+&lt;/head&gt;&lt;body&gt;
+&nbsp; &lt;h1&gt;This page is under construction&lt;/h1&gt;
+&lt;/body&gt;&lt;/html&gt;' &gt; index.html
+git add index.html
+git commit -m 'Initial commit'
+git push origin master</code></pre>
+<p>&nbsp;4. Идём в настройки проекта (https://github.com/username/username.github.io/settings или кнопка settings с пиктограммой в виде шестерёнки) и ищем раздел с названием GitHub Pages. У меня он выглядит следующим образом:</p>
+<p style="text-align: center;"><img src="images/ghpages.png" /></p>
+<p>&nbsp; &nbsp;В поле Source нужно выбрать ветку master и нажать на кнопку Save. Если у вас нет собственного домена, то поле Custom domain нужно оставить пустым. Считайте, что сайт у вас уже есть и доступен по адресу https://username.github.io. Проще точно некуда. Но есть ещё один момент, достойный рассмотрения. Существует такой статический генератор контента как&nbsp;<a href="https://jekyllrb.com/" target="_blank">Jekyll</a>. Что это вообще такое? Статический генератор на входе получает текстовые файлы в определённом формате (в нашем случае это <a href="https://ru.wikipedia.org/wiki/Markdown" target="_blank">Markdown</a>) и транслирует его в html, css, возможно js, используя шаблоны и некие настройки. Про <a href="pro-lyubov-k-minimalizmu-i-staticheskuyu-generaciyu-kontenta.html" target="_blank">статическую генерацию контента</a> был самый первый пост в этом блоге. Когда я выбирал себе статический генератор, я в том числе рассматривал и Jekyll, но&nbsp;он показался мне слишком громоздким для моих целей, поэтому я свой блог построил на <a href="https://github.com/cfenollosa/bashblog" target="_blank">bashblog</a>. Собственно, к чему я начал про Jekyll - дело в том, что он интегрирован с GitHub pages, что позволяет писать статьи сразу в markdown, а при пуше на github, джекилл сам должен траслировать md в html и всё прочее необходимое. Как раз для выбора темы оформления блога пристуствует кнопка Choose a theme. Погружаться в эту тему я не буду, приведу только ссылки на пару годных статей, где подробно описано, с чего начать и как завести блог на GitHub Pages с использованием Jekyll: <a href="https://guides.hexlet.io/jekyll/" target="_blank">раз</a> и <a href="https://habr.com/ru/post/336266/" target="_blank">два</a>. Кстати,&nbsp;для меня было открытием, что Jekyll умеет импортировать статьи&nbsp;из wordpress, drupal и кучи других источников, включая даже rss! Выберете ли вы для себя Jekyll или любой из <a href="https://www.staticgen.com/" target="_blank">других статических генераторов контента</a> - решать только вам.</p>
+<p>&nbsp;5. В случае, если у нас есть собственный домен, то тут возможны два варианта - либо нам нужно сделать запись типа CNAME, которая будет указывать на наш урл (username.github.io), либо запись типа А, которая должна содержать один из следующих IP адресов (яндекс коннект например не позволяет сделать корневую запись CNAME типа, только типа А):</p>
+<ul>
+<li>185.199.108.153</li>
+<li>185.199.109.153</li>
+<li>185.199.110.153</li>
+<li>185.199.111.153</li>
+</ul>
+<p>&nbsp; Вот <a href="https://help.github.com/articles/troubleshooting-custom-domains/" target="_blank">тут</a> есть документация, которая поможет разобраться с проблемами, если таковые возникнут. После добавления DNS записи, прописываем наш домен в поле Custom domain и нажимаем кнопку Save. Это автоматически создаст ещё одну ревизию в репозитории, в которой в корень будет добавлен файл с именем CNAME, в содержимом будет имя вашего домена.&nbsp;Этот файл нужен, имейте это в виду.</p>
+<p>&nbsp;</p>
+<p>&nbsp; Меня кто-то спросил - а чего это я мучаюсь, что-то изобретаю, чиню и форкаю, если можно было просто использовать какой-нибудь <a href="https://www.blogger.com" target="_blank">blogger.com</a>? На то есть несколько причин.</p>
+<ol>
+<li>Хотелось именно статический контент, потому что мне это было интересно.</li>
+<li>Статика имеет куда меньше потенциальных уязвимостей с точки зрения безопасности.</li>
+<li>Статика&nbsp;практически не имеет зависимостей кроме веб сервера.&nbsp;Статику может раздавать что угодно, что чуть умнее утюга. Мой блог может функицонировать на роутере 10ти летней давности. Да и вообще,&nbsp;я люблю минимализм.</li>
+<li>В рамках статики я могу выложить что угодно и в каком угодно виде, могу создать сколько угодно кастомных страниц, отличающихся друг от друга.</li>
+</ol>
+
+<p>&nbsp; Кстати, отличный юзкейс для использования GitHub Pages - сайт визитка с кратким резюме. Просто, бесплатно, без рекламы и намекает на то, что вы как минимум умеете работать с гитом и html, даже если вы считаете себя гуманитарием. :)</p>
+
+<p>Теги: <a href='tag_blog.html'>blog</a>, <a href='tag_админское.html'>админское</a></p>
+<!-- text end -->
+<!-- entry end -->
+</div>
+<div id="disqus_thread"></div>
+            <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+               var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+            /* * * DONT EDIT BELOW THIS LINE * * */
+            (function() {
+            var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+            dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+            (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<div id="footer">
+<!-- Tolstoy Comments
+<script type="text/javascript">!(function(w,d,s,l,x){w[l]=w[l]||[];var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=!0;j.src='//web.tolstoycomments.com/sitejs/app.js?i='+l+'&x='+x+'&t='+(new Date().getTime());f.parentNode.insertBefore(j,f)})(window,document,'script','tolstoycomments','1577');</script>
+-->
+<a href="https://vk.com/evgeniy_shumilov">Evgeniy Shumilov</a> &mdash; <a href="mailto:evgeniy&#46;shumilov&#64;gmail&#46;com">evgeniy&#46;shumilov&#64;gmail&#46;com</a><br/>
+Generated with <a href="https://github.com/cfenollosa/bashblog">bashblog</a>, a single bash script to easily create blogs like this one</div>
+</div></div>
+</body></html>
+</div></div>
+<script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+        /* * * DONT EDIT BELOW THIS LINE * * */
+        (function () {
+        var s = document.createElement("script"); s.async = true;
+        s.type = "text/javascript";
+        s.src = "//" + disqus_shortname + ".disqus.com/count.js";
+        (document.getElementsByTagName("HEAD")[0] || document.getElementsByTagName("BODY")[0]).appendChild(s);
+    }());
+    </script>
+</body></html>

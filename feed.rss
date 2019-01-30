@@ -2,9 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Tue, 29 Jan 2019 19:59:48 +0500</lastBuildDate>
-<pubDate>Tue, 29 Jan 2019 19:59:48 +0500</pubDate>
+<lastBuildDate>Wed, 30 Jan 2019 14:07:49 +0500</lastBuildDate>
+<pubDate>Wed, 30 Jan 2019 14:07:49 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Про внезапный переезд на GitHub Pages
+</title><description><![CDATA[
+
+<p style="text-align: center;"><img src="images/ghpageslogo.png"></p>
+<p>&nbsp; Сегодня ночью случилось сразу несколько событий. Яндекс мигрировал мой домен в <a href="https://connect.yandex.ru/" target="_blank">Яндекс.Коннект</a>, у меня дома отвалился интернет, а затем выключили и электропитание. Нередкий случай проявления заботы со стороны нашего ТСЖ - нечего ночами сидеть в сети, ложись спать давай, родной. Вот, мы и свет уже тебе погасили. Логичным продолжением было бы отключение воды, отопления, газа и, чего уж там, сразу воздуха, но этого, что меня радует, не последовало.</p>
+<p>&nbsp; Через какое-то время мой хороший друг написал в телеграм - мол, блог твой недоступен, на что ласково был обозван "мониторингом мониторинговичем" и примерно в этот же миг снизошло на меня озарение свыше - включили свет и увидел я мир вокруг. И понял я, что это хорошо. Интернет тоже не заставил себя ждать, а вот блог так и остался недоступен. Раньше я бы плюнул на всё и лёг спать, но с мыслью о 52х постах, которые кто-то читает, кто-то даже комментирует, а кому-то, о чудо, и вовсе нравится, я уже уснуть спокойно не мог. Надо было чинить.</p>
+<hr/>
+<p>Теги: <a href='tag_blog.html'>blog</a>, <a href='tag_админское.html'>админское</a></p>
+]]></description><link>https://shumiloff.ru/pro-vnezapnyj-pereezd-na-github-pages.html</link>
+<guid>https://shumiloff.ru/./pro-vnezapnyj-pereezd-na-github-pages.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Wed, 30 Jan 2019 14:06:59 +0500</pubDate></item>
 <item><title>
 Про математический обман
 </title><description><![CDATA[
@@ -126,16 +139,4 @@
 <guid>https://shumiloff.ru/./otpravka-logov-s-openwrtlede-v-syslog-i-obrabotka-sobytij.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Sun, 13 Jan 2019 02:31:22 +0500</pubDate></item>
-<item><title>
-Про ярлыки и квадратно-гнездовой способ мышления
-</title><description><![CDATA[
-
-<p style="text-align: center;"><img src="images/urody.png"></p>
-<p>&nbsp; Один мой друг натолкнул меня на мысли о "навешивании ярлыков". Что же в сущности такое - эти ярлыки и зачем их на кого-то навешивать? На мой взгляд всё очень просто. Ярлыки - это принадлежность к некоей категории или нескольким категориям. Наш мозг склонен структурировать информацию, потому что в таком виде ей легче оперировать и её легче хранить. Мозг бережёт себя от перегрузок, переходя на более высокий уровень абстракции. На этом уровне он отбрасывает массу незначительных, как ему кажется, деталей, создавая ассоциативную связь вида "Вася" -&gt; "Урод". Для создания данной связи ему нужно, чтобы в категории "Уроды" уже находился некий индивид, скажем, "Петя", или группа индивидов, например, "Байкеры", которые имеют некие признаки или совершили некие действия подобные действиям нашего гипотетического Васи.</p>
-<hr/>
-<p>Теги: <a href='tag_жизненное.html'>жизненное</a>, <a href='tag_мысли-вслух.html'>мысли-вслух</a></p>
-]]></description><link>https://shumiloff.ru/pro-yarlyki-i-kvadratno-gnezdovoj-sposob-myshleniya.html</link>
-<guid>https://shumiloff.ru/./pro-yarlyki-i-kvadratno-gnezdovoj-sposob-myshleniya.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Wed, 09 Jan 2019 18:02:49 +0500</pubDate></item>
 </channel></rss>
