@@ -40,6 +40,99 @@
 <div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
 </div>
 <div id="divbody"><div class="content">
+<h3><a class="ablack" href="uporoboros-ili-samoperezapisyvaemye-znacheniya-v-shell-skriptax.html">
+Упороборос или самоперезаписываемые значения в shell скриптах
+</a></h3>
+<!-- bashblog_timestamp: #201902022157.39# -->
+<div class="subtitle">2019-02-02 21:57:39 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<p style="text-align: center;"><img src="images/updatevars.png"></p>
+<p>&nbsp; Периодически, когда мне нужно написать какой-то скрипт на шелле, я сталкиваюсь с типовыми задачами, которые можно решить быстро, просто и в лоб, а можно написать некоторое количество кода, что займёт больше времени, но при этом позволит использовать эту наработку в будущем. Одним словом, на шелле с этим всё обстоит точно так же, как и в других языках. Хотя наверное сочетание слов "библиотека на шелле" звучит&nbsp;достаточно дико и непривычно. Когда -то я уже <a href="v-rotejt-mne-logi-pro-minimalizm-busybox-i-logirovanie.html" target="_blank">писал</a> о <a href="https://github.com/alive-corpse/eslogger/" target="_blank">библиотеке логирования на шелле</a>,&nbsp;которую я&nbsp;сделал&nbsp;много лет назад&nbsp;и достаточно часто ей пользуюсь,&nbsp;с тех пор не было нужды что-то в ней менять.</p>
+<p>&nbsp; Вчера я столкнулся с задачей, для которой целая библиотека на гитхабе - это явный перебор, но метод, который можно включать в различные скрипты мне бы совсем не помешал. И вот чем прекрасен собственный блог - это самое подходящее место для того, чтобы оставить заметочку с небольшим куском кода, который потом при необходимости оттуда&nbsp;можно быстро скопировать. Как это нередко бывает при попытке написать что-то на шелле, сам код оказался куда проще, компактнее и универсальнее, чем изначально казалось, должен был быть.</p>
+<p>&nbsp;Общий смысл решаемой задачи следующий: для работы скрипта необходимо задание ряда переменных, в случае, если они не заданы, хотелось бы опросить пользователя в интерактивном режиме, заодно проверить соответствие этих переменных неким шаблонам с предложением повторить ввод в случае несоответствия, и, что самое главное, сохранить знaчения этих переменных внутри самого запущенного скрипта. Последнее будет полезным в случае, если этот скрипт потом потребует переноса на другой инстанс. Помимо сохранения значения переменных, так же происходит и их экспорт, что позволяет сразу же после ввода использовать их так, как если бы они уже были прописаны в скрипте изначально.&nbsp;Приведу пример, для чего мне это понадобилось. Сейчас я пишу скрипт для обновления dns записей в CloudFlare, для чего нужно ввести необходимые для авторизации данные. При первом запуске данные будут запрошены у пользователя и сохранены в скрипте. При повторном никаких вопросов уже не будет, а заодно можно будет&nbsp;пропустить лишний вызов апи для получения идентификатора зоны по её имени -&nbsp;мы просто сохраним полученный идентификатор так же внутри скрипта.&nbsp;Ниже приведу код метода:</p>
+<pre><code class="bash"># Updating variables
+# 1 - variable name
+# 2 - optional check mask
+# 3 - optional comment (will taken from variable comment if not exists)
+# 4 - optional value for non-interactive update
+selfUpdate() {
+    [ -z "$1" ] &amp;&amp; l fe "Variable name not exists"
+    l d "Updating variable $1"
+    var=`cat -n "$0" | sed '1,/###VARSBEGIN###/d;/###VARSEND###/,$d;s/^[^0-9]\+//;/\t'"$1"'=/!d'`
+    [ -n "$3" ] &amp;&amp; comm="$3" || comm=`echo "$var" | sed 's/^.*#[ \t]*//'`
+    [ -z "$comm" ] &amp;&amp; comm="$1"
+    val=`echo "$var" | sed 's/[ \t]*#.*$//;s/^[0-9]\+[ \t]*'"$1"'=//;s/^["'"'"']//;s/["'"'"']$//'`
+    nline=`echo "$var" | awk '{print $1}'`
+    if [ -z "$4" ]; then
+        res=''
+        while [ -z "$res" ]; do
+            [ -z "$val" ] &amp;&amp; echo -n "Input $comm: " || echo -n "Input $comm (current is $val): "
+            read res
+            if [ -n "$2" ]; then
+                [ -z "$(echo "$res" | grep -E "$2")" ] &amp;&amp; l w "Variable $1 check is failed, try again" &amp;&amp; res=''
+            else
+                break
+            fi
+         done
+    else
+        res="$4"
+    fi
+    if [ -n "$nline" ]; then
+        sed -i "$nline"'s/^.*$/'"$1"'='"'""$res""'"" # $comm"'/' "$0"
+    else
+        nline=`cat -n "$0" | awk '$2~/###VARSEND###/ {print $1}'`
+        sed "$nline"'i'"$1=\'$res\' # $comm" "$0"
+    fi
+    l d "Variable $1 is setted with value $res"
+    export "$1"="$res"
+}</code></pre>
+<p>&nbsp; Метод использует упомянутую выше библиотеку логирования, но при желании можно легко замениить вызовы "l d" и "l fe" на простые echo и exit (в случае с fe).</p>
+<p>&nbsp; В начале скрипта, где мы будем использовать этот метод, нужно&nbsp;с помощью двух&nbsp;меток определить место для инициализации переменных, все действия метода будут производиться с переменными, расположенными между этих меток, строки с метками не должны содержать никаких дополнительных символов ни до ни после меток. Так же есть ограничение - значения переменных не должны содержать одиночных кавычек. Пример первоначального задания переменных:</p>
+<pre><code class="bash">#!/bin/sh
+
+cd `dirname "$0"` # переходим в текущую директорию
+. ./eslogger # импортируем библиотеку логирования
+LOGLEVEL='debug'
+
+
+###VARSBEGIN###
+domain='' # domain name (for example: test.yourdomain.xx)
+authemail='' # email, used for authentication
+authkey='' # api key
+ttl='1440' # default ttl for new records
+zid='' # zone id
+###VARSEND###</code></pre>
+<p>&nbsp; Передаваемых методу параметров - четыре. Первый - это имя переменной. Второй - это regexp для проверки на соответствие значению. Если параметр не задан, то по умолчанию будет проверка на отличие от пустой строки. Третий параметр - это комментарий. При задании переменной будет выведено приглашение ко вводу вида: "Input comment: ", где comment - это тот самый комментарий, указанный третьим параметром. В случае, если&nbsp;комментарий не передан методу,&nbsp;он будет взят из строки с определением переменной. То есть, в нашем случае для переменной authkey без передачи третьего параметра мы получим приглашение ко вводу вида "Input api key: ". Если же комментарий не задан и в строке инициализации переменной, то в качестве комментария будет взято имя самой переменной.&nbsp;</p>
+<p>&nbsp; Если&nbsp;мы вызовем данный метод с именем неописанной между метками переменной, то она будет добавлена в конец списка перед меткой ###VARSEND### с использованием&nbsp;указанного комментария или имени переменной в качестве комментария в соответствии с описанной выше логикой.&nbsp;Вот пример вызова метода для описанных переменных (кроме переменной zid, которя будет обновлена после вызова метода api).</p>
+<pre><code class="bash">[ -z "$domain" ] &amp;&amp; selfUpdate domain '^([a-zA-Z0-9_-]+\.)*[a-zA-Z0-9][a-zA-Z0-9_-]+\.[a-zA-Z][a-zA-Z]{1,11}$' 
+[ -z "$authemail" ] &amp;&amp; selfUpdate authemail '^([a-zA-Z0-9_-]+\.?)*@([a-zA-Z0-9_-]+\.)[a-zA-Z][a-zA-Z]{1,11}$' 
+[ -z "$authkey" ] &amp;&amp; selfUpdate authkey '^[a-z0-9]{38}$' 
+[ -z "$ttl" ] &amp;&amp; selfUpdate ttl '^[0-9]{2,5}$'</code></pre>
+<p>&nbsp; Да, я знаю, что мои regexp не соответствуют RFC, но&nbsp;как минимальная защита от неверного ввода они меня устраивают. Теперь в качестве примера я попробую вызвать скрипт и наделать кучу ошибок при вводе.</p>
+<pre>$ ./test<br />2019.02.02-20:42:16 DEBUG: Updating variable domain<br />Input domain name (for example: test.yourdomain.xx):<br />2019.02.02-20:42:18 WARNING: Variable domain check is failed, try again<br />Input domain name (for example: test.yourdomain.xx): 123<br />2019.02.02-20:42:20 WARNING: Variable domain check is failed, try again<br />Input domain name (for example: test.yourdomain.xx): aaa<br />2019.02.02-20:42:22 WARNING: Variable domain check is failed, try again<br />Input domain name (for example: test.yourdomain.xx): test.<br />2019.02.02-20:42:26 WARNING: Variable domain check is failed, try again<br />Input domain name (for example: test.yourdomain.xx): !a@b#c<br />2019.02.02-20:42:38 WARNING: Variable domain check is failed, try again<br />Input domain name (for example: test.yourdomain.xx): test1.test2.com<br />2019.02.02-20:43:47 DEBUG: Variable domain is setted with value test1.test2.com<br />2019.02.02-20:43:47 DEBUG: Updating variable authemail<br />Input email, used for authentication: 123<br />2019.02.02-20:43:55 WARNING: Variable authemail check is failed, try again<br />Input email, used for authentication:<br />2019.02.02-20:43:58 WARNING: Variable authemail check is failed, try again<br />Input email, used for authentication: aaa<br />2019.02.02-20:43:59 WARNING: Variable authemail check is failed, try again<br />Input email, used for authentication: evgeniy.shumilov@gmail.com<br />2019.02.02-20:44:09 DEBUG: Variable authemail is setted with value evgeniy.shumilov@gmail.com<br />2019.02.02-20:44:09 DEBUG: Updating variable authkey<br />Input api key: 123<br />2019.02.02-20:44:17 WARNING: Variable authkey check is failed, try again<br />Input api key: aaa<br />2019.02.02-20:44:18 WARNING: Variable authkey check is failed, try again<br />Input api key: 012345678901234567890123456789abdcefg<br />2019.02.02-20:56:11 DEBUG: Variable authkey is setted with value 012345678901234567890123456789abdcefg<br />$</pre>
+<p>&nbsp; Скрипт не стал запрашивать ввода значения для переменной tty, так как она уже была задана. Попробуем запустить скрипт ещё раз.</p>
+<pre>$ ./test<br />$</pre>
+<p>&nbsp; Как видим, скрипт больше не требует от нас никаких действий. Посмотрим, как изменилась наша секция с переменными:</p>
+<pre><code class="bash">###VARSBEGIN###
+domain='test1.test2.com' # domain name (for example: test.yourdomain.xx)
+authemail='evgeniy.shumilov@gmail.com' # email, used for authentication
+authkey='012345678901234567890123456789abdcefg' # api key
+ttl='1440' # default ttl for new records
+zid='' # zone id
+###VARSEND###</code></pre>
+<p>&nbsp; Теперь попробуем отключить проверку и задать переменную принудительно, в этом случае при вводе нового значения мы получим в приглашении ко вводу помимо комментария ещё и текущее значение переменной. Вызов будет следующим:&nbsp;</p>
+<pre><code class="bash">selfUpdate ttl '^[0-9]{2,5}$'</code></pre>
+<pre>$ ./test<br />2019.02.02-21:11:27 DEBUG: Updating variable ttl<br />Input default ttl for new records (current is 1440): 120<br />2019.02.02-21:11:35 DEBUG: Variable ttl is setted with value 120<br />$</pre>
+<p>&nbsp; А теперь попробуем задать значение для ttl в неинтерактивном режиме (не забываем, что значение у нас является не третьим, а четвёртым параметром):</p>
+<pre><code class="bash">selfUpdate ttl '^[0-9]{2,5}$' '' 600</code></pre>
+<pre>$ ./test<br />2019.02.02-21:16:54 DEBUG: Updating variable ttl<br />2019.02.02-21:16:54 DEBUG: Variable ttl is setted with value 600<br />$</pre>
+<p>На этом на сегодня всё.</p>
+
+<p>Теги: <a href='tag_shell.html'>shell</a></p>
+<!-- text end -->
 <h3><a class="ablack" href="gde-mogut-prigoditsya-grafiki.html">
 Где могут пригодиться графики
 </a></h3>
@@ -53,7 +146,7 @@ Evgeniy Shumilov
 <p>&nbsp; Пару месяцев назад я нашёл для себя неожиданно полезное применение графиков в своей работе. И нет, это не мониторинг в классическом понимании этого слова. Это наколенные прогнозы.</p>
 <h4>Описание задачи</h4>
 <p>&nbsp; Есть у нас в jenkins одна джоба, которая производит довольно длительную операцию с базой данных. Размер базы около 100Гб, самый долгий этап - обработка таблицы почти в 60 миллионов записей. Иногда этот процесс проходил за 7 часов, иногда за 21 час и я пытался обнаружить причину, по которой получается такая разница во времени обработки данных. Проблема была в том, что понять, насколько быстро выполняется очередная ревизия джобы из километрового лога с цифрами было достаточно сложно. Скрипт раз в 30 секунд выдавал количество обработанных строк и приходилось брать разницу в этом количестве на каком-то временном периоде и затем сравнивать её с аналогичным прошлым, позапрошлым и, возможно, поза-поза-чёрт-знает-сколько-прошлым запуском. Ведь нет смысла ждать и нагружать мощности, если за час работы скрипта можно определить, сколько примерно он будет работать. Но всё оказалось не так просто. Зависимость количества обработанных строк за единицу времени оказалась нелинейной и чтобы понять характер работы, мне понадобился график.</p>
-<p class="readmore"><a href="./gde-mogut-prigoditsya-grafiki.html">Читать дальше...</a></p>
+<p class="readmore"><a href="gde-mogut-prigoditsya-grafiki.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_shell.html'>shell</a>, <a href='tag_админское.html'>админское</a>, <a href='tag_aws.html'>aws</a></p>
 <h3><a class="ablack" href="veb-server-odnim-fajlom-na-shellenbspv-24-kilobajta-s-shaxmatami-i-poetessami.html">
 Веб-сервер одним файлом на шелле в 24 килобайта с шахматами и поэтессами
@@ -65,7 +158,7 @@ Evgeniy Shumilov
 <!-- text begin -->
 <p style="text-align: center;"><img src="images/bbhttpd.png"></p>
 <p>&nbsp;&nbsp;Когда я начинал вести этот блог, у меня было стойкое ощущение, что писать мне будет не о чем, но снова и снова я нахожу какие-то интересные вещи, которыми хотелось бы поделиться.&nbsp; Иногда я нахожу их заброшенными,&nbsp;достаю из бекапов, причёсываю, привожу в более-менее нормальный вид, исправляю какие-то ошибки, пишу документацию, выкладываю на github. Вот так и сейчас. Для тестирования блога мне периодически нужен вебсервер. Вебсервер, который должен выполнять только одну функцию - отдавать браузеру HTML. Можно конечно открыть файл самим браузером из файловой системы, но тогда ломаются ссылки на графику и локальные ресуры вида /images/imagename.png. В качестве вебсервера я обычно запускал python c соответствующим модулем: python -m SimpleHTTPServer. В принципе, этого хватает, но дёргать за хвост целый интерпретатор пайтона ради отдачи HTML - это какой-то overkill. Тогда я и вспомнил, что когда-то написал веб-сервер на шелле. Кто сказал, что нельзя написать веб-сервер на шелле?</p>
-<p class="readmore"><a href="./veb-server-odnim-fajlom-na-shellenbspv-24-kilobajta-s-shaxmatami-i-poetessami.html">Читать дальше...</a></p>
+<p class="readmore"><a href="veb-server-odnim-fajlom-na-shellenbspv-24-kilobajta-s-shaxmatami-i-poetessami.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_shell.html'>shell</a>, <a href='tag_web.html'>web</a>, <a href='tag_minimalism.html'>minimalism</a></p>
 <h3><a class="ablack" href="dorabatyvaem-bashblog-napilnikom-chast-tretya---ispravlyaem-tajmstempy.html">
 Дорабатываем bashblog напильником, часть третья - исправляем таймстемпы
@@ -79,7 +172,7 @@ Evgeniy Shumilov
 <p>&nbsp; Не бывает бочки мёда без пары ложек дёгтя.&nbsp;Если привкус дёгтя вам по вкусу - можно ничего не менять и наслаждаться жизнью, в противном случае требуется&nbsp;какое-то вмешательство. Проблема, которую будем сегодня решать - это даты или таймстемпы, кому как привычнее. Дело в том, что когда работа с bashblog производится на одной машине, то проблем не возникает, но как только мы уносим проект в git и делаем checkout на другой машине, то все даты создания файлов на локальной файловой системе&nbsp;будут совпадать со временем чекаута. Например:</p>
 <pre>-rw-r--r-- 1 corpse corpse 12K ноя 1 14:17 nemnogo-ob-avtomaticheskoj-generacii-parolej.html<br />-rw-r--r-- 1 corpse corpse 9,0K ноя 1 14:17 o-detalyax-i-pamyati.html<br />-rw-r--r-- 1 corpse corpse 15K ноя 1 14:17 okna-v-okne---pro-evolyuciyu-virtualizacii.html<br />-rw-r--r-- 1 corpse corpse 30K ноя 1 14:17 pro-klaviatury-gryaznye-xaki-i-podgoranie-pyatoj-tochki.html<br />-rw-r--r-- 1 corpse corpse 13K ноя 1 14:17 pro-lyubov-k-minimalizmu-i-staticheskuyu-generaciyu-kontenta.html<br />&nbsp;</pre>
 <p>&nbsp; Bashblog устроен таким образом, что он при каждом rebuild или посте переписывает&nbsp;даты и время публикации поста на время создание файла. То есть, вы сделали десяток постов, потом решили добавить ещё один, находясь за другим компьютером, сделали checkout, создали новый пост&nbsp;и все ваши посты получили сегодняшнюю дату и время, когда вы выгрузили содержимое репозитория. Нехорошо. Есть два пути решения этой проблемы - либо вмешаться в&nbsp;содержимое&nbsp;bashblog и изменить его логику работы со временем и датой постов, либо&nbsp;после выгрузки изменять дату и время создания файлов на необходимые. Путь менее очевидный, но я предпочёл его, поскольку не хочу менять код bashblog без особой на то необходимости (чтобы не было мучительно больно после обновления самого bashblog при необходимости).</p>
-<p class="readmore"><a href="./dorabatyvaem-bashblog-napilnikom-chast-tretya---ispravlyaem-tajmstempy.html">Читать дальше...</a></p>
+<p class="readmore"><a href="dorabatyvaem-bashblog-napilnikom-chast-tretya---ispravlyaem-tajmstempy.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_bashblog.html'>bashblog</a>, <a href='tag_shell.html'>shell</a></p>
 <h3><a class="ablack" href="sam-sebe-xosting-ili-o-nedoocenyonnyx-utilitax.html">
 Сам себе хостинг или о недооценённых утилитах
@@ -96,7 +189,7 @@ Evgeniy Shumilov
 <img src="/images/mss.png" class="rightimg">
 <p>&nbsp;&nbsp;О чём вы думаете, когда слышите аббревиатуру FTP? На меня накатывает ностальгия. Сразу вспоминаются всякие уютные ламповые локалочки, сетевые карты rtl8139, серенькие восьмипортовые коммутаторы D-Link в пластиковых корпусах, папки Public и Private, полные варезом - фильмы, музыка, софт, игры... Одним словом, машинка времени в моей голове телепортирует меня куда-то лет на 15 назад. Много воды утекло с тех пор, но когда кто-то просит совета, как построить себе миниатюрный хостинг, часто в числе прочего я в том или ином виде получаю вопрос: "как поднять FTP"? И каждый раз меня это удивляет. А чем sftp не угодил? Да, это медленнее, но во-первых, скорость интернет соединения сейчас уже не та, что была 15 лет тому, во-вторых, у sftp на борту шифрование и в-третьих, sftp практически всегда уже есть там, где присутствует openssh.</p>
 <p>&nbsp;&nbsp;Да, sftp, реализованный средствами OpenSSH не лишён ряда недостатков. Хотелось найти некое решение, которое бы позволило быстро и просто реализовать доступ к машине для разных пользователей, для каждого в свою папку, желательно с chroot. Всё заканчивалось длинными ролями на ансибле, которые переписывали конфиги openssh, добавляли пользователей в нужные гргуппы, ставили пакет управления расширенными правами доступа, дёргали всякие setfacl и прочее. И тут меня попросил мой хороший друг (Иван, спасибо тебе!) помочь ему настроить сервер, а пользователям в качестве шелла поставить MySecureShell. Ранее я с таким зверем не сталкивался, да и ни от кого из моих знакомых за те почти 15 лет, что я общаюсь с linux, не слышал. Судя по всему, это не особо популярное решение. Я бы сказал, незаслуженно обойдённое вниманием. Да вы только посмотрите на их логотип! Похоже, это пингвин, прямо поверх которого начали разводить печатную плату (что похоже, сказалось на его настроении), при этом он ещё кому-то угражает двумя логотипами OpenBSD! Интересно, на каких веществах сидел автор? Ладно, этот вопрос оставим наркологам. Лучше посмотрим в конфигурационный файл. Почитав, что там написано, я понял, что эта штука умеет всё, о чём я мечтал и многое из того, о чём я мечтать не смел.</p>
-<p class="readmore"><a href="./sam-sebe-xosting-ili-o-nedoocenyonnyx-utilitax.html">Читать дальше...</a></p>
+<p class="readmore"><a href="sam-sebe-xosting-ili-o-nedoocenyonnyx-utilitax.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_ssh.html'>ssh</a>, <a href='tag_shell.html'>shell</a>, <a href='tag_sftp.html'>sftp</a>, <a href='tag_админское.html'>админское</a></p>
 <h3><a class="ablack" href="nemnogo-ob-avtomaticheskoj-generacii-parolej.html">
 Немного об автоматической генерации паролей
@@ -108,7 +201,7 @@ Evgeniy Shumilov
 <!-- text begin -->
 
 <p>&nbsp;&nbsp;Зачастую возникает необходимость сгенерировать для какой-то цели пароль. Преимущественно это пароль, состоящий из некоторого количества цифр и букв разного регистра.Иногда требуется сгенерировать несколько паролей сразу. Например, для обновления паролей для целой группы пользователей в скрипте или просто хочется выбрать наиболее удобный для набора. Пересмотрев несколько решений, я решил снова ездить на своих велосипедах, так как они имеют минимум зависимостей.</p>
-<p class="readmore"><a href="./nemnogo-ob-avtomaticheskoj-generacii-parolej.html">Читать дальше...</a></p>
+<p class="readmore"><a href="nemnogo-ob-avtomaticheskoj-generacii-parolej.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_shell.html'>shell</a>, <a href='tag_automatization.html'>automatization</a>, <a href='tag_админское.html'>админское</a></p>
 <h3><a class="ablack" href="v-rotejt-mne-logi-pro-minimalizm-busybox-i-logirovanie.html">
 В ротейт мне логи! Про минимализм, busybox и логирование.
@@ -131,7 +224,7 @@ Evgeniy Shumilov
     <li>Разделитель (очень полезно для отделения частей лога)</li>
     <li>Краткий синтаксис вызова (не люблю длинные имена модулей)</li>
 </ul>
-<p class="readmore"><a href="./v-rotejt-mne-logi-pro-minimalizm-busybox-i-logirovanie.html">Читать дальше...</a></p>
+<p class="readmore"><a href="v-rotejt-mne-logi-pro-minimalizm-busybox-i-logirovanie.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_logging.html'>logging</a>, <a href='tag_shell.html'>shell</a>, <a href='tag_busybox.html'>busybox</a>, <a href='tag_minimalism.html'>minimalism</a></p>
 <h3><a class="ablack" href="dorabatyvaem-bashblog-napilnikom-chast-vtoraya---podsvetka-sintaksisa.html">
 Дорабатываем bashblog напильником, часть вторая - подсветка синтаксиса
@@ -143,7 +236,7 @@ Evgeniy Shumilov
 <!-- text begin -->
 
 <p>&nbsp;&nbsp;Думаю, следует сразу предупредить, что я далеко не специалист в html, вёрстке по сетке, css, javascript и прочем кунг-фу из области визуализации веб контента, так что всё, что здесь изложено может оказаться далёким от best practice. Итак, есть задача - получить возможность добавлять в посты блога секции с кодом. Из хотелок - подсветка синтаксиса для разных языков и опциональный скроллбар, если текст не входит в поле по ширине.</p>
-<p class="readmore"><a href="./dorabatyvaem-bashblog-napilnikom-chast-vtoraya---podsvetka-sintaksisa.html">Читать дальше...</a></p>
+<p class="readmore"><a href="dorabatyvaem-bashblog-napilnikom-chast-vtoraya---podsvetka-sintaksisa.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_bashblog.html'>bashblog</a>, <a href='tag_web.html'>web</a>, <a href='tag_shell.html'>shell</a></p>
 <h3><a class="ablack" href="dorabatyvaem-napilnikom-bashblog-chast-pervaya.html">
 Дорабатываем напильником bashblog, часть первая
@@ -155,7 +248,7 @@ Evgeniy Shumilov
 <!-- text begin -->
 
 <p>&nbsp;&nbsp;О том, что мне нужно от блога, я рассказывал в прошлой <a href="https://shumiloff.ru/pro-lyubov-k-minimalizmu-i-staticheskuyu-generaciyu-kontenta.html">записи</a>. Теперь небольшая заметка о том, как привести всё это к минимально рабочему виду. Для начала создадим новую директорию, скачаем туда скрипт и выдадим права на запуск.</p>
-<p class="readmore"><a href="./dorabatyvaem-napilnikom-bashblog-chast-pervaya.html">Читать дальше...</a></p>
+<p class="readmore"><a href="dorabatyvaem-napilnikom-bashblog-chast-pervaya.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_bashblog.html'>bashblog</a>, <a href='tag_web.html'>web</a>, <a href='tag_shell.html'>shell</a>, <a href='tag_rsync.html'>rsync</a></p>
 <h3><a class="ablack" href="pro-lyubov-k-minimalizmu-i-staticheskuyu-generaciyu-kontenta.html">
 Про любовь к минимализму и статическую генерацию контента
@@ -177,7 +270,7 @@ Evgeniy Shumilov
     <li>возможность подключения комментариев</li>
     <li>возможность подключения подсветки синтаксиса</li>
 </ul>
-<p class="readmore"><a href="./pro-lyubov-k-minimalizmu-i-staticheskuyu-generaciyu-kontenta.html">Читать дальше...</a></p>
+<p class="readmore"><a href="pro-lyubov-k-minimalizmu-i-staticheskuyu-generaciyu-kontenta.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_ностальгия.html'>ностальгия</a>, <a href='tag_minimalism.html'>minimalism</a>, <a href='tag_web.html'>web</a>, <a href='tag_shell.html'>shell</a>, <a href='tag_blog.html'>blog</a>, <a href='tag_bashblog.html'>bashblog</a></p>
 </div>
 <div id="footer">

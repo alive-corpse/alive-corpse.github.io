@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="main.css" type="text/css" />
+<link rel="stylesheet" href="blog.css" type="text/css" />
+<link rel="stylesheet" href="assets/highlight/styles/corpse.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="" href="feed.rss" />
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+<script src="assets/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<title>Упороборос или самоперезаписываемые значения в shell скриптах</title>
+</head><body>
+<div id="divbodyholder">
+<div class="headerholder">
+<a href="https://vk.com/evgeniy_shumilov" target="_blank"><img src="/images/logo.png" class="logo" height="106pt" style="float: left; margin-right: 20px;"></a>
+<div class="header">
+<div id="title">
+<h1 class="nomargin"><a class="ablack" href="https://shumiloff.ru/index.html">Зайчатки разума</a></h1>
+<div id="description">Записная книжка айтишника</div>
+</div></div>
+<ul class="full-width">
+    <li>
+        <a href="/pro-lyubov-k-minimalizmu-i-staticheskuyu-generaciyu-kontenta.html">О блоге</a>
+<!--
+        <ul>
+            <li><a href="#">Item1</a></li>
+            <li><a href="#">Item2</a></li>
+            <li><a href="#">Item3</a></li>
+        </ul>
+-->
+    </li>
+    <li><a href="/all_tags.html">Теги</a></li>
+    <li><a href="/all_posts.html">Все посты</a></li>
+    <li><a href="/tag_ностальгия.html">Ностальгическое</a></li>
+    <li><a href="/tag_мысли-вслух.html">Мысли вслух</a></li>
+</ul>
+
+<div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
+</div>
+<div id="divbody"><div class="content">
+<!-- entry begin -->
+<h3><a class="ablack" href="uporoboros-ili-samoperezapisyvaemye-znacheniya-v-shell-skriptax.html">
+Упороборос или самоперезаписываемые значения в shell скриптах
+</a></h3>
+<!-- bashblog_timestamp: #201902022157.39# -->
+<div class="subtitle">2019-02-02 21:57:39 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<p style="text-align: center;"><img src="images/updatevars.png"></p>
+<p>&nbsp; Периодически, когда мне нужно написать какой-то скрипт на шелле, я сталкиваюсь с типовыми задачами, которые можно решить быстро, просто и в лоб, а можно написать некоторое количество кода, что займёт больше времени, но при этом позволит использовать эту наработку в будущем. Одним словом, на шелле с этим всё обстоит точно так же, как и в других языках. Хотя наверное сочетание слов "библиотека на шелле" звучит&nbsp;достаточно дико и непривычно. Когда -то я уже <a href="v-rotejt-mne-logi-pro-minimalizm-busybox-i-logirovanie.html" target="_blank">писал</a> о <a href="https://github.com/alive-corpse/eslogger/" target="_blank">библиотеке логирования на шелле</a>,&nbsp;которую я&nbsp;сделал&nbsp;много лет назад&nbsp;и достаточно часто ей пользуюсь,&nbsp;с тех пор не было нужды что-то в ней менять.</p>
+<p>&nbsp; Вчера я столкнулся с задачей, для которой целая библиотека на гитхабе - это явный перебор, но метод, который можно включать в различные скрипты мне бы совсем не помешал. И вот чем прекрасен собственный блог - это самое подходящее место для того, чтобы оставить заметочку с небольшим куском кода, который потом при необходимости оттуда&nbsp;можно быстро скопировать. Как это нередко бывает при попытке написать что-то на шелле, сам код оказался куда проще, компактнее и универсальнее, чем изначально казалось, должен был быть.</p>
+<p>&nbsp;Общий смысл решаемой задачи следующий: для работы скрипта необходимо задание ряда переменных, в случае, если они не заданы, хотелось бы опросить пользователя в интерактивном режиме, заодно проверить соответствие этих переменных неким шаблонам с предложением повторить ввод в случае несоответствия, и, что самое главное, сохранить знaчения этих переменных внутри самого запущенного скрипта. Последнее будет полезным в случае, если этот скрипт потом потребует переноса на другой инстанс. Помимо сохранения значения переменных, так же происходит и их экспорт, что позволяет сразу же после ввода использовать их так, как если бы они уже были прописаны в скрипте изначально.&nbsp;Приведу пример, для чего мне это понадобилось. Сейчас я пишу скрипт для обновления dns записей в CloudFlare, для чего нужно ввести необходимые для авторизации данные. При первом запуске данные будут запрошены у пользователя и сохранены в скрипте. При повторном никаких вопросов уже не будет, а заодно можно будет&nbsp;пропустить лишний вызов апи для получения идентификатора зоны по её имени -&nbsp;мы просто сохраним полученный идентификатор так же внутри скрипта.&nbsp;Ниже приведу код метода:</p>
+<pre><code class="bash"># Updating variables
+# 1 - variable name
+# 2 - optional check mask
+# 3 - optional comment (will taken from variable comment if not exists)
+# 4 - optional value for non-interactive update
+selfUpdate() {
+    [ -z "$1" ] &amp;&amp; l fe "Variable name not exists"
+    l d "Updating variable $1"
+    var=`cat -n "$0" | sed '1,/###VARSBEGIN###/d;/###VARSEND###/,$d;s/^[^0-9]\+//;/\t'"$1"'=/!d'`
+    [ -n "$3" ] &amp;&amp; comm="$3" || comm=`echo "$var" | sed 's/^.*#[ \t]*//'`
+    [ -z "$comm" ] &amp;&amp; comm="$1"
+    val=`echo "$var" | sed 's/[ \t]*#.*$//;s/^[0-9]\+[ \t]*'"$1"'=//;s/^["'"'"']//;s/["'"'"']$//'`
+    nline=`echo "$var" | awk '{print $1}'`
+    if [ -z "$4" ]; then
+        res=''
+        while [ -z "$res" ]; do
+            [ -z "$val" ] &amp;&amp; echo -n "Input $comm: " || echo -n "Input $comm (current is $val): "
+            read res
+            if [ -n "$2" ]; then
+                [ -z "$(echo "$res" | grep -E "$2")" ] &amp;&amp; l w "Variable $1 check is failed, try again" &amp;&amp; res=''
+            else
+                break
+            fi
+         done
+    else
+        res="$4"
+    fi
+    if [ -n "$nline" ]; then
+        sed -i "$nline"'s/^.*$/'"$1"'='"'""$res""'"" # $comm"'/' "$0"
+    else
+        nline=`cat -n "$0" | awk '$2~/###VARSEND###/ {print $1}'`
+        sed "$nline"'i'"$1=\'$res\' # $comm" "$0"
+    fi
+    l d "Variable $1 is setted with value $res"
+    export "$1"="$res"
+}</code></pre>
+<p>&nbsp; Метод использует упомянутую выше библиотеку логирования, но при желании можно легко замениить вызовы "l d" и "l fe" на простые echo и exit (в случае с fe).</p>
+<p>&nbsp; В начале скрипта, где мы будем использовать этот метод, нужно&nbsp;с помощью двух&nbsp;меток определить место для инициализации переменных, все действия метода будут производиться с переменными, расположенными между этих меток, строки с метками не должны содержать никаких дополнительных символов ни до ни после меток. Так же есть ограничение - значения переменных не должны содержать одиночных кавычек. Пример первоначального задания переменных:</p>
+<pre><code class="bash">#!/bin/sh
+
+cd `dirname "$0"` # переходим в текущую директорию
+. ./eslogger # импортируем библиотеку логирования
+LOGLEVEL='debug'
+
+
+###VARSBEGIN###
+domain='' # domain name (for example: test.yourdomain.xx)
+authemail='' # email, used for authentication
+authkey='' # api key
+ttl='1440' # default ttl for new records
+zid='' # zone id
+###VARSEND###</code></pre>
+<p>&nbsp; Передаваемых методу параметров - четыре. Первый - это имя переменной. Второй - это regexp для проверки на соответствие значению. Если параметр не задан, то по умолчанию будет проверка на отличие от пустой строки. Третий параметр - это комментарий. При задании переменной будет выведено приглашение ко вводу вида: "Input comment: ", где comment - это тот самый комментарий, указанный третьим параметром. В случае, если&nbsp;комментарий не передан методу,&nbsp;он будет взят из строки с определением переменной. То есть, в нашем случае для переменной authkey без передачи третьего параметра мы получим приглашение ко вводу вида "Input api key: ". Если же комментарий не задан и в строке инициализации переменной, то в качестве комментария будет взято имя самой переменной.&nbsp;</p>
+<p>&nbsp; Если&nbsp;мы вызовем данный метод с именем неописанной между метками переменной, то она будет добавлена в конец списка перед меткой ###VARSEND### с использованием&nbsp;указанного комментария или имени переменной в качестве комментария в соответствии с описанной выше логикой.&nbsp;Вот пример вызова метода для описанных переменных (кроме переменной zid, которя будет обновлена после вызова метода api).</p>
+<pre><code class="bash">[ -z "$domain" ] &amp;&amp; selfUpdate domain '^([a-zA-Z0-9_-]+\.)*[a-zA-Z0-9][a-zA-Z0-9_-]+\.[a-zA-Z][a-zA-Z]{1,11}$' 
+[ -z "$authemail" ] &amp;&amp; selfUpdate authemail '^([a-zA-Z0-9_-]+\.?)*@([a-zA-Z0-9_-]+\.)[a-zA-Z][a-zA-Z]{1,11}$' 
+[ -z "$authkey" ] &amp;&amp; selfUpdate authkey '^[a-z0-9]{38}$' 
+[ -z "$ttl" ] &amp;&amp; selfUpdate ttl '^[0-9]{2,5}$'</code></pre>
+<p>&nbsp; Да, я знаю, что мои regexp не соответствуют RFC, но&nbsp;как минимальная защита от неверного ввода они меня устраивают. Теперь в качестве примера я попробую вызвать скрипт и наделать кучу ошибок при вводе.</p>
+<pre>$ ./test<br />2019.02.02-20:42:16 DEBUG: Updating variable domain<br />Input domain name (for example: test.yourdomain.xx):<br />2019.02.02-20:42:18 WARNING: Variable domain check is failed, try again<br />Input domain name (for example: test.yourdomain.xx): 123<br />2019.02.02-20:42:20 WARNING: Variable domain check is failed, try again<br />Input domain name (for example: test.yourdomain.xx): aaa<br />2019.02.02-20:42:22 WARNING: Variable domain check is failed, try again<br />Input domain name (for example: test.yourdomain.xx): test.<br />2019.02.02-20:42:26 WARNING: Variable domain check is failed, try again<br />Input domain name (for example: test.yourdomain.xx): !a@b#c<br />2019.02.02-20:42:38 WARNING: Variable domain check is failed, try again<br />Input domain name (for example: test.yourdomain.xx): test1.test2.com<br />2019.02.02-20:43:47 DEBUG: Variable domain is setted with value test1.test2.com<br />2019.02.02-20:43:47 DEBUG: Updating variable authemail<br />Input email, used for authentication: 123<br />2019.02.02-20:43:55 WARNING: Variable authemail check is failed, try again<br />Input email, used for authentication:<br />2019.02.02-20:43:58 WARNING: Variable authemail check is failed, try again<br />Input email, used for authentication: aaa<br />2019.02.02-20:43:59 WARNING: Variable authemail check is failed, try again<br />Input email, used for authentication: evgeniy.shumilov@gmail.com<br />2019.02.02-20:44:09 DEBUG: Variable authemail is setted with value evgeniy.shumilov@gmail.com<br />2019.02.02-20:44:09 DEBUG: Updating variable authkey<br />Input api key: 123<br />2019.02.02-20:44:17 WARNING: Variable authkey check is failed, try again<br />Input api key: aaa<br />2019.02.02-20:44:18 WARNING: Variable authkey check is failed, try again<br />Input api key: 012345678901234567890123456789abdcefg<br />2019.02.02-20:56:11 DEBUG: Variable authkey is setted with value 012345678901234567890123456789abdcefg<br />$</pre>
+<p>&nbsp; Скрипт не стал запрашивать ввода значения для переменной tty, так как она уже была задана. Попробуем запустить скрипт ещё раз.</p>
+<pre>$ ./test<br />$</pre>
+<p>&nbsp; Как видим, скрипт больше не требует от нас никаких действий. Посмотрим, как изменилась наша секция с переменными:</p>
+<pre><code class="bash">###VARSBEGIN###
+domain='test1.test2.com' # domain name (for example: test.yourdomain.xx)
+authemail='evgeniy.shumilov@gmail.com' # email, used for authentication
+authkey='012345678901234567890123456789abdcefg' # api key
+ttl='1440' # default ttl for new records
+zid='' # zone id
+###VARSEND###</code></pre>
+<p>&nbsp; Теперь попробуем отключить проверку и задать переменную принудительно, в этом случае при вводе нового значения мы получим в приглашении ко вводу помимо комментария ещё и текущее значение переменной. Вызов будет следующим:&nbsp;</p>
+<pre><code class="bash">selfUpdate ttl '^[0-9]{2,5}$'</code></pre>
+<pre>$ ./test<br />2019.02.02-21:11:27 DEBUG: Updating variable ttl<br />Input default ttl for new records (current is 1440): 120<br />2019.02.02-21:11:35 DEBUG: Variable ttl is setted with value 120<br />$</pre>
+<p>&nbsp; А теперь попробуем задать значение для ttl в неинтерактивном режиме (не забываем, что значение у нас является не третьим, а четвёртым параметром):</p>
+<pre><code class="bash">selfUpdate ttl '^[0-9]{2,5}$' '' 600</code></pre>
+<pre>$ ./test<br />2019.02.02-21:16:54 DEBUG: Updating variable ttl<br />2019.02.02-21:16:54 DEBUG: Variable ttl is setted with value 600<br />$</pre>
+<p>На этом на сегодня всё.</p>
+
+<p>Теги: <a href='tag_shell.html'>shell</a></p>
+<!-- text end -->
+<!-- entry end -->
+</div>
+<div id="disqus_thread"></div>
+            <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+               var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+            /* * * DONT EDIT BELOW THIS LINE * * */
+            (function() {
+            var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+            dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+            (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<div id="footer">
+<!-- Tolstoy Comments
+<script type="text/javascript">!(function(w,d,s,l,x){w[l]=w[l]||[];var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=!0;j.src='//web.tolstoycomments.com/sitejs/app.js?i='+l+'&x='+x+'&t='+(new Date().getTime());f.parentNode.insertBefore(j,f)})(window,document,'script','tolstoycomments','1577');</script>
+-->
+<a href="https://vk.com/evgeniy_shumilov">Evgeniy Shumilov</a> &mdash; <a href="mailto:evgeniy&#46;shumilov&#64;gmail&#46;com">evgeniy&#46;shumilov&#64;gmail&#46;com</a><br/>
+Generated with <a href="https://github.com/cfenollosa/bashblog">bashblog</a>, a single bash script to easily create blogs like this one</div>
+</div></div>
+</body></html>
+</div></div>
+<script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+        /* * * DONT EDIT BELOW THIS LINE * * */
+        (function () {
+        var s = document.createElement("script"); s.async = true;
+        s.type = "text/javascript";
+        s.src = "//" + disqus_shortname + ".disqus.com/count.js";
+        (document.getElementsByTagName("HEAD")[0] || document.getElementsByTagName("BODY")[0]).appendChild(s);
+    }());
+    </script>
+</body></html>
