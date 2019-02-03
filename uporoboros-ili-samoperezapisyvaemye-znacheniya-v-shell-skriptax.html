@@ -64,7 +64,7 @@ selfUpdate() {
     [ -z "$1" ] &amp;&amp; l fe "Variable name not exists"
     l d "Updating variable $1"
     var=`cat -n "$0" | sed '1,/###VARSBEGIN###/d;/###VARSEND###/,$d;s/^[^0-9]\+//;/\t'"$1"'=/!d'`
-    [ -n "$3" ] &amp;&amp; comm="$3" || comm=`echo "$var" | sed 's/^.*#[ \t]*//'`
+    [ -n "$3" ] &amp;&amp; comm="$3" || comm=`echo "$var" | sed '/#/!d;s/^.*#[ \t]*//'`
     [ -z "$comm" ] &amp;&amp; comm="$1"
     val=`echo "$var" | sed 's/[ \t]*#.*$//;s/^[0-9]\+[ \t]*'"$1"'=//;s/^["'"'"']//;s/["'"'"']$//'`
     nline=`echo "$var" | awk '{print $1}'`
