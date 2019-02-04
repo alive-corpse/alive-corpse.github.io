@@ -86,7 +86,7 @@ selfUpdate() {
         sed -i "$nline"'s/^.*$/'"$1"'='"'""$res""'"" # $comm"'/' "$0"
     else
         nline=`cat -n "$0" | awk '$2~/###VARSEND###/ {print $1}'`
-        sed "$nline"'i'"$1=\'$res\' # $comm" "$0"
+        sed -i "$nline"'i'"$1=\'$res\' # $comm" "$0"
     fi
     l d "Variable $1 is setted with value $res"
     export "$1"="$res"
