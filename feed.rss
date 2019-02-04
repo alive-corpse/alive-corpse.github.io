@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Mon, 04 Feb 2019 16:16:59 +0500</lastBuildDate>
-<pubDate>Mon, 04 Feb 2019 16:16:59 +0500</pubDate>
+<lastBuildDate>Mon, 04 Feb 2019 16:42:44 +0500</lastBuildDate>
+<pubDate>Mon, 04 Feb 2019 16:42:44 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
 <item><title>
-Про женкскую красоту и дорогую древесину
+Про женскую красоту и дорогую древесину
 </title><description><![CDATA[
 
 <p style="text-align: center;"><img src="images/woman/shampoo.jpg"></p>
 <p>&nbsp; Моя жена периодически смотрит различные видео, посвящённые маникюру, косметике и прочему девочковому стаффу. Особо не прислушиваюсь, но так или иначе всё это приходится слышать. Иногда это провоцирует появление различных сугубо мужских мыслей на эту тему, которые я и выложу тут. Скажу сразу - да, наверное я чего-то не понимаю (и не против, чтобы мне что-то объяснили), но большинство подобных описанным ниже ситуаций происходит по той причине, что женщинам просто хочется почувствовать себя особенными. Так же я прекрасно понимаю, что мы симметрично можем глупо выглядеть в глазах женщин со своими увлечениями электроникой, машинами и компьютерными играми.</p>
 <hr />
 <p>Теги: <a href='tag_мысли-вслух.html'>мысли-вслух</a></p>
-]]></description><link>https://shumiloff.ru/pro-zhenkskuyu-krasotu-i-doroguyu-drevesinu.html</link>
-<guid>https://shumiloff.ru/./pro-zhenkskuyu-krasotu-i-doroguyu-drevesinu.html</guid>
+]]></description><link>https://shumiloff.ru/pro-zhenskuyu-krasotu-i-doroguyu-drevesinu.html</link>
+<guid>https://shumiloff.ru/./pro-zhenskuyu-krasotu-i-doroguyu-drevesinu.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Mon, 04 Feb 2019 15:53:45 +0500</pubDate></item>
+<pubDate>Mon, 04 Feb 2019 16:42:39 +0500</pubDate></item>
 <item><title>
 Упороборос или самоперезаписываемые значения в shell скриптах
 </title><description><![CDATA[
