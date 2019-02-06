@@ -2,9 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Tue, 05 Feb 2019 16:58:43 +0500</lastBuildDate>
-<pubDate>Tue, 05 Feb 2019 16:58:43 +0500</pubDate>
+<lastBuildDate>Thu, 07 Feb 2019 03:40:52 +0500</lastBuildDate>
+<pubDate>Thu, 07 Feb 2019 03:40:52 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Скрипт для обновления DNS записей CloudFlare
+</title><description><![CDATA[
+
+<p style="text-align: center;"><img src="images/escflare.png"></p>
+<p>&nbsp; Пост называется "опять не спится" или "как&nbsp;бесплатно&nbsp;завернуть домен второго уровня на ваш домашний динамический IP адрес". Для чего это вам может быть нужно? Вариантов много. Например, это возможность впоследствии поднять дома какие-нибудь сервисы. Например, создать <a href="https://nextcloud.com/" target="_blank">собственное облако для хранения и расшаривания файлов</a> и смотреть в пути фильмы, лежащие на домашнем жёстком диске или развернуть <a href="http://max-3000.com/" target="_blank">личный блог</a>, сайт-визитку, <a href="https://mjdm.ru/" target="_blank">сервис умного дома</a>, да хоть устроить <a href="https://www.dmosk.ru/instruktions.php?object=Icecast" target="_blank">станцию онлайн вещания</a> - всё ограничивается вашей фантазией, вариантов использования может найтись масса, когда существует возможность.</p>
+<hr />
+<p>Теги: <a href='tag_shell.html'>shell</a>, <a href='tag_automatization.html'>automatization</a>, <a href='tag_networking.html'>networking</a>, <a href='tag_админское.html'>админское</a></p>
+]]></description><link>https://shumiloff.ru/skript-dlya-obnovleniya-dns-zapisej-cloudflare.html</link>
+<guid>https://shumiloff.ru/./skript-dlya-obnovleniya-dns-zapisej-cloudflare.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Thu, 07 Feb 2019 03:40:17 +0500</pubDate></item>
 <item><title>
 Про женскую внешность и шанс на знакомство
 </title><description><![CDATA[
@@ -125,16 +137,4 @@
 <guid>https://shumiloff.ru/./pro-evreev-chuvstva-veruyushhix-i-zakony.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Fri, 25 Jan 2019 16:42:09 +0500</pubDate></item>
-<item><title>
-Установка Micropython на esp8266 и утилита mpfshell
-</title><description><![CDATA[
-
-<p style="text-align: center;"><img src="images/mpfshell.png"></p>
-<p>&nbsp; Я давно и прочно люблю Python. Это уникальный язык, позволяющий <span style="text-decoration: line-through;">говнокодить</span> заниматься прототипированием с очень высокой скоростью и уровнем комфорта. Мне нравится его синтаксис, его простота, его универсальность и гибкость. Так же мне интересны микроконтроллеры, поэтому за проектом под названием <a class="page" title="MicroPython" href="https://micropython.org/">MicroPython</a> я слежу уже давно. Вообще, создание реализации интерпретатора Python3, пусть даже и в очень обрезанном виде для микроконтроллеров - это нечто на мой взгляд удивительное. Но куда полезнее от восторгов перейти к практике. Заодно расскажу про одну интересную утилиту, которая существенно облегчает жизнь.</p>
-<hr />
-<p>Теги: <a href='tag_esp8266.html'>esp8266</a>, <a href='tag_micropython.html'>micropython</a></p>
-]]></description><link>https://shumiloff.ru/ustanovka-micropython-na-esp8266-i-utilita-mpfshell.html</link>
-<guid>https://shumiloff.ru/./ustanovka-micropython-na-esp8266-i-utilita-mpfshell.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Thu, 24 Jan 2019 00:55:33 +0500</pubDate></item>
 </channel></rss>

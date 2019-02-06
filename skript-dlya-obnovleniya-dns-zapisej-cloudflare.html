@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="main.css" type="text/css" />
+<link rel="stylesheet" href="blog.css" type="text/css" />
+<link rel="stylesheet" href="assets/highlight/styles/corpse.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="" href="feed.rss" />
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+<script src="assets/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<title>Скрипт для обновления DNS записей CloudFlare</title>
+</head><body>
+<div id="divbodyholder">
+<div class="headerholder">
+<a href="https://vk.com/evgeniy_shumilov" target="_blank"><img src="/images/logo.png" class="logo" height="106pt" style="float: left; margin-right: 20px;"></a>
+<div class="header">
+<div id="title">
+<h1 class="nomargin"><a class="ablack" href="https://shumiloff.ru/index.html">Зайчатки разума</a></h1>
+<div id="description">Записная книжка айтишника</div>
+</div></div>
+<ul class="full-width">
+    <li>
+        <a href="/pro-lyubov-k-minimalizmu-i-staticheskuyu-generaciyu-kontenta.html">О блоге</a>
+<!--
+        <ul>
+            <li><a href="#">Item1</a></li>
+            <li><a href="#">Item2</a></li>
+            <li><a href="#">Item3</a></li>
+        </ul>
+-->
+    </li>
+    <li><a href="/all_tags.html">Теги</a></li>
+    <li><a href="/all_posts.html">Все посты</a></li>
+    <li><a href="/tag_ностальгия.html">Ностальгическое</a></li>
+    <li><a href="/tag_мысли-вслух.html">Мысли вслух</a></li>
+</ul>
+
+<div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
+</div>
+<div id="divbody"><div class="content">
+<!-- entry begin -->
+<h3><a class="ablack" href="skript-dlya-obnovleniya-dns-zapisej-cloudflare.html">
+Скрипт для обновления DNS записей CloudFlare
+</a></h3>
+<!-- bashblog_timestamp: #201902070340.17# -->
+<div class="subtitle">2019-02-07 03:40:17 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<p style="text-align: center;"><img src="images/escflare.png"></p>
+<p>&nbsp; Пост называется "опять не спится" или "как&nbsp;бесплатно&nbsp;завернуть домен второго уровня на ваш домашний динамический IP адрес". Для чего это вам может быть нужно? Вариантов много. Например, это возможность впоследствии поднять дома какие-нибудь сервисы. Например, создать <a href="https://nextcloud.com/" target="_blank">собственное облако для хранения и расшаривания файлов</a> и смотреть в пути фильмы, лежащие на домашнем жёстком диске или развернуть <a href="http://max-3000.com/" target="_blank">личный блог</a>, сайт-визитку, <a href="https://mjdm.ru/" target="_blank">сервис умного дома</a>, да хоть устроить <a href="https://www.dmosk.ru/instruktions.php?object=Icecast" target="_blank">станцию онлайн вещания</a> - всё ограничивается вашей фантазией, вариантов использования может найтись масса, когда существует возможность.</p>
+<hr />
+<p>&nbsp; Начну издалека. Мне не нравится, когда с меня пытаются любыми способами вытянуть деньги и повышают цену на какой-то продукт в два или три раза без особых на то оснований. Конечно, я могу и не знать об этих основаниях, но скорее всего цена повысилась исходя из принципа "да куда вы нахрен денетесь с подводной лодки?". Я имею в виду интернет от билайн, точнее их услугу предоставления белого IP адреса.&nbsp;</p>
+<p>&nbsp; Много лет я пользовался интернетом от Dom.ru, меня всё устраивало, но меня достали менеджеры билайна, пытающиеся обратить меня в свою веру. Мне звонили раз 15 и предлагали перейти на их интернет. Свидетели Святого Коннектия, честное слово! В конечном итоге я разобрался в тарифах и это действительно оказалось выгодно.</p>
+<p>&nbsp; За Dom.ru (интернет + телевидение) я платил раз в месяц 550 рублей + 20 рублей за белый адрес, затем мне пришло письмо, где меня уведомляли, что стоимость повышают и я буду платить 600 с хвостиком за то же самое. Что-ж, я пришёл в оффис и положил <span style="text-decoration: line-through;">партбилет</span> тв карту на стол, заявив, что их телевидением я всё равно&nbsp;пользовался два раза за последние несколько лет и хотел бы от него отказаться. Тогда мне предложили какую-то сказочную скидку в 20 процентов на ближайшие полгода, оставив тариф прежним.&nbsp;Я согласился. Примерно через три месяца мне снова пришло письмо о том, что я опять должен платить больше. На этот раз я настаивал и перешёл на тариф без телевидения. Скорость интернета увеличилась в два раза, но платил я по-прежнему примерно ту же сумму в 570 рублей. Прошло ещё два или три месяца и я снова получил письмо, где было сказано, что теперь уже точно стоимость услуг будет около 670 рублей в месяц. Казалось бы, какие-то 100 рублей в месяц ничего не решают, но это было делом принципа.</p>
+<p>&nbsp;&nbsp;На протяжении всех этих событий я параллельно отслеживал, что может предложить билайн в отношении домашнего интернета.&nbsp;Цены и условия были довольно заманчивыми, но вот стоимость белого IP адреса, который мне действительно нужен, менее чем за год выросла с 50-ти до 150-ти рублей. Как несложно заметить, это 1800 рублей в год и при этом никто не обещает, что стоимость этой услуги не будет повышаться и дальше. Меня это не устраивало. В остальном тариф позволял производить оплату за домашний интернет, свой телефон и телефон жены на один счёт, что несомненно, было очень удобно, да и так получалось, что в итоге я на этом экономил полее 5600 в год. Нужно было как-то решать задачу с IP адресом.</p>
+<p>&nbsp; Мой домен был делегирован на Яндекс. У них есть сервис "Почта для домена", который меня всем устраивал. Тогда я почитал документацию на их API и написал скрипт, которому в параметрах можно было передать список DNS записей и IP адрес, после чего скрипт обновлял их. Конечно,&nbsp;подобных скриптов было навалом, но чего я только не видел - python, perl, php и, прости, господи, npm (спасибо, что без gradle для сборки обошлось)!!! Импортирование нескольких библиотек, развесистые зависимости - и всё это для того, чтобы сделать пару вызовов курлом к апи. У меня аллергия на вещи, которые для решения простых задач требуют библиотеки валидации ввода, работы с json, ещё чего-то мне неизвестного и, заодно, библиотеку поддержки цыган с медведями и балалайками просто так, на всякий случай. Это всё-равно что в булочную за углом ездить на карьерном самосвале.</p>
+<p>&nbsp; Конечно, нашёл я и варианты, написанные на bash, но пара просмотренных мной не подходили, поскольку&nbsp;так же использовали&nbsp;сущности, которые мне ставить не хотелось, либо представлялось затруднительным. Принцип был простой - скрипт должен работать на роутере и&nbsp;использовать&nbsp;минимум из того, что можно поставить на роутер.&nbsp;А если уж писать свой велосипед, то вполне можно добавить немного магии, локального блекджека и падших женщин, не прибегая к импорту внешних "цыган, медведей и балалаек". В скрипте я реализовал <a href="v-rotejt-mne-logi-pro-minimalizm-busybox-i-logirovanie.html" target="_blank">нормальное многоуровневое логирование</a> (что существенно облегчило отладку, благо, метод этот я написал уже очень давно) и возможность обновлять сразу несколько записей, передавая их через запятую. Например, можно было написать test,gw01,*,@.shumiloff.ru и скрипт обновил бы сразу четыре записи, что экономило время, не требовало множества дополнительных запусков и, как следствие, дополнительных вызовов API.</p>
+<p>&nbsp; Я перешёл на билайн и скрипт работал как часы, исправно обновляя необходимые DNS записи, что позволяло мне постоянно иметь доступ извне к своей машине и пользоваться теми сервисами, которые крутились на домашнем сервисе. Этот блог был в их числе. В какой-то момент я причесал код, убрал лишнее, добавил помощь, readme и <a href="https://github.com/alive-corpse/ydns" target="_blank">выложил это всё на github</a>.</p>
+<p>&nbsp; Всё шло замечательно, пока в один прекрасный момент&nbsp;Яндекс без объявления войны не мигрировал мой домен с почты для домена на Яндекс.Коннект. Нужно было срочно решать, что делать с блогом и я, посидев ночью,&nbsp;<a href="pro-vnezapnyj-pereezd-na-github-pages.html" target="_blank">перенёс его на Github Pages</a>. Но это&nbsp;решало лишь малую часть проблем. Мне по-прежнему нужен был доступ извне к своим сервисам, домашним проектам и данным. Да даже музыка, которую я порой слушаю в процессе работы или передвижения по городу, воспроизводится с домашнего сервера.</p>
+<p>&nbsp; Я покопался на гитхабе и нашёл <a href="https://github.com/Yukioru/yandex-connect-ddns" target="_blank">некий репозиторий</a>, не разобравшись в содержимом которого, я решил, что задача написания скрипта для обновления DNS записей реализуема и для Яндекс.Коннект. Спойлер: это не так. Я начал писать, параллельно изучая документацию к API Яндекс.Коннект, разобрался с авторизацией через OAuth 2, написал кусок кода, но потом с удивлением для себя обнаружил, что возможности изменить DNS записи просто нет! Её не реализовали. Параллельно на гитхабе в issues мне написал один человек - мол, спасибо за скрипт, всё работало, но после переноса на коннект перестало. Мы с ним пообщались и оказалось, что после его запроса в техподдержку яндекса, его домен перенесли обратно, в сервис "Почта для домена". Я тоже написал в поддержку, объяснил ситуацию. Мне пришёл автоматический ответ - тикет создан, номер такой-то, обращение будет рассмотрено в срок от трёх до пяти рабочих дней. Прошла неделя, воз и ныне там, ни ответа, ни привета.</p>
+<p>&nbsp; После отправки письма в поддержку, я начал искать альтернативные решения и в конце-концов, решил взять себе ещё один бесплатный домен второго уровня на&nbsp;<a href="http://freenom.com/" target="_blank">http://freenom.com/</a>. Был удивлён, когда узнал, что пара моих знакомых, разбирающихся в теме не знала об этой возможности. Когда-то я уже брал там пару доменов под свои домашние проекты, это было ещё лет 6 тому назад, хотя я и был наслышан о том, что в один прекрасный момент этот домен просто могут прикрыть и потребовать деньги за продолжение поддержки, если проект окажется успешным. В моём случае это некритично. Мне просто нужен доступ снаружи, а публичные DDNS сервисы меня по ряду причин не устраивают. В общем, для домена я долго выбирал DNS хостинг с поддержкой апи. Попробовал <a href="https://dnspod.com" target="_blank">https://dnspod.com</a>&nbsp;- вроде бы всё неплохо и всё работает, кроме одной мелочи - не приходит ни одного письма на почту даже после того, как на сайте пишут, что письмо выслано. То есть, в случае необходимости я даже пароль своего аккаунта восстановить не смогу. В итоге выбор пал на <a href="https://cloudflare.com" target="_blank">https://cloudflare.com</a>. Я не пожалел и смело могу его порекомендовать.</p>
+<p>&nbsp; По аналогии со скриптом для обновления записей на Почте для домена от Яндекс, я <a href="https://github.com/alive-corpse/escflare" target="_blank">написал свой скрипт для CloudFlare</a>. Причины создания собственного велосипеда были точно такими же, как и в случае с Яндексом, а вот <s>спектр азартных игр и падших женщин</s> функционал расширился.&nbsp;В процессе написания мне в голову пришла идея о том, что неплохо было бы во-первых, сохранять параметры запуска в самом скрипте, во-вторых, при необходимости запрашивать их в интерактивном режиме при вводе и, в третьих, валидировать. Тогда я сделал <a href="/uporoboros-ili-samoperezapisyvaemye-znacheniya-v-shell-skriptax.html" target="_blank">метод, реализующий эту идею</a>.&nbsp;Затем метод эволюционировал и начал проверять, изменилось ли значение и перезаписывать его только в случае изменения, что поможет сохранить флешпамять роутера на больший срок. Появился метод очистки заданных переменных и оператор case, позволяющий&nbsp;обновлять/задавать и очищать необходимые параметры. Это позволило реализовать и другие идеи. Например, если&nbsp;нам для обновления зоны нужно получить её ID, то зачем дёргать для этого апи каждый раз?&nbsp;Можно закешировать имя зоны, ID и&nbsp;избавиться от лишнего вызова и обработки его результатов, сэкономив время и ресурсы CPU. А если мы проверяем изменение IP адреса на интерфейсе, скажем, в кроне раз в минуту, то какой смысл вообще обновлять записи, если адрес не изменился? Правильно! Можно опять же закешировать содержимое записи в самом скрипте и сверять его с адресом, обновляя зону только в том случае, если адрес изменился. Логирование тоже никуда не делось. Одним словом, у меня постепенно получается некий свой крошечный фреймворк с шахматами и поэтессами для написания скриптов на sh. И с каждым следующим скриптом он эволюционирует и нравится мне всё больше.</p>
+<p>&nbsp; Так как CloudFlare&nbsp;в отличие от Яндекс сервисов пользуются не только у нас, но и по всему земному шару, пришлось&nbsp;написать два README - <a href="https://github.com/alive-corpse/escflare/blob/master/READMERUS.md" target="_blank">для соотечественников</a> и <a href="https://github.com/alive-corpse/escflare/blob/master/README.md" target="_blank">для всех остальных</a>. Не уверен, что у меня это получилось хорошо, но какая-то документация в любом случае лучше, чем никакой.</p>
+<p>P.S.: Я бы не рекомендовал пользоваться freenom.com для чего-то, что вам дорого и важно, но для пет проектов связка freenom.com + CloudFlare + вышеописанный скрипт - это то, что доктор прописал, потому что интернет с динамическим белым IP адресом есть дома практически у всех, а тут вы&nbsp;без <span style="text-decoration: line-through;">оплаты и смс</span> каких-либо дополнительных затрат средств получаете&nbsp;на его основе свой бесплатный хостинг без рекламы с доменом второго уровня и ресурсами, ограниченными тем железом, какое у вас дома найдётся (например, старый смартфон или планшет тоже вполне может для этого сгодиться, не говоря уже о всяких Raspberry и роутерах, поддерживающих *wrt).&nbsp;В какой-нибудь другой статье напишу более подробно, как сделать свою песочницу,&nbsp;используя всё вышеописанное и получить зелёный сертификат от Let's encrypt.&nbsp;</p>
+
+<p>Теги: <a href='tag_shell.html'>shell</a>, <a href='tag_automatization.html'>automatization</a>, <a href='tag_networking.html'>networking</a>, <a href='tag_админское.html'>админское</a></p>
+<!-- text end -->
+<!-- entry end -->
+</div>
+<div id="disqus_thread"></div>
+            <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+               var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+            /* * * DONT EDIT BELOW THIS LINE * * */
+            (function() {
+            var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+            dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+            (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<div id="footer">
+<!-- Tolstoy Comments
+<script type="text/javascript">!(function(w,d,s,l,x){w[l]=w[l]||[];var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=!0;j.src='//web.tolstoycomments.com/sitejs/app.js?i='+l+'&x='+x+'&t='+(new Date().getTime());f.parentNode.insertBefore(j,f)})(window,document,'script','tolstoycomments','1577');</script>
+-->
+<a href="https://vk.com/evgeniy_shumilov">Evgeniy Shumilov</a> &mdash; <a href="mailto:evgeniy&#46;shumilov&#64;gmail&#46;com">evgeniy&#46;shumilov&#64;gmail&#46;com</a><br/>
+Generated with <a href="https://github.com/cfenollosa/bashblog">bashblog</a>, a single bash script to easily create blogs like this one</div>
+</div></div>
+</body></html>
+</div></div>
+<script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+        /* * * DONT EDIT BELOW THIS LINE * * */
+        (function () {
+        var s = document.createElement("script"); s.async = true;
+        s.type = "text/javascript";
+        s.src = "//" + disqus_shortname + ".disqus.com/count.js";
+        (document.getElementsByTagName("HEAD")[0] || document.getElementsByTagName("BODY")[0]).appendChild(s);
+    }());
+    </script>
+</body></html>
