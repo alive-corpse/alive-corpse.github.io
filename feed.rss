@@ -2,8 +2,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Fri, 08 Feb 2019 02:40:01 +0500</lastBuildDate>
-<pubDate>Fri, 08 Feb 2019 02:40:01 +0500</pubDate>
+<lastBuildDate>Fri, 08 Feb 2019 02:58:28 +0500</lastBuildDate>
+<pubDate>Fri, 08 Feb 2019 02:58:28 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
 <item><title>
 О информационной безопасности и сроке годности
@@ -18,19 +18,6 @@
 <guid>https://shumiloff.ru/./o-informacionnoj-bezopasnosti-i-sroke-godnosti.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Fri, 08 Feb 2019 02:22:18 +0500</pubDate></item>
-<item><title>
-Title on this line
-</title><description><![CDATA[
-
-<p>The rest of the text file is an <b>html</b> blog post. The process will continue as soon
-as you exit your editor.</p>
-
-<p>Теги: <a href='tag_keep-this-tag-format.html'>keep-this-tag-format</a>, <a href='tag_tags-are-optional.html'>tags-are-optional</a>, <a href='tag_example.html'>example</a></p>
-<!-- text end -->
-]]></description><link>https://shumiloff.ru/title-on-this-line.html</link>
-<guid>https://shumiloff.ru/./title-on-this-line.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Fri, 08 Feb 2019 00:26:09 +0500</pubDate></item>
 <item><title>
 Рубрика "в гостях у калькулятора"
 </title><description><![CDATA[
@@ -130,4 +117,19 @@ as you exit your editor.</p>
 <guid>https://shumiloff.ru/./pro-matematicheskij-obman.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Tue, 29 Jan 2019 19:40:53 +0500</pubDate></item>
+<item><title>
+Про аспекты выбора
+</title><description><![CDATA[
+
+<p style="text-align: center;"><img src="images/vybor.jpg"></p>
+<h4>Шашечки или ехать?</h4>
+<p>&nbsp; Как-то раз много лет тому назад мне позвонила знакомая девушка, сказала, что находится в Москве, хотела бы купить себе ноутбук и ей нужна моя помощь в выборе. Что-ж, время у меня тогда было и я по доброте душевной решил помочь. Я спросил, для каких целей приобретается ноутбук, на что получил один из стандартных ответов - редактирование документов, фильмы, музыка, интернет. Отдельными требованиями была компактность и автономность, чтобы была возможнось комфортно носить его с собой на учёбу. Осведомился о бюджете и, спустя какое-то время, потраченное на изучение обзоров, рейтингов и отзывов, нашёл замечательный вариант 12'' нетбука по отличной цене. Перезвонил девушке, сообщил, номер товара, адрес магазина, где этот нетбук есть в наличии, и даже то, как ей из текущего её местонахождения на метро проехать к нужному месту. Меня душевно поблагодарили и попрощались, после чего я об этой истории благополучно забыл на какое-то время.</p>
+<p>&nbsp; Прошло полгода, после чего я к этой девушке попал на день рождения. На столе у неё стоял самсунговский ультрабук, стоимостью в 3 раза выше, чем то, что я рекомендовал и в два раза дороже озвученного изначально бюджета. Полюбопытствовал у хозяйки, почему она взяла именно его.</p>
+<p>- "Ну он красненький, симпатичный такой, мне нравится!"</p>
+<hr/>
+<p>Теги: <a href='tag_мысли-вслух.html'>мысли-вслух</a></p>
+]]></description><link>https://shumiloff.ru/pro-aspekty-vybora.html</link>
+<guid>https://shumiloff.ru/./pro-aspekty-vybora.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Tue, 29 Jan 2019 00:28:24 +0500</pubDate></item>
 </channel></rss>

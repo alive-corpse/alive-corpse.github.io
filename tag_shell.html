@@ -51,7 +51,7 @@ Evgeniy Shumilov
 
 <p style="text-align: center;"><img src="images/escflare.png"></p>
 <p>&nbsp; Пост называется "опять не спится" или "как&nbsp;бесплатно&nbsp;завернуть домен второго уровня на ваш домашний динамический IP адрес". Для чего это вам может быть нужно? Вариантов много. Например, это возможность впоследствии поднять дома какие-нибудь сервисы. Например, создать <a href="https://nextcloud.com/" target="_blank">собственное облако для хранения и расшаривания файлов</a> и смотреть в пути фильмы, лежащие на домашнем жёстком диске или развернуть <a href="http://max-3000.com/" target="_blank">личный блог</a>, сайт-визитку, <a href="https://mjdm.ru/" target="_blank">сервис умного дома</a>, да хоть устроить <a href="https://www.dmosk.ru/instruktions.php?object=Icecast" target="_blank">станцию онлайн вещания</a> - всё ограничивается вашей фантазией, вариантов использования может найтись масса, когда существует возможность.</p>
-<p class="readmore"><a href="skript-dlya-obnovleniya-dns-zapisej-cloudflare.html">Читать дальше...</a></p>
+<p class="readmore"><a href="./skript-dlya-obnovleniya-dns-zapisej-cloudflare.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_shell.html'>shell</a>, <a href='tag_automatization.html'>automatization</a>, <a href='tag_networking.html'>networking</a>, <a href='tag_админское.html'>админское</a></p>
 <h3><a class="ablack" href="uporoboros-ili-samoperezapisyvaemye-znacheniya-v-shell-skriptax.html">
 Упороборос или самоперезаписываемые значения в shell скриптах
@@ -65,7 +65,7 @@ Evgeniy Shumilov
 <p style="text-align: center;"><img src="images/updatevars.png"></p>
 <p>&nbsp; Периодически, когда мне нужно написать какой-то скрипт на шелле, я сталкиваюсь с типовыми задачами, которые можно решить быстро, просто и в лоб, а можно написать некоторое количество кода, что займёт больше времени, но при этом позволит использовать эту наработку в будущем. Одним словом, на шелле с этим всё обстоит точно так же, как и в других языках. Хотя наверное сочетание слов "библиотека на шелле" звучит&nbsp;достаточно дико и непривычно. Когда -то я уже <a href="v-rotejt-mne-logi-pro-minimalizm-busybox-i-logirovanie.html" target="_blank">писал</a> о <a href="https://github.com/alive-corpse/eslogger/" target="_blank">библиотеке логирования на шелле</a>,&nbsp;которую я&nbsp;сделал&nbsp;много лет назад&nbsp;и достаточно часто ей пользуюсь,&nbsp;с тех пор не было нужды что-то в ней менять.</p>
 <p>&nbsp; Вчера я столкнулся с задачей, для которой целая библиотека на гитхабе - это явный перебор, но метод, который можно включать в различные скрипты мне бы совсем не помешал. И вот чем прекрасен собственный блог - это самое подходящее место для того, чтобы оставить заметочку с небольшим куском кода, который потом при необходимости оттуда&nbsp;можно быстро скопировать. Как это нередко бывает при попытке написать что-то на шелле, сам код оказался куда проще, компактнее и универсальнее, чем изначально казалось, должен был быть.</p>
-<p class="readmore"><a href="uporoboros-ili-samoperezapisyvaemye-znacheniya-v-shell-skriptax.html">Читать дальше...</a></p>
+<p class="readmore"><a href="./uporoboros-ili-samoperezapisyvaemye-znacheniya-v-shell-skriptax.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_shell.html'>shell</a></p>
 <h3><a class="ablack" href="gde-mogut-prigoditsya-grafiki.html">
 Где могут пригодиться графики
@@ -80,7 +80,7 @@ Evgeniy Shumilov
 <p>&nbsp; Пару месяцев назад я нашёл для себя неожиданно полезное применение графиков в своей работе. И нет, это не мониторинг в классическом понимании этого слова. Это наколенные прогнозы.</p>
 <h4>Описание задачи</h4>
 <p>&nbsp; Есть у нас в jenkins одна джоба, которая производит довольно длительную операцию с базой данных. Размер базы около 100Гб, самый долгий этап - обработка таблицы почти в 60 миллионов записей. Иногда этот процесс проходил за 7 часов, иногда за 21 час и я пытался обнаружить причину, по которой получается такая разница во времени обработки данных. Проблема была в том, что понять, насколько быстро выполняется очередная ревизия джобы из километрового лога с цифрами было достаточно сложно. Скрипт раз в 30 секунд выдавал количество обработанных строк и приходилось брать разницу в этом количестве на каком-то временном периоде и затем сравнивать её с аналогичным прошлым, позапрошлым и, возможно, поза-поза-чёрт-знает-сколько-прошлым запуском. Ведь нет смысла ждать и нагружать мощности, если за час работы скрипта можно определить, сколько примерно он будет работать. Но всё оказалось не так просто. Зависимость количества обработанных строк за единицу времени оказалась нелинейной и чтобы понять характер работы, мне понадобился график.</p>
-<p class="readmore"><a href="gde-mogut-prigoditsya-grafiki.html">Читать дальше...</a></p>
+<p class="readmore"><a href="./gde-mogut-prigoditsya-grafiki.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_shell.html'>shell</a>, <a href='tag_админское.html'>админское</a>, <a href='tag_aws.html'>aws</a></p>
 <h3><a class="ablack" href="veb-server-odnim-fajlom-na-shellenbspv-24-kilobajta-s-shaxmatami-i-poetessami.html">
 Веб-сервер одним файлом на шелле в 24 килобайта с шахматами и поэтессами
@@ -92,7 +92,7 @@ Evgeniy Shumilov
 <!-- text begin -->
 <p style="text-align: center;"><img src="images/bbhttpd.png"></p>
 <p>&nbsp;&nbsp;Когда я начинал вести этот блог, у меня было стойкое ощущение, что писать мне будет не о чем, но снова и снова я нахожу какие-то интересные вещи, которыми хотелось бы поделиться.&nbsp; Иногда я нахожу их заброшенными,&nbsp;достаю из бекапов, причёсываю, привожу в более-менее нормальный вид, исправляю какие-то ошибки, пишу документацию, выкладываю на github. Вот так и сейчас. Для тестирования блога мне периодически нужен вебсервер. Вебсервер, который должен выполнять только одну функцию - отдавать браузеру HTML. Можно конечно открыть файл самим браузером из файловой системы, но тогда ломаются ссылки на графику и локальные ресуры вида /images/imagename.png. В качестве вебсервера я обычно запускал python c соответствующим модулем: python -m SimpleHTTPServer. В принципе, этого хватает, но дёргать за хвост целый интерпретатор пайтона ради отдачи HTML - это какой-то overkill. Тогда я и вспомнил, что когда-то написал веб-сервер на шелле. Кто сказал, что нельзя написать веб-сервер на шелле?</p>
-<p class="readmore"><a href="veb-server-odnim-fajlom-na-shellenbspv-24-kilobajta-s-shaxmatami-i-poetessami.html">Читать дальше...</a></p>
+<p class="readmore"><a href="./veb-server-odnim-fajlom-na-shellenbspv-24-kilobajta-s-shaxmatami-i-poetessami.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_shell.html'>shell</a>, <a href='tag_web.html'>web</a>, <a href='tag_minimalism.html'>minimalism</a></p>
 <h3><a class="ablack" href="dorabatyvaem-bashblog-napilnikom-chast-tretya---ispravlyaem-tajmstempy.html">
 Дорабатываем bashblog напильником, часть третья - исправляем таймстемпы
@@ -106,7 +106,7 @@ Evgeniy Shumilov
 <p>&nbsp; Не бывает бочки мёда без пары ложек дёгтя.&nbsp;Если привкус дёгтя вам по вкусу - можно ничего не менять и наслаждаться жизнью, в противном случае требуется&nbsp;какое-то вмешательство. Проблема, которую будем сегодня решать - это даты или таймстемпы, кому как привычнее. Дело в том, что когда работа с bashblog производится на одной машине, то проблем не возникает, но как только мы уносим проект в git и делаем checkout на другой машине, то все даты создания файлов на локальной файловой системе&nbsp;будут совпадать со временем чекаута. Например:</p>
 <pre>-rw-r--r-- 1 corpse corpse 12K ноя 1 14:17 nemnogo-ob-avtomaticheskoj-generacii-parolej.html<br />-rw-r--r-- 1 corpse corpse 9,0K ноя 1 14:17 o-detalyax-i-pamyati.html<br />-rw-r--r-- 1 corpse corpse 15K ноя 1 14:17 okna-v-okne---pro-evolyuciyu-virtualizacii.html<br />-rw-r--r-- 1 corpse corpse 30K ноя 1 14:17 pro-klaviatury-gryaznye-xaki-i-podgoranie-pyatoj-tochki.html<br />-rw-r--r-- 1 corpse corpse 13K ноя 1 14:17 pro-lyubov-k-minimalizmu-i-staticheskuyu-generaciyu-kontenta.html<br />&nbsp;</pre>
 <p>&nbsp; Bashblog устроен таким образом, что он при каждом rebuild или посте переписывает&nbsp;даты и время публикации поста на время создание файла. То есть, вы сделали десяток постов, потом решили добавить ещё один, находясь за другим компьютером, сделали checkout, создали новый пост&nbsp;и все ваши посты получили сегодняшнюю дату и время, когда вы выгрузили содержимое репозитория. Нехорошо. Есть два пути решения этой проблемы - либо вмешаться в&nbsp;содержимое&nbsp;bashblog и изменить его логику работы со временем и датой постов, либо&nbsp;после выгрузки изменять дату и время создания файлов на необходимые. Путь менее очевидный, но я предпочёл его, поскольку не хочу менять код bashblog без особой на то необходимости (чтобы не было мучительно больно после обновления самого bashblog при необходимости).</p>
-<p class="readmore"><a href="dorabatyvaem-bashblog-napilnikom-chast-tretya---ispravlyaem-tajmstempy.html">Читать дальше...</a></p>
+<p class="readmore"><a href="./dorabatyvaem-bashblog-napilnikom-chast-tretya---ispravlyaem-tajmstempy.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_bashblog.html'>bashblog</a>, <a href='tag_shell.html'>shell</a></p>
 <h3><a class="ablack" href="sam-sebe-xosting-ili-o-nedoocenyonnyx-utilitax.html">
 Сам себе хостинг или о недооценённых утилитах
@@ -123,7 +123,7 @@ Evgeniy Shumilov
 <img src="/images/mss.png" class="rightimg">
 <p>&nbsp;&nbsp;О чём вы думаете, когда слышите аббревиатуру FTP? На меня накатывает ностальгия. Сразу вспоминаются всякие уютные ламповые локалочки, сетевые карты rtl8139, серенькие восьмипортовые коммутаторы D-Link в пластиковых корпусах, папки Public и Private, полные варезом - фильмы, музыка, софт, игры... Одним словом, машинка времени в моей голове телепортирует меня куда-то лет на 15 назад. Много воды утекло с тех пор, но когда кто-то просит совета, как построить себе миниатюрный хостинг, часто в числе прочего я в том или ином виде получаю вопрос: "как поднять FTP"? И каждый раз меня это удивляет. А чем sftp не угодил? Да, это медленнее, но во-первых, скорость интернет соединения сейчас уже не та, что была 15 лет тому, во-вторых, у sftp на борту шифрование и в-третьих, sftp практически всегда уже есть там, где присутствует openssh.</p>
 <p>&nbsp;&nbsp;Да, sftp, реализованный средствами OpenSSH не лишён ряда недостатков. Хотелось найти некое решение, которое бы позволило быстро и просто реализовать доступ к машине для разных пользователей, для каждого в свою папку, желательно с chroot. Всё заканчивалось длинными ролями на ансибле, которые переписывали конфиги openssh, добавляли пользователей в нужные гргуппы, ставили пакет управления расширенными правами доступа, дёргали всякие setfacl и прочее. И тут меня попросил мой хороший друг (Иван, спасибо тебе!) помочь ему настроить сервер, а пользователям в качестве шелла поставить MySecureShell. Ранее я с таким зверем не сталкивался, да и ни от кого из моих знакомых за те почти 15 лет, что я общаюсь с linux, не слышал. Судя по всему, это не особо популярное решение. Я бы сказал, незаслуженно обойдённое вниманием. Да вы только посмотрите на их логотип! Похоже, это пингвин, прямо поверх которого начали разводить печатную плату (что похоже, сказалось на его настроении), при этом он ещё кому-то угражает двумя логотипами OpenBSD! Интересно, на каких веществах сидел автор? Ладно, этот вопрос оставим наркологам. Лучше посмотрим в конфигурационный файл. Почитав, что там написано, я понял, что эта штука умеет всё, о чём я мечтал и многое из того, о чём я мечтать не смел.</p>
-<p class="readmore"><a href="sam-sebe-xosting-ili-o-nedoocenyonnyx-utilitax.html">Читать дальше...</a></p>
+<p class="readmore"><a href="./sam-sebe-xosting-ili-o-nedoocenyonnyx-utilitax.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_ssh.html'>ssh</a>, <a href='tag_shell.html'>shell</a>, <a href='tag_sftp.html'>sftp</a>, <a href='tag_админское.html'>админское</a></p>
 <h3><a class="ablack" href="nemnogo-ob-avtomaticheskoj-generacii-parolej.html">
 Немного об автоматической генерации паролей
@@ -135,7 +135,7 @@ Evgeniy Shumilov
 <!-- text begin -->
 
 <p>&nbsp;&nbsp;Зачастую возникает необходимость сгенерировать для какой-то цели пароль. Преимущественно это пароль, состоящий из некоторого количества цифр и букв разного регистра.Иногда требуется сгенерировать несколько паролей сразу. Например, для обновления паролей для целой группы пользователей в скрипте или просто хочется выбрать наиболее удобный для набора. Пересмотрев несколько решений, я решил снова ездить на своих велосипедах, так как они имеют минимум зависимостей.</p>
-<p class="readmore"><a href="nemnogo-ob-avtomaticheskoj-generacii-parolej.html">Читать дальше...</a></p>
+<p class="readmore"><a href="./nemnogo-ob-avtomaticheskoj-generacii-parolej.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_shell.html'>shell</a>, <a href='tag_automatization.html'>automatization</a>, <a href='tag_админское.html'>админское</a></p>
 <h3><a class="ablack" href="v-rotejt-mne-logi-pro-minimalizm-busybox-i-logirovanie.html">
 В ротейт мне логи! Про минимализм, busybox и логирование.
@@ -158,7 +158,7 @@ Evgeniy Shumilov
     <li>Разделитель (очень полезно для отделения частей лога)</li>
     <li>Краткий синтаксис вызова (не люблю длинные имена модулей)</li>
 </ul>
-<p class="readmore"><a href="v-rotejt-mne-logi-pro-minimalizm-busybox-i-logirovanie.html">Читать дальше...</a></p>
+<p class="readmore"><a href="./v-rotejt-mne-logi-pro-minimalizm-busybox-i-logirovanie.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_logging.html'>logging</a>, <a href='tag_shell.html'>shell</a>, <a href='tag_busybox.html'>busybox</a>, <a href='tag_minimalism.html'>minimalism</a></p>
 <h3><a class="ablack" href="dorabatyvaem-bashblog-napilnikom-chast-vtoraya---podsvetka-sintaksisa.html">
 Дорабатываем bashblog напильником, часть вторая - подсветка синтаксиса
@@ -170,7 +170,7 @@ Evgeniy Shumilov
 <!-- text begin -->
 
 <p>&nbsp;&nbsp;Думаю, следует сразу предупредить, что я далеко не специалист в html, вёрстке по сетке, css, javascript и прочем кунг-фу из области визуализации веб контента, так что всё, что здесь изложено может оказаться далёким от best practice. Итак, есть задача - получить возможность добавлять в посты блога секции с кодом. Из хотелок - подсветка синтаксиса для разных языков и опциональный скроллбар, если текст не входит в поле по ширине.</p>
-<p class="readmore"><a href="dorabatyvaem-bashblog-napilnikom-chast-vtoraya---podsvetka-sintaksisa.html">Читать дальше...</a></p>
+<p class="readmore"><a href="./dorabatyvaem-bashblog-napilnikom-chast-vtoraya---podsvetka-sintaksisa.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_bashblog.html'>bashblog</a>, <a href='tag_web.html'>web</a>, <a href='tag_shell.html'>shell</a></p>
 <h3><a class="ablack" href="dorabatyvaem-napilnikom-bashblog-chast-pervaya.html">
 Дорабатываем напильником bashblog, часть первая
@@ -182,7 +182,7 @@ Evgeniy Shumilov
 <!-- text begin -->
 
 <p>&nbsp;&nbsp;О том, что мне нужно от блога, я рассказывал в прошлой <a href="https://shumiloff.ru/pro-lyubov-k-minimalizmu-i-staticheskuyu-generaciyu-kontenta.html">записи</a>. Теперь небольшая заметка о том, как привести всё это к минимально рабочему виду. Для начала создадим новую директорию, скачаем туда скрипт и выдадим права на запуск.</p>
-<p class="readmore"><a href="dorabatyvaem-napilnikom-bashblog-chast-pervaya.html">Читать дальше...</a></p>
+<p class="readmore"><a href="./dorabatyvaem-napilnikom-bashblog-chast-pervaya.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_bashblog.html'>bashblog</a>, <a href='tag_web.html'>web</a>, <a href='tag_shell.html'>shell</a>, <a href='tag_rsync.html'>rsync</a></p>
 <h3><a class="ablack" href="pro-lyubov-k-minimalizmu-i-staticheskuyu-generaciyu-kontenta.html">
 Про любовь к минимализму и статическую генерацию контента
@@ -204,7 +204,7 @@ Evgeniy Shumilov
     <li>возможность подключения комментариев</li>
     <li>возможность подключения подсветки синтаксиса</li>
 </ul>
-<p class="readmore"><a href="pro-lyubov-k-minimalizmu-i-staticheskuyu-generaciyu-kontenta.html">Читать дальше...</a></p>
+<p class="readmore"><a href="./pro-lyubov-k-minimalizmu-i-staticheskuyu-generaciyu-kontenta.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_ностальгия.html'>ностальгия</a>, <a href='tag_minimalism.html'>minimalism</a>, <a href='tag_web.html'>web</a>, <a href='tag_shell.html'>shell</a>, <a href='tag_blog.html'>blog</a>, <a href='tag_bashblog.html'>bashblog</a></p>
 </div>
 <div id="footer">
