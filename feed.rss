@@ -2,9 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Wed, 13 Feb 2019 17:48:43 +0500</lastBuildDate>
-<pubDate>Wed, 13 Feb 2019 17:48:43 +0500</pubDate>
+<lastBuildDate>Mon, 18 Feb 2019 18:34:17 +0500</lastBuildDate>
+<pubDate>Mon, 18 Feb 2019 18:34:17 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Про диктофон для Андроид, который просто работает
+</title><description><![CDATA[
+<p style="text-align: center;"><img src="images/dictophone/1.jpg"><img src="images/dictophone/2.jpg"></p>
+<p style="text-align: center;"><img src="images/dictophone/3.jpg"><img src="images/dictophone/4.jpg"></p>
+<p>&nbsp; Я давно уже хотел сделать отдельный раздел для обзора различных полезных андроид приложений, начну видимо, с этого.</p>
+<hr/>
+<p>Теги: <a href='tag_android-soft.html'>android-soft</a></p>
+]]></description><link>https://shumiloff.ru/pro-diktofon-dlya-android-kotoryj-prosto-rabotaet.html</link>
+<guid>https://shumiloff.ru/./pro-diktofon-dlya-android-kotoryj-prosto-rabotaet.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Mon, 18 Feb 2019 18:28:59 +0500</pubDate></item>
 <item><title>
 О деградации кино и коротких рассказах
 </title><description><![CDATA[
@@ -113,17 +125,4 @@
 <guid>https://shumiloff.ru/./pro-filtry-i-informacionnyj-shum.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Thu, 31 Jan 2019 16:08:55 +0500</pubDate></item>
-<item><title>
-Про внезапный переезд на GitHub Pages
-</title><description><![CDATA[
-
-<p style="text-align: center;"><img src="images/ghpageslogo.png"></p>
-<p>&nbsp; Сегодня ночью случилось сразу несколько событий. Яндекс мигрировал мой домен в <a href="https://connect.yandex.ru/" target="_blank">Яндекс.Коннект</a>, у меня дома отвалился интернет, а затем выключили и электропитание. Нередкий случай проявления заботы со стороны нашего ТСЖ - нечего ночами сидеть в сети, ложись спать давай, родной. Вот, мы и свет уже тебе погасили. Логичным продолжением было бы отключение воды, отопления, газа и, чего уж там, сразу воздуха, но этого, что меня радует, не последовало.</p>
-<p>&nbsp; Через какое-то время мой хороший друг написал в телеграм - мол, блог твой недоступен, на что ласково был обозван "мониторингом мониторинговичем" и примерно в этот же миг снизошло на меня озарение свыше - включили свет и увидел я мир вокруг. И понял я, что это хорошо. Интернет тоже не заставил себя ждать, а вот блог так и остался недоступен. Раньше я бы плюнул на всё и лёг спать, но с мыслью о 52х постах, которые кто-то читает, кто-то даже комментирует, а кому-то, о чудо, и вовсе нравится, я уже уснуть спокойно не мог. Надо было чинить.</p>
-<hr/>
-<p>Теги: <a href='tag_blog.html'>blog</a>, <a href='tag_админское.html'>админское</a></p>
-]]></description><link>https://shumiloff.ru/pro-vnezapnyj-pereezd-na-github-pages.html</link>
-<guid>https://shumiloff.ru/./pro-vnezapnyj-pereezd-na-github-pages.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Wed, 30 Jan 2019 14:06:59 +0500</pubDate></item>
 </channel></rss>
