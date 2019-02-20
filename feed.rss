@@ -2,9 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Mon, 18 Feb 2019 18:34:17 +0500</lastBuildDate>
-<pubDate>Mon, 18 Feb 2019 18:34:17 +0500</pubDate>
+<lastBuildDate>Wed, 20 Feb 2019 17:30:40 +0500</lastBuildDate>
+<pubDate>Wed, 20 Feb 2019 17:30:40 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Про светлую магию костюмов и тёмную магию носок
+</title><description><![CDATA[
+
+<p style="text-align: center;"><img src="images/style/starwars.jpg"></p>
+<p class="light" style="text-align: right;">Преамбула: В человеке всё должно быть прекрасно:<br/> и одежда, и ботинки, и мотоцикл.</p>
+<p>&nbsp; Есть один уютный чатик в контакте, где я порою общаюсь с интересными людьми. В числе прочего внезапно поднялась тема стиля мужской одежды и меня попросили изложить всё, что я об этом думаю, так что ниже будет мой личный взгляд на подобные вещи.</p>
+<p>&nbsp; К обсуждению стиля подошли издалека:</p>
+<hr/>
+<p>Теги: <a href='tag_мысли-вслух.html'>мысли-вслух</a></p>
+]]></description><link>https://shumiloff.ru/pro-svetluyu-magiyu-kostyumov-i-tyomnuyu-magiyu-nosok.html</link>
+<guid>https://shumiloff.ru/./pro-svetluyu-magiyu-kostyumov-i-tyomnuyu-magiyu-nosok.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Wed, 20 Feb 2019 17:29:41 +0500</pubDate></item>
 <item><title>
 Про диктофон для Андроид, который просто работает
 </title><description><![CDATA[
@@ -112,17 +126,4 @@
 <guid>https://shumiloff.ru/./uporoboros-ili-samoperezapisyvaemye-znacheniya-v-shell-skriptax.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Sat, 02 Feb 2019 21:57:39 +0500</pubDate></item>
-<item><title>
-Про фильтры и информационный шум
-</title><description><![CDATA[
-
-<p style="text-align: center;"><img src="images/infoshum.png"></p>
-<p>&nbsp; Мой хороший друг написал <a href="https://vk.com/@buddah-twitter-and-short-texts" target="_blank">статью о твиттере, социальных сетях и почте</a>. В статье помимо прочего было замечено следующее:</p>
-<p class="light">&nbsp; Соцсети, например, создают очень сильный информационный шум. И если не уметь его фильтровать и отсеивать, то пользы не будет никакой. Будут усталые глаза, затекшая шея и ощущение, что ты сделал что-то полезное (на самом деле нет).&nbsp;Самый эффективный и простой инструмент доставки полезной информации &mdash; это электронные письма. И пока ничего более удобного не придумали.</p>
-<hr/>
-<p>Теги: <a href='tag_мысли-вслух.html'>мысли-вслух</a></p>
-]]></description><link>https://shumiloff.ru/pro-filtry-i-informacionnyj-shum.html</link>
-<guid>https://shumiloff.ru/./pro-filtry-i-informacionnyj-shum.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Thu, 31 Jan 2019 16:08:55 +0500</pubDate></item>
 </channel></rss>
