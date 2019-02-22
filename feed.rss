@@ -2,9 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Wed, 20 Feb 2019 18:24:31 +0500</lastBuildDate>
-<pubDate>Wed, 20 Feb 2019 18:24:31 +0500</pubDate>
+<lastBuildDate>Sat, 23 Feb 2019 01:37:21 +0500</lastBuildDate>
+<pubDate>Sat, 23 Feb 2019 01:37:21 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Про возможности, отношение к ним и наглость
+</title><description><![CDATA[
+<p style="text-align: center;"><img src="images/abilities.jpg"></p>
+<p>&nbsp; Каждый раз, после того, как я вступаю в диалог в комментариях на ютьюбе, я потом жалею об этом. И каждый раз я обещаю себе больше этого не делать. Зачем снова и снова я пытаюсь наставить кого-то на путь истинный (истинный с моей точки зрения), да ещё и испытываю при этом некие далеко не позитивные эмоции? Я не могу дать себе ответ на этот простой вопрос. Пора бы уже научиться просто заканчивать диалог без попыток оставить последнее слово за собой.</p>
+<hr/>
+<p>Теги: <a href='tag_мысли-вслух.html'>мысли-вслух</a></p>
+]]></description><link>https://shumiloff.ru/pro-vozmozhnosti-otnoshenie-k-nim-i-naglost.html</link>
+<guid>https://shumiloff.ru/./pro-vozmozhnosti-otnoshenie-k-nim-i-naglost.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Sat, 23 Feb 2019 01:29:27 +0500</pubDate></item>
 <item><title>
 Про светлую магию костюмов и тёмную магию носков
 </title><description><![CDATA[
@@ -113,17 +124,4 @@
 <guid>https://shumiloff.ru/./pro-zhenskuyu-krasotu-i-doroguyu-drevesinu.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Mon, 04 Feb 2019 16:42:39 +0500</pubDate></item>
-<item><title>
-Упороборос или самоперезаписываемые значения в shell скриптах
-</title><description><![CDATA[
-
-<p style="text-align: center;"><img src="images/updatevars.png"></p>
-<p>&nbsp; Периодически, когда мне нужно написать какой-то скрипт на шелле, я сталкиваюсь с типовыми задачами, которые можно решить быстро, просто и в лоб, а можно написать некоторое количество кода, что займёт больше времени, но при этом позволит использовать эту наработку в будущем. Одним словом, на шелле с этим всё обстоит точно так же, как и в других языках. Хотя наверное сочетание слов "библиотека на шелле" звучит&nbsp;достаточно дико и непривычно. Когда -то я уже <a href="v-rotejt-mne-logi-pro-minimalizm-busybox-i-logirovanie.html" target="_blank">писал</a> о <a href="https://github.com/alive-corpse/eslogger/" target="_blank">библиотеке логирования на шелле</a>,&nbsp;которую я&nbsp;сделал&nbsp;много лет назад&nbsp;и достаточно часто ей пользуюсь,&nbsp;с тех пор не было нужды что-то в ней менять.</p>
-<p>&nbsp; Вчера я столкнулся с задачей, для которой целая библиотека на гитхабе - это явный перебор, но метод, который можно включать в различные скрипты мне бы совсем не помешал. И вот чем прекрасен собственный блог - это самое подходящее место для того, чтобы оставить заметочку с небольшим куском кода, который потом при необходимости оттуда&nbsp;можно быстро скопировать. Как это нередко бывает при попытке написать что-то на шелле, сам код оказался куда проще, компактнее и универсальнее, чем изначально казалось, должен был быть.</p>
-<hr />
-<p>Теги: <a href='tag_shell.html'>shell</a></p>
-]]></description><link>https://shumiloff.ru/uporoboros-ili-samoperezapisyvaemye-znacheniya-v-shell-skriptax.html</link>
-<guid>https://shumiloff.ru/./uporoboros-ili-samoperezapisyvaemye-znacheniya-v-shell-skriptax.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Sat, 02 Feb 2019 21:57:39 +0500</pubDate></item>
 </channel></rss>
