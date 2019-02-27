@@ -2,9 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Tue, 26 Feb 2019 18:59:22 +0500</lastBuildDate>
-<pubDate>Tue, 26 Feb 2019 18:59:22 +0500</pubDate>
+<lastBuildDate>Wed, 27 Feb 2019 17:07:47 +0500</lastBuildDate>
+<pubDate>Wed, 27 Feb 2019 17:07:47 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Про New York и глупые фантазии
+</title><description><![CDATA[
+<p style="text-align: center;"><a href="images/ny/nyfull.jpg" target="_blank"><img src="images/ny/ny.jpg" /></a></p>
+<p>&nbsp; Есть у меня одна <a href="images/ny/nyfull.jpg" target="_blank">фотография</a>, которая уже наверное лет десять кочует со мной с одного рабочего стола на другой. Уж и не помню, где я её нашёл. Иногда я ловлю себя на том, что разглядываю её минут пять или больше и не могу оторваться. Я вглядываюсь в какое-нибудь окно ближайшего дома и пытаюсь представить, что за ним происходит сейчас и происходило в момент, когда было сделано это фото. Воображение рисует интерьер небольшой комнаты, письменный стол, телевизор в углу, ноутбук, небрежно брошенный на тумбочке возле кровати.&nbsp;Читающего перед сном в постели&nbsp;молодого человека или уже мирно спящего. Представляю его шкаф с одеждой, джинсы, футболки, пачку дешёвого стирального порошка рядом с дешёвой стиральной машиной, пару тройку грязных тарелок в раковине, кроссовки у порога, ключи на крючке возле двери. Его работу каким-нибудь офисным клерком или скромным менеджером по продажам в местном супермаркете, его утренний кофе и утреннюю прохладу, сопровождающую его по пути на работу. Его мать и отца, живущих где-нибудь в небольшом домике в тихом пригороде, каких-нибудь отчаянных белок, которые им досаждают, забираясь на чердак и пряча там припасы. Или енотов, ворующих еду у собаки из миски. Побитый жизнью старый пикап, стоящий возле гаража, аккуратно постриженный газон, пару газет, лежащих на пороге дома...</p>
+<hr />
+<p>Теги: <a href='tag_мысли-вслух.html'>мысли-вслух</a></p>
+]]></description><link>https://shumiloff.ru/pro-new-york-i-glupye-fantazii.html</link>
+<guid>https://shumiloff.ru/./pro-new-york-i-glupye-fantazii.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Wed, 27 Feb 2019 17:07:39 +0500</pubDate></item>
 <item><title>
 О троичной логике и троичных компьютерах
 </title><description><![CDATA[
@@ -112,15 +123,4 @@
 <guid>https://shumiloff.ru/./skript-dlya-obnovleniya-dns-zapisej-cloudflare.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Thu, 07 Feb 2019 03:40:17 +0500</pubDate></item>
-<item><title>
-Про женскую внешность и шанс на знакомство
-</title><description><![CDATA[
-<p style="text-align: center;"><img src="images/woman/lambolada.png"></p>
-<p>&nbsp; Под <a href="pro-zhenskuyu-krasotu-i-doroguyu-drevesinu.html" target="_blank">предыдущим постом</a>&nbsp;развернулась <a href="https://vk.com/wall2345279_9298" target="_blank">дискуссия в контакте </a>на тему внешности и шансов девушки познакомиться. Приведу ниже два комментария, оставленных разными людьми (с сохранением оригинальной пунктуации и орфографии):</p>
-<hr/>
-<p>Теги: <a href='tag_мысли-вслух.html'>мысли-вслух</a></p>
-]]></description><link>https://shumiloff.ru/pro-zhenskuyu-vneshnost-i-shans-na-znakomstvo.html</link>
-<guid>https://shumiloff.ru/./pro-zhenskuyu-vneshnost-i-shans-na-znakomstvo.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Tue, 05 Feb 2019 16:12:51 +0500</pubDate></item>
 </channel></rss>
