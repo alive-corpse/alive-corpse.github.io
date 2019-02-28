@@ -2,9 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Wed, 27 Feb 2019 17:40:54 +0500</lastBuildDate>
-<pubDate>Wed, 27 Feb 2019 17:40:54 +0500</pubDate>
+<lastBuildDate>Thu, 28 Feb 2019 16:20:56 +0500</lastBuildDate>
+<pubDate>Thu, 28 Feb 2019 16:20:56 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Про F-Droid и возможность качать видео и аудио с YouTube
+</title><description><![CDATA[
+
+
+<p style="text-align: center;"><img src="images/fdroid/fdroid1.jpg"><img src="images/fdroid/fdroid2.jpg"><img src="images/fdroid/fdroid3.jpg"></p>
+<p>&nbsp; На андроиде подавляющее большинство наших соотечественников пользуется приложениями, представленными исключительно в <a href="https://play.google.com/store" target="_blank">плей маркете</a>. Кто-то что-то слышал о <a href="https://store.yandex.ru/" target="_blank">Яндекс.Store</a>, ко-то возможно им даже пользовался, чаще всего это происходит лишь в том случае, если Яндекс.Store был предустановлен на устройство. Но мало кто из моих знакомых слышал об <a href="https://f-droid.org/" target="_blank">F-Droid</a>. Конечно, он ориентирован на приложения с открытым исходным кодом, для большинства приложений нет скриншотов, а так же &nbsp;там нет бОльшей части того, чем мы привыкли пользоваться и что получаем из плей маркета. Это не замена плей маркету, а скорее приятное дополнение к нему.</p>
+<hr/>
+<p>Теги: <a href='tag_android-soft.html'>android-soft</a></p>
+]]></description><link>https://shumiloff.ru/pro-f-droid-i-vozmozhnost-kachat-video-i-audio-s-youtube.html</link>
+<guid>https://shumiloff.ru/./pro-f-droid-i-vozmozhnost-kachat-video-i-audio-s-youtube.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Thu, 28 Feb 2019 16:20:32 +0500</pubDate></item>
 <item><title>
 Про New York и глупые фантазии
 </title><description><![CDATA[
@@ -15,7 +28,7 @@
 ]]></description><link>https://shumiloff.ru/pro-new-york-i-glupye-fantazii.html</link>
 <guid>https://shumiloff.ru/./pro-new-york-i-glupye-fantazii.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Wed, 27 Feb 2019 17:07:39 +0500</pubDate></item>
+<pubDate>Thu, 28 Feb 2019 16:13:09 +0500</pubDate></item>
 <item><title>
 О троичной логике и троичных компьютерах
 </title><description><![CDATA[
@@ -111,16 +124,4 @@
 <guid>https://shumiloff.ru/./rubrika-v-gostyax-u-kalkulyatora.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Thu, 07 Feb 2019 05:20:39 +0500</pubDate></item>
-<item><title>
-Скрипт для обновления DNS записей CloudFlare
-</title><description><![CDATA[
-
-<p style="text-align: center;"><img src="images/escflare.png"></p>
-<p>&nbsp; Пост называется "опять не спится" или "как&nbsp;бесплатно&nbsp;завернуть домен второго уровня на ваш домашний динамический IP адрес". Для чего это вам может быть нужно? Вариантов много. Например, это возможность впоследствии поднять дома какие-нибудь сервисы. Например, создать <a href="https://nextcloud.com/" target="_blank">собственное облако для хранения и расшаривания файлов</a> и смотреть в пути фильмы, лежащие на домашнем жёстком диске или развернуть <a href="http://max-3000.com/" target="_blank">личный блог</a>, сайт-визитку, <a href="https://mjdm.ru/" target="_blank">сервис умного дома</a>, да хоть устроить <a href="https://www.dmosk.ru/instruktions.php?object=Icecast" target="_blank">станцию онлайн вещания</a> - всё ограничивается вашей фантазией, вариантов использования может найтись масса, когда существует возможность.</p>
-<hr />
-<p>Теги: <a href='tag_shell.html'>shell</a>, <a href='tag_automatization.html'>automatization</a>, <a href='tag_networking.html'>networking</a>, <a href='tag_админское.html'>админское</a></p>
-]]></description><link>https://shumiloff.ru/skript-dlya-obnovleniya-dns-zapisej-cloudflare.html</link>
-<guid>https://shumiloff.ru/./skript-dlya-obnovleniya-dns-zapisej-cloudflare.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Thu, 07 Feb 2019 03:40:17 +0500</pubDate></item>
 </channel></rss>
