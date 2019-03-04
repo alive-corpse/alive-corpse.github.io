@@ -2,9 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Fri, 01 Mar 2019 20:58:11 +0500</lastBuildDate>
-<pubDate>Fri, 01 Mar 2019 20:58:11 +0500</pubDate>
+<lastBuildDate>Tue, 05 Mar 2019 01:53:57 +0500</lastBuildDate>
+<pubDate>Tue, 05 Mar 2019 01:53:57 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Выпуск подкаста с моим участием по&nbsp;теме троичной логики и троичных компьютеров
+</title><description><![CDATA[
+<p style="text-align: center;"><img src="images/ternary/setun.jpg"></p>
+<p>&nbsp; Пару недель назад я принял участие в подкасте <a href="http://www.ok-podcast.ru/" target="_blank">"Опытные на кухне"</a>. Я просто оставлю тут <a href="http://www.ok-podcast.ru/ok-132-opytnye-na-kuxne/" target="_blank">ссылку на выпуск</a>.</p>
+<p><a href="/stuff/OK_132_finish.mp3" data-length="1:48:28" class="jouele">ОК #132. Опытные на кухне.</a></p>
+<p style="text-align: right;"><a href="/stuff/OK_132_finish.mp3" rel="nofollow" download="OK_132.mp3">Скачать (53мб)</a></p>
+
+<p>Теги: <a href='tag_подкасты.html'>подкасты</a>, <a href='tag_hardware.html'>hardware</a></p>
+
+<!-- text end -->
+]]></description><link>https://shumiloff.ru/vypusk-podkasta-s-moim-uchastiem-ponbspteme-troichnoj-logiki-i-troichnyx-kompyuterov.html</link>
+<guid>https://shumiloff.ru/./vypusk-podkasta-s-moim-uchastiem-ponbspteme-troichnoj-logiki-i-troichnyx-kompyuterov.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Mon, 04 Mar 2019 23:45:33 +0500</pubDate></item>
 <item><title>
 Очистка старых смерженных веток в удалённом git репозитории
 </title><description><![CDATA[
@@ -111,17 +126,4 @@
 <guid>https://shumiloff.ru/./ochistka-staroj-pochty-v-gmail.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Tue, 12 Feb 2019 17:14:56 +0500</pubDate></item>
-<item><title>
-Об информационной безопасности и сроке годности
-</title><description><![CDATA[
-<p style="text-align: center;">&nbsp;<img src="images/security.jpg"></p>
-<h4>Прогресс</h4>
-<p>&nbsp; Скорость прогресса непостоянна. Если взять скажем, разницу в образе жизни людей 13го века и образе жизни людей 17го века, то разница конечно же будет, но она ни в какое сравнение не идёт между разницей между 17-м и 19-м веками. И даже эта разница меркнет по сравнению с тем разрывом в прогрессе, который произошёл между 19м веком и настоящим временем. Развитие нелинейно, оно экспоненциально. Чем больше у нас знаний и возможности их применения, тем больше это даёт новых и новых знаний и возможностей их применения.</p>
-<p>&nbsp; Наша среда изменяется, появляются новые вещи, новые понятия и новые возможности, о которых и не мечтали фантасты в 19-м веке. Жюль Верн ничего не написал про появление в будущем интернета, но он был бы наверное в шоке, если бы узнал, что сейчас мы можем достать из кармана небольшой прямоугольничек и получить доступ практически ко всем знаниям и всему опыту, накопленному человечеством за всё время. И он скорее всего впал бы в депрессию, если бы узнал, что бОльшая часть человечества пользуется этой возможностью преимущественно для того, чтобы лицезреть изображения котиков или выкладывать изображения себя на всеобщее обозрение.</p>
-<hr/>
-<p>Теги: <a href='tag_мысли-вслух.html'>мысли-вслух</a></p>
-]]></description><link>https://shumiloff.ru/o-informacionnoj-bezopasnosti-i-sroke-godnosti.html</link>
-<guid>https://shumiloff.ru/./o-informacionnoj-bezopasnosti-i-sroke-godnosti.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Fri, 08 Feb 2019 02:22:18 +0500</pubDate></item>
 </channel></rss>
