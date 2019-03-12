@@ -2,9 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Wed, 06 Mar 2019 16:07:51 +0500</lastBuildDate>
-<pubDate>Wed, 06 Mar 2019 16:07:51 +0500</pubDate>
+<lastBuildDate>Tue, 12 Mar 2019 22:32:42 +0500</lastBuildDate>
+<pubDate>Tue, 12 Mar 2019 22:32:42 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Про запись подкастов, оборудование и ошибки начинающего
+</title><description><![CDATA[
+<p style="text-align: center;"><img src="images/recording/mic.jpg"></p>
+<p>&nbsp; Вы когда-нибудь задумывались о том, насколько хорошо вы владеете собственными речью и голосом? Я раньше не особо, но когда я слышал свой голос на записи, мне он абсолютно не нравился. Совершенно. Возможно дело в том, что я всю свою жизнь картавлю, но довольно успешно маскирую своё неумение говорить букву "Р", имитируя её при помощи голосовых связок, а не движения языка. В принципе, я могу произнести любое слово одновременно с непрерывающейся картавой буквой "Р" - такая вот суперспособность сомнительной полезности. А ещё после участия в подкастах я начал слышать то, чего&nbsp;никогда не слышал или не замечал раньше.</p>
+<hr />
+<p>Теги: <a href='tag_подкасты.html'>подкасты</a>, <a href='tag_hardware.html'>hardware</a></p>
+]]></description><link>https://shumiloff.ru/pro-zapis-podkastov-oborudovanie-i-oshibki-nachinayushhego.html</link>
+<guid>https://shumiloff.ru/./pro-zapis-podkastov-oborudovanie-i-oshibki-nachinayushhego.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Tue, 12 Mar 2019 22:29:58 +0500</pubDate></item>
 <item><title>
 Про беспроводные клавиатуры от Apple
 </title><description><![CDATA[
@@ -114,16 +125,4 @@
 <guid>https://shumiloff.ru/./pro-diktofon-dlya-android-kotoryj-prosto-rabotaet.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Mon, 18 Feb 2019 18:28:59 +0500</pubDate></item>
-<item><title>
-О деградации кино и коротких рассказах
-</title><description><![CDATA[
-
-<p style="text-align: center;"><img src="images/nenravitsa.jpg"></p>
-<p>&nbsp; Не знаю, как у вас, а у меня довольно часто бывает такое состояние,&nbsp;когда хочется выпасть из окружающего тебя мира хотя бы на 10 минут, очутиться в другой реальности, забыть про дела и работу - одним словом, сбежать от всего, что окружает. И что удивительно, художественная литература в этом отношении лично на меня в последнее время оказывает куда больший эффект, нежели видеоряд. Не знаю, почему так. Может быть мы уже избалованы спецэффектами после разнообразных "Аватаров" и "Властелинов колец". Может быть за последнее время слишком часто за спецэффектами стали прятать отсутствие смысла, банальность сюжета или логические несостыковки. А возможно, моя фантазия устала от бездействия и хочет сама создавать какие-то образы. Одним словом, какое кино или сериал я ни начинаю в последнее время смотреть, мне не нравится. И то, что идёт в прокате в кино мне тоже не нравится. Пересматривать уже просмотренное я не люблю так же как и перечитывать уже прочитанное, разве что уж совсем что-то напрочь забытое.&nbsp;</p>
-<hr />
-<p>Теги: <a href='tag_кино.html'>кино</a>, <a href='tag_книги.html'>книги</a>, <a href='tag_подкасты.html'>подкасты</a>, <a href='tag_мысли-вслух.html'>мысли-вслух</a></p>
-]]></description><link>https://shumiloff.ru/o-degradacii-kino-i-korotkix-rasskazax.html</link>
-<guid>https://shumiloff.ru/./o-degradacii-kino-i-korotkix-rasskazax.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Wed, 13 Feb 2019 17:47:28 +0500</pubDate></item>
 </channel></rss>
