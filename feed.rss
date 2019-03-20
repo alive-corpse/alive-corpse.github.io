@@ -2,9 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Wed, 13 Mar 2019 21:40:25 +0500</lastBuildDate>
-<pubDate>Wed, 13 Mar 2019 21:40:25 +0500</pubDate>
+<lastBuildDate>Thu, 21 Mar 2019 02:07:58 +0500</lastBuildDate>
+<pubDate>Thu, 21 Mar 2019 02:07:58 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Скрипт для проверки времени протухания сертификатов
+</title><description><![CDATA[
+<p style="text-align: center;"><img src="images/escheckcert.png"></p>
+<p>&nbsp; На работе понадобилось отслеживать время протухания различных сертификатов и слать алерты в случае, если до истечения осталось менее, чем N дней. Быстро накидал скрипт, а потом решил&nbsp;расширить его функционал таким образом, чтобы он сам находил все сертификаты в директории и выдавал даты выдачи и истечения срока действия сертификата, время жизни и количество дней, в течение которых сертификат остаётся валидным. В случае, если хотя бы один из сертификатов оказывается невалидным, возвращается ненулевой код&nbsp;возврата, в результате чего можно удобно использовать скрипт для отправки алертов.</p>
+<pre><code class="bash">if! expired=`./escheckcert.sh domain1.com domain2.com`; then
+  echo "$expired" | mail -s "Expired certs" admin@domain.com
+fi</code></pre>
+<p>&nbsp; Так же можно помимо файлов сертификатов и путей директорий, содержащих сертификаты, использовать непосредственно доменные имена.&nbsp;Имена файлов, директорий и доменов можно передавать скрипту вперемешку, разделяя пробелами.&nbsp;</p>
+<p>&nbsp; Причесал код, <a href="https://github.com/alive-corpse/escheckcert" target="_blank">выложил на github</a>, доволен.&nbsp;И на работе задачу выполнил и для себя давно подобную утилиту хотел и пост в блог получился.</p>
+
+<p>Теги: <a href='tag_shell.html'>shell</a>, <a href='tag_админское.html'>админское</a></p>
+<!-- text end -->
+]]></description><link>https://shumiloff.ru/skript-dlya-proverki-vremeni-protuxaniya-sertifikatov.html</link>
+<guid>https://shumiloff.ru/./skript-dlya-proverki-vremeni-protuxaniya-sertifikatov.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Thu, 21 Mar 2019 02:04:17 +0500</pubDate></item>
 <item><title>
 Про бюрократию, дохлых мышей, инвентаризадницу и админскую магию
 </title><description><![CDATA[
@@ -110,18 +127,4 @@
 <guid>https://shumiloff.ru/./pro-vozmozhnosti-otnoshenie-k-nim-i-naglost.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Sat, 23 Feb 2019 01:29:27 +0500</pubDate></item>
-<item><title>
-Про светлую магию костюмов и тёмную магию носков
-</title><description><![CDATA[
-
-<p style="text-align: center;"><img src="images/style/starwars.jpg"></p>
-<p class="light" style="text-align: right;">Преамбула: В человеке всё должно быть прекрасно:<br/> и одежда, и ботинки, и мотоцикл.</p>
-<p>&nbsp; Есть один уютный чатик в контакте, где я порою общаюсь с интересными людьми. В числе прочего внезапно поднялась тема стиля мужской одежды и меня попросили изложить всё, что я об этом думаю, так что ниже будет мой личный взгляд на подобные вещи.</p>
-<p>&nbsp; К обсуждению стиля подошли издалека:</p>
-<hr/>
-<p>Теги: <a href='tag_мысли-вслух.html'>мысли-вслух</a></p>
-]]></description><link>https://shumiloff.ru/pro-svetluyu-magiyu-kostyumov-i-tyomnuyu-magiyu-nosok.html</link>
-<guid>https://shumiloff.ru/./pro-svetluyu-magiyu-kostyumov-i-tyomnuyu-magiyu-nosok.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Wed, 20 Feb 2019 17:29:41 +0500</pubDate></item>
 </channel></rss>
