@@ -2,9 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Thu, 21 Mar 2019 02:07:58 +0500</lastBuildDate>
-<pubDate>Thu, 21 Mar 2019 02:07:58 +0500</pubDate>
+<lastBuildDate>Fri, 29 Mar 2019 15:59:33 +0500</lastBuildDate>
+<pubDate>Fri, 29 Mar 2019 15:59:33 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Мука выбора ноутбука
+</title><description><![CDATA[
+<p style="text-align: center;"><img src="images/notebooks/lenovo-laptop-ideapad-330-14-hero.webp"></p>
+<p>&nbsp; Я всегда был за минимализм и адекватность выбора инструмента по отношению к решаемым с помощью этого инструмента задачам. Если можно для чего-то безболезненно использовать меньше ресурсов, то зачем приобретать их больше? В булочную, расположенную в паре кварталов, можно теоретически ездить за хлебом на карьерном самосвале, на болиде формулы 1 или летать на вертолёте, но куда правильнее будет сходить туда пешком или в крайнем случае взять самокат, даже если ты можешь себе позволить приобрести вертолёт.</p>
+<p>&nbsp;&nbsp;<a href="https://www.ixbt.com/live/mpanius/obzor-chuwi-lapbook-141-otlichnyy-kompaktnyy-netbuk-dlya-lyubyh-ofisnyh-i-domashnih-zadach.html" target="_blank">Ноутбук</a>, на котором я работал последние два года и который служил мне верой и правдой, был куплен мной на распродаже gearbest примерно за 12 с небольшим тысяч рублей и за эти деньги он был прекрасен. Тонкие рамки, пассивное охлаждение, матовый FHD экран, прекрасная удобная клавиатура, неплохой тачпад и свободный слот M.2 под SSD форм фактора 2242. Согласитесь, за 12 тысяч рублей это очень неплохо! И самое главное - его возможности вполне соответствовали задачам, которые я с его помощью решал за одним небольшим исключением - мне не всегда хватало 4gb оперативной памяти, плюс недавно произошло событие, которое меня подтолкнуло к поиску замены.</p>
+<hr />
+<p>Теги: <a href='tag_hardware.html'>hardware</a></p>
+]]></description><link>https://shumiloff.ru/muka-vybora-noutbuka.html</link>
+<guid>https://shumiloff.ru/./muka-vybora-noutbuka.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Fri, 29 Mar 2019 15:41:19 +0500</pubDate></item>
 <item><title>
 Скрипт для проверки времени протухания сертификатов
 </title><description><![CDATA[
@@ -116,15 +128,4 @@ fi</code></pre>
 <guid>https://shumiloff.ru/./o-troichnoj-logike-i-troichnyx-kompyuterax.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Tue, 26 Feb 2019 18:59:18 +0500</pubDate></item>
-<item><title>
-Про возможности, отношение к ним и наглость
-</title><description><![CDATA[
-<p style="text-align: center;"><img src="images/abilities.jpg"></p>
-<p>&nbsp; Каждый раз, после того, как я вступаю в диалог в комментариях на ютьюбе, я потом жалею об этом. И каждый раз я обещаю себе больше этого не делать. Зачем снова и снова я пытаюсь наставить кого-то на путь истинный (истинный с моей точки зрения), да ещё и испытываю при этом некие далеко не позитивные эмоции? Я не могу дать себе ответ на этот простой вопрос. Пора бы уже научиться просто заканчивать диалог без попыток оставить последнее слово за собой.</p>
-<hr/>
-<p>Теги: <a href='tag_мысли-вслух.html'>мысли-вслух</a></p>
-]]></description><link>https://shumiloff.ru/pro-vozmozhnosti-otnoshenie-k-nim-i-naglost.html</link>
-<guid>https://shumiloff.ru/./pro-vozmozhnosti-otnoshenie-k-nim-i-naglost.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Sat, 23 Feb 2019 01:29:27 +0500</pubDate></item>
 </channel></rss>
