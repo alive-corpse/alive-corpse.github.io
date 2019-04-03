@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Thu, 04 Apr 2019 02:21:08 +0500</lastBuildDate>
-<pubDate>Thu, 04 Apr 2019 02:21:08 +0500</pubDate>
+<lastBuildDate>Thu, 04 Apr 2019 02:22:32 +0500</lastBuildDate>
+<pubDate>Thu, 04 Apr 2019 02:22:32 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
 <item><title>
 Правильное отключение SWAP раздела в Linux Mint
 </title><description><![CDATA[
 <p style="text-align: center;"><img src="images/swap.jpg"></p>
 <p>&nbsp; До того, как я <a href="muka-vybora-noutbuka.html" target="_blank">купил себе ноутбук</a>, я предварительно искал информацию о том, с какими проблемами&nbsp;мне придётся&nbsp;столкнуться при установке линукса. Судя по тому, что я нашёл, мне светило пропатчить модуль ядра для того, чтобы заработал тачпад и собрать модуль драйвера Wi-Fi из исходников.&nbsp;Это конечно, совершенно не rocket science, но со временем начинаешь ценить время и удобство, хочется побольше вещей, которые просто работают, работают хорошо и из коробки.</p>
-<p>&nbsp; Последние лет шесть я работал на самосборном дистрибутиве на базе debian. И всё было бы ничего, но поддержка этого дистрибутива в актуальном состоянии требовала периодических усилий и существенных затрат времени. Так как debian stable имеет далеко не самую свежую пакетную базу, то заморочек с железом ожидалось больше, чем обычно. Так как у меня уже был <a href="pingvin-s-chelovecheskim-licom.html" target="_blank">положительный опыт установки Linux Mint</a>, я взял <a href="https://blog.linuxmint.com/?p=3671" target="_blank">последнюю версию 19.1 Tara с xfce4</a>,&nbsp;накатил на ноутбук и - о чудо - всё заработало. Абсолютно всё - тачпад, звук, wi-fi, видео. При всём этом установка заняла в общей сложности всего минут&nbsp;пять.&nbsp;</p>A
+<p>&nbsp; Последние лет шесть я работал на самосборном дистрибутиве на базе debian. И всё было бы ничего, но поддержка этого дистрибутива в актуальном состоянии требовала периодических усилий и существенных затрат времени. Так как debian stable имеет далеко не самую свежую пакетную базу, то заморочек с железом ожидалось больше, чем обычно. Так как у меня уже был <a href="pingvin-s-chelovecheskim-licom.html" target="_blank">положительный опыт установки Linux Mint</a>, я взял <a href="https://blog.linuxmint.com/?p=3671" target="_blank">последнюю версию 19.1 Tara с xfce4</a>,&nbsp;накатил на ноутбук и - о чудо - всё заработало. Абсолютно всё - тачпад, звук, wi-fi, видео. При всём этом установка заняла в общей сложности всего минут&nbsp;пять.&nbsp;</p>
 <hr/>
 <p>Теги: <a href='tag_linux.html'>linux</a>, <a href='tag_админское.html'>админское</a></p>
 ]]></description><link>https://shumiloff.ru/pravilnoe-otklyuchenie-swap-razdela-v-linux-mint.html</link>
