@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="main.css" type="text/css" />
+<link rel="stylesheet" href="blog.css" type="text/css" />
+<link rel="stylesheet" href="assets/highlight/styles/corpse.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="" href="feed.rss" />
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+<script src="assets/jquery.min.js"></script>
+<script src="assets/jouele/jouele.min.js"></script>
+<link href="assets/jouele/jouele.min.css" rel="stylesheet"/>
+<script src="assets/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(52451890, "init", {
+        id:52451890,
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/52451890" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<title>Правильное отключение SWAP раздела в Linux Mint</title>
+</head><body>
+<div id="divbodyholder">
+<div class="headerholder">
+<a href="https://vk.com/evgeniy_shumilov" target="_blank"><img src="/images/logo.png" class="logo" height="106pt" style="float: left; margin-right: 20px;"></a>
+<div class="header">
+<div id="title">
+<h1 class="nomargin"><a class="ablack" href="https://shumiloff.ru/index.html">Зайчатки разума</a></h1>
+<div id="description">Записная книжка айтишника</div>
+</div></div>
+<ul class="full-width">
+    <li>
+        <a href="/pro-lyubov-k-minimalizmu-i-staticheskuyu-generaciyu-kontenta.html">О блоге</a>
+<!--
+        <ul>
+            <li><a href="#">Item1</a></li>
+            <li><a href="#">Item2</a></li>
+            <li><a href="#">Item3</a></li>
+        </ul>
+-->
+    </li>
+    <li><a href="/all_tags.html">Теги</a></li>
+    <li><a href="/all_posts.html">Все посты</a></li>
+    <li><a href="/tag_ностальгия.html">Ностальгическое</a></li>
+    <li><a href="/tag_мысли-вслух.html">Мысли вслух</a></li>
+</ul>
+
+<div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
+</div>
+<div id="divbody"><div class="content">
+<!-- entry begin -->
+<h3><a class="ablack" href="pravilnoe-otklyuchenie-swap-razdela-v-linux-mint.html">
+Правильное отключение SWAP раздела в Linux Mint
+</a></h3>
+<!-- bashblog_timestamp: #201904040220.12# -->
+<div class="subtitle">2019-04-04 02:20:12 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+<p style="text-align: center;"><img src="images/swap.jpg"></p>
+<p>&nbsp; До того, как я <a href="muka-vybora-noutbuka.html" target="_blank">купил себе ноутбук</a>, я предварительно искал информацию о том, с какими проблемами&nbsp;мне придётся&nbsp;столкнуться при установке линукса. Судя по тому, что я нашёл, мне светило пропатчить модуль ядра для того, чтобы заработал тачпад и собрать модуль драйвера Wi-Fi из исходников.&nbsp;Это конечно, совершенно не rocket science, но со временем начинаешь ценить время и удобство, хочется побольше вещей, которые просто работают, работают хорошо и из коробки.</p>
+<p>&nbsp; Последние лет шесть я работал на самосборном дистрибутиве на базе debian. И всё было бы ничего, но поддержка этого дистрибутива в актуальном состоянии требовала периодических усилий и существенных затрат времени. Так как debian stable имеет далеко не самую свежую пакетную базу, то заморочек с железом ожидалось больше, чем обычно. Так как у меня уже был <a href="pingvin-s-chelovecheskim-licom.html" target="_blank">положительный опыт установки Linux Mint</a>, я взял <a href="https://blog.linuxmint.com/?p=3671" target="_blank">последнюю версию 19.1 Tara с xfce4</a>,&nbsp;накатил на ноутбук и - о чудо - всё заработало. Абсолютно всё - тачпад, звук, wi-fi, видео. При всём этом установка заняла в общей сложности всего минут&nbsp;пять.&nbsp;</p>A
+<hr/>
+<p>&nbsp; Так как заморачиваться действительно не хотелось, а попользоваться новым ноутбуком напротив - хотелось очень, то разбивать жёсткий диск я не стал и оставил настройку разделов в таком виде, в котором её предлагает программа установки по умолчанию, только дополнительно включил шифрование.&nbsp; После установки я решил отключить swap, так как во-первых, 8Гб оперативной памяти мне скорее всего должно хватить на все мои нужды, а держать swap раздел на ssd&nbsp;категорически не рекомендуется. Постоянная перезапись одних и тех же блоков намного быстрее исчерпает ресурс ssd диска.</p>
+<p>&nbsp; Отключить swap - несложно, но есть несколько тонкостей. Например, отключение приводит к тому, что ноутбук начинает загружаться в несколько раз дольше, так как скрипты в initrd пытаются найти swap раздел и проверить, нет ли там данных для восстановления из режима гибернации. На ожидание раздела есть таймаут в 30 секунд и несколько попыток, в результате чгео время загрузки увеличивается примерно на полторы минуты или даже больше.&nbsp;</p>
+<p>&nbsp; Для начала отключаем swap и убираем его автоматическое подключение из fstab:</p>
+<pre>sudo swapoff -a<br />sudo sed -i '/vg-swap/s/^/#/' /etc/fstab</pre>
+<p>&nbsp; Затем запускаем команду lvm, с её помощью смотрим список активных lvm вольюмов, удаляем&nbsp;вольюм свопа, проверяем размер вольюма root, расширяем root на всё доступное пространство и снова проверяем размер вольюма:</p>
+<pre>lvm&gt; lvscan <br /> ACTIVE '/dev/mint-vg/root' [&lt;110.09 GiB] inherit <br /> ACTIVE '/dev/mint-vg/swap_1' [7.91 GiB] inherit<br /><br />lvm&gt; lvremove /dev/mint-vg/swap_1 <br />Do you really want to remove and DISCARD active logical volume mint-vg/swap_1? [y/n]: y <br /> Logical volume "swap_1" successfully removed <br /><br />lvm&gt; vgs<br /> VG #PV #LV #SN Attr VSize VFree <br /> mint-vg 1 1 0 wz--n- 118.02g &lt;7.94g<br /><br />lvm&gt; lvextend -l +100%FREE /dev/mint-vg/root<br /> Size of logical volume mint-vg/root changed from &lt;110.09 GiB (28182 extents) to 118.02 GiB (30214 extents).<br /> Logical volume mint-vg/root successfully resized.<br /><br />lvm&gt; lvs<br /> LV VG Attr LSize Pool Origin Data% Meta% Move Log Cpy%Sync Convert<br /> root mint-vg -wi-ao---- 118.02g</pre>
+<p>&nbsp; С помощью resize2fs увеличиваем размер раздела на всё доступное пространство:</p>
+<pre>resize2fs /dev/mint-vg/root <br />resize2fs 1.44.1 (24-Mar-2018)<br />Filesystem at /dev/mint-vg/root is mounted on /; on-line resizing required<br />old_desc_blocks = 14, new_desc_blocks = 15<br />The filesystem on /dev/mint-vg/root is now 30939136 (4k) blocks long.</pre>
+<p>&nbsp; Проверяем:</p>
+<pre>df -h /dev/mapper/mint--vg-root <br />Файл.система Размер Использовано Дост Использовано% Cмонтировано в<br />/dev/mapper/mint--vg-root 116G 8.6G 102G 8% /</pre>
+<p>&nbsp; Всё прошло вполне успешно. Но как я уже писал выше, нам нужно обновить initrd, чтобы он не&nbsp;пытался каждый раз искать swap при старте. Причину и метод устранения проблемы я нашёл не сразу, поэтому просто поделюсь простым и правильным способом:</p>
+<pre>sudo rm /etc/initramfs-tools/conf.d/resume<br />sudo update-initramfs -u</pre>
+<p>&nbsp; Всё, после ребута перезагрузка будет занимать примерно то же время, что и до удаления свопа.</p>
+<p>&nbsp; Также нужно заметить, что при работе без свопа нужно следить, чтобы приложения не скушали всю доступную оперативную память. В Linux для этого существует так называемый OOMKiller (OOM = Out Of Memory) - это часть ядра linux, призванная убивать приложения в ситуации критической нехватки оперативной памяти с целью предотвращения полного зависания. На своей машине пока ещё соответствующие настройки не менял, но могу поделиться парой полезных ссылок, где написано о том, как это сделать: <a href="http://catap.ru/blog/2009/05/03/about-memory-oom-killer/" target="_blank">раз</a> и <a href="http://geckich.blogspot.com/2013/12/linux-out-of-memory-killer-oom.html" target="_blank">два</a>.</p>
+
+<p>Теги: <a href='tag_linux.html'>linux</a>, <a href='tag_админское.html'>админское</a></p>
+<!-- text end -->
+<!-- entry end -->
+</div>
+<div id="disqus_thread"></div>
+            <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+               var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+            /* * * DONT EDIT BELOW THIS LINE * * */
+            (function() {
+            var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+            dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+            (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<div id="footer">
+<!-- Tolstoy Comments
+<script type="text/javascript">!(function(w,d,s,l,x){w[l]=w[l]||[];var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=!0;j.src='//web.tolstoycomments.com/sitejs/app.js?i='+l+'&x='+x+'&t='+(new Date().getTime());f.parentNode.insertBefore(j,f)})(window,document,'script','tolstoycomments','1577');</script>
+-->
+<a href="https://vk.com/evgeniy_shumilov">Evgeniy Shumilov</a> &mdash; <a href="mailto:evgeniy&#46;shumilov&#64;gmail&#46;com">evgeniy&#46;shumilov&#64;gmail&#46;com</a><br/>
+Generated with <a href="https://github.com/cfenollosa/bashblog">bashblog</a>, a single bash script to easily create blogs like this one</div>
+</div></div>
+</div></div>
+<script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+        /* * * DONT EDIT BELOW THIS LINE * * */
+        (function () {
+        var s = document.createElement("script"); s.async = true;
+        s.type = "text/javascript";
+        s.src = "//" + disqus_shortname + ".disqus.com/count.js";
+        (document.getElementsByTagName("HEAD")[0] || document.getElementsByTagName("BODY")[0]).appendChild(s);
+    }());
+    </script>
+</body></html>
