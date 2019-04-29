@@ -2,9 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Tue, 09 Apr 2019 15:23:45 +0500</lastBuildDate>
-<pubDate>Tue, 09 Apr 2019 15:23:45 +0500</pubDate>
+<lastBuildDate>Mon, 29 Apr 2019 21:14:53 +0500</lastBuildDate>
+<pubDate>Mon, 29 Apr 2019 21:14:53 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Про весеннее обострение
+</title><description><![CDATA[
+<p style="text-align: center;">&nbsp;<img src="images/spring/obostrenie.jpg"></p>
+<p>&nbsp; &nbsp;Этой весной столько всего приключилось и накопилось, что на ведение блога просто не хватало сил и времени. Постараюсь исправить это упущение и вывалю всё скопом. Скажу сразу, под обострением я в данном случае имею в виду обострение моего желания изменений,&nbsp;стремления к чему-то новому и избавление от чего-то старого.</p>
+<hr />
+<p>Теги: <a href='tag_жизненное.html'>жизненное</a>, <a href='tag_3d-printing.html'>3d-printing</a>, <a href='tag_moto.html'>moto</a>, <a href='tag_keyboards.html'>keyboards</a>, <a href='tag_smarthome.html'>smarthome</a></p>
+]]></description><link>https://shumiloff.ru/pro-vesennee-obostrenie.html</link>
+<guid>https://shumiloff.ru/./pro-vesennee-obostrenie.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Mon, 29 Apr 2019 21:05:30 +0500</pubDate></item>
 <item><title>
 Про векторную графику и консерватизм
 </title><description><![CDATA[
@@ -116,17 +127,4 @@ fi</code></pre>
 <guid>https://shumiloff.ru/./ochistka-staryx-smerzhennyx-vetok-v-udalyonnom-git-repozitorii.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Fri, 01 Mar 2019 20:48:21 +0500</pubDate></item>
-<item><title>
-Про F-Droid и возможность качать видео и аудио с YouTube
-</title><description><![CDATA[
-
-
-<p style="text-align: center;"><img src="images/fdroid/fdroid1.jpg"><img src="images/fdroid/fdroid2.jpg"><img src="images/fdroid/fdroid3.jpg"></p>
-<p>&nbsp; На андроиде подавляющее большинство наших соотечественников пользуется приложениями, представленными исключительно в <a href="https://play.google.com/store" target="_blank">плей маркете</a>. Кто-то что-то слышал о <a href="https://store.yandex.ru/" target="_blank">Яндекс.Store</a>, ко-то возможно им даже пользовался, чаще всего это происходит лишь в том случае, если Яндекс.Store был предустановлен на устройство. Но мало кто из моих знакомых слышал об <a href="https://f-droid.org/" target="_blank">F-Droid</a>. Конечно, он ориентирован на приложения с открытым исходным кодом, для большинства приложений нет скриншотов, а так же &nbsp;там нет бОльшей части того, чем мы привыкли пользоваться и что получаем из плей маркета. Это не замена плей маркету, а скорее приятное дополнение к нему.</p>
-<hr/>
-<p>Теги: <a href='tag_android-soft.html'>android-soft</a></p>
-]]></description><link>https://shumiloff.ru/pro-f-droid-i-vozmozhnost-kachat-video-i-audio-s-youtube.html</link>
-<guid>https://shumiloff.ru/./pro-f-droid-i-vozmozhnost-kachat-video-i-audio-s-youtube.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Thu, 28 Feb 2019 16:20:32 +0500</pubDate></item>
 </channel></rss>
