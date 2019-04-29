@@ -2,9 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Mon, 29 Apr 2019 21:14:53 +0500</lastBuildDate>
-<pubDate>Mon, 29 Apr 2019 21:14:53 +0500</pubDate>
+<lastBuildDate>Mon, 29 Apr 2019 21:50:53 +0500</lastBuildDate>
+<pubDate>Mon, 29 Apr 2019 21:50:53 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Простое приспособление для разделения печатных плат
+</title><description><![CDATA[
+<p style="text-align: center;"><img src="images/pcbdivider/0.jpg"></p>
+<p>&nbsp; Как я уже писал в <a href="/pro-vesennee-obostrenie.html" target="_blank">прошлом посте</a>, я зимой получил горсть печатных плат. Есть такой сервис, как JLCPCB, который&nbsp;дёшево производит печатные платы хорошего качества. Есть только одно но - минимальный заказ 10 штук и платы должны быть не больше, чем 10*10 сантиметров. Но дело в том, что на площади в 10*10 сантиметров порою можно разместить множество небольших плат для различных устройств. Есть различные способы разделения плат. Можно заказать пропил между платами, можно прокатку (между платами делается ложбинка, по которой их можно разломить), но когда у тебя на руках уже есть две платы на одном куске текстолита, которые нужно разделить, на помощь приходит старый дедовский способ - стальная линейка и канцелярский нож.&nbsp;</p>
+<p>&nbsp; У данного способа есть очевидные недостатки. Во-первых, стальная линейка достаточно тонкая, а во-вторых - достаточно гладкая. Поэтому в процессе реза её можно случайно сдвинуть или нож может уйти в сторону, потому что каждый раз, когда я пытался прорезать в плате углубление, я боялся, что при достаточно сильном давлении в сторону руки, которая держит линейку, нож сорвётся и выскочит на линейку. Одним словом, есть опасность повредить руку. И, кажется, я нашёл метод, с помощью которого можно усовершенствовать данный способ, используя <s>гуано и веточки</s> легкодоступные и дешёвые ресурсы.</p>
+<hr />
+<p>Теги: <a href='tag_pcb.html'>pcb</a>, <a href='tag_lifehack.html'>lifehack</a></p>
+]]></description><link>https://shumiloff.ru/prostoe-prisposoblenie-dlya-razdeleniya-pechatnyx-plat.html</link>
+<guid>https://shumiloff.ru/./prostoe-prisposoblenie-dlya-razdeleniya-pechatnyx-plat.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Mon, 29 Apr 2019 21:49:41 +0500</pubDate></item>
 <item><title>
 Про весеннее обострение
 </title><description><![CDATA[
@@ -116,15 +128,4 @@ fi</code></pre>
 <guid>https://shumiloff.ru/./vypusk-podkasta-s-moim-uchastiem-ponbspteme-troichnoj-logiki-i-troichnyx-kompyuterov.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Mon, 04 Mar 2019 23:45:33 +0500</pubDate></item>
-<item><title>
-Очистка старых смерженных веток в удалённом git репозитории
-</title><description><![CDATA[
-<p style="text-align: center;"><img src="images/gitclean.png"></p>
-<p>&nbsp; Не так давно по работе я столкнулся с задачей - необходимо было очистить большой репозиторий на гитхабе от всех веток, которые были полностью смержены в мастер, позднее, чем N дней.&nbsp;Для этого пришлось написать небольшой скрипт, который я просто оставлю ниже.</p>
-<hr/>
-<p>Теги: <a href='tag_админское.html'>админское</a>, <a href='tag_shell.html'>shell</a>, <a href='tag_automatization.html'>automatization</a></p>
-]]></description><link>https://shumiloff.ru/ochistka-staryx-smerzhennyx-vetok-v-udalyonnom-git-repozitorii.html</link>
-<guid>https://shumiloff.ru/./ochistka-staryx-smerzhennyx-vetok-v-udalyonnom-git-repozitorii.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Fri, 01 Mar 2019 20:48:21 +0500</pubDate></item>
 </channel></rss>
