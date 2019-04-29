@@ -2,9 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Mon, 29 Apr 2019 21:50:53 +0500</lastBuildDate>
-<pubDate>Mon, 29 Apr 2019 21:50:53 +0500</pubDate>
+<lastBuildDate>Mon, 29 Apr 2019 22:13:46 +0500</lastBuildDate>
+<pubDate>Mon, 29 Apr 2019 22:13:46 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Для чего нужен 3d принтер (часть первая)
+</title><description><![CDATA[
+<p style="text-align: center;"><img src="images/lampholder/0.jpg"></p>
+<p>&nbsp; В закромах оф родина у меня давно пылился старый линейный светильник. Вероятно я бы применил его где-нибудь и раньше, если бы не одно но -&nbsp;штатные крепления от него были безвозвратно утеряны ещё лет *дцать тому&nbsp;назад. Светильник периодически использовался в качестве временного источника освещения и для того, чтобы была хоть какая-то возможность его закрепить, я сделал крепления из зажимов от пакетов с хлебом. Лютый колхоз, я согласен, но эти желтые штуки уже не раз выручали меня при необходимости прикепить что-то к чему-то, в то время&nbsp;когда другие способы были исчерпаны. Вот и в этом случае подобная магия помогла прикрепить светильник к полке над 3d принтером в шкафу. Проблема была в низкой надёжности таких креплений - светильник периодически падал со своего насиженного места, стоило мне лишь сегка его задеть.&nbsp;</p>
+<p>&nbsp; В очередной раз, когда он сбросился вниз, осознав тщетность своего бытия,&nbsp;мне надоело бороться с&nbsp;хлебной&nbsp;закруткой и герр Штангенциркуль&nbsp;нам помог в очередной раз. Проектирование - 5 минут, печать - около 25 минут. Фотографии процесса и результата - под катом.</p>
+<hr />
+<p>Теги: <a href='tag_3d-printing.html'>3d-printing</a></p>
+]]></description><link>https://shumiloff.ru/dlya-chego-nuzhen-3d-printer-chast-pervaya.html</link>
+<guid>https://shumiloff.ru/./dlya-chego-nuzhen-3d-printer-chast-pervaya.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Mon, 29 Apr 2019 22:08:24 +0500</pubDate></item>
 <item><title>
 Простое приспособление для разделения печатных плат
 </title><description><![CDATA[
@@ -113,19 +125,4 @@ fi</code></pre>
 <guid>https://shumiloff.ru/./pro-besprovodnye-klaviatury-ot-apple.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Wed, 06 Mar 2019 16:02:36 +0500</pubDate></item>
-<item><title>
-Выпуск подкаста с моим участием по&nbsp;теме троичной логики и троичных компьютеров
-</title><description><![CDATA[
-<p style="text-align: center;"><img src="images/ternary/setun.jpg"></p>
-<p>&nbsp; Пару недель назад я принял участие в подкасте <a href="http://www.ok-podcast.ru/" target="_blank">"Опытные на кухне"</a>. Я просто оставлю тут <a href="http://www.ok-podcast.ru/ok-132-opytnye-na-kuxne/" target="_blank">ссылку на выпуск</a>.</p>
-<p><a href="/stuff/OK_132_finish.mp3" data-length="1:48:28" class="jouele">ОК #132. Опытные на кухне.</a></p>
-<p style="text-align: right;"><a href="/stuff/OK_132_finish.mp3" rel="nofollow" download="OK_132.mp3">Скачать (53мб)</a></p>
-
-<p>Теги: <a href='tag_подкасты.html'>подкасты</a>, <a href='tag_hardware.html'>hardware</a></p>
-
-<!-- text end -->
-]]></description><link>https://shumiloff.ru/vypusk-podkasta-s-moim-uchastiem-ponbspteme-troichnoj-logiki-i-troichnyx-kompyuterov.html</link>
-<guid>https://shumiloff.ru/./vypusk-podkasta-s-moim-uchastiem-ponbspteme-troichnoj-logiki-i-troichnyx-kompyuterov.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Mon, 04 Mar 2019 23:45:33 +0500</pubDate></item>
 </channel></rss>
