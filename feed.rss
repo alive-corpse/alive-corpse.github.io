@@ -2,9 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Mon, 29 Apr 2019 22:47:35 +0500</lastBuildDate>
-<pubDate>Mon, 29 Apr 2019 22:47:35 +0500</pubDate>
+<lastBuildDate>Mon, 29 Apr 2019 23:09:04 +0500</lastBuildDate>
+<pubDate>Mon, 29 Apr 2019 23:09:04 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Для чего нужен 3d принтер (часть 2)
+</title><description><![CDATA[
+<p style="text-align: center;"><img src="images/orangepipc/0.jpg"></p>
+<p>&nbsp; В продолжение <a href="korpus-dlya-orange-pi-pc-iz-akrila.html" target="_blank">одного</a> из предыдущих постов, хочу продолжить тему о корпусах и в продолжение <a href="dlya-chego-nuzhen-3d-printer-chast-pervaya.html" target="_blank">другого</a> - о 3d печати. Как я уже говорил, корпуса для Orange PI PC стоят от 300 до 700 с лишним рублей. О том, сколько можно сэкономить, используя 3d печать, будет под катом.</p>
+<hr />
+<p>Теги: <a href='tag_3d-printing.html'>3d-printing</a>, <a href='tag_pi.html'>pi</a></p>
+]]></description><link>https://shumiloff.ru/dlya-chego-nuzhen-3d-printer-chast-2.html</link>
+<guid>https://shumiloff.ru/./dlya-chego-nuzhen-3d-printer-chast-2.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Mon, 29 Apr 2019 23:08:20 +0500</pubDate></item>
 <item><title>
 Корпус для Orange PI PC из акрила
 </title><description><![CDATA[
@@ -114,15 +125,4 @@ fi</code></pre>
 <guid>https://shumiloff.ru/./pro-byurokratiyu-doxlyx-myshej-inventarizadnicu-i-adminskuyu-magiyu.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Wed, 13 Mar 2019 21:39:24 +0500</pubDate></item>
-<item><title>
-Про запись подкастов, оборудование и ошибки начинающего
-</title><description><![CDATA[
-<p style="text-align: center;"><img src="images/recording/mic.jpg"></p>
-<p>&nbsp; Вы когда-нибудь задумывались о том, насколько хорошо вы владеете собственными речью и голосом? Я раньше не особо, но когда я слышал свой голос на записи, мне он абсолютно не нравился. Совершенно. Возможно дело в том, что я всю свою жизнь картавлю, но довольно успешно маскирую своё неумение говорить букву "Р", имитируя её при помощи голосовых связок, а не движения языка. В принципе, я могу произнести любое слово одновременно с непрерывающейся картавой буквой "Р" - такая вот суперспособность сомнительной полезности. А ещё после участия в подкастах я начал слышать то, чего&nbsp;никогда не слышал или не замечал раньше.</p>
-<hr />
-<p>Теги: <a href='tag_подкасты.html'>подкасты</a>, <a href='tag_hardware.html'>hardware</a></p>
-]]></description><link>https://shumiloff.ru/pro-zapis-podkastov-oborudovanie-i-oshibki-nachinayushhego.html</link>
-<guid>https://shumiloff.ru/./pro-zapis-podkastov-oborudovanie-i-oshibki-nachinayushhego.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Tue, 12 Mar 2019 22:29:58 +0500</pubDate></item>
 </channel></rss>
