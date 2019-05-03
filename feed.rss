@@ -2,9 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Mon, 29 Apr 2019 23:09:04 +0500</lastBuildDate>
-<pubDate>Mon, 29 Apr 2019 23:09:04 +0500</pubDate>
+<lastBuildDate>Fri, 03 May 2019 09:34:16 +0500</lastBuildDate>
+<pubDate>Fri, 03 May 2019 09:34:16 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Про смерть, мотоциклы и "гиен"
+</title><description><![CDATA[
+<p style="text-align: center;"><img src="images/brokenmoto.jpg"></p>
+<p>&nbsp; Ну вот, опять началось. Как только погибает мотоциклист, раз за разом происходит одно и то же - откуда-то появляется множество (десятки) людей, пишущих "хруст", "оттаяли смертнички", "одноразовый", "сам виноват", "туда ему и дорога" и тому подобное. Эти люди подобны гиенам, они ходят вокруг погибшего, ржут, троллят, смеются. Причём их ценное оригинальное мнение о подобных ситуациях, которое обязательно все должны узнать, выражается ими ДО того, как стали известны какие-либо детали происшествия, ДО того, как получено официальное заключение ГИБДД, ДО того, как появились в открытом доступе записи с видеорегистраторов и вообще стало известно, кто виноват в сложившейся ситуации. А под аналогичными постами о ДТП с участием авто большинство пишет "соболезнуем", "кошмар" и так далее.</p>
+<p>&nbsp; Вот пост в&nbsp;<a href="https://vk.com/wall-69295870_655545?hash=a3df61cf8f39b9cdc2" target="_blank">ЧП ДТП Пермь</a>, а вот пост о том же ДТП в&nbsp;<a href="https://vk.com/wall-73425035_16519?hash=24d64922d3838f8e55" target="_blank">Мотобратство Пермь</a>. Совершенно разные комментарии.</p>
+<p>&nbsp; Отец с сыном ехали на двух мотоциклах из Ижевска к нам на трек, отец 57-ми лет, насколько мне известно, не справился с управлением и влетел в ограждение.&nbsp; Насмерть. Сын жив, цел.</p>
+<hr />
+<p>Теги: <a href='tag_moto.html'>moto</a></p>
+]]></description><link>https://shumiloff.ru/pro-smert-motocikly-i-gien.html</link>
+<guid>https://shumiloff.ru/./pro-smert-motocikly-i-gien.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Fri, 03 May 2019 09:33:23 +0500</pubDate></item>
 <item><title>
 Для чего нужен 3d принтер (часть 2)
 </title><description><![CDATA[
@@ -114,15 +127,4 @@ fi</code></pre>
 <guid>https://shumiloff.ru/./skript-dlya-proverki-vremeni-protuxaniya-sertifikatov.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Thu, 21 Mar 2019 02:04:17 +0500</pubDate></item>
-<item><title>
-Про бюрократию, дохлых мышей, инвентаризадницу и админскую магию
-</title><description><![CDATA[
-<p style="text-align: center;"><img src="images/burocrat.jpg"></p>
-<p><span style="font-weight: 400;">&nbsp; Внезапно вспомнился период мой работы в конторе под названием КЭС-Прикамье, это было примерно лет десять тому назад и это была одна из самых бюрократических контор, которые мне удалось повидать в своей жизни. Одним из самых ярких примеров бюрократии была процедура заказа оборудования. Например, у Ивана Ивановича на рабочем месте сдохла компьютерная мышь. Далее начинается целый процесс, в который вовлечено множество людей и который влечёт за собой километры, набеганные по коридору.</span></p>
-<hr />
-<p>Теги: <a href='tag_админское.html'>админское</a>, <a href='tag_fun.html'>fun</a></p>
-]]></description><link>https://shumiloff.ru/pro-byurokratiyu-doxlyx-myshej-inventarizadnicu-i-adminskuyu-magiyu.html</link>
-<guid>https://shumiloff.ru/./pro-byurokratiyu-doxlyx-myshej-inventarizadnicu-i-adminskuyu-magiyu.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Wed, 13 Mar 2019 21:39:24 +0500</pubDate></item>
 </channel></rss>
