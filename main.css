@@ -28,7 +28,7 @@ body{font-family:"FixedsysExcelsior",,monospace;margin:0;padding:0;background-co
         #footer{padding-top:10px;border-top:solid 1px #B2B525;color:#87B676;text-align:center;font-size:small;font-family:"FixedsysExcelsior";}
         a{text-decoration:none;color:#B2B525;}
         a:visited{text-decoration:none;color:#787A19;}
-        blockquote{background-color:#f9f9f9;border-left:solid 4px #e9e9e9;margin-left:12px;padding:12px 12px 12px 24px;}
+        blockquote{background-color:#333333;border-left:solid 4px #B2B525;margin-left:12px;padding:12px 12px 12px 24px;}
         blockquote img{margin:12px 0px;}
         blockquote iframe{margin:12px 0px;}
 
