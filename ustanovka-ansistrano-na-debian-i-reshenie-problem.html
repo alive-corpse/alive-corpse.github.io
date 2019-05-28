@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="main.css" type="text/css" />
+<link rel="stylesheet" href="blog.css" type="text/css" />
+<link rel="stylesheet" href="assets/highlight/styles/corpse.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="" href="feed.rss" />
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+<script src="assets/jquery.min.js"></script>
+<script src="assets/jouele/jouele.min.js"></script>
+<link href="assets/jouele/jouele.min.css" rel="stylesheet"/>
+<script src="assets/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(52451890, "init", {
+        id:52451890,
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/52451890" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<title>Установка Ansistrano на Debian и решение проблем</title>
+</head><body>
+<div id="divbodyholder">
+<div class="headerholder">
+<a href="https://vk.com/evgeniy_shumilov" target="_blank"><img src="/images/logo.png" class="logo" height="106pt" style="float: left; margin-right: 20px;"></a>
+<div class="header">
+<div id="title">
+<h1 class="nomargin"><a class="ablack" href="https://shumiloff.ru/index.html">Зайчатки разума</a></h1>
+<div id="description">Записная книжка айтишника</div>
+</div></div>
+<ul class="full-width">
+    <li>
+        <a href="/pro-lyubov-k-minimalizmu-i-staticheskuyu-generaciyu-kontenta.html">О блоге</a>
+<!--
+        <ul>
+            <li><a href="#">Item1</a></li>
+            <li><a href="#">Item2</a></li>
+            <li><a href="#">Item3</a></li>
+        </ul>
+-->
+    </li>
+    <li><a href="/all_tags.html">Теги</a></li>
+    <li><a href="/all_posts.html">Все посты</a></li>
+    <li><a href="/tag_ностальгия.html">Ностальгическое</a></li>
+    <li><a href="/tag_мысли-вслух.html">Мысли вслух</a></li>
+</ul>
+
+<div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
+</div>
+<div id="divbody"><div class="content">
+<!-- entry begin -->
+<h3><a class="ablack" href="ustanovka-ansistrano-na-debian-i-reshenie-problem.html">
+Установка Ansistrano на Debian и решение проблем
+</a></h3>
+<!-- bashblog_timestamp: #201905281803.06# -->
+<div class="subtitle">2019-05-28 18:03:06 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<p style="text-align:center"><img alt="" src="/images/ansible-debian.png" /></p>
+
+<p>&nbsp; Не так давно появилась необходимость реализовать CI/CD. Подумав, решил разбить это на две части - сборку и деплой контейнеров и отдельно - на деплой кода. Вторую часть решил реализовать с помощью <a href="https://github.com/ansistrano" target="_blank">ansistrano</a> - это аналог <a href="https://capistranorb.com/" target="_blank">capistrano</a>, только выполненный в виде модуля для <a href="https://ru.wikipedia.org/wiki/Ansible" target="_blank">ansible</a>. Почему не стал делать статические контейнеры с кодом? Хотя бы потому, что в случае использования ansistrano, роллбек проходит практически мгновенно, а это большой плюс. Когда-то я уже поднимал ansistrano, но на этот раз всё оказалось несколько сложнее.</p>
+
+<hr />
+<p>&nbsp; Ansible был установлен в контейнер c debian 9.0 из штатной пакетной базы. Затем были устновлены роли deploy и rollback в соответствии с документацией:</p>
+
+<pre>
+<code>ansible-galaxy install ansistrano.deploy ansistrano.rollback</code></pre>
+
+<p>&nbsp; &nbsp;Первая возникшая проблема заключалась в том, что при попытке запуска деплоя всё падало на конструкции:</p>
+
+<pre>
+<code>- include_tasks: "{{ ansistrano_before_setup_tasks_file | default('empty.yml') }}"</code></pre>
+
+<p>&nbsp; Это самая первая строка main.yml из роли deploy ansistrano. Как оказалось, директива include_tasks появилась только в ansible версии 2.4, а по умолчанию из репозитория дебиана можно поставить только 2.2. Пришлось немного изменить сборку контейнера, добавить в него python-pip3 и установить ansible через pip install ansible. Текущая версия аж 2.8.0! Как быстро летит время. Казалось бы совсем недавно пользовался версией 1.8, это явно говорит о том, какими темпами развивается ansible. На всякий случай проверил - в репозиториях убунты 18.04 лежит версия 2.5.1, так что если у вас контейнер базируется на ubuntu 18.04, у вас этой проблемы возникнуть не должно.</p>
+
+<p>&nbsp; После этого всё начало работать, но упорно пыталось отправить анонимную статистику в ansistrano и на этом падало:</p>
+
+<pre>
+<code>TASK [common/ansistrano/deploy : ANSISTRANO | Send anonymous stats] ***************************************************
+[DEPRECATION WARNING]: evaluating ansistrano_allow_anonymous_stats as a bare variable, this behaviour will go away and
+ you might need to add |bool to the expression in the future. Also see CONDITIONAL_BARE_VARS configuration toggle.. 
+This feature will be removed in version 2.12. Deprecation warnings can be disabled by setting 
+deprecation_warnings=False in ansible.cfg.
+fatal: [utest]: FAILED! =&gt; {"changed": false, "msg": "Failed to connect to ansistrano.com at port 443: [Errno 104] Connection reset by peer"}
+...ignoring</code></pre>
+
+<p>&nbsp; В документации для отключения отправки статистики рекомендуется задать значение false для переменной ansistrano_allow_anonymous_stats, но как я ни бился, это не помогло. Я пытался добавить это значение в раздел vars плейбука деплоя, задать в роли, подгрузить из внешнего файла с переменными - бесполезно. Даже добавил вывод значения переменной дебагом - переменная была успешно задана, но при деплое всё-равно шла попытка отправить статистику, после чего роль падала. Проблема была решена просто. В директории роли ansistrano.deploy в поддиректории tasks заменяем файл anon-stats.yml на пустой:</p>
+
+<pre>
+<code>mv anon-stats.yml anon-stats.yml_orig
+touch anon-stats.yml</code></pre>
+
+<p>&nbsp; Вуаля! Деплой проходит! Но после деплоя получаем пачку ошибок следующего вида:</p>
+
+<pre>
+<code>Exception ignored in: &lt;function WeakValueDictionary.__init__.&lt;locals&gt;.remove at 0xb7099d64&gt;
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/weakref.py", line 117, in remove
+TypeError: 'NoneType' object is not callable
+Exception ignored in: &lt;function WeakValueDictionary.__init__.&lt;locals&gt;.remove at 0xb7099d64&gt;
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/weakref.py", line 117, in remove
+TypeError: 'NoneType' object is not callable</code></pre>
+
+<p>&nbsp; Спустя какое-то время гугла подсказал, <a href="https://github.com/ayufan-rock64/linux-build/issues/136" target="_blank">как решить эту проблему</a>:</p>
+
+<blockquote>
+<p>In short open&nbsp;<code>/usr/lib/python3.5/weakref.py</code>&nbsp;and change line 109 to:</p>
+
+<pre>
+<code>def remove(wr, selfref=ref(self), _atomic_removal=_remove_dead_weakref):
+</code></pre>
+
+<p>And line 117 to:</p>
+
+<pre>
+<code>_atomic_removal(d, wr.key)
+</code></pre>
+
+<p>Note you need to do this with spaces, not tabs as this will cause other errors.</p>
+</blockquote>
+
+<p>&nbsp; Возможно это кому-то будет полезным, как минимум оставлю этот пост в качестве памятки для себя самого.</p>
+
+<p>Теги: <a href='tag_админское.html'>админское</a>, <a href='tag_ansible.html'>ansible</a></p>
+<!-- text end -->
+<!-- entry end -->
+</div>
+<div id="disqus_thread"></div>
+            <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+               var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+            /* * * DONT EDIT BELOW THIS LINE * * */
+            (function() {
+            var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+            dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+            (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<div id="footer">
+<!-- Tolstoy Comments
+<script type="text/javascript">!(function(w,d,s,l,x){w[l]=w[l]||[];var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=!0;j.src='//web.tolstoycomments.com/sitejs/app.js?i='+l+'&x='+x+'&t='+(new Date().getTime());f.parentNode.insertBefore(j,f)})(window,document,'script','tolstoycomments','1577');</script>
+-->
+<a href="https://vk.com/evgeniy_shumilov">Evgeniy Shumilov</a> &mdash; <a href="mailto:evgeniy&#46;shumilov&#64;gmail&#46;com">evgeniy&#46;shumilov&#64;gmail&#46;com</a><br/>
+Generated with <a href="https://github.com/cfenollosa/bashblog">bashblog</a>, a single bash script to easily create blogs like this one</div>
+</div></div>
+</div></div>
+<script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+        /* * * DONT EDIT BELOW THIS LINE * * */
+        (function () {
+        var s = document.createElement("script"); s.async = true;
+        s.type = "text/javascript";
+        s.src = "//" + disqus_shortname + ".disqus.com/count.js";
+        (document.getElementsByTagName("HEAD")[0] || document.getElementsByTagName("BODY")[0]).appendChild(s);
+    }());
+    </script>
+</body></html>

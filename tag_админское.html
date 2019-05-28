@@ -58,6 +58,21 @@
 <div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
 </div>
 <div id="divbody"><div class="content">
+<h3><a class="ablack" href="ustanovka-ansistrano-na-debian-i-reshenie-problem.html">
+Установка Ansistrano на Debian и решение проблем
+</a></h3>
+<!-- bashblog_timestamp: #201905281803.06# -->
+<div class="subtitle">2019-05-28 18:03:06 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<p style="text-align:center"><img alt="" src="/images/ansible-debian.png" /></p>
+
+<p>&nbsp; Не так давно появилась необходимость реализовать CI/CD. Подумав, решил разбить это на две части - сборку и деплой контейнеров и отдельно - на деплой кода. Вторую часть решил реализовать с помощью <a href="https://github.com/ansistrano" target="_blank">ansistrano</a> - это аналог <a href="https://capistranorb.com/" target="_blank">capistrano</a>, только выполненный в виде модуля для <a href="https://ru.wikipedia.org/wiki/Ansible" target="_blank">ansible</a>. Почему не стал делать статические контейнеры с кодом? Хотя бы потому, что в случае использования ansistrano, роллбек проходит практически мгновенно, а это большой плюс. Когда-то я уже поднимал ansistrano, но на этот раз всё оказалось несколько сложнее.</p>
+
+<p class="readmore"><a href="ustanovka-ansistrano-na-debian-i-reshenie-problem.html">Читать дальше...</a></p>
+<p>Теги: <a href='tag_админское.html'>админское</a>, <a href='tag_ansible.html'>ansible</a></p>
 <h3><a class="ablack" href="pravilnoe-otklyuchenie-swap-razdela-v-linux-mint.html">
 Правильное отключение SWAP раздела в Linux Mint
 </a></h3>
