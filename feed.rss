@@ -2,11 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Thu, 30 May 2019 19:05:07 +0500</lastBuildDate>
-<pubDate>Thu, 30 May 2019 19:05:07 +0500</pubDate>
+<lastBuildDate>Tue, 04 Jun 2019 15:05:58 +0500</lastBuildDate>
+<pubDate>Tue, 04 Jun 2019 15:05:58 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
 <item><title>
-&nbsp;Как уменьшить размер контейнера с python проектом
+Про голубей, крыс,&nbsp;тараканов и какахи или мерзости пост
+</title><description><![CDATA[
+
+<p style="text-align:center"><img alt="" src="/images/golub.jpg" style="height:533px; width:710px" /></p>
+
+<p>&nbsp; Как-то пару месяцев назад по пути из дома на работу, видел в разных местах трёх бабушек, рассыпающих пшено или какую-то другую крупу на асфальт для голубей. Причём в пакетах и на земле суммарно&nbsp;было явно больше половины&nbsp;килограмма. В тот же день видел ещё пару куч зерна и скопления голубей. Как я заметил, позиция относительно подкармливания голубей преимущественно полярная. Кто-то сам кормит и считает, что творит добро, а кто-то люто против, причём выражается это порою в довольно радикальной форме. Вот <a href="https://www.city-n.ru/view/424997.html" target="_blank">тут</a> есть статья о том, как кто-то массово отравил голубей в Новокузнецке. Самое интересное - это комментарии под этой статьёй, прямо битва тех кто &quot;за&quot; и тех, кто &quot;против&quot;. В числе прочего даже спрашивают, где и какой отравы купить, чтобы гарантировано отправить пачку пернатых к праотцам.</p>
+
+<hr/>
+<p>Теги: <a href='tag_мысли-вслух.html'>мысли-вслух</a></p>
+]]></description><link>https://shumiloff.ru/pro-golubej-krysnbsptarakanov-i-kakaxi-ili-merzosti-post.html</link>
+<guid>https://shumiloff.ru/./pro-golubej-krysnbsptarakanov-i-kakaxi-ili-merzosti-post.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Tue, 04 Jun 2019 15:05:20 +0500</pubDate></item>
+<item><title>
+Как уменьшить размер контейнера с python проектом
 </title><description><![CDATA[
 
 <p style="text-align:center"><img alt="" src="/images/docker-python.png" /></p>
@@ -129,15 +143,4 @@
 <guid>https://shumiloff.ru/./prostoe-prisposoblenie-dlya-razdeleniya-pechatnyx-plat.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Mon, 29 Apr 2019 21:49:41 +0500</pubDate></item>
-<item><title>
-Про весеннее обострение
-</title><description><![CDATA[
-<p style="text-align: center;">&nbsp;<img src="images/spring/obostrenie.jpg"></p>
-<p>&nbsp; &nbsp;Этой весной столько всего приключилось и накопилось, что на ведение блога просто не хватало сил и времени. Постараюсь исправить это упущение и вывалю всё скопом. Скажу сразу, под обострением я в данном случае имею в виду обострение моего желания изменений,&nbsp;стремления к чему-то новому и избавление от чего-то старого.</p>
-<hr />
-<p>Теги: <a href='tag_жизненное.html'>жизненное</a>, <a href='tag_3d-printing.html'>3d-printing</a>, <a href='tag_moto.html'>moto</a>, <a href='tag_keyboards.html'>keyboards</a>, <a href='tag_smarthome.html'>smarthome</a></p>
-]]></description><link>https://shumiloff.ru/pro-vesennee-obostrenie.html</link>
-<guid>https://shumiloff.ru/./pro-vesennee-obostrenie.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Mon, 29 Apr 2019 21:05:30 +0500</pubDate></item>
 </channel></rss>
