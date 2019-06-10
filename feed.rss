@@ -2,9 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Tue, 04 Jun 2019 19:42:36 +0500</lastBuildDate>
-<pubDate>Tue, 04 Jun 2019 19:42:36 +0500</pubDate>
+<lastBuildDate>Mon, 10 Jun 2019 17:57:16 +0500</lastBuildDate>
+<pubDate>Mon, 10 Jun 2019 17:57:16 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Холивара пост
+</title><description><![CDATA[
+
+<p style="text-align:center"><img alt="" src="/images/mac/ipad-pro-2019.jpg" /></p>
+
+<p>&nbsp; Я тут на днях послушал <a href="https://droidercast.podster.fm/65" target="_blank">выпуск DroiderCast</a>, в котором в числе прочего рассказывали про новый iPad Pro, который показывали на последней выставке WWDC. С восторгом говорили, что теперь к айпаду можно подключать USB накопители и даже мыши и клавиатуры! Ещё отдельного упоминания удостоился тот факт, что теперь на айпаде (о, чудо-то какое!) можно ДАЖЕ просматривать свойства файлов! Ну офигеть! Дожили! Эм... Что? Я был не в курсе, но выходит, что к айпадам нельзя было подключать USB устройства? Если честно, я в полном шоке. Андроид <a href="https://habr.com/ru/post/123361/" target="_blank">это умеет</a> на минуточку с 2011-го года и версии 2.3.4. У&nbsp;меня и&nbsp;в мыслях не было, что айпады могут этого не уметь. Для меня возможность подключить что-либо к планшету или телефону (по крайней мере для флагманов) являлась чем-то само собой разумеющимся.</p>
+
+<hr />
+<p>Теги: <a href='tag_android-soft.html'>android-soft</a>, <a href='tag_mac.html'>mac</a>, <a href='tag_мысли-вслух.html'>мысли-вслух</a></p>
+]]></description><link>https://shumiloff.ru/xolivara-post.html</link>
+<guid>https://shumiloff.ru/./xolivara-post.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Mon, 10 Jun 2019 17:49:12 +0500</pubDate></item>
 <item><title>
 Про голубей, крыс,&nbsp;тараканов и какахи или мерзости пост
 </title><description><![CDATA[
@@ -131,16 +145,4 @@
 <guid>https://shumiloff.ru/./dlya-chego-nuzhen-3d-printer-chast-pervaya.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Mon, 29 Apr 2019 22:08:24 +0500</pubDate></item>
-<item><title>
-Простое приспособление для разделения печатных плат
-</title><description><![CDATA[
-<p style="text-align: center;"><img src="images/pcbdivider/0.jpg"></p>
-<p>&nbsp; Как я уже писал в <a href="/pro-vesennee-obostrenie.html" target="_blank">прошлом посте</a>, я зимой получил горсть печатных плат. Есть такой сервис, как JLCPCB, который&nbsp;дёшево производит печатные платы хорошего качества. Есть только одно но - минимальный заказ 10 штук и платы должны быть не больше, чем 10*10 сантиметров. Но дело в том, что на площади в 10*10 сантиметров порою можно разместить множество небольших плат для различных устройств. Есть различные способы разделения плат. Можно заказать пропил между платами, можно прокатку (между платами делается ложбинка, по которой их можно разломить), но когда у тебя на руках уже есть две платы на одном куске текстолита, которые нужно разделить, на помощь приходит старый дедовский способ - стальная линейка и канцелярский нож.&nbsp;</p>
-<p>&nbsp; У данного способа есть очевидные недостатки. Во-первых, стальная линейка достаточно тонкая, а во-вторых - достаточно гладкая. Поэтому в процессе реза её можно случайно сдвинуть или нож может уйти в сторону, потому что каждый раз, когда я пытался прорезать в плате углубление, я боялся, что при достаточно сильном давлении в сторону руки, которая держит линейку, нож сорвётся и выскочит на линейку. Одним словом, есть опасность повредить руку. И, кажется, я нашёл метод, с помощью которого можно усовершенствовать данный способ, используя <s>гуано и веточки</s> легкодоступные и дешёвые ресурсы.</p>
-<hr />
-<p>Теги: <a href='tag_pcb.html'>pcb</a>, <a href='tag_lifehack.html'>lifehack</a></p>
-]]></description><link>https://shumiloff.ru/prostoe-prisposoblenie-dlya-razdeleniya-pechatnyx-plat.html</link>
-<guid>https://shumiloff.ru/./prostoe-prisposoblenie-dlya-razdeleniya-pechatnyx-plat.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Mon, 29 Apr 2019 21:49:41 +0500</pubDate></item>
 </channel></rss>
