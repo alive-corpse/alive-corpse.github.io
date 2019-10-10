@@ -2,9 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Wed, 09 Oct 2019 10:54:05 +0500</lastBuildDate>
-<pubDate>Wed, 09 Oct 2019 10:54:05 +0500</pubDate>
+<lastBuildDate>Thu, 10 Oct 2019 09:35:42 +0500</lastBuildDate>
+<pubDate>Thu, 10 Oct 2019 09:35:42 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Быстрая разблокировка старых 3g модемов под linux
+</title><description><![CDATA[
+
+<p style="text-align:center"><img alt="" src="images/e1550.jpg" /></p>
+
+<p>&nbsp; Я просто оставлю это здесь, как памятку, возможно ещё пригодится. Подобных мануалов масса, но в основном они ориентированы на наличие windows, в linux это оказалось даже проще.&nbsp;У меня есть отдельная коробочка, куда я складывал попадающие ко мне 3g/4g модемы на случай, если мне они понадобятся в будущем. И вот, сегодня я нашёл этот ящик пандоры и он оказался очень кстати. Среди прочих моделей, отыскался один Huawei e1550 от Мегафон. Одна из лучших в своё время моделей, легко поддавалась перепрошивке, можно было использовать как SIP транк и вообще, делать с ним что угодно. Но естественно, он был залочен на использование симкарт от мегафона. Всё, что нам потребуется - браузер, консоль и пакет minicom (sudo apt-get install minicom, в случае, если вы пользуетесь debian-based системой).</p>
+
+<hr />
+<p>Теги: <a href='tag_linux.html'>linux</a></p>
+]]></description><link>https://shumiloff.ru/bystraya-razblokirovka-staryx-3g-modemov-pod-linux.html</link>
+<guid>https://shumiloff.ru/./bystraya-razblokirovka-staryx-3g-modemov-pod-linux.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Thu, 10 Oct 2019 09:34:27 +0500</pubDate></item>
 <item><title>
 О разнице в восприятии, понимании и формулировке задач
 </title><description><![CDATA[
@@ -154,17 +168,4 @@
 <guid>https://shumiloff.ru/./pro-umnye-chasy.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Fri, 10 May 2019 14:10:07 +0500</pubDate></item>
-<item><title>
-Про смерть, мотоциклы и "гиен"
-</title><description><![CDATA[
-<p style="text-align: center;"><img src="images/brokenmoto.jpg"></p>
-<p>&nbsp; Ну вот, опять началось. Как только погибает мотоциклист, раз за разом происходит одно и то же: откуда-то появляется множество (десятки) людей, пишущих "хруст", "оттаяли смертнички", "одноразовый", "сам виноват", "туда ему и дорога" и так далее. Эти люди подобны гиенам, они ходят вокруг погибшего, ржут, троллят, смеются. Причём их ценное оригинальное мнение о подобных ситуациях, которое обязательно все должны узнать, выражается ими ДО того, как стали известны какие-либо детали происшествия, ДО того, как получено официальное заключение ГИБДД, ДО того, как появились в открытом доступе записи с видеорегистраторов и вообще стало известно, кто виноват в сложившейся ситуации. А под аналогичными постами о ДТП с участием авто большинство пишет "соболезнуем", "кошмар" и так далее.</p>
-<p>&nbsp; Вот пост в&nbsp;<a href="https://vk.com/wall-69295870_655545?hash=a3df61cf8f39b9cdc2" target="_blank">ЧП ДТП Пермь</a>, а вот пост о том же ДТП в&nbsp;<a href="https://vk.com/wall-73425035_16519?hash=24d64922d3838f8e55" target="_blank">Мотобратство Пермь</a>. Совершенно разные комментарии.</p>
-<p>&nbsp; Отец с сыном ехали на двух мотоциклах из Ижевска к нам на трек, отец 57-ми лет, насколько мне известно, не справился с управлением и влетел в ограждение.&nbsp; Насмерть. Сын жив, цел.</p>
-<hr />
-<p>Теги: <a href='tag_moto.html'>moto</a></p>
-]]></description><link>https://shumiloff.ru/pro-smert-motocikly-i-gien.html</link>
-<guid>https://shumiloff.ru/./pro-smert-motocikly-i-gien.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Fri, 03 May 2019 09:33:23 +0500</pubDate></item>
 </channel></rss>
