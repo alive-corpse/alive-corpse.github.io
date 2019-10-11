@@ -2,9 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Thu, 10 Oct 2019 09:47:56 +0500</lastBuildDate>
-<pubDate>Thu, 10 Oct 2019 09:47:56 +0500</pubDate>
+<lastBuildDate>Fri, 11 Oct 2019 08:54:28 +0500</lastBuildDate>
+<pubDate>Fri, 11 Oct 2019 08:54:28 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Небольшой лайфхак для отключения питания Ender3 от Octoprint
+</title><description><![CDATA[
+
+<p style="text-align:center"><img alt="" src="images/ender3display.jpg" style="height:418px; width:800px" /></p>
+
+<p>&nbsp;&nbsp;<img alt="" src="images/ender3display.jpg1" style="height:1067px; width:800px" />С того момента, как я подключил свой 3d принтер Creality Ender3 к Orange Pi PC и настроил octoprint для удалённой печати, меня очень раздражала одна особенность реализации платы управления эндера. В случае, когда питание принтера было выключено, плата продолжала питаться по линии +5в через USB разъём. Дисплей светился, на нём отображалась информация с датчиков температуры (хоть и не настолько контрастно, как при включенном питании), можно было перемещаться по меню,&nbsp;а вентилятор охлаждения хотенда постоянно вращался (не в полную силу конечно, но это тоже создавало лишний звуковой фон). Более того, octoprint не терял соединения с принтером, и если при этом включить нагрев стола или хотенда, изображение на дисплее становилось менее различимым, но подсветка продолжала работать. Другими словами, есть явная недоработка со стороны Creality и вчера я это исправил, потратив на это примерно 0 рублей, сотые доли копейки и три минуты.</p>
+
+<hr />
+<p>Теги: <a href='tag_3d-printing.html'>3d-printing</a></p>
+]]></description><link>https://shumiloff.ru/nebolshoj-lajfxak-dlya-otklyucheniya-pitaniya-ender3-ot-octoprint.html</link>
+<guid>https://shumiloff.ru/./nebolshoj-lajfxak-dlya-otklyucheniya-pitaniya-ender3-ot-octoprint.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Fri, 11 Oct 2019 08:53:53 +0500</pubDate></item>
 <item><title>
 Быстрая разблокировка старых 3g модемов под linux
 </title><description><![CDATA[
@@ -131,26 +145,4 @@
 <guid>https://shumiloff.ru/./o-tradicionnyx-svadbax.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Wed, 15 May 2019 18:26:23 +0500</pubDate></item>
-<item><title>
-Про умные часы
-</title><description><![CDATA[
-
-<p style="text-align:center"><img alt="Sony SmartWatch2" src="/images/smartwatch/sw2.jpg"></p>
-
-<p>&nbsp; Помню, несколько лет назад перед установкой натяжного потолка ко мне пришёл замерщик. Произвёл все необходимые замеры, занёс&nbsp;данные в бумаги и собрался было уже уходить, но заметил на моём запястье умные часы, в результате чего между нами произошёл забавный диалог:</p>
-
-<blockquote>- Это что, умные часы?<br />
-- Ну да, а что?<br />
-- Но Apple ведь их ещё не выпустила!<br />
-- Компания Sony не спрашивала их разрешения и это уже третьи умные часы, которые они выпускают.<br />
-- А что они умеют?</blockquote>
-
-<p>&nbsp; И далее мне уже пришлось вкратце описывать функционал, чем из этого функционала&nbsp;пользуюсь лично я, сколько они живут от одной зарядки&nbsp;(прямо по аналогии с вопросами о мотоцикле в стиле &quot;Сколько жрёт? Сколько прёт?&quot;) и тому подобное. Для меня всегда была удивительна позиция людей, которые живут в некоем вакууме вендорлока одной компании (будь то Apple, Samsung или,&nbsp;например, Sony) и мало того, что не видят ничего вокруг, так ещё и считают (этим больше всего грешат адепты Apple почему-то), что весь мир крутится именно вокруг этой компании, именно она делает всё лучше остальных и именно ей принадлежит изобретение чего-то, чем они пользуются.</p>
-
-<hr />
-<p>Теги: <a href='tag_smartwatch.html'>smartwatch</a>, <a href='tag_gadgets.html'>gadgets</a></p>
-]]></description><link>https://shumiloff.ru/pro-umnye-chasy.html</link>
-<guid>https://shumiloff.ru/./pro-umnye-chasy.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Fri, 10 May 2019 14:10:07 +0500</pubDate></item>
 </channel></rss>

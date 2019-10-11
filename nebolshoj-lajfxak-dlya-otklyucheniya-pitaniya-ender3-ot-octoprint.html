@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="main.css" type="text/css" />
+<link rel="stylesheet" href="blog.css" type="text/css" />
+<link rel="stylesheet" href="assets/highlight/styles/corpse.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="" href="feed.rss" />
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+<script src="assets/jquery.min.js"></script>
+<script src="assets/jouele/jouele.min.js"></script>
+<link href="assets/jouele/jouele.min.css" rel="stylesheet"/>
+<script src="assets/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(52451890, "init", {
+        id:52451890,
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/52451890" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<title>Небольшой лайфхак для отключения питания Ender3 от Octoprint</title>
+</head><body>
+<div id="divbodyholder">
+<div class="headerholder">
+<a href="https://vk.com/evgeniy_shumilov" target="_blank"><img src="/images/logo.png" class="logo" height="106pt" style="float: left; margin-right: 20px;"></a>
+<div class="header">
+<div id="title">
+<h1 class="nomargin"><a class="ablack" href="https://shumiloff.ru/index.html">Зайчатки разума</a></h1>
+<div id="description">Записная книжка айтишника</div>
+</div></div>
+<ul class="full-width">
+    <li>
+        <a href="/pro-lyubov-k-minimalizmu-i-staticheskuyu-generaciyu-kontenta.html">О блоге</a>
+<!--
+        <ul>
+            <li><a href="#">Item1</a></li>
+            <li><a href="#">Item2</a></li>
+            <li><a href="#">Item3</a></li>
+        </ul>
+-->
+    </li>
+    <li><a href="/all_tags.html">Теги</a></li>
+    <li><a href="/all_posts.html">Все посты</a></li>
+    <li><a href="/tag_ностальгия.html">Ностальгическое</a></li>
+    <li><a href="/tag_мысли-вслух.html">Мысли вслух</a></li>
+</ul>
+
+<div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
+</div>
+<div id="divbody"><div class="content">
+<!-- entry begin -->
+<h3><a class="ablack" href="nebolshoj-lajfxak-dlya-otklyucheniya-pitaniya-ender3-ot-octoprint.html">
+Небольшой лайфхак для отключения питания Ender3 от Octoprint
+</a></h3>
+<!-- bashblog_timestamp: #201910110853.53# -->
+<div class="subtitle">2019-10-11 08:53:53 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<p style="text-align:center"><img alt="" src="images/ender3display.jpg" style="height:418px; width:800px" /></p>
+
+<p>&nbsp;&nbsp;<img alt="" src="images/ender3display.jpg1" style="height:1067px; width:800px" />С того момента, как я подключил свой 3d принтер Creality Ender3 к Orange Pi PC и настроил octoprint для удалённой печати, меня очень раздражала одна особенность реализации платы управления эндера. В случае, когда питание принтера было выключено, плата продолжала питаться по линии +5в через USB разъём. Дисплей светился, на нём отображалась информация с датчиков температуры (хоть и не настолько контрастно, как при включенном питании), можно было перемещаться по меню,&nbsp;а вентилятор охлаждения хотенда постоянно вращался (не в полную силу конечно, но это тоже создавало лишний звуковой фон). Более того, octoprint не терял соединения с принтером, и если при этом включить нагрев стола или хотенда, изображение на дисплее становилось менее различимым, но подсветка продолжала работать. Другими словами, есть явная недоработка со стороны Creality и вчера я это исправил, потратив на это примерно 0 рублей, сотые доли копейки и три минуты.</p>
+
+<hr />
+<p>&nbsp; Казалось бы, что плохого в том, что плата запитана через *Pi постоянно? Дело в том, что блок питания на Ender выдаёт 24 вольта. И вентиляторы охлаждения соответственно так же потребляют 24 вольта, в том числе и вентилятор охлаждения хотенда. Потребляемая им мощность 12в * 1А = 12 ватт. Блоку питания, к которому подключен *Pi приходится очень несладко и он работает в нештатном режиме и как минимум с двойной нагрузкой. Я уже не говорю о том, что при случайной попытке нагреть стол или хотенд, потребляемая мощность становится совершенно другой и то, что блок питания, подключенный к *Pi не умер в мучениях, пытаясь это вытянуть, вообще у меня вызывает удивление. Поэтому если в начале дня я ставил на печать какую-то деталь, скажем, на 4-5 часов, то оставшиеся 5-6 часов, пока я находился на работе, принтер продолжал работать вхолостую.</p>
+
+<p>&nbsp; Однажды, когда я снимал деталь со стола, у меня в руке был зажат пинцет, которым я по неосторожности попал в вентилятор охлаждения хотенда, в результате чего тот мгновенно вышел из строя. Вентилятор пришлось заменить. Раньше я и не подозревал, что найти вентилятор подходящего размера на 24 вольта может составить проблему в городе с населением в миллион человек. Я нашёл всего один подходящий вентилятор и всего в одном месте, поэтому мой вам совет - озаботьтесь приобретением небольшого стабилизатора напряжения с 24 на 12 вольт, с тем, чтобы достать вентилятор на 12 вольт никаких проблем нет. После замены штатного охлаждения при отключении питания принтера с подключением Orange Pi новый вентилятор уже не вращался, но издавал очень неприятный, хоть и не очень громкий писк. Другими словами, выключить принтер полностью, оставив работать *Pi было возможно, но очень не хотелось.</p>
+
+<p>&nbsp; При поиске решения этой проблемы, мне приходили в голову разные варианты - и запараллелить управляемый вход реле, включающего принтер со входом соседнего реле и с его помощью отключать вентилятор. И использовать симистор с делителем напряжения на двух резисторах и перерезать дорожку питания возле USB разъёма на плате, но оказалось, что решение проблемы куда проще, быстрее и не требует вносить практически никаких изменений в конструкцию. Идея проста как апельсин. Зачем вносить конструктивные изменения в Orange Pi или тем более, в плату принтера, если можно изменить кабель? Наша задача - прервать поступление питания на плату принтера через USB кабель. Для передачи информации необходимо согласование уровней, это обеспечивается общей линией земли, а плата принтера пускай получает питание как положено - от своего блока питания.&nbsp;Первой моей идеей было снять изоляцию и просто разрезать красный провод питания кабеля, но потом я придумал ещё один вариант, который оказался ещё проще и даже не предполагает физического насилия над самим кабелем.&nbsp;&nbsp;Если посмотреть на распиновку разъёма&nbsp;USB Type A, развернув его к себе, то контакт питания будет справа, на схеме он обозначен цифрой 1.</p>
+
+<p style="text-align:center"><img alt="" src="images/usb2pinout.png" />&nbsp;&nbsp;</p>
+
+<p style="text-align:justify">&nbsp; Всё, что нам необходимо - изолировать его. Чем можно подобраться к контакту так, чтобы его изолировать,&nbsp;не повредить&nbsp;разъём и чтобы при этом разъём потом можно было вставить в ответный разъём? Нужно что-то тонкое и не проводящее ток. Изолента не подходит - слишком толстая. Вывод - берём скотч! Всё, что нужно сделать - аккуратно вырезать узкую полоску скотча примерно в полтора миллиметра шириной и сантиметра в два длиной. Аккуратно помещаем полоску в разъём так, чтобы клейкой стороной она легла на контакт питания. Прижимаем к контакту зубочисткой, а оставшуюся часть, выглядывающую из разъёма, загибаем наружу и приклеиваем к нижней его части. Получается замечательно - изолирующая полоска никуда не денется в процессе подключения разъёма, ничему не будет мешать, а в случае необходимости её очень легко можно убрать. Теперь при подаче питания на принтер всё работает like a charm, при отключении - принтер обесточивается полностью. Никакого свиста от кулера, никакого светящегося в ночи дисплея - можно спать спокойно.</p>
+
+<p>Теги: <a href='tag_3d-printing.html'>3d-printing</a></p>
+<!-- text end -->
+<!-- entry end -->
+</div>
+<div id="disqus_thread"></div>
+            <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+               var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+            /* * * DONT EDIT BELOW THIS LINE * * */
+            (function() {
+            var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+            dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+            (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<div id="footer">
+<!-- Tolstoy Comments
+<script type="text/javascript">!(function(w,d,s,l,x){w[l]=w[l]||[];var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=!0;j.src='//web.tolstoycomments.com/sitejs/app.js?i='+l+'&x='+x+'&t='+(new Date().getTime());f.parentNode.insertBefore(j,f)})(window,document,'script','tolstoycomments','1577');</script>
+-->
+<a href="https://vk.com/evgeniy_shumilov">Evgeniy Shumilov</a> &mdash; <a href="mailto:evgeniy&#46;shumilov&#64;gmail&#46;com">evgeniy&#46;shumilov&#64;gmail&#46;com</a><br/>
+Generated with <a href="https://github.com/cfenollosa/bashblog">bashblog</a>, a single bash script to easily create blogs like this one</div>
+</div></div>
+</div></div>
+<script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+        /* * * DONT EDIT BELOW THIS LINE * * */
+        (function () {
+        var s = document.createElement("script"); s.async = true;
+        s.type = "text/javascript";
+        s.src = "//" + disqus_shortname + ".disqus.com/count.js";
+        (document.getElementsByTagName("HEAD")[0] || document.getElementsByTagName("BODY")[0]).appendChild(s);
+    }());
+    </script>
+</body></html>
