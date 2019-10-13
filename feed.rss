@@ -2,27 +2,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<<<<<<< HEAD
-<lastBuildDate>Sun, 13 Oct 2019 01:53:00 +0500</lastBuildDate>
-<pubDate>Sun, 13 Oct 2019 01:53:00 +0500</pubDate>
-<atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
-<item><title>
-Решение проблемы импорта чертежей из Inkscape во FreeCAD
-</title><description><![CDATA[
-
-<p style="text-align:center"><img alt="" src="images/freecad/main.png" /></p>
-
-<p style="text-align:justify">&nbsp; Есть два приложения для linux, которые мне очень нравятся - это <a href="https://inkscape.org/" target="_blank">Inkscape</a> и <a href="https://www.freecadweb.org/" target="_blank">FreeCAD</a>. Первый - двухмерный редактор векторной графики. Второй - трёхмерный редактор, который я часто использую для создания моделей, затем отправляющихся на 3d печать. Оба OpenSource и оба хороши тем, что портированы в том числе под Windows и MacOS.&nbsp;И вот, ещё во времена debian седьмой версии не было никаких проблем, чтобы из поставляющегося в составе дистрибутива Inkscape что-то экспортировать в DXF и открыть это во FreeCAD. Точнее, импортировать было можно, но после импорта мы получали множество объектов типа Polyline и Spline, которые затем объединялись и могли быть конвертированы в четрёж, т.е. в Draft. С какой-то версии FreeCAD при попытке перевода объединения линий в чертёж, создавались пустые чертежи в том случае, если среди линий были кривые, т.е. объекты типа Spline. Я долго страдал по этому поводу, ведь есть вещи, которые куда удобнее и приятнее нарисовать в Inkscape и затем импортировать во FreeCAD, чем рисовать непосредственно во FreeCAD&#39;е. Всё дело в том, что в Inkscape намного удобнее реализован инструмент работы с кривыми Безье, направляющими и сеткой.</p>
-
-<hr />
-<p>Теги: <a href='tag_graphics.html'>graphics</a>, <a href='tag_linux.html'>linux</a>, <a href='tag_soft.html'>soft</a></p>
-]]></description><link>https://shumiloff.ru/reshenie-problemy-importa-chertezhej-iz-inkscape-vo-freecad.html</link>
-<guid>https://shumiloff.ru/./reshenie-problemy-importa-chertezhej-iz-inkscape-vo-freecad.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Sun, 13 Oct 2019 01:50:19 +0500</pubDate></item>
-=======
-<lastBuildDate>Sun, 13 Oct 2019 23:18:49 +0500</lastBuildDate>
-<pubDate>Sun, 13 Oct 2019 23:18:49 +0500</pubDate>
+<lastBuildDate>Sun, 13 Oct 2019 23:22:03 +0500</lastBuildDate>
+<pubDate>Sun, 13 Oct 2019 23:22:03 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
 <item><title>
 Автоматическая перезагрузка OpenWRT роутера при отсутствии интернета N секунд
@@ -38,7 +19,20 @@
 <guid>https://shumiloff.ru/./avtomaticheskaya-perezagruzka-openwrt-routera-pri-otsutstvii-interneta-n-sekund.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Sun, 13 Oct 2019 23:15:08 +0500</pubDate></item>
->>>>>>> owrt-reboot
+<item><title>
+Решение проблемы импорта чертежей из Inkscape во FreeCAD
+</title><description><![CDATA[
+
+<p style="text-align:center"><img alt="" src="images/freecad/main.png" /></p>
+
+<p style="text-align:justify">&nbsp; Есть два приложения для linux, которые мне очень нравятся - это <a href="https://inkscape.org/" target="_blank">Inkscape</a> и <a href="https://www.freecadweb.org/" target="_blank">FreeCAD</a>. Первый - двухмерный редактор векторной графики. Второй - трёхмерный редактор, который я часто использую для создания моделей, затем отправляющихся на 3d печать. Оба OpenSource и оба хороши тем, что портированы в том числе под Windows и MacOS.&nbsp;И вот, ещё во времена debian седьмой версии не было никаких проблем, чтобы из поставляющегося в составе дистрибутива Inkscape что-то экспортировать в DXF и открыть это во FreeCAD. Точнее, импортировать было можно, но после импорта мы получали множество объектов типа Polyline и Spline, которые затем объединялись и могли быть конвертированы в четрёж, т.е. в Draft. С какой-то версии FreeCAD при попытке перевода объединения линий в чертёж, создавались пустые чертежи в том случае, если среди линий были кривые, т.е. объекты типа Spline. Я долго страдал по этому поводу, ведь есть вещи, которые куда удобнее и приятнее нарисовать в Inkscape и затем импортировать во FreeCAD, чем рисовать непосредственно во FreeCAD&#39;е. Всё дело в том, что в Inkscape намного удобнее реализован инструмент работы с кривыми Безье, направляющими и сеткой.</p>
+
+<hr />
+<p>Теги: <a href='tag_graphics.html'>graphics</a>, <a href='tag_linux.html'>linux</a>, <a href='tag_soft.html'>soft</a></p>
+]]></description><link>https://shumiloff.ru/reshenie-problemy-importa-chertezhej-iz-inkscape-vo-freecad.html</link>
+<guid>https://shumiloff.ru/./reshenie-problemy-importa-chertezhej-iz-inkscape-vo-freecad.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Sun, 13 Oct 2019 01:50:19 +0500</pubDate></item>
 <item><title>
 Небольшой лайфхак для отключения питания Ender3 от Octoprint
 </title><description><![CDATA[
@@ -150,18 +144,4 @@
 <guid>https://shumiloff.ru/./nbspkak-umenshit-razmer-kontejnera-s-python-proektom.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Thu, 30 May 2019 18:59:31 +0500</pubDate></item>
-<item><title>
-Установка Ansistrano на Debian и решение проблем
-</title><description><![CDATA[
-
-<p style="text-align:center"><img alt="" src="/images/ansible-debian.png" /></p>
-
-<p>&nbsp; Не так давно появилась необходимость реализовать CI/CD. Подумав, решил разбить это на две части - сборку и деплой контейнеров и отдельно - на деплой кода. Вторую часть решил реализовать с помощью <a href="https://github.com/ansistrano" target="_blank">ansistrano</a> - это аналог <a href="https://capistranorb.com/" target="_blank">capistrano</a>, только выполненный в виде модуля для <a href="https://ru.wikipedia.org/wiki/Ansible" target="_blank">ansible</a>. Почему не стал делать статические контейнеры с кодом? Хотя бы потому, что в случае использования ansistrano, роллбек проходит практически мгновенно, а это большой плюс. Когда-то я уже поднимал ansistrano, но на этот раз всё оказалось несколько сложнее.</p>
-
-<hr />
-<p>Теги: <a href='tag_админское.html'>админское</a>, <a href='tag_ansible.html'>ansible</a></p>
-]]></description><link>https://shumiloff.ru/ustanovka-ansistrano-na-debian-i-reshenie-problem.html</link>
-<guid>https://shumiloff.ru/./ustanovka-ansistrano-na-debian-i-reshenie-problem.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Tue, 28 May 2019 18:03:06 +0500</pubDate></item>
 </channel></rss>
