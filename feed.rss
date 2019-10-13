@@ -2,6 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
+<<<<<<< HEAD
 <lastBuildDate>Sun, 13 Oct 2019 01:53:00 +0500</lastBuildDate>
 <pubDate>Sun, 13 Oct 2019 01:53:00 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
@@ -19,6 +20,25 @@
 <guid>https://shumiloff.ru/./reshenie-problemy-importa-chertezhej-iz-inkscape-vo-freecad.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Sun, 13 Oct 2019 01:50:19 +0500</pubDate></item>
+=======
+<lastBuildDate>Sun, 13 Oct 2019 23:18:49 +0500</lastBuildDate>
+<pubDate>Sun, 13 Oct 2019 23:18:49 +0500</pubDate>
+<atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Автоматическая перезагрузка OpenWRT роутера при отсутствии интернета N секунд
+</title><description><![CDATA[
+
+<p style="text-align:center"><img alt="" src="images/disconnected.jpg" /></p>
+
+<p>&nbsp; У меня дома подключен интернет от Beeline, но периодически с ним возникают проблемы. Что тому виной - не могу понять. Периодически коннект разрывается, роутеру выдаётся по DHCP новый IP адрес, l2tp отрабатывает, получает свой адрес, но до шлюза через l2tp интерфейс пакеты идут только в одну сторону. Обратно приходит порядка 60 байт чего-то (не успел поймать), затем тишина. Решил написать небольшой простой скрипт, который будет проверять интернет и если его нет более 5ти минут, будет перезагружать роутер.</p>
+
+<hr />
+<p>Теги: <a href='tag_shell.html'>shell</a>, <a href='tag_networking.html'>networking</a>, <a href='tag_openwrt.html'>openwrt</a></p>
+]]></description><link>https://shumiloff.ru/avtomaticheskaya-perezagruzka-openwrt-routera-pri-otsutstvii-interneta-n-sekund.html</link>
+<guid>https://shumiloff.ru/./avtomaticheskaya-perezagruzka-openwrt-routera-pri-otsutstvii-interneta-n-sekund.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Sun, 13 Oct 2019 23:15:08 +0500</pubDate></item>
+>>>>>>> owrt-reboot
 <item><title>
 Небольшой лайфхак для отключения питания Ender3 от Octoprint
 </title><description><![CDATA[
