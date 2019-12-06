@@ -2,9 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Fri, 25 Oct 2019 13:13:25 +0500</lastBuildDate>
-<pubDate>Fri, 25 Oct 2019 13:13:25 +0500</pubDate>
+<lastBuildDate>Fri, 06 Dec 2019 20:49:40 +0500</lastBuildDate>
+<pubDate>Fri, 06 Dec 2019 20:49:40 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Про книги, запахи, флешбеки и эстетику
+</title><description><![CDATA[
+
+<p style="text-align:center"><img alt="" src="images/bioparox.jpg" style="height:378px; width:612px" /><img alt="" src="/images/boiparox.jpg" /></p>
+
+<p>&nbsp; Хорошая знакомая Настя написала <a href="https://vk.com/wall2779724_9024" target="_blank">пост о воздействии запахов на наши воспоминания и эмоциональное состояние</a>. Начал ей отвечать и как это иногда случается, понял, что мой ответ перерастает в микропост. Да будет так.</p>
+
+<div id="vk_post_2779724_9024">&nbsp; Помню, когда мне было лет 14, я болел ангиной и меня потчевали ингалятором под названием &quot;биопарокс&quot;. Во время той же болезни я прочитал книгу Джеймса Оливера Кервуда &quot;Бродяги Севера&quot; и она мне как-то очень тогда запала в душу. Как и множество других книг, которые я прочитал в своём детстве/юности, искренне считаю, что бОльшую часть из них уже лучше не перечитывать - за время взросления мировоззрение и вкусы порядочно могут измениться. Я даже нашёл фотографию именно того издания, которое у меня было и, наверняка, всё ещё стоит у мамы в шкафу.</div>
+
+<div style="text-align:center">
+<hr /><img alt="" src="images/kerwood.jpeg" style="height:516px; width:800px" /></div>
+<p>Теги: <a href='tag_мысли-вслух.html'>мысли-вслух</a>, <a href='tag_ностальгия.html'>ностальгия</a></p>
+]]></description><link>https://shumiloff.ru/pro-knigi-zapaxi-fleshbeki-i-estetiku.html</link>
+<guid>https://shumiloff.ru/./pro-knigi-zapaxi-fleshbeki-i-estetiku.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Fri, 06 Dec 2019 20:49:11 +0500</pubDate></item>
 <item><title>
 Про прогресс, технологии и флешки
 </title><description><![CDATA[
@@ -130,18 +147,4 @@
 <guid>https://shumiloff.ru/./xolivara-post.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Mon, 10 Jun 2019 17:49:12 +0500</pubDate></item>
-<item><title>
-Про голубей, крыс,&nbsp;тараканов и какахи или мерзости пост
-</title><description><![CDATA[
-
-<p style="text-align:center"><img alt="" src="/images/golub.jpg"/></p>
-
-<p>&nbsp; Как-то пару месяцев назад по пути из дома на работу видел в разных местах трёх бабушек, рассыпающих пшено или какую-то другую крупу на асфальт для голубей. Причём в пакетах и на земле суммарно&nbsp;было явно больше половины&nbsp;килограмма. В тот же день видел ещё пару куч зерна и скопления голубей. Как я заметил, позиция относительно подкармливания голубей преимущественно полярная. Кто-то сам кормит и считает, что творит добро, а кто-то люто против, причём выражается это порою в довольно радикальной форме. Вот <a href="https://www.city-n.ru/view/424997.html" target="_blank">тут</a> есть статья о том, как кто-то массово отравил голубей в Новокузнецке. Самое интересное - это комментарии под этой статьёй, прямо битва тех кто &quot;за&quot; и тех, кто &quot;против&quot;. В числе прочего даже спрашивают, где и какой отравы купить, чтобы гарантировано отправить пачку пернатых к праотцам.</p>
-
-<hr/>
-<p>Теги: <a href='tag_мысли-вслух.html'>мысли-вслух</a></p>
-]]></description><link>https://shumiloff.ru/pro-golubej-krysnbsptarakanov-i-kakaxi-ili-merzosti-post.html</link>
-<guid>https://shumiloff.ru/./pro-golubej-krysnbsptarakanov-i-kakaxi-ili-merzosti-post.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Tue, 04 Jun 2019 15:05:20 +0500</pubDate></item>
 </channel></rss>
