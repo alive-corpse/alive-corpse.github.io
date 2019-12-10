@@ -58,6 +58,28 @@
 <div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
 </div>
 <div id="divbody"><div class="content">
+<h3><a class="ablack" href="pro-centralizovannyj-sbor-logov.html">
+Про централизованный сбор логов
+</a></h3>
+<!-- bashblog_timestamp: #201901030052.53# -->
+<div class="subtitle">2019-01-03 00:52:53 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<p style="text-align: center;"><img src="images/syslog/syslogng.png"></p>
+<p>&nbsp; За последнее время случилось несколько событий, которые привели меня к необходимости централизованного сбора логов в своей домашней сети.</p>
+<h4>Что и зачем собирать?</h4>
+<ol>
+<li>Периодически ночью отваливается интернет от билайна, хотелось бы видеть, что в этот момент происходит с роутером.</li>
+<li>Есть десяток IoT устройств, построенных на ESP8266, которые с прошивкой ESPEasy умеют отправлять логи по сети.</li>
+<li>Жена на новый год подарила управляемый гигабитный коммутатор, почему бы не снимать логи и с него, если уж будет такая возможность?</li>
+<li>Есть сервер умного дома, работающий на отдельной OrangePI Zero.</li>
+<li>Есть около полутора десятков докер и lxc контейнеров с различными службами и pet-проектами, в том числе и этот блог.</li>
+</ol>
+<p>&nbsp; Хотелось бы хранить все эти логи в одном месте, чтобы облегчить их анализ, ротацию, архивирование и бекап. Как обрабатывать подобную информацию - это уже отдельная задача, но для начала эту информацию нужно собрать.</p>
+<p class="readmore"><a href="./pro-centralizovannyj-sbor-logov.html">Читать дальше...</a></p>
+<p>Теги: <a href='tag_админское.html'>админское</a>, <a href='tag_docker.html'>docker</a>, <a href='tag_logging.html'>logging</a></p>
 <h3><a class="ablack" href="pro-prazdniki-pozdravleniya-i-specializaciyu.html">
 Про праздники, поздравления и специализацию
 </a></h3>
@@ -199,20 +221,6 @@ Evgeniy Shumilov
 <p>&nbsp; С прошлого поста прошло 5 дней, за это время я столкнулся с некоторыми <s>проблемами</s> особенностями продукции Apple. Девушка, которой я выдал другой мак на замену (я писал об этом в <a href="/pro-nadyozhnost-chast-vtoraya.html">одном из прошлых постов</a>, попросила восстановить её заметки, там была некая важная информация.</p>
 <p class="readmore"><a href="./pro-nadyozhnost-chast-n2.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_mac.html'>mac</a></p>
-<h3><a class="ablack" href="pro-evolyuciyu-xraneniya-zametok.html">
-Про эволюцию хранения заметок.
-</a></h3>
-<!-- bashblog_timestamp: #201811290148.17# -->
-<div class="subtitle">2018-11-29 01:48:17 &mdash; 
-Evgeniy Shumilov
-</div>
-<!-- text begin -->
-
-<img src="images/notes.png" class="leftimg">
-<p>&nbsp; Ко многим вещам, как и ко многому софту, которым я в текущий момент пользуюсь постоянно, меня приводил долгий эволюционно-эмпирический путь. Таким долгим путём прошли ножи, фонари, идут одноплатные компьютеры, домашний сервер, роутеры, клавиатуры, пульты дистанционного управления, множество скриптов и чёрт знает, что ещё. Сегодня я расскажу о том, как я решал проблему хранения заметок, а впоследствии - проблему иерархического хранения заметок.</p>
-<p>&nbsp; Во времена школы всё было просто - записная книжка и ручка. Требований к записной книжке немного - удобные габариты, практичная обложка, да и всё пожалуй. Когда дело доходит до хранения заметок в виде данных, сразу появляется море хотелок и требований. И чтобы поиск работал и чтобы ссылки были (в том числе перекрёстные) и теги желательно и вложения и чтобы открывалось это везде и т.п.. Вполне можно проследить эволюцию подобных приложений по мере того, как я менял одно на другое.</p>
-<p class="readmore"><a href="./pro-evolyuciyu-xraneniya-zametok.html">Читать дальше...</a></p>
-<p>Теги: <a href='tag_linux.html'>linux</a>, <a href='tag_soft.html'>soft</a></p>
 <div id="all_posts">
 <a href="index7.html">&lt;&lt; В прошлое</a> &mdash; 
 <a href="all_posts.html">Все записи</a> &mdash; <a href="all_tags.html">Все теги</a> &mdash; <a href="">RSS</a>
