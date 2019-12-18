@@ -22,12 +22,12 @@
         ul,ol{margin-left:24px;margin-right:24px;font-family:"FixedsysExcelsior";}
         #all_posts{margin-top:24px;text-align:center;font-family:"FixedsysExcelsior";}
         .light{color:#83A397;}
-        .subtitle{color:#666;margin:12px 0px;}
+        .subtitle{color:#666;margin:12px 0px;text-align:left}
         .content p{margin-left:0px;margin-right:0px;}
         p{text-align:justify;font-family:"FixedsysExcelsior";}
         h1{margin-bottom:0px !important;font-weight:normal;}
         #description{font-size:large;margin-bottom:12px;color:#6A847A;}
-        h3{margin-top:42px;margin-bottom:8px;font-weight:normal;}
+        h3{margin-top:42px;margin-bottom:8px;font-weight:normal;text-align:left}
         h4{margin-left:24px;margin-right:24px;font-weight:normal;font-size:large;color:#e8bf6a;}
         hr{color:#B2B525;height:2px;background-color:#B2B525;border:none;}
         img{max-width:100%;}

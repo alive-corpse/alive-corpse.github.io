@@ -2,8 +2,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Sat, 14 Dec 2019 23:50:50 +0500</lastBuildDate>
-<pubDate>Sat, 14 Dec 2019 23:50:50 +0500</pubDate>
+<lastBuildDate>Wed, 18 Dec 2019 10:04:04 +0500</lastBuildDate>
+<pubDate>Wed, 18 Dec 2019 10:04:04 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
 <item><title>
 Про чувственные переживания, эмоциональный шум и точку душевного равновесия
@@ -39,7 +39,7 @@
 Про книги, запахи, флешбеки и эстетику
 </title><description><![CDATA[
 
-<p style="text-align:center"><img alt="" src="images/bioparox.jpg" style="height:378px; width:612px" /><img alt="" src="/images/boiparox.jpg" /></p>
+<p style="text-align:center"><img alt="" src="images/bioparox.jpg" /><img alt="" src="/images/boiparox.jpg" /></p>
 
 <p>&nbsp; Хорошая знакомая Настя написала <a href="https://vk.com/wall2779724_9024" target="_blank">пост о воздействии запахов на наши воспоминания и эмоциональное состояние</a>. Начал ей отвечать и как это иногда случается, понял, что мой ответ перерастает в микропост. Да будет так.</p>
 
@@ -56,7 +56,8 @@
 Про прогресс, технологии и флешки
 </title><description><![CDATA[
 
-<p style="text-align:center"><img alt="" src="images/usb-drive.jpg" style="height:300px; width:650px" /></p>
+
+<p style="text-align:center"><img alt="" src="images/usb-drive.jpg" /></p>
 
 <p>&nbsp; На работе недавно одна девушка (Д)&nbsp;написала в чат, что ей нужна флешка и у нас состоялся следующий диалог:</p>
 
@@ -98,7 +99,7 @@
 Небольшой лайфхак для отключения питания Ender3 от Octoprint
 </title><description><![CDATA[
 
-<p style="text-align:center"><img alt="" src="images/ender3display.jpg" style="height:418px; width:800px" /></p>
+<p style="text-align:center"><img alt="" src="images/ender3display.jpg" /></p>
 
 <p>&nbsp;&nbsp;<img alt="" src="images/ender3display.jpg1" style="height:1067px; width:800px" />С того момента, как я подключил свой 3d принтер Creality Ender3 к Orange Pi PC и настроил octoprint для удалённой печати, меня очень раздражала одна особенность реализации платы управления эндера. В случае, когда питание принтера было выключено, плата продолжала питаться по линии +5в через USB разъём. Дисплей светился, на нём отображалась информация с датчиков температуры (хоть и не настолько контрастно, как при включенном питании), можно было перемещаться по меню,&nbsp;а вентилятор охлаждения хотенда постоянно вращался (не в полную силу конечно, но это тоже создавало лишний звуковой фон). Более того, octoprint не терял соединения с принтером, и если при этом включить нагрев стола или хотенда, изображение на дисплее становилось менее различимым, но подсветка продолжала работать. Другими словами, есть явная недоработка со стороны Creality и вчера я это исправил, потратив на это примерно 0 рублей, сотые доли копейки и три минуты.</p>
 
