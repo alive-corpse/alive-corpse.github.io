@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="main.css" type="text/css" />
+<link rel="stylesheet" href="blog.css" type="text/css" />
+<link rel="stylesheet" href="assets/highlight/styles/corpse.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="" href="feed.rss" />
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+<script src="assets/jquery.min.js"></script>
+<script src="assets/jouele/jouele.min.js"></script>
+<link href="assets/jouele/jouele.min.css" rel="stylesheet"/>
+<script src="assets/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(52451890, "init", {
+        id:52451890,
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/52451890" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<title>Про файл-призрак или как найти суслика, которого нет</title>
+</head><body>
+<div id="divbodyholder">
+<div class="headerholder">
+<a href="https://vk.com/evgeniy_shumilov" target="_blank"><img src="/images/logo.png" class="logo" height="106pt" style="float: left; margin-right: 20px;"></a>
+<div class="header">
+<div id="title">
+<h1 class="nomargin"><a class="ablack" href="https://shumiloff.ru/index.html">Зайчатки разума</a></h1>
+<div id="description">Записная книжка айтишника</div>
+</div></div>
+<ul class="full-width">
+    <li>
+        <a href="/pro-lyubov-k-minimalizmu-i-staticheskuyu-generaciyu-kontenta.html">О блоге</a>
+<!--
+        <ul>
+            <li><a href="#">Item1</a></li>
+            <li><a href="#">Item2</a></li>
+            <li><a href="#">Item3</a></li>
+        </ul>
+-->
+    </li>
+    <li><a href="/all_tags.html">Теги</a></li>
+    <li><a href="/all_posts.html">Все посты</a></li>
+    <li><a href="/tag_ностальгия.html">Ностальгическое</a></li>
+    <li><a href="/tag_мысли-вслух.html">Мысли вслух</a></li>
+</ul>
+
+<div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
+</div>
+<div id="divbody"><div class="content">
+<!-- entry begin -->
+<h3><a class="ablack" href="pro-fajl-prizrak-ili-kak-najti-suslika-kotorogo-net.html">
+Про файл-призрак или как найти суслика, которого нет
+</a></h3>
+<!-- bashblog_timestamp: #201912241421.35# -->
+<div class="subtitle">2019-12-24 14:21:35 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<p style="text-align:center"><img alt="" src="images/boromir.jpg" /></p>
+
+<p>&nbsp; Сегодня на работе столкнулся с интересным моментом. Ко мне подошёл разработчик и сказал, что на старом dev сервере закончилось место. Дело житейское, начал искать. Запустил <a href="https://dev.yorhel.nl/ncdu">ncdu</a>&nbsp;(кстати, незаменимая утилита, всем рекомендую) и попытался найти, что же занимает место. Не нашёл, да и визуально показалось, что занято не так уж много. В нижней строке ncdu показывал Total disk usage равный 29ти гб при общем размере диска в 200 гб. При этом при попытке создать любой файл, система говорила об ошибке в связи с нехваткой места.&nbsp;</p>
+
+<hr />
+<p>&nbsp; Вторым делом проверил айноды. df -i / показывал, что на корневом разделе занято 3% айнод, df -h / - что занято всё место под завязку. Потом меня посетила одна идея и я долго листал ман, пытаясь вспомнить необходимые ключи к lsof, в итоге нагуглил <a href="https://linux-notes.org/primery-ispol-zovaniya-komandy-lsof/">хороший список параметров к lsof</a>, который тоже всем рекомендую. Нужным мне был параметр</p>
+
+<pre>
+<code class="language-bash">sudo lsof +L1</code></pre>
+
+<p>&nbsp; Он отображает открытые дескрипторы файлов, на которые меньше одной ссылки, т.е. некая именованная область хранения данных, у которой больше нет имени и на которую никто не ссылается. Другими словами, жил/был большой отладочный log файл, который писал nginx. Постепенно файл занял всё свободное место, после чего разработчик зашёл и удалил этот файл. После чего файл как суслик из ДМБ - его никто не видит, но он как бы есть. Запущенный процесс (в нашем случае nginx) не отпускает дескриптор файла и ОС не может считать место, занимаемое этим файлом свободным.&nbsp;</p>
+
+<p>Пример вывода sudo lsof +L1:</p>
+
+<pre>
+<code class="language-bash">COMMAND     PID       USER   FD   TYPE DEVICE SIZE/OFF NLINK     NODE NAME
+systemd-j   390       root  txt    REG    9,2   326224     0  6033164 /lib/systemd/systemd-journald (deleted)
+systemd-l   571       root  txt    REG    9,2   618520     0  6033180 /lib/systemd/systemd-logind (deleted)
+dbus-daem   572 messagebus  txt    REG    9,2   224208     0  1580294 /usr/bin/dbus-daemon (deleted)
+php-fpm7.  1060   www-data    4u   REG    9,2        0     0  1310758 /tmp/.ZendSem.CF4mtM (deleted)
+php-fpm7.  2446       root    4u   REG    9,2        0     0  1310758 /tmp/.ZendSem.CF4mtM (deleted)
+php-fpm7.  2832   www-data    4u   REG    9,2        0     0  1310758 /tmp/.ZendSem.CF4mtM (deleted)
+systemd    3894       root  txt    REG    9,2  1577232     0  6033178 /lib/systemd/systemd (deleted)
+(sd-pam    3895       root  txt    REG    9,2  1577232     0  6033178 /lib/systemd/systemd (deleted)
+bash      16531       root  txt    REG    9,2  1037528     0 13369404 /bin/bash (deleted)
+php-fpm7. 18024   www-data    4ur  REG    9,2        0     0  1310758 /tmp/.ZendSem.CF4mtM (deleted)
+bash      18729       root  txt    REG    9,2  1037528     0 13369404 /bin/bash (deleted)
+bash      23796       root  txt    REG    9,2  1037528     0 13369404 /bin/bash (deleted)
+php-fpm7. 29340   www-data    4u   REG    9,2        0     0  1310758 /tmp/.ZendSem.CF4mtM (deleted)</code></pre>
+
+<p>&nbsp; Как можно видеть, в конце каждой строки есть &quot;(deleted), кто как бы намекает, что файл был удалён. Нас интересует строка SIZE/OFF. Мы можем отсортировать значения по ней и вывести например, 10 самых жирных файлов, которые были удалены, но при этом всё ещё занимают место. Например, вот так:</p>
+
+<pre>
+<code class="language-bash">$ sudo lsof +L1 | sed '1d' | sort -n -k 7 -r | head -n 5
+postgres  29512   postgres   46u   REG    9,2 16777216     0  3544115 /var/lib/postgresql/9.5/main/pg_xlog/000000010000000F00000095 (deleted)
+systemd    3894       root  txt    REG    9,2  1577232     0  6033178 /lib/systemd/systemd (deleted)
+(sd-pam    3895       root  txt    REG    9,2  1577232     0  6033178 /lib/systemd/systemd (deleted)
+bash      23796       root  txt    REG    9,2  1037528     0 13369404 /bin/bash (deleted)
+bash      18729       root  txt    REG    9,2  1037528     0 13369404 /bin/bash (deleted)</code></pre>
+
+<p>&nbsp; Заметьте, не смотря на то, что в числе удалённых числятся и /bin/bash и /lib/systemd/systemd, ещё не означает, что этих файлов физически нет на диске. Вполне возможно, что была открыта та же сессия /bin/bash, после чего сам интерпретатор успел обновиться, т.е. старая версия /bin/bash была удалена, а на её месте уже лежит новая.&nbsp;<br />
+&nbsp;</p>
+
+<p>Теги: <a href='tag_админское.html'>админское</a>, <a href='tag_linux.html'>linux</a></p>
+<!-- text end -->
+<!-- entry end -->
+</div>
+<div id="disqus_thread"></div>
+            <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+               var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+            /* * * DONT EDIT BELOW THIS LINE * * */
+            (function() {
+            var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+            dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+            (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<div id="footer">
+<!-- Tolstoy Comments
+<script type="text/javascript">!(function(w,d,s,l,x){w[l]=w[l]||[];var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=!0;j.src='//web.tolstoycomments.com/sitejs/app.js?i='+l+'&x='+x+'&t='+(new Date().getTime());f.parentNode.insertBefore(j,f)})(window,document,'script','tolstoycomments','1577');</script>
+-->
+<a href="https://vk.com/evgeniy_shumilov">Evgeniy Shumilov</a> &mdash; <a href="mailto:evgeniy&#46;shumilov&#64;gmail&#46;com">evgeniy&#46;shumilov&#64;gmail&#46;com</a><br/>
+Generated with <a href="https://github.com/cfenollosa/bashblog">bashblog</a>, a single bash script to easily create blogs like this one</div>
+</div></div>
+</div></div>
+<script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+        /* * * DONT EDIT BELOW THIS LINE * * */
+        (function () {
+        var s = document.createElement("script"); s.async = true;
+        s.type = "text/javascript";
+        s.src = "//" + disqus_shortname + ".disqus.com/count.js";
+        (document.getElementsByTagName("HEAD")[0] || document.getElementsByTagName("BODY")[0]).appendChild(s);
+    }());
+    </script>
+</body></html>
