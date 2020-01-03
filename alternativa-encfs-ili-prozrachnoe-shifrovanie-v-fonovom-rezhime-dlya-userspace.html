@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="main.css" type="text/css" />
+<link rel="stylesheet" href="blog.css" type="text/css" />
+<link rel="stylesheet" href="assets/highlight/styles/corpse.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="" href="feed.rss" />
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+<script src="assets/jquery.min.js"></script>
+<script src="assets/jouele/jouele.min.js"></script>
+<link href="assets/jouele/jouele.min.css" rel="stylesheet"/>
+<script src="assets/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(52451890, "init", {
+        id:52451890,
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/52451890" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<title>Альтернатива EncFS или прозрачное шифрование в фоновом режиме для userspace</title>
+</head><body>
+<div id="divbodyholder">
+<div class="headerholder">
+<a href="https://vk.com/evgeniy_shumilov" target="_blank"><img src="/images/logo.png" class="logo" height="106pt" style="float: left; margin-right: 20px;"></a>
+<div class="header">
+<div id="title">
+<h1 class="nomargin"><a class="ablack" href="https://shumiloff.ru/index.html">Зайчатки разума</a></h1>
+<div id="description">Записная книжка айтишника</div>
+</div></div>
+<ul class="full-width">
+    <li>
+        <a href="/pro-lyubov-k-minimalizmu-i-staticheskuyu-generaciyu-kontenta.html">О блоге</a>
+<!--
+        <ul>
+            <li><a href="#">Item1</a></li>
+            <li><a href="#">Item2</a></li>
+            <li><a href="#">Item3</a></li>
+        </ul>
+-->
+    </li>
+    <li><a href="/all_tags.html">Теги</a></li>
+    <li><a href="/all_posts.html">Все посты</a></li>
+    <li><a href="/tag_ностальгия.html">Ностальгическое</a></li>
+    <li><a href="/tag_мысли-вслух.html">Мысли вслух</a></li>
+</ul>
+
+<div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
+</div>
+<div id="divbody"><div class="content">
+<!-- entry begin -->
+<h3><a class="ablack" href="alternativa-encfs-ili-prozrachnoe-shifrovanie-v-fonovom-rezhime-dlya-userspace.html">
+Альтернатива EncFS или прозрачное шифрование в фоновом режиме для userspace
+</a></h3>
+<!-- bashblog_timestamp: #202001040251.16# -->
+<div class="subtitle">2020-01-04 02:51:16 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<p style="text-align:center"><img alt="" src="/images/encrypted.jpg" /></p>
+
+<p>&nbsp; Когда-то давно я пользовался утилитой под названием <a href="https://ru.wikipedia.org/wiki/EncFS">EncFS</a>. Её прелесть была в том, что она позволяла монтировать одну директорию (для шифрованного контента) в другую (для дешифрованного), при этом для пользователя всё оставалось прозрачным, он работал со своими данными как обычно, а шифрование происходило в фоновом режиме. Конечно, операции чтения/записи при этом занимали бОльшее время, да и нагрузка на CPU повышалась, но всё это было более, чем приемлемым, так как эта утилита и не была рассчитана на то, чтобы с её помощью шифровали образы дисков или многогигабайтные архивы (для подобных целей очевидно, следует использовать <a href="https://ru.wikipedia.org/wiki/LUKS">LUKS</a> или что-то подобное). Юзкейсы вполне просты и понятны - например, зашифровать директорию с документами перед тем, как отправить в облако.</p>
+
+<hr />
+<h4>Боль и разочарование</h4>
+
+<p>&nbsp; И волосы тех, кто пользовался EncFS были гладкими и шелковистыми ровно до того момента, пока коду EncFS в 2014-м году&nbsp;не <a href="https://defuse.ca/audits/encfs.htm">провели серьёзный аудит и не выявили&nbsp;пачку критических уязвимостей</a>, после чего EncFS исключили из состава пакетов stable репозитория debian, что само по себе является некоей лакмусовой бумажкой, говорящей о том, что лучше этим не пользоваться в принципе. Затем какое-то время что-то чинили, а в 2017-м снова нашли&nbsp;<a href="https://www.cvedetails.com/product/39385/Vgough-Encfs.html?vendor_id=16820">уязвимость</a>. Я ещё после 2014-го года искал альтернативу, удовлетворяющую следующему списку требований:</p>
+
+<ul>
+	<li>Отсутствие необходимости использовать отдельный раздел</li>
+	<li>Прозрачное шифрование в фоне</li>
+	<li>Простота использования</li>
+	<li>Наличие в стандартном репозитории debian</li>
+</ul>
+
+<p>&nbsp; Собственно, тогда я подобной альтернативы к своему сожалению, не нашёл и через какое-то время забыл об этом, испытывая некоторые неудобства при использовании LUKS для своих задач.&nbsp;</p>
+
+<p>&nbsp; И вот, недавно я решил проверить и&nbsp;обнаружил в репозитории debian stable (10-й релиз на текущий момент)&nbsp;пакет encfs, но при установке меня постигло разочарование:</p>
+
+<pre>
+<code>Encfs security information
+
+According to a security audit by Taylor Hornby (Defuse Security), the current
+implementation of Encfs is vulnerable or potentially vulnerable to multiple types of
+attacks. For example, an attacker with read/write access to encrypted data might lower
+the decryption complexity for subsequently encrypted data without this being noticed by
+a legitimate user, or might use timing analysis to deduce information.
+
+Until these issues are resolved, encfs should not be considered a safe home for
+sensitive data in scenarios where such attacks are possible.</code></pre>
+
+<p>&nbsp; То есть, в стабильный репозиторий мы пакет добавили, но при установке предупреждаем, что он содержит уязвимости и лучше им не пользоваться. Гениально! Конечно, от любопытных глаз простых и даже не очень простых пользователей нас EncFS вполне может уберечь, но от мейнтейнеров дебиана с их фанатизмом я такого не ожидал.</p>
+
+<h4>Альтернатива</h4>
+
+<p>&nbsp; В связи со сложившейся ситуацией я решил проверить, а не появилось ли новых альтернатив вышеупомянутой EncFS и через полчаса обнаружил в точности то, что мне нужно, удовлетворяющее всем моим требованиям. Знакомьтесь, это <a href="https://www.cryfs.org/">CryFS</a>, созданная в 2015-м году. Разработана была изначально с расчётом на хранение шифрованных директорий во внешнем облаке. Если вам интересно, чем она отличается от EncFS,&nbsp;то вам <a href="https://www.cryfs.org/comparison/">сюда</a>, но забегая вперёд, могу сказать, что с пользовательской точки зрения ответ будет - &quot;ничем&quot;.&nbsp;В статье по вышеупомянутой ссылке так же есть сравнение с eCryptfs, gocryptfs и прочими.</p>
+
+<p>&nbsp; Кроме всего прочего, CryFS&nbsp;работает и под MacOS и даже можно собрать тестовый вариант под Windows, что даёт возможность надеяться на то, что в плане мультиплатформенности он скоро догонит EncFS. Да и вообще, проект&nbsp;довольно живой и последний коммит в <a href="https://github.com/cryfs/cryfs/">официальном репозитории на гитхабе</a> был пару месяцев назад, что не может не радовать.</p>
+
+<h4>Установка и использование</h4>
+
+<p>&nbsp; Установка на debian-based системах (по крайней мере на свежих версиях) до безумия проста:</p>
+
+<pre>
+<code class="language-bash">sudo apt-get install cryfs</code></pre>
+
+<p>Использование так же не относится к rocket science, но есть один нюанс, который не обозначен явно в документации.&nbsp;</p>
+
+<pre>
+<code class="language-bash">root@pve [01:51:25]:~# mkdir encrypted decrypted
+root@pve [01:51:43]:~# cryfs encrypted decrypted
+CryFS Version 0.9.10
+
+Use default settings?
+Your choice [y/n]: y
+
+Generating secure encryption key. This might take some time..done
+Password: 
+Confirm Password: 
+Creating config file (this can take some time)...done
+
+Mounting filesystem. To unmount, call:
+$ fusermount -u "/root/decrypted"
+
+root@pve [01:52:03]:~# mount | tail -n 1
+cryfs@/root/encrypted on /root/decrypted type fuse.cryfs (rw,nosuid,nodev,relatime,user_id=0,group_id=0)
+
+root@pve [01:52:33]:~# echo test &gt; decrypted/test.txt
+root@pve [01:52:54]:~# ls encrypted/
+2FF  AAE  cryfs.config
+</code></pre>
+
+<p>&nbsp; В данном примере мы создали две директории - encrypted, в которой будут храниться зашифрованные данные и decrypted, которая будет являться точкой монтирования, после чего с помощью cryfs смонтировали первую во вторую, в процессе чего был запрошен пароль для шифрования и создана вся необходимая структура включая конфигурационный файл. Затем мы записали тестовый файл в директорию decrypted, после чего в директории encrypted появилось некоторое количество зашифрованных данных. С файлом test.txt мы затем можем работать как обычно - отредактировать его, переименовать, удалить, изменить права, но даже если мы создадим в директории decrypted папку, на которую выдадим права другому пользователю, то попытка этого пользователя получить доступ к этой директории закончится неудачей.</p>
+
+<pre>
+<code class="language-bash">root@pve [01:58:00]:~# mkdir decrypted/guest
+root@pve [01:58:25]:~# chown guest decrypted/guest/
+root@pve [01:58:34]:~# sudo -u guest bash
+guest@pve:/root$ cd decrypted/guest
+bash: cd: decrypted/guest: Permission denied</code></pre>
+
+<p>&nbsp; С одной стороны это хорошо, но в моём случае&nbsp;есть необходимость смонтировать зашифрованную директорию, в которой будут расположены директории, владельцами которых будут различные пользователи. Можно конечно монтировать каждую директорию от имени каждого пользователя, но это не очень удобно для моей задачи. На гитхабе проекта было написано, что должен помочь&nbsp;следующий способ:</p>
+
+<pre>
+<code>root@pve [01:59:30]:~# fusermount -u /root/decrypted
+root@pve [02:03:12]:~# ls -la decrypted/
+total 8
+drwxr-xr-x  2 root root 4096 Jan  4 01:51 .
+drwx------ 10 root root 4096 Jan  4 01:51 ..
+root@pve [02:03:18]:~# cryfs encrypted decrypted -- -o allow_other
+CryFS Version 0.9.10
+
+Password: 
+Loading config file (this can take some time)...done
+
+Mounting filesystem. To unmount, call:
+$ fusermount -u "/root/decrypted"
+
+root@pve [02:03:57]:~# cat decrypted/test.txt 
+test
+</code></pre>
+
+<p>&nbsp; Но и он не помог:</p>
+
+<pre>
+<code class="language-bash">root@pve [02:07:48]:~# sudo -u guest bash
+guest@pve:/root$ cd decrypted/guest/
+bash: cd: decrypted/guest/: Permission denied
+guest@pve:/root$ exit
+root@pve [02:14:30]:~# ls -la | grep decry
+drwxr-xr-x  2 root root  4096 Jan  4 02:03 decrypted</code></pre>
+
+<h4>Решение</h4>
+
+<p>&nbsp; В итоге я нашёл, каким образом можно решить проблему. Во-первых, нужно&nbsp;действительно монтировать с ключом -o allow_other. И во-вторых,&nbsp;внутри зашифрованной директории требуется сделать поддиректорию с правами на чтение для любого пользователя, в которой уже будут храниться директории самих пользователей,&nbsp;после чего уже её через mount -o bind монтировать в нужное место файловой системы. Собственно, остановился на втором варианте, получилось как-то так:</p>
+
+<pre>
+<code class="language-bash">#!/bin/sh
+
+cryfs /mnt/hd1000/private /mnt/intermediate-private -- -o allow_other
+mount -o bind /mnt/intermediate-private/private /mnt/private</code></pre>
+
+<h4>Для чего мне это было нужно?</h4>
+
+<p>&nbsp; У меня есть несколько разношёрстных девайсов - планшет и пара телефонов на андроиде, тв-приставка, куча разных *Pi, откуда нужно синхронизировать бекапы. Самый удобный для меня способ это делать - через SFTP с использованием&nbsp;<a href="/sam-sebe-xosting-ili-o-nedoocenyonnyx-utilitax.html">MySecureShell</a>&nbsp;на стороне сервера. Так как устройства периодически появляются&nbsp;и исчезают, есть скрипты для создания пользователей со всеми необходимыми настройками. Раньше я использовал отдельный зашифрованный с помощью <a href="https://ru.wikipedia.org/wiki/LUKS">LUKS</a> раздел на диске, но меня это перестало устраивать, так как периодически то хочется сэкономить место, оторванное от основного раздела, то необходимо выделить больше, чем позволяет зашифрованный раздел. Связка <a href="/sam-sebe-xosting-ili-o-nedoocenyonnyx-utilitax.html">MySecureShell</a> и CryFS пока меня полностью устраивает.&nbsp;</p>
+
+<p>Теги: <a href='tag_админскоe.html'>админскоe</a></p>
+<!-- text end -->
+<!-- entry end -->
+</div>
+<div id="disqus_thread"></div>
+            <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+               var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+            /* * * DONT EDIT BELOW THIS LINE * * */
+            (function() {
+            var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+            dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+            (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<div id="footer">
+<!-- Tolstoy Comments
+<script type="text/javascript">!(function(w,d,s,l,x){w[l]=w[l]||[];var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=!0;j.src='//web.tolstoycomments.com/sitejs/app.js?i='+l+'&x='+x+'&t='+(new Date().getTime());f.parentNode.insertBefore(j,f)})(window,document,'script','tolstoycomments','1577');</script>
+-->
+<a href="https://vk.com/evgeniy_shumilov">Evgeniy Shumilov</a> &mdash; <a href="mailto:evgeniy&#46;shumilov&#64;gmail&#46;com">evgeniy&#46;shumilov&#64;gmail&#46;com</a><br/>
+Generated with <a href="https://github.com/cfenollosa/bashblog">bashblog</a>, a single bash script to easily create blogs like this one</div>
+</div></div>
+</div></div>
+<script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+        /* * * DONT EDIT BELOW THIS LINE * * */
+        (function () {
+        var s = document.createElement("script"); s.async = true;
+        s.type = "text/javascript";
+        s.src = "//" + disqus_shortname + ".disqus.com/count.js";
+        (document.getElementsByTagName("HEAD")[0] || document.getElementsByTagName("BODY")[0]).appendChild(s);
+    }());
+    </script>
+</body></html>
