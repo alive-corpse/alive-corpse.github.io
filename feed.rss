@@ -2,9 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Sat, 04 Jan 2020 02:53:58 +0500</lastBuildDate>
-<pubDate>Sat, 04 Jan 2020 02:53:58 +0500</pubDate>
+<lastBuildDate>Mon, 27 Jan 2020 14:24:23 +0500</lastBuildDate>
+<pubDate>Mon, 27 Jan 2020 14:24:23 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Сон 2020.01.27 07:46
+</title><description><![CDATA[
+
+<p style="text-align:center"><img alt="" src="images/jungle.png" /></p>
+
+<p>&nbsp; Надо сказать, что я крайне редко помню свои сны. Ещё реже они представляют из себя что-то связное и законченное. И ещё реже нечто, что можно смело рассказать любому человеку, не ожидая, что он сразу после этого вызовет для тебя&nbsp;скорую психиатрическую помощь, ну или в лучшем случае не решит держаться от тебя подальше. Сегодня же случилось нечто удивительное - мне приснился длинный связный сон с более-менее возможным в реальности сюжетом за исключением некоторых деталей. Но самое занятное - мне не просто снился сон, где я был действующим лицом или находился в гуще событий. Я просто лежал на своём&nbsp;диване и слушал аудиокнигу. С интересом слушал, надо сказать и мне нравилось.&nbsp;Перед тем, как проснуться, я даже специально встал с кровати, подош&euml;л к телефону. чтобы посмотреть название и автора книги - хотел рассказать жене, когда проснусь, что&nbsp; я слушал всю ночь. Книга называлась &quot;Хорошо обдуманные вещи&quot;, автор - некий Владимир Исаев.</p>
+
+<hr />
+<p>Теги: <a href='tag_dreams.html'>dreams</a></p>
+]]></description><link>https://shumiloff.ru/son-ot-20200127-0746.html</link>
+<guid>https://shumiloff.ru/./son-ot-20200127-0746.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Mon, 27 Jan 2020 14:14:29 +0500</pubDate></item>
 <item><title>
 Альтернатива EncFS или прозрачное шифрование в фоновом режиме для userspace
 </title><description><![CDATA[
@@ -137,18 +151,4 @@
 <guid>https://shumiloff.ru/./nebolshoj-lajfxak-dlya-otklyucheniya-pitaniya-ender3-ot-octoprint.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Fri, 11 Oct 2019 08:53:53 +0500</pubDate></item>
-<item><title>
-Быстрая разблокировка старых 3g модемов под linux
-</title><description><![CDATA[
-
-<p style="text-align:center"><img alt="" src="images/e1550.jpg" /></p>
-
-<p>&nbsp; Я просто оставлю это здесь, как памятку, возможно ещё пригодится. Подобных мануалов масса, но в основном они ориентированы на наличие windows, в linux это оказалось даже проще.&nbsp;У меня есть отдельная коробочка, куда я складывал попадающие ко мне 3g/4g модемы на случай, если мне они понадобятся в будущем. И вот, сегодня я нашёл этот ящик пандоры и он оказался очень кстати. Среди прочих моделей, отыскался один Huawei e1550 от Мегафон. Одна из лучших в своё время моделей, легко поддавалась перепрошивке, можно было использовать как SIP транк и вообще, делать с ним что угодно. Но естественно, он был залочен на использование симкарт от мегафона. Всё, что нам потребуется - браузер, консоль и пакет minicom (sudo apt-get install minicom, в случае, если вы пользуетесь debian-based системой).</p>
-
-<hr />
-<p>Теги: <a href='tag_linux.html'>linux</a></p>
-]]></description><link>https://shumiloff.ru/bystraya-razblokirovka-staryx-3g-modemov-pod-linux.html</link>
-<guid>https://shumiloff.ru/./bystraya-razblokirovka-staryx-3g-modemov-pod-linux.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Thu, 10 Oct 2019 09:34:27 +0500</pubDate></item>
 </channel></rss>
