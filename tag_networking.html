@@ -58,6 +58,21 @@
 <div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
 </div>
 <div id="divbody"><div class="content">
+<h3><a class="ablack" href="prostaya-i-bystraya-nastrojka-mesh-vpn-s-pomoshhyu-tinc.html">
+Простая и быстрая настройка mesh VPN с помощью tinc
+</a></h3>
+<!-- bashblog_timestamp: #202001302036.30# -->
+<div class="subtitle">2020-01-30 20:36:30 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<p style="text-align:center"><img alt="" src="images/tinclogo.png" /></p>
+
+<p>&nbsp; Периодически сталкиваюсь с какими-то программными продуктами, которые существуют уже много лет, удобны, легки, просто работают, но я о них по какой-то причине не слышал на протяжении всего времени их существования. На этой неделе открыл для себя <a href="https://www.tinc-vpn.org/">tinc</a>. Если кратко, то tinc - это vpn, который позволяет объединить несколько машин друг с другом, где каждая будет обмениваться при необходимости данными с каждой, т.е. не будет единой точки отказа. Чем прекрасен именно этот вариант - он требует минимальной настройки, конфигурационные файлы очень просты, создание ключа - тоже. Типичный сценарий для использования tinc - несколько географически удалённых филиалов одной сети. Поднимаем на двух машинах бридж, выдаём ему нужный локальный адрес, tinc поднимает tap или tun интерфейс, при создании/уничтожении интерфейса запускает скрипт, в который передаёт имя интерфейса, что позволяет добавить его в бридж или удалить из него. Всё просто работает, но есть один нюанс, о котором я расскажу ниже.</p>
+
+<p class="readmore"><a href="prostaya-i-bystraya-nastrojka-mesh-vpn-s-pomoshhyu-tinc.html">Читать дальше...</a></p>
+<p>Теги: <a href='tag_админское.html'>админское</a>, <a href='tag_networking.html'>networking</a></p>
 <h3><a class="ablack" href="avtomaticheskaya-perezagruzka-openwrt-routera-pri-otsutstvii-interneta-n-sekund.html">
 Автоматическая перезагрузка OpenWRT роутера при отсутствии интернета N секунд
 </a></h3>
@@ -71,7 +86,7 @@ Evgeniy Shumilov
 
 <p>&nbsp; У меня дома подключен интернет от Beeline, но периодически с ним возникают проблемы. Что тому виной - не могу понять. Периодически коннект разрывается, роутеру выдаётся по DHCP новый IP адрес, l2tp отрабатывает, получает свой адрес, но до шлюза через l2tp интерфейс пакеты идут только в одну сторону. Обратно приходит порядка 60 байт чего-то (не успел поймать), затем тишина. Решил написать небольшой простой скрипт, который будет проверять интернет и если его нет более 5ти минут, будет перезагружать роутер.</p>
 
-<p class="readmore"><a href="./avtomaticheskaya-perezagruzka-openwrt-routera-pri-otsutstvii-interneta-n-sekund.html">Читать дальше...</a></p>
+<p class="readmore"><a href="avtomaticheskaya-perezagruzka-openwrt-routera-pri-otsutstvii-interneta-n-sekund.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_shell.html'>shell</a>, <a href='tag_networking.html'>networking</a>, <a href='tag_openwrt.html'>openwrt</a></p>
 <h3><a class="ablack" href="skript-dlya-obnovleniya-dns-zapisej-cloudflare.html">
 Скрипт для обновления DNS записей CloudFlare
@@ -84,7 +99,7 @@ Evgeniy Shumilov
 
 <p style="text-align: center;"><img src="images/escflare.png"></p>
 <p>&nbsp; Пост называется "опять не спится" или "как&nbsp;бесплатно&nbsp;завернуть домен второго уровня на ваш домашний динамический IP адрес". Для чего это вам может быть нужно? Вариантов много. Например, это возможность впоследствии поднять дома какие-нибудь сервисы. Например, создать <a href="https://nextcloud.com/" target="_blank">собственное облако для хранения и расшаривания файлов</a> и смотреть в пути фильмы, лежащие на домашнем жёстком диске или развернуть <a href="http://max-3000.com/" target="_blank">личный блог</a>, сайт-визитку, <a href="https://mjdm.ru/" target="_blank">сервис умного дома</a>, да хоть устроить <a href="https://www.dmosk.ru/instruktions.php?object=Icecast" target="_blank">станцию онлайн вещания</a> - всё ограничивается вашей фантазией, вариантов использования может найтись масса, когда существует возможность.</p>
-<p class="readmore"><a href="./skript-dlya-obnovleniya-dns-zapisej-cloudflare.html">Читать дальше...</a></p>
+<p class="readmore"><a href="skript-dlya-obnovleniya-dns-zapisej-cloudflare.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_shell.html'>shell</a>, <a href='tag_automatization.html'>automatization</a>, <a href='tag_networking.html'>networking</a>, <a href='tag_админское.html'>админское</a></p>
 <h3><a class="ablack" href="pro-optimizaciyu-tishinu-evolyuciyu-nestandartnye-resheniya-i-domashnyuyu-set.html">
 Про оптимизацию, тишину, эволюцию, нестандартные решения и домашнюю сеть.
@@ -98,7 +113,7 @@ Evgeniy Shumilov
 <p style="text-align: center;"><img src="images/balcon/1.jpg" /></p>
 <p>&nbsp; Достаточно давно я собрал свой первый домашний сервер. И довольно много сил я тогда положил на то, чтобы сделать его как можно более&nbsp;тихим, маленьким и потребляющим минимум энергии. Я сменил радиаторы на процессеоре и северном мосту с целью увеличить площадь рассеивающей поверхности. Я искал самые тихие кулеры, я занижал частоту процессора, я сменил кулер в блоке питания и жёсткий диск я выбирал тоже исходя из теж же требований - тихий и потребляющий минимум энергии. В конце-концов, я <a href="/kunstkamera-drevesnostruzhechnoj-promyshlennosti-ili-mdf-neadekvatnost.html" target="_blank">переместил свой сервер в диван</a>. Мне тогда нужна была платформа для экспериментов и само-собою подразумевалось, что она будет работать 24 часа, 7 дней в неделю.</p>
 <p>&nbsp; Зачем <span style="text-decoration: line-through;">не</span>нормальному человеку может быть нужен сервер? Во-первых, это файлопомойка; во-вторых, это медиакомбайн, соединённый с музыкальным центром и имеющий доступ ко всем твоим аудиозаписям, а заодно и к нескольким десяткам онлайн радиостанций; в-третьих файрвол, позволяющий тонко управлять различными подключениями и роутингом между двумя провайдерами и рабочей сетью; в-четвёртых - VPN; в пятых... Продолжать можно долго.</p>
-<p class="readmore"><a href="./pro-optimizaciyu-tishinu-evolyuciyu-nestandartnye-resheniya-i-domashnyuyu-set.html">Читать дальше...</a></p>
+<p class="readmore"><a href="pro-optimizaciyu-tishinu-evolyuciyu-nestandartnye-resheniya-i-domashnyuyu-set.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_админское.html'>админское</a>, <a href='tag_automatization.html'>automatization</a>, <a href='tag_networking.html'>networking</a>, <a href='tag_python.html'>python</a></p>
 <h3><a class="ablack" href="aspekty-nastrojki-seti-v-qemu-obedinenie-interfejsov-na-kanalnom-urovne.html">
 АСПЕКТЫ НАСТРОЙКИ СЕТИ В QEMU. ОБЪЕДИНЕНИЕ ИНТЕРФЕЙСОВ НА КАНАЛЬНОМ УРОВНЕ.
@@ -113,13 +128,10 @@ Evgeniy Shumilov
 
 <p>&nbsp;&nbsp;Доброго времени суток. Вечер. 31 декабря 2008 года. Чем заняться человеку в такое время? Правильно! Начать писать статью на permlug, чтобы поделиться опытом. :)</p>
 
-<p class="readmore"><a href="./aspekty-nastrojki-seti-v-qemu-obedinenie-interfejsov-na-kanalnom-urovne.html">Читать дальше...</a></p>
+<p class="readmore"><a href="aspekty-nastrojki-seti-v-qemu-obedinenie-interfejsov-na-kanalnom-urovne.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_virtualization.html'>virtualization</a>, <a href='tag_qemu.html'>qemu</a>, <a href='tag_networking.html'>networking</a>, <a href='tag_админское.html'>админское</a></p>
 </div>
 <div id="footer">
-<!-- Tolstoy Comments
-<script type="text/javascript">!(function(w,d,s,l,x){w[l]=w[l]||[];var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=!0;j.src='//web.tolstoycomments.com/sitejs/app.js?i='+l+'&x='+x+'&t='+(new Date().getTime());f.parentNode.insertBefore(j,f)})(window,document,'script','tolstoycomments','1577');</script>
--->
 <a href="https://vk.com/evgeniy_shumilov">Evgeniy Shumilov</a> &mdash; <a href="mailto:evgeniy&#46;shumilov&#64;gmail&#46;com">evgeniy&#46;shumilov&#64;gmail&#46;com</a><br/>
 Generated with <a href="https://github.com/cfenollosa/bashblog">bashblog</a>, a single bash script to easily create blogs like this one</div>
 </div></div>

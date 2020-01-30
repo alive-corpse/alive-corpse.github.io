@@ -58,6 +58,26 @@
 <div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
 </div>
 <div id="divbody"><div class="content">
+<h3><a class="ablack" href="skript-dlya-proverki-vremeni-protuxaniya-sertifikatov.html">
+Скрипт для проверки времени протухания сертификатов
+</a></h3>
+<!-- bashblog_timestamp: #201903210204.17# -->
+<div class="subtitle">2019-03-21 02:04:17 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+<p style="text-align: center;"><img src="images/escheckcert.png"></p>
+<p>&nbsp; На работе понадобилось отслеживать время протухания различных сертификатов и слать алерты в случае, если до истечения осталось менее, чем N дней. Быстро накидал скрипт, а потом решил&nbsp;расширить его функционал таким образом, чтобы он сам находил все сертификаты в директории и выдавал даты выдачи и истечения срока действия сертификата, время жизни и количество дней, в течение которых сертификат остаётся валидным. В случае, если хотя бы один из сертификатов оказывается невалидным, возвращается ненулевой код&nbsp;возврата, в результате чего можно удобно использовать скрипт для отправки алертов.</p>
+<pre><code class="bash">if! expired=`./escheckcert.sh domain1.com domain2.com`; then
+  echo "$expired" | mail -s "Expired certs" admin@domain.com
+fi</code></pre>
+<p>&nbsp; Так же можно помимо файлов сертификатов и путей директорий, содержащих сертификаты, использовать непосредственно доменные имена.&nbsp;Имена файлов, директорий и доменов можно передавать скрипту вперемешку, разделяя пробелами.&nbsp;</p>
+<p>&nbsp; Причесал код, <a href="https://github.com/alive-corpse/escheckcert" target="_blank">выложил на github</a>, доволен.&nbsp;И на работе задачу выполнил и для себя давно подобную утилиту хотел и пост в блог получился.</p>
+
+<p>Теги: <a href='tag_shell.html'>shell</a>, <a href='tag_админское.html'>админское</a></p>
+
+
+<!-- text end -->
 <h3><a class="ablack" href="pro-byurokratiyu-doxlyx-myshej-inventarizadnicu-i-adminskuyu-magiyu.html">
 Про бюрократию, дохлых мышей, инвентаризадницу и админскую магию
 </a></h3>
@@ -174,21 +194,6 @@ Evgeniy Shumilov
 <p>&nbsp; Каждый раз, после того, как я вступаю в диалог в комментариях на ютьюбе, я потом жалею об этом. И каждый раз я обещаю себе больше этого не делать. Зачем снова и снова я пытаюсь наставить кого-то на путь истинный (истинный с моей точки зрения), да ещё и испытываю при этом некие далеко не позитивные эмоции? Я не могу дать себе ответ на этот простой вопрос. Пора бы уже научиться просто заканчивать диалог без попыток оставить последнее слово за собой.</p>
 <p class="readmore"><a href="./pro-vozmozhnosti-otnoshenie-k-nim-i-naglost.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_мысли-вслух.html'>мысли-вслух</a></p>
-<h3><a class="ablack" href="pro-svetluyu-magiyu-kostyumov-i-tyomnuyu-magiyu-nosok.html">
-Про светлую магию костюмов и тёмную магию носков
-</a></h3>
-<!-- bashblog_timestamp: #201902201729.41# -->
-<div class="subtitle">2019-02-20 17:29:41 &mdash; 
-Evgeniy Shumilov
-</div>
-<!-- text begin -->
-
-<p style="text-align: center;"><img src="images/style/starwars.jpg"></p>
-<p class="light" style="text-align: right;">Преамбула: В человеке всё должно быть прекрасно:<br/> и одежда, и ботинки, и мотоцикл.</p>
-<p>&nbsp; Есть один уютный чатик в контакте, где я порою общаюсь с интересными людьми. В числе прочего внезапно поднялась тема стиля мужской одежды и меня попросили изложить всё, что я об этом думаю, так что ниже будет мой личный взгляд на подобные вещи.</p>
-<p>&nbsp; К обсуждению стиля подошли издалека:</p>
-<p class="readmore"><a href="./pro-svetluyu-magiyu-kostyumov-i-tyomnuyu-magiyu-nosok.html">Читать дальше...</a></p>
-<p>Теги: <a href='tag_мысли-вслух.html'>мысли-вслух</a></p>
 <div id="all_posts">
 <a href="index4.html">&lt;&lt; В прошлое</a> &mdash; 
 <a href="all_posts.html">Все записи</a> &mdash; <a href="all_tags.html">Все теги</a> &mdash; <a href="">RSS</a>
@@ -196,9 +201,6 @@ Evgeniy Shumilov
 </div>
 </div>
 <div id="footer">
-<!-- Tolstoy Comments
-<script type="text/javascript">!(function(w,d,s,l,x){w[l]=w[l]||[];var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=!0;j.src='//web.tolstoycomments.com/sitejs/app.js?i='+l+'&x='+x+'&t='+(new Date().getTime());f.parentNode.insertBefore(j,f)})(window,document,'script','tolstoycomments','1577');</script>
--->
 <a href="https://vk.com/evgeniy_shumilov">Evgeniy Shumilov</a> &mdash; <a href="mailto:evgeniy&#46;shumilov&#64;gmail&#46;com">evgeniy&#46;shumilov&#64;gmail&#46;com</a><br/>
 Generated with <a href="https://github.com/cfenollosa/bashblog">bashblog</a>, a single bash script to easily create blogs like this one</div>
 </div></div>

@@ -58,6 +58,21 @@
 <div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
 </div>
 <div id="divbody"><div class="content">
+<h3><a class="ablack" href="prostaya-i-bystraya-nastrojka-mesh-vpn-s-pomoshhyu-tinc.html">
+Простая и быстрая настройка mesh VPN с помощью tinc
+</a></h3>
+<!-- bashblog_timestamp: #202001302036.30# -->
+<div class="subtitle">2020-01-30 20:36:30 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<p style="text-align:center"><img alt="" src="images/tinclogo.png" /></p>
+
+<p>&nbsp; Периодически сталкиваюсь с какими-то программными продуктами, которые существуют уже много лет, удобны, легки, просто работают, но я о них по какой-то причине не слышал на протяжении всего времени их существования. На этой неделе открыл для себя <a href="https://www.tinc-vpn.org/">tinc</a>. Если кратко, то tinc - это vpn, который позволяет объединить несколько машин друг с другом, где каждая будет обмениваться при необходимости данными с каждой, т.е. не будет единой точки отказа. Чем прекрасен именно этот вариант - он требует минимальной настройки, конфигурационные файлы очень просты, создание ключа - тоже. Типичный сценарий для использования tinc - несколько географически удалённых филиалов одной сети. Поднимаем на двух машинах бридж, выдаём ему нужный локальный адрес, tinc поднимает tap или tun интерфейс, при создании/уничтожении интерфейса запускает скрипт, в который передаёт имя интерфейса, что позволяет добавить его в бридж или удалить из него. Всё просто работает, но есть один нюанс, о котором я расскажу ниже.</p>
+
+<p class="readmore"><a href="./prostaya-i-bystraya-nastrojka-mesh-vpn-s-pomoshhyu-tinc.html">Читать дальше...</a></p>
+<p>Теги: <a href='tag_админское.html'>админское</a>, <a href='tag_networking.html'>networking</a></p>
 <h3><a class="ablack" href="son-ot-20200127-0746.html">
 Сон 2020.01.27 07:46
 </a></h3>
@@ -199,30 +214,12 @@ Evgeniy Shumilov
 
 <p class="readmore"><a href="./reshenie-problemy-importa-chertezhej-iz-inkscape-vo-freecad.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_graphics.html'>graphics</a>, <a href='tag_linux.html'>linux</a>, <a href='tag_soft.html'>soft</a></p>
-<h3><a class="ablack" href="nebolshoj-lajfxak-dlya-otklyucheniya-pitaniya-ender3-ot-octoprint.html">
-Небольшой лайфхак для отключения питания Ender3 от Octoprint
-</a></h3>
-<!-- bashblog_timestamp: #201910110853.53# -->
-<div class="subtitle">2019-10-11 08:53:53 &mdash; 
-Evgeniy Shumilov
-</div>
-<!-- text begin -->
-
-<p style="text-align:center"><img alt="" src="images/ender3display.jpg" /></p>
-
-<p>&nbsp;&nbsp;<img alt="" src="images/ender3display.jpg1" style="height:1067px; width:800px" />С того момента, как я подключил свой 3d принтер Creality Ender3 к Orange Pi PC и настроил octoprint для удалённой печати, меня очень раздражала одна особенность реализации платы управления эндера. В случае, когда питание принтера было выключено, плата продолжала питаться по линии +5в через USB разъём. Дисплей светился, на нём отображалась информация с датчиков температуры (хоть и не настолько контрастно, как при включенном питании), можно было перемещаться по меню,&nbsp;а вентилятор охлаждения хотенда постоянно вращался (не в полную силу конечно, но это тоже создавало лишний звуковой фон). Более того, octoprint не терял соединения с принтером, и если при этом включить нагрев стола или хотенда, изображение на дисплее становилось менее различимым, но подсветка продолжала работать. Другими словами, есть явная недоработка со стороны Creality и вчера я это исправил, потратив на это примерно 0 рублей, сотые доли копейки и три минуты.</p>
-
-<p class="readmore"><a href="./nebolshoj-lajfxak-dlya-otklyucheniya-pitaniya-ender3-ot-octoprint.html">Читать дальше...</a></p>
-<p>Теги: <a href='tag_3d-printing.html'>3d-printing</a></p>
 <div id="all_posts">
 <a href="index1.html">&lt;&lt; В прошлое</a> &mdash; 
 <a href="all_posts.html">Все записи</a> &mdash; <a href="all_tags.html">Все теги</a> &mdash; <a href="">RSS</a>
 </div>
 </div>
 <div id="footer">
-<!-- Tolstoy Comments
-<script type="text/javascript">!(function(w,d,s,l,x){w[l]=w[l]||[];var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=!0;j.src='//web.tolstoycomments.com/sitejs/app.js?i='+l+'&x='+x+'&t='+(new Date().getTime());f.parentNode.insertBefore(j,f)})(window,document,'script','tolstoycomments','1577');</script>
--->
 <a href="https://vk.com/evgeniy_shumilov">Evgeniy Shumilov</a> &mdash; <a href="mailto:evgeniy&#46;shumilov&#64;gmail&#46;com">evgeniy&#46;shumilov&#64;gmail&#46;com</a><br/>
 Generated with <a href="https://github.com/cfenollosa/bashblog">bashblog</a>, a single bash script to easily create blogs like this one</div>
 </div></div>

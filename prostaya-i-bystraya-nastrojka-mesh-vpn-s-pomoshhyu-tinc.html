@@ -1,0 +1,285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="main.css" type="text/css" />
+<link rel="stylesheet" href="blog.css" type="text/css" />
+<link rel="stylesheet" href="assets/highlight/styles/corpse.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="" href="feed.rss" />
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+<script src="assets/jquery.min.js"></script>
+<script src="assets/jouele/jouele.min.js"></script>
+<link href="assets/jouele/jouele.min.css" rel="stylesheet"/>
+<script src="assets/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(52451890, "init", {
+        id:52451890,
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/52451890" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<title>Простая и быстрая настройка mesh VPN с помощью tinc</title>
+</head><body>
+<div id="divbodyholder">
+<div class="headerholder">
+<a href="https://vk.com/evgeniy_shumilov" target="_blank"><img src="/images/logo.png" class="logo" height="106pt" style="float: left; margin-right: 20px;"></a>
+<div class="header">
+<div id="title">
+<h1 class="nomargin"><a class="ablack" href="https://shumiloff.ru/index.html">Зайчатки разума</a></h1>
+<div id="description">Записная книжка айтишника</div>
+</div></div>
+<ul class="full-width">
+    <li>
+        <a href="/pro-lyubov-k-minimalizmu-i-staticheskuyu-generaciyu-kontenta.html">О блоге</a>
+<!--
+        <ul>
+            <li><a href="#">Item1</a></li>
+            <li><a href="#">Item2</a></li>
+            <li><a href="#">Item3</a></li>
+        </ul>
+-->
+    </li>
+    <li><a href="/all_tags.html">Теги</a></li>
+    <li><a href="/all_posts.html">Все посты</a></li>
+    <li><a href="/tag_ностальгия.html">Ностальгическое</a></li>
+    <li><a href="/tag_мысли-вслух.html">Мысли вслух</a></li>
+</ul>
+
+<div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
+</div>
+<div id="divbody"><div class="content">
+<!-- entry begin -->
+<h3><a class="ablack" href="prostaya-i-bystraya-nastrojka-mesh-vpn-s-pomoshhyu-tinc.html">
+Простая и быстрая настройка mesh VPN с помощью tinc
+</a></h3>
+<!-- bashblog_timestamp: #202001302036.30# -->
+<div class="subtitle">2020-01-30 20:36:30 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<p style="text-align:center"><img alt="" src="images/tinclogo.png" /></p>
+
+<p>&nbsp; Периодически сталкиваюсь с какими-то программными продуктами, которые существуют уже много лет, удобны, легки, просто работают, но я о них по какой-то причине не слышал на протяжении всего времени их существования. На этой неделе открыл для себя <a href="https://www.tinc-vpn.org/">tinc</a>. Если кратко, то tinc - это vpn, который позволяет объединить несколько машин друг с другом, где каждая будет обмениваться при необходимости данными с каждой, т.е. не будет единой точки отказа. Чем прекрасен именно этот вариант - он требует минимальной настройки, конфигурационные файлы очень просты, создание ключа - тоже. Типичный сценарий для использования tinc - несколько географически удалённых филиалов одной сети. Поднимаем на двух машинах бридж, выдаём ему нужный локальный адрес, tinc поднимает tap или tun интерфейс, при создании/уничтожении интерфейса запускает скрипт, в который передаёт имя интерфейса, что позволяет добавить его в бридж или удалить из него. Всё просто работает, но есть один нюанс, о котором я расскажу ниже.</p>
+
+<hr />
+<p>&nbsp; Для начала поставим tinc и&nbsp;создадим в /etc/tinc директорию, соответствующую имени сети. Пусть в нашем случае это будет просто&nbsp;networkname:</p>
+
+<pre>
+<code>sudo apt-get install tinc bridge-utils
+cd /etc/tinc
+sudo mkdir networkname
+cd networkname</code></pre>
+
+<p>&nbsp; Внутри этой директории нужно создать конфигурационный файл с именем tinc.conf и следующим содержимым:</p>
+
+<pre>
+<code>Name = host1
+Mode = switch
+Interface = tap0
+Port = 655
+
+ConnectTo = host2</code></pre>
+
+<p>&nbsp; Соответственно, host1 - это имя нашей машины, host2 - это машина, к которой мы будем подключаться. Строк ConnectTo может быть сколько угодно, таким образом, каждый из ваших узлов может соединяться со всеми остальными, на которых запущен tinc. В этом случае желательно настроить синхронизацию конфигурационных файлов между машинами, чтобы не переносить их каждый раз руками или, ещё лучше, накатывать чем-то вроде <a href="https://www.ansible.com/">ansible</a>.&nbsp;Вдаваться подробно в параметры не вижу смысла, <a href="https://www.tinc-vpn.org/documentation/Main-configuration-variables.html">вот здесь</a> есть замечательная и понятная документация по параметрам конфигурационного файла.&nbsp;</p>
+
+<p>&nbsp; Tinc работает по udp протоколу, поэтому необходимо на всех машинах с tinc открыть 655-й порт udp. На обоих машинах в директории /etc/tinc/networkname нужно создать директорию hosts, после чего создать пару ключей - публичный и приватный с помощью tincd:</p>
+
+<pre>
+<code>tincd -n networkname -K</code></pre>
+
+<p>&nbsp; Публичный ключ должен появиться в директории hosts в файле с именем, соответствующим значению поля Name в конфигурационном файле tinc.conf. Т.е. на host1 публичный ключ будет лежать в /etc/tinc/networkname/hosts/host1, а на host2 - в /etc/tinc/networkname/hosts/host2. Теперь на машине host1 мы должны создать файл&nbsp;/etc/tinc/networkname/hosts/host2 следующего содержания:</p>
+
+<pre>
+<code>Address = 1.2.3.4
+Cipher = aes-128-cbc
+Digest = sha1
+Compression = 0
+
+-----BEGIN RSA PUBLIC KEY-----
+SomeLongHashWasHere
+-----END RSA PUBLIC KEY-----
+</code></pre>
+
+<p>&nbsp; Где 1.2.3.4 - это белый IP адрес host2, а в конце файла после Compression = 0 нужно вставить публичный ключ с host2, т.е.&nbsp;содержимое файла&nbsp;/etc/tinc/networkname/hosts/host2. Симметричным образом на машине host2 нужно создать файл&nbsp;/etc/tinc/networkname/hosts/host1, после чего на обеих машинах можно запускать сервис, но тут как раз и появляется та тонкость, о которой я писал в самом начале.</p>
+
+<p>&nbsp; У меня было две машины - с Ubuntu 16.04 LTS и Ubuntu 18.04 LTS. На первой после запуска появился интерфейс tap0, а на второй - нет. Начал разбираться.</p>
+
+<pre>
+<code>$ systemctl status tinc
+● tinc.service - Tinc VPN
+   Loaded: loaded (/lib/systemd/system/tinc.service; enabled; vendor preset: enabled)
+   Active: active (exited) since Tue 2020-01-28 14:57:45 MSK; 4min 41s ago
+  Process: 7920 ExecStart=/bin/true (code=exited, status=0/SUCCESS)
+ Main PID: 7920 (code=exited, status=0/SUCCESS)
+
+Jan 28 14:57:45 git systemd[1]: Starting Tinc VPN...
+Jan 28 14:57:45 git systemd[1]: Started Tinc VPN.</code></pre>
+
+<p>&nbsp; Запущен и тут же завершён с кодом возврата 0. Интересно, а что же внутри сервиса?</p>
+
+<pre>
+<code>$ cat /lib/systemd/system/tinc.service
+# This is a mostly empty service, but allows commands like stop, start, reload
+# to propagate to all tinc@ service instances.
+
+[Unit]
+Description=Tinc VPN
+After=network.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/bin/true
+ExecReload=/bin/true
+WorkingDirectory=/etc/tinc
+
+[Install]
+WantedBy=multi-user.target</code></pre>
+
+<p>&nbsp; Гениально! Внимание, запускаем VPN сервис // на самом деле нет! // ... Запустили! Наслаждайтесь! // на самом деле нет! //<br />
+Для сравнения на ubuntu 16.04 в статусе иное:</p>
+
+<pre>
+<code>$ systemctl status tinc
+● tinc.service - LSB: Start tinc daemons
+   Loaded: loaded (/etc/init.d/tinc; bad; vendor preset: enabled)
+   Active: active (running) since Tue 2020-01-28 14:55:06 MSK; 6min ago
+     Docs: man:systemd-sysv-generator(8)
+  Process: 31199 ExecStop=/etc/init.d/tinc stop (code=exited, status=0/SUCCESS)
+  Process: 31215 ExecStart=/etc/init.d/tinc start (code=exited, status=0/SUCCESS)
+    Tasks: 1
+   Memory: 372.0K
+      CPU: 32ms
+   CGroup: /system.slice/tinc.service
+           └─31224 /usr/sbin/tincd -n service</code></pre>
+
+<p>&nbsp; Проверил sys-v-init скрипты запуска сервиса на обеих машинах - отличия минимальны. Решил убрать файл сервиса на Ubuntu 18.04, после чего systemd вынужден будет вместо него использовать старый скрипт sys-v-init, проверил - работает!</p>
+
+<pre>
+<code>$ sudo mv /lib/systemd/system/tinc.service .
+$ sudo systemctl daemon-reload
+$ systemctl status tinc
+● tinc.service - LSB: Start tinc daemons
+   Loaded: loaded (/etc/init.d/tinc; generated)
+   Active: active (exited) since Tue 2020-01-28 14:57:45 MSK; 11min ago
+     Docs: man:systemd-sysv-generator(8)
+ Main PID: 7920 (code=exited, status=0/SUCCESS)
+    Tasks: 0 (limit: 4915)
+   CGroup: /system.slice/tinc.service
+$ sudo systemctl enable tinc
+$ sudo systemctl restart tinc
+$ systemctl status tinc
+● tinc.service - LSB: Start tinc daemons
+   Loaded: loaded (/etc/init.d/tinc; generated)
+   Active: active (running) since Tue 2020-01-28 15:10:24 MSK; 6s ago
+     Docs: man:systemd-sysv-generator(8)
+  Process: 12683 ExecStop=/etc/init.d/tinc stop (code=exited, status=0/SUCCESS)
+  Process: 12701 ExecStart=/etc/init.d/tinc start (code=exited, status=0/SUCCESS)
+ Main PID: 7920 (code=exited, status=0/SUCCESS)
+    Tasks: 1 (limit: 4915)
+   CGroup: /system.slice/tinc.service
+           └─12720 /usr/sbin/tincd -n service
+
+Jan 28 15:10:24 git systemd[1]: Starting LSB: Start tinc daemons...
+Jan 28 15:10:24 git tinc[12701]: Starting tinc daemons: service.
+Jan 28 15:10:24 git systemd[1]: Started LSB: Start tinc daemons.
+Jan 28 15:10:24 git tinc.service[12720]: tincd 1.0.33 starting, debug level 0
+Jan 28 15:10:24 git tinc.service[12720]: /dev/net/tun is a Linux tun/tap device (tap mode)
+Jan 28 15:10:24 git tinc.service[12720]: Ready</code></pre>
+
+<p>&nbsp; После этого можно двигаться дальше. Итак, у нас на этот момент на обеих машинах должен быть интерфейс tap0. Далее возможны варианты - можно назначить на эти интерфейсы серые IP адреса и они будут видны друг-другу. Можно устроить роутинг через них. А можно создать два бриджа и добавить интерфейсы в бриджи, что даст возможность в те же бриджи потом добавить и физические интерфейсы, таким образом объединив удалённые подсети.</p>
+
+<p>&nbsp; При создании интерфейса tinc может запустить скрипт tinc-up, если найдёт таковой в директории с конфигурационным файлом сети и аналогичным образом будет запущен tinc-down при опускании интерфейса. Вот примеры моих скриптов.</p>
+
+<p>tinc-up:</p>
+
+<pre>
+<code class="language-bash">#!/bin/sh
+cd `dirname "$0"`
+[ -f ".env" ] &amp;&amp; . ./.env
+
+BR="$(basename `pwd`)"
+
+if [ -z "$(brctl show | awk 'NR&gt;1 &amp;&amp; $1~/^'"$BR"'$/')" ]; then
+    echo "Trying to bring up new bridge $BR"
+    brctl addbr "$BR"
+    [ -n "$ADDRESS" ] &amp;&amp; echo "Setting address $ADDRESS to bridge $BR" &amp;&amp; ifconfig "$BR" "$ADDRESS" netmask "$NETMASK" up
+fi
+
+ip link set $INTERFACE up
+brctl addif "$BR" $INTERFACE</code></pre>
+
+<p>tinc-down:</p>
+
+<pre>
+<code class="language-bash">#!/bin/sh
+cd `dirname "$0"`
+[ -f ".env" ] &amp;&amp; . ./.env
+BR="$(basename `pwd`)"
+
+brctl delif "$BR" "$INTERFACE"
+ip link set "$INTERFAСE" down
+</code></pre>
+
+<p>&nbsp; Нужные мне параметры берутся из файла .env, в который я их буду добавлять по мере необходимости и усложнения.</p>
+
+<p>.env:</p>
+
+<pre>
+<code>ADDRESS=10.11.12.13
+NETMASK=255.255.255.0
+IFACE=tap0
+</code></pre>
+
+<p>&nbsp; Скрипт в качестве имени сети берёт имя директории, в которой он запущен, проверяет наличие бриджа, если его нет, то создаёт его, назначает ему адрес сети и маску из файла .env и добавляет в него интерфейс tap0. Сетевой мост мы можем использовать и как стандартный интерфейс в том числе, что удобно.&nbsp;<br />
+&nbsp; На сегодня это всё.</p>
+
+<p>P.S.: И не спрашивайте меня, почему на лого изображение боевого вертолёта. Я сам хотел бы это знать.</p>
+
+<p>Теги: <a href='tag_админское.html'>админское</a>, <a href='tag_networking.html'>networking</a></p>
+<!-- text end -->
+<!-- entry end -->
+</div>
+<div id="disqus_thread"></div>
+            <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+               var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+            /* * * DONT EDIT BELOW THIS LINE * * */
+            (function() {
+            var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+            dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+            (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<div id="footer">
+<a href="https://vk.com/evgeniy_shumilov">Evgeniy Shumilov</a> &mdash; <a href="mailto:evgeniy&#46;shumilov&#64;gmail&#46;com">evgeniy&#46;shumilov&#64;gmail&#46;com</a><br/>
+Generated with <a href="https://github.com/cfenollosa/bashblog">bashblog</a>, a single bash script to easily create blogs like this one</div>
+</div></div>
+</div></div>
+<script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+        /* * * DONT EDIT BELOW THIS LINE * * */
+        (function () {
+        var s = document.createElement("script"); s.async = true;
+        s.type = "text/javascript";
+        s.src = "//" + disqus_shortname + ".disqus.com/count.js";
+        (document.getElementsByTagName("HEAD")[0] || document.getElementsByTagName("BODY")[0]).appendChild(s);
+    }());
+    </script>
+</body></html>
