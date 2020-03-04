@@ -58,6 +58,20 @@
 <div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
 </div>
 <div id="divbody"><div class="content">
+<h3><a class="ablack" href="uporoboros-ili-samoperezapisyvaemye-znacheniya-v-shell-skriptax.html">
+Упороборос или самоперезаписываемые значения в shell скриптах
+</a></h3>
+<!-- bashblog_timestamp: #201902022157.39# -->
+<div class="subtitle">2019-02-02 21:57:39 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<p style="text-align: center;"><img src="images/updatevars.png"></p>
+<p>&nbsp; Периодически, когда мне нужно написать какой-то скрипт на шелле, я сталкиваюсь с типовыми задачами, которые можно решить быстро, просто и в лоб, а можно написать некоторое количество кода, что займёт больше времени, но при этом позволит использовать эту наработку в будущем. Одним словом, на шелле с этим всё обстоит точно так же, как и в других языках. Хотя наверное сочетание слов "библиотека на шелле" звучит&nbsp;достаточно дико и непривычно. Когда -то я уже <a href="v-rotejt-mne-logi-pro-minimalizm-busybox-i-logirovanie.html" target="_blank">писал</a> о <a href="https://github.com/alive-corpse/eslogger/" target="_blank">библиотеке логирования на шелле</a>,&nbsp;которую я&nbsp;сделал&nbsp;много лет назад&nbsp;и достаточно часто ей пользуюсь,&nbsp;с тех пор не было нужды что-то в ней менять.</p>
+<p>&nbsp; Вчера я столкнулся с задачей, для которой целая библиотека на гитхабе - это явный перебор, но метод, который можно включать в различные скрипты мне бы совсем не помешал. И вот чем прекрасен собственный блог - это самое подходящее место для того, чтобы оставить заметочку с небольшим куском кода, который потом при необходимости оттуда&nbsp;можно быстро скопировать. Как это нередко бывает при попытке написать что-то на шелле, сам код оказался куда проще, компактнее и универсальнее, чем изначально казалось, должен был быть.</p>
+<p class="readmore"><a href="./uporoboros-ili-samoperezapisyvaemye-znacheniya-v-shell-skriptax.html">Читать дальше...</a></p>
+<p>Теги: <a href='tag_shell.html'>shell</a></p>
 <h3><a class="ablack" href="pro-filtry-i-informacionnyj-shum.html">
 Про фильтры и информационный шум
 </a></h3>
@@ -193,18 +207,6 @@ Evgeniy Shumilov
 <p>&nbsp; Вы можете себе представить многотысячную армию фанатов какой-то определённой модели плоскогубцев? Или строительный молоток с рукоятью из чёрного дерева, отделанного серебром? Или, скажем, огромную выставку ножовок по металлу, на которую слетаются люди со всей страны, а то и из-за рубежа? Глянцевый пятидесятистраничный каталог "Лучшие лопаты ноября 2018" фирмы X?</p>
 <p class="readmore"><a href="./o-najfomanii-i-nozhax-kak-takovyx.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_knifes.html'>knifes</a></p>
-<h3><a class="ablack" href="vyzov-metoda-klassa-po-imeni-v-python.html">
-Вызов метода класса по имени в python
-</a></h3>
-<!-- bashblog_timestamp: #201901151850.43# -->
-<div class="subtitle">2019-01-15 18:50:43 &mdash; 
-Evgeniy Shumilov
-</div>
-<!-- text begin -->
-<p style="text-align: center;"><img class="leftimg" src="images/micropython.webp" /></p>
-<p>&nbsp; Недавно столкнулся с одной простой задачей, с которой раньше cталкиваться не приходилось, поэтому оставлю себе здесь запись в качестве памятки. В <a href="http://micropython.org/" target="_blank">MicroPython</a> необходимо было для одного класса написать встроенный менеджер задач - некий аналог cron и таймера, который бы позволил микроконтроллеру в общем цикле вызывать методы этого же класса (например, проверка состояния GPIO, датчиков, подключения к WiFi, MQTT и т.п.) по расписанию или через заданное количество времени после наступления какого-либо события. В числе прочего планировалась возможность фильтровать задачи по имени для динамической расстановки их приоритетов и я счёл, что лучшим вариантом в этом случае будет хранение в структуре данных имени метода, затем, возможно, создание словаря, ключами которого будут имена методов. Заодно и имя метода в виде строки куда проще передавать в другой метод в качестве параметра плюс аттрибуты отдельным кортежем во втором параметре. Использовать для обратного преобразования (да и для практически любых других задач) eval&nbsp;- мягко говоря, дурной тон, поэтому пришлось мучать гугл. Решение оказалось не простым, а очень простым. Я уже устал удивляться подобному при программировании на python, но всё ещё продолжаю это делать.</p>
-<p class="readmore"><a href="./vyzov-metoda-klassa-po-imeni-v-python.html">Читать дальше...</a></p>
-<p>Теги: <a href='tag_python.html'>python</a></p>
 <div id="all_posts">
 <a href="index6.html">&lt;&lt; В прошлое</a> &mdash; 
 <a href="all_posts.html">Все записи</a> &mdash; <a href="all_tags.html">Все теги</a> &mdash; <a href="">RSS</a>
