@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="main.css" type="text/css" />
+<link rel="stylesheet" href="blog.css" type="text/css" />
+<link rel="stylesheet" href="assets/highlight/styles/corpse.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="" href="feed.rss" />
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+<script src="assets/jquery.min.js"></script>
+<script src="assets/jouele/jouele.min.js"></script>
+<link href="assets/jouele/jouele.min.css" rel="stylesheet"/>
+<script src="assets/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(52451890, "init", {
+        id:52451890,
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/52451890" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<title>Использование отдельных различных SSH ключей для различных GIT репозиториев</title>
+</head><body>
+<div id="divbodyholder">
+<div class="headerholder">
+<a href="https://vk.com/evgeniy_shumilov" target="_blank"><img src="/images/logo.png" class="logo" height="106pt" style="float: left; margin-right: 20px;"></a>
+<div class="header">
+<div id="title">
+<h1 class="nomargin"><a class="ablack" href="https://shumiloff.ru/index.html">Зайчатки разума</a></h1>
+<div id="description">Записная книжка айтишника</div>
+</div></div>
+<ul class="full-width">
+    <li>
+        <a href="/pro-lyubov-k-minimalizmu-i-staticheskuyu-generaciyu-kontenta.html">О блоге</a>
+<!--
+        <ul>
+            <li><a href="#">Item1</a></li>
+            <li><a href="#">Item2</a></li>
+            <li><a href="#">Item3</a></li>
+        </ul>
+-->
+    </li>
+    <li><a href="/all_tags.html">Теги</a></li>
+    <li><a href="/all_posts.html">Все посты</a></li>
+    <li><a href="/tag_ностальгия.html">Ностальгическое</a></li>
+    <li><a href="/tag_мысли-вслух.html">Мысли вслух</a></li>
+</ul>
+
+<div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
+</div>
+<div id="divbody"><div class="content">
+<!-- entry begin -->
+<h3><a class="ablack" href="ispolzovanie-otdelnyx-razlichnyx-ssh-klyuchej-dlya-razlichnyx-git-repozitoriev.html">
+Использование отдельных различных SSH ключей для различных GIT репозиториев
+</a></h3>
+<!-- bashblog_timestamp: #202003061455.17# -->
+<div class="subtitle">2020-03-06 14:55:17 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<p style="text-align:center"><img alt="" src="/images/sshkey.png"></p>
+
+<p>&nbsp; Сегодня нашёл метод решения одной из небольших, но досадных проблем, которые меня мучали годами. Собственно, описание проблемы понятно из заголовка. Если чуть более подробно, то для того, чтобы использовать git pull/fetch/push&nbsp;и тому подобные команды с GitHub/GitLab, git может использовать либо подключение через ssh, в том числе использованием доступа по ключу, либо через https, что заставляет вас каждый раз вводить логин и пароль. В данном случае речь идёт не о средах разработки, где все учётные данные в этом случае прекрасно сохраняются, а о работе с консолью и использовании скриптов в автоматическом режиме например, для деплоя. В случае использования пары ключей конечно, можно создать ключ без пароля и всё будет прекрасно ровно до того момента, пока вам не понадобится использовать разные ключи для разных репозиториев. Например, в случае с разными учётными записями на GitHub/GitLab - домашней и рабочей. Или если вы получили так называемый deploy key от удалённого репозитория.</p>
+
+<hr />
+<p>&nbsp; Известный многим способ - создаём в ~/.ssh/config описание нужного количества хостов по одному на ключ, меняем для каждого значение Host и прописываем нужные ключи в IdentityFile. Вот пример части такого конфигурационного файла:</p>
+
+<pre>
+<code>Host user1.github.com
+HostName github.com
+User git
+IdentityFile ~/.ssh/user1_private_rsa_key
+IdentitiesOnly yes
+
+Host user2.github.com
+HostName github.com
+User git
+IdentityFile ~/.ssh/user2_private_rsa_key
+IdentitiesOnly yes</code></pre>
+
+<p>&nbsp; В этом случае мы должны клонировать репозиторий уже с использованием нового url примерно так:</p>
+
+<pre>
+<code>git clone git@user1.github.com:someuser/somerepo.git</code></pre>
+
+<p>&nbsp; Либо необходимо изменить remote origin, что можно сделать в содержимом .git/config ручками в поле url секции origin или с помощью команды&nbsp;</p>
+
+<pre>
+<code>git remote set-url origin git@user1.github.com:someuser/somerepo.git</code></pre>
+
+<p>&nbsp; Конечно, всё это прекрасно работает и этот способ описан на реддите и stackoverflow столько раз, сколько был задан вопрос о том, как это сделать. Но мне такой способ никогда не нравился тем, что кроме клонирования репозитория нам необходимо ещё править конфигурационные файлы у какого-то определённого пользователя, помнить об этом. Я хочу в случае крайней необходимости выполнить sudo git pull и получить результат, а не искать по домашним директориям всех пользователей конфиг с нужным корректно прописанным хостом. Вариант, когда&nbsp; настройки репозитория остаются в пределах самого репозитория кажется мне намного более логичным и переносимым (надеюсь, я подобрал правильный перевод к слову portable).</p>
+
+<p>&nbsp; И вот, спустя лет 10 работы с гитом я нашёл способ и он оказался очень простым. Как выяснилось, для git можно задавать кастомную команду для установки коннекта по ssh по аналогии с тем, как это делается для rsync, только почему-то об этом практически нигде не пишут.&nbsp;Предположим, что наш ключ для репозитория git@github.com/someuser/somerepo.git лежит по пути /home/someuser/.ssh/specialkey_rsa, тогда последовательность действий, которую нам нужно будет совершить, будет следующей:</p>
+
+<pre>
+<code>mkdir somerepo
+cd somerepo
+git remote add git@github.com/someuser/somerepo.git
+git config --local core.sshCommand 'ssh -i /home/someuser/.ssh/specialkey_rsa'</code></pre>
+
+<p>&nbsp;Всё, можно пользоваться в рамках этой директории командой git как обычно, она при этом будет использовать указанный нами ключ. Так как git config мы вызывали с ключом --local, то глобальные настройки не будут изменены. По умолчанию параметр core.sshCommand пуст и git в этом случае использует первый найденный в $PATH бинарник с именем ssh. Проверить, что всё верно можно запустив указанную ниже команду внутри нашего репозитория и за его пределами.</p>
+
+<pre>
+<code>git config --local core.sshCommand</code></pre>
+
+<p>&nbsp;</p>
+
+<p>Теги: <a href='tag_админское.html'>админское</a></p>
+<!-- text end -->
+<!-- entry end -->
+</div>
+<div id="disqus_thread"></div>
+            <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+               var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+            /* * * DONT EDIT BELOW THIS LINE * * */
+            (function() {
+            var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+            dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+            (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<div id="footer">
+<a href="https://vk.com/evgeniy_shumilov">Evgeniy Shumilov</a> &mdash; <a href="mailto:evgeniy&#46;shumilov&#64;gmail&#46;com">evgeniy&#46;shumilov&#64;gmail&#46;com</a><br/>
+Generated with <a href="https://github.com/cfenollosa/bashblog">bashblog</a>, a single bash script to easily create blogs like this one</div>
+</div></div>
+</div></div>
+<script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+        /* * * DONT EDIT BELOW THIS LINE * * */
+        (function () {
+        var s = document.createElement("script"); s.async = true;
+        s.type = "text/javascript";
+        s.src = "//" + disqus_shortname + ".disqus.com/count.js";
+        (document.getElementsByTagName("HEAD")[0] || document.getElementsByTagName("BODY")[0]).appendChild(s);
+    }());
+    </script>
+</body></html>

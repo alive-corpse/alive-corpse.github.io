@@ -2,9 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Wed, 04 Mar 2020 13:56:26 +0500</lastBuildDate>
-<pubDate>Wed, 04 Mar 2020 13:56:26 +0500</pubDate>
+<lastBuildDate>Fri, 06 Mar 2020 14:56:01 +0500</lastBuildDate>
+<pubDate>Fri, 06 Mar 2020 14:56:01 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Использование отдельных различных SSH ключей для различных GIT репозиториев
+</title><description><![CDATA[
+
+<p style="text-align:center"><img alt="" src="/images/sshkey.png"></p>
+
+<p>&nbsp; Сегодня нашёл метод решения одной из небольших, но досадных проблем, которые меня мучали годами. Собственно, описание проблемы понятно из заголовка. Если чуть более подробно, то для того, чтобы использовать git pull/fetch/push&nbsp;и тому подобные команды с GitHub/GitLab, git может использовать либо подключение через ssh, в том числе использованием доступа по ключу, либо через https, что заставляет вас каждый раз вводить логин и пароль. В данном случае речь идёт не о средах разработки, где все учётные данные в этом случае прекрасно сохраняются, а о работе с консолью и использовании скриптов в автоматическом режиме например, для деплоя. В случае использования пары ключей конечно, можно создать ключ без пароля и всё будет прекрасно ровно до того момента, пока вам не понадобится использовать разные ключи для разных репозиториев. Например, в случае с разными учётными записями на GitHub/GitLab - домашней и рабочей. Или если вы получили так называемый deploy key от удалённого репозитория.</p>
+
+<hr />
+<p>Теги: <a href='tag_админское.html'>админское</a></p>
+]]></description><link>https://shumiloff.ru/ispolzovanie-otdelnyx-razlichnyx-ssh-klyuchej-dlya-razlichnyx-git-repozitoriev.html</link>
+<guid>https://shumiloff.ru/./ispolzovanie-otdelnyx-razlichnyx-ssh-klyuchej-dlya-razlichnyx-git-repozitoriev.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Fri, 06 Mar 2020 14:55:17 +0500</pubDate></item>
 <item><title>
 Сказка про боксберри.
 </title><description><![CDATA[
@@ -138,18 +152,4 @@
 <guid>https://shumiloff.ru/./pro-progress-texnologii-i-fleshki.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Fri, 25 Oct 2019 13:13:04 +0500</pubDate></item>
-<item><title>
-Автоматическая перезагрузка OpenWRT роутера при отсутствии интернета N секунд
-</title><description><![CDATA[
-
-<p style="text-align:center"><img alt="" src="images/disconnected.jpg" /></p>
-
-<p>&nbsp; У меня дома подключен интернет от Beeline, но периодически с ним возникают проблемы. Что тому виной - не могу понять. Периодически коннект разрывается, роутеру выдаётся по DHCP новый IP адрес, l2tp отрабатывает, получает свой адрес, но до шлюза через l2tp интерфейс пакеты идут только в одну сторону. Обратно приходит порядка 60 байт чего-то (не успел поймать), затем тишина. Решил написать небольшой простой скрипт, который будет проверять интернет и если его нет более 5ти минут, будет перезагружать роутер.</p>
-
-<hr />
-<p>Теги: <a href='tag_shell.html'>shell</a>, <a href='tag_networking.html'>networking</a>, <a href='tag_openwrt.html'>openwrt</a></p>
-]]></description><link>https://shumiloff.ru/avtomaticheskaya-perezagruzka-openwrt-routera-pri-otsutstvii-interneta-n-sekund.html</link>
-<guid>https://shumiloff.ru/./avtomaticheskaya-perezagruzka-openwrt-routera-pri-otsutstvii-interneta-n-sekund.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Sun, 13 Oct 2019 23:15:08 +0500</pubDate></item>
 </channel></rss>
