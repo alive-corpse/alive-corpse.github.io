@@ -2,9 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Fri, 06 Mar 2020 14:56:01 +0500</lastBuildDate>
-<pubDate>Fri, 06 Mar 2020 14:56:01 +0500</pubDate>
+<lastBuildDate>Fri, 20 Mar 2020 18:43:42 +0500</lastBuildDate>
+<pubDate>Fri, 20 Mar 2020 18:43:42 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Про &quot;Вику&quot;
+</title><description><![CDATA[
+
+<p style="text-align:center"><img alt="" src="/images/izolon.jpg" /></p>
+
+<p>&nbsp; Купил я сушилку для овощей и фруктов для сушки &quot;неовощей&quot; и &quot;нефруктов&quot;. Так уж получилось, что эти устройства помимо своего основного предназначения отлично выполняют функцию сушки филамента (пластика) для 3d принтера. Веселуха началась прямо с момента покупки.</p>
+
+<hr />
+<p>Теги: <a href='tag_fun.html'>fun</a></p>
+]]></description><link>https://shumiloff.ru/pro-quotvikuquot.html</link>
+<guid>https://shumiloff.ru/./pro-quotvikuquot.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Fri, 20 Mar 2020 18:41:50 +0500</pubDate></item>
 <item><title>
 Использование отдельных различных SSH ключей для различных GIT репозиториев
 </title><description><![CDATA[
@@ -137,19 +151,4 @@
 <guid>https://shumiloff.ru/./pro-knigi-zapaxi-fleshbeki-i-estetiku.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Fri, 06 Dec 2019 20:49:11 +0500</pubDate></item>
-<item><title>
-Про прогресс, технологии и флешки
-</title><description><![CDATA[
-
-
-<p style="text-align:center"><img alt="" src="images/usb-drive.jpg" /></p>
-
-<p>&nbsp; На работе недавно одна девушка (Д)&nbsp;написала в чат, что ей нужна флешка и у нас состоялся следующий диалог:</p>
-
-<hr />
-<p>Теги: <a href='tag_мысли-вслух.html'>мысли-вслух</a></p>
-]]></description><link>https://shumiloff.ru/pro-progress-texnologii-i-fleshki.html</link>
-<guid>https://shumiloff.ru/./pro-progress-texnologii-i-fleshki.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Fri, 25 Oct 2019 13:13:04 +0500</pubDate></item>
 </channel></rss>
