@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="main.css" type="text/css" />
+<link rel="stylesheet" href="blog.css" type="text/css" />
+<link rel="stylesheet" href="assets/highlight/styles/corpse.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="" href="feed.rss" />
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+<script src="assets/jquery.min.js"></script>
+<script src="assets/jouele/jouele.min.js"></script>
+<link href="assets/jouele/jouele.min.css" rel="stylesheet"/>
+<script src="assets/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(52451890, "init", {
+        id:52451890,
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/52451890" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<title>Обновление прошивки программатора USBASP с помощью Arduino UNO</title>
+</head><body>
+<div id="divbodyholder">
+<div class="headerholder">
+<a href="https://vk.com/evgeniy_shumilov" target="_blank"><img src="/images/logo.png" class="logo" height="106pt" style="float: left; margin-right: 20px;"></a>
+<div class="header">
+<div id="title">
+<h1 class="nomargin"><a class="ablack" href="https://shumiloff.ru/index.html">Зайчатки разума</a></h1>
+<div id="description">Записная книжка айтишника</div>
+</div></div>
+<ul class="full-width">
+    <li>
+        <a href="/pro-lyubov-k-minimalizmu-i-staticheskuyu-generaciyu-kontenta.html">О блоге</a>
+<!--
+        <ul>
+            <li><a href="#">Item1</a></li>
+            <li><a href="#">Item2</a></li>
+            <li><a href="#">Item3</a></li>
+        </ul>
+-->
+    </li>
+    <li><a href="/all_tags.html">Теги</a></li>
+    <li><a href="/all_posts.html">Все посты</a></li>
+    <li><a href="/tag_ностальгия.html">Ностальгическое</a></li>
+    <li><a href="/tag_мысли-вслух.html">Мысли вслух</a></li>
+</ul>
+
+<div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
+</div>
+<div id="divbody"><div class="content">
+<!-- entry begin -->
+<h3><a class="ablack" href="obnovlenie-proshivki-programmatora-usbasp-s-pomoshhyu-arduino-uno.html">
+Обновление прошивки программатора USBASP с помощью Arduino UNO
+</a></h3>
+<!-- bashblog_timestamp: #202004111643.32# -->
+<div class="subtitle">2020-04-11 16:43:32 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<p style="text-align:center"><img alt="" src="images/usbasp/usbasp.jpg" style="height:451px; width:623px" /></p>
+
+<p>&nbsp; Когда-то давно я приобрёл китайскую копию программатора USBASP. При попытке перепрошивки микроконтроллеров через ISP я, как и многие другие, получал ошибку следующего вида:</p>
+
+<pre>
+<code>avrdude: warning: cannot set sck period, please check for usbasp firmware update</code></pre>
+
+<p>&nbsp; Инструкции, которые я обнаружил, были написаны с рассчётом на использование в Windows, а так же в некоторых статьях я заметил ошибки и несоответствия (например, неверно указан тип программатора для avrdude, из-за чего какое-то время пришлось побуксовать), так что решил написать для себя короткую статью, убрав всё лишнее.</p>
+
+<hr />
+<p>&nbsp; Для начала нам нужен avrdude. Благо, в отличие от windows, нам не нужно искать, качать и ставить драйвера и всё прочее. Если уже установлена среда arduino, то avrdude можно найти по следующему относительному пути:</p>
+
+<pre>
+<code>arduino-X.X.X/hardware/tools/avr/bin/avrdude</code></pre>
+
+<p>&nbsp; Где X.X.X - версия среды. Если же среды arduino на машине нет, то на debian-based системах установить avrdude можно из репозитория:</p>
+
+<pre>
+<code>sudo apt-get install avrdude</code></pre>
+
+<p>&nbsp; В этом случае конфигурационный файл будет расположен тут:&nbsp;/etc/avrdude.conf, но среда нам понадобится, чтобы сменить прошивку на нашей текущей ардуине, с помощью которой будет прошиваться программатор.</p>
+
+<p>&nbsp; Далее необходимо скачать самую &quot;свежую&quot; прошивку для USBASP:&nbsp;</p>
+
+<pre>
+<code>wget https://www.fischl.de/usbasp/usbasp.2011-05-28.tar.gz
+tar xvzf usbasp.2011-05-28.tar.gz</code></pre>
+
+<p>&nbsp; Да, самой свежей прошивке на текущий момент чуть менее девяти лет. Внутри архива нас интересует файл bin/firmware/usbasp.atmega8.2011-05-28.hex, его мы и будем прошивать.</p>
+
+<p>&nbsp; Далее на плате программатора нужно замкнуть джампер JP1 (на фото установлен зелёный джампер), если его нет, нужно запаять или замкнуть пинцетом на время прошивки.</p>
+
+<p style="text-align:center"><img alt="" src="images/usbasp/1.jpg" /></p>
+
+<p>&nbsp; Затем соединяем проводами&nbsp;соответствующие пины Arduino и программатора:</p>
+
+<p style="text-align:center"><img alt="" src="images/usbasp/arduino-usbasp.jpg" /></p>
+
+<p>&nbsp; Схему честно стырил из другой статьи. Теперь открываем среду Arduino, выставляем нужную плату (в нашем случае Arduino Genuino/UNO) и порт (в нашем случае /dev/ttyUSB0). Если вы не знаете, какой алиас получил интерфейс, среда сама должна подсказать. В любом случае, подсказку можно найти тут:</p>
+
+<pre>
+<code>$ ls /sys/bus/usb-serial/devices/
+ttyUSB0</code></pre>
+
+<p>&nbsp; Прошиваем скетч из примеров с названием ArduinoISP, на этом окно можно закрывать. В терминале переходим в директорию с avrdude внутри директории с ardunio и сперва проверим, что микроконтроллер нашего программатора виден через Arduino Uno по ISP:</p>
+
+<pre>
+<code>$ ./avrdude -C ../etc/avrdude.conf -p atmega8 -c avrisp -b 19200 -P /dev/ttyUSB0 -v
+
+avrdude: Version 6.3-20171130
+         Copyright (c) 2000-2005 Brian Dean, http://www.bdmicro.com/
+         Copyright (c) 2007-2014 Joerg Wunsch
+
+         System wide configuration file is "../etc/avrdude.conf"
+         User configuration file is "/home/corpse/.avrduderc"
+         User configuration file does not exist or is not a regular file, skipping
+
+         Using Port                    : /dev/ttyUSB0
+         Using Programmer              : avrisp
+         Overriding Baud Rate          : 19200
+         AVR Part                      : ATmega8
+         Chip Erase delay              : 10000 us
+         PAGEL                         : PD7
+         BS2                           : PC2
+         RESET disposition             : dedicated
+         RETRY pulse                   : SCK
+         serial program mode           : yes
+         parallel program mode         : yes
+         Timeout                       : 200
+         StabDelay                     : 100
+         CmdexeDelay                   : 25
+         SyncLoops                     : 32
+         ByteDelay                     : 0
+         PollIndex                     : 3
+         PollValue                     : 0x53
+         Memory Detail                 :
+
+                                  Block Poll               Page                       Polled
+           Memory Type Mode Delay Size  Indx Paged  Size   Size #Pages MinW  MaxW   ReadBack
+           ----------- ---- ----- ----- ---- ------ ------ ---- ------ ----- ----- ---------
+           eeprom         4    20   128    0 no        512    4      0  9000  9000 0xff 0xff
+           flash         33    10    64    0 yes      8192   64    128  4500  4500 0xff 0x00
+           lfuse          0     0     0    0 no          1    0      0  2000  2000 0x00 0x00
+           hfuse          0     0     0    0 no          1    0      0  2000  2000 0x00 0x00
+           efuse          0     0     0    0 no          0    0      0     0     0 0x00 0x00
+           lock           0     0     0    0 no          1    0      0  2000  2000 0x00 0x00
+           calibration    0     0     0    0 no          4    0      0     0     0 0x00 0x00
+           signature      0     0     0    0 no          3    0      0     0     0 0x00 0x00
+
+         Programmer Type : STK500
+         Description     : Atmel AVR ISP
+         Hardware Version: 2
+         Firmware Version: 1.18
+         Topcard         : Unknown
+         Vtarget         : 0.0 V
+         Oscillator      : Off
+         SCK period      : 0.1 us
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.02s
+
+avrdude: Device signature = 0x1e9307 (probably m8)
+avrdude: safemode: lfuse reads as EF
+avrdude: safemode: hfuse reads as D9
+avrdude: safemode: Fuse reading not support by programmer.
+              Safemode disabled.
+
+avrdude: safemode: lfuse reads as EF
+avrdude: safemode: hfuse reads as D9
+avrdude: safemode: lfuse reads as EF
+avrdude: safemode: hfuse reads as D9
+avrdude: safemode: Sorry, reading back fuses was unreliable. I have given up and exited programming mode
+
+avrdude done.  Thank you.</code></pre>
+
+<p>&nbsp; Если чип программатора отличается, проблема в соединении или имеются иные проблемы, мы увидим ворнинги следующего вида или им подобные:</p>
+
+<pre>
+<code>avrdude: stk500_initialize(): (b) protocol error, expect=0x10, resp=0x01                    
+avrdude: initialization failed, rc=-1
+         Double check connections and try again, or use -F to override
+         this check.
+
+avrdude: stk500_disable(): protocol error, expect=0x14, resp=0x10    </code></pre>
+
+<p>&nbsp; В этом случае нужно перепроверить всё ещё раз, особенно подключение. Далее имеет смысл сохранить текущую прошивку в файл на всякий случай (вместо /path/to/backup укажите свой путь):</p>
+
+<pre>
+<code>$ ./avrdude -C ../etc/avrdude.conf -p atmega8 -c avrisp -b 19200 -P /dev/ttyUSB0 -U flash:r:/path/to/backup/original_firmware.bin:r         
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.02s
+
+avrdude: Device signature = 0x1e9307 (probably m8)
+avrdude: reading flash memory:
+
+Reading | ################################################## | 100% 5.74s
+
+avrdude: writing output file "original_firmware.bin"
+
+avrdude: safemode: Sorry, reading back fuses was unreliable. I have given up and exited programming mode
+
+avrdude done.  Thank you.  </code></pre>
+
+<p>&nbsp; Прошиваем &quot;свежую&quot; прошивку девятилетней давности:</p>
+
+<pre>
+<code>$ ./avrdude -C ../etc/avrdude.conf -p m8 -c avrisp -b 19200 -P /dev/ttyUSB0 -U flash:w:/path/to/firmwares/usbasp/usbasp.2011-05-28/bin/firmware/usbasp.atmega8.2011-05-28.hex
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.02s
+
+avrdude: Device signature = 0x1e9307 (probably m8)
+avrdude: NOTE: "flash" memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: reading input file "/path/to/firmwares/usbasp/usbasp.2011-05-28/bin/firmware/usbasp.atmega8.2011-05-28.hex"
+avrdude: input file /path/to/firmwares/usbasp/usbasp.2011-05-28/bin/firmware/usbasp.atmega8.2011-05-28.hex auto detected as Intel Hex
+avrdude: writing flash (4700 bytes):
+
+Writing | ################################################## | 100% 6.78s
+
+avrdude: 4700 bytes of flash written
+avrdude: verifying flash memory against /path/to/firmwares/usbasp/usbasp.2011-05-28/bin/firmware/usbasp.atmega8.2011-05-28.hex:
+avrdude: load data flash data from input file /path/to/firmwares/usbasp/usbasp.2011-05-28/bin/firmware/usbasp.atmega8.2011-05-28.hex:
+avrdude: input file /path/to/firmwares/usbasp/usbasp.2011-05-28/bin/firmware/usbasp.atmega8.2011-05-28.hex auto detected as Intel Hex
+avrdude: input file /path/to/firmwares/usbasp/usbasp.2011-05-28/bin/firmware/usbasp.atmega8.2011-05-28.hex contains 4700 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 3.31s
+
+avrdude: verifying ...
+avrdude: 4700 bytes of flash verified
+
+avrdude: safemode: Sorry, reading back fuses was unreliable. I have given up and exited programming mode
+
+avrdude done.  Thank you.
+</code></pre>
+
+<p>Собственно, вот и всё.</p>
+
+<p>Теги: <a href='tag_avr.html'>avr</a></p>
+<!-- text end -->
+<!-- entry end -->
+</div>
+<div id="disqus_thread"></div>
+            <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+               var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+            /* * * DONT EDIT BELOW THIS LINE * * */
+            (function() {
+            var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+            dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+            (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<div id="footer">
+<a href="https://vk.com/evgeniy_shumilov">Evgeniy Shumilov</a> &mdash; <a href="mailto:evgeniy&#46;shumilov&#64;gmail&#46;com">evgeniy&#46;shumilov&#64;gmail&#46;com</a><br/>
+Generated with <a href="https://github.com/cfenollosa/bashblog">bashblog</a>, a single bash script to easily create blogs like this one</div>
+</div></div>
+</div></div>
+<script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+        /* * * DONT EDIT BELOW THIS LINE * * */
+        (function () {
+        var s = document.createElement("script"); s.async = true;
+        s.type = "text/javascript";
+        s.src = "//" + disqus_shortname + ".disqus.com/count.js";
+        (document.getElementsByTagName("HEAD")[0] || document.getElementsByTagName("BODY")[0]).appendChild(s);
+    }());
+    </script>
+</body></html>

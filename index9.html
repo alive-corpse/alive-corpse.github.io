@@ -58,6 +58,22 @@
 <div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
 </div>
 <div id="divbody"><div class="content">
+<h3><a class="ablack" href="ready-for-production.html">
+Ready for production
+</a></h3>
+<!-- bashblog_timestamp: #201811132242.34# -->
+<div class="subtitle">2018-11-13 22:42:34 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<h1 style="text-align: center;">- Ты видишь контейнер?</h1>
+<h1 style="text-align: center;">- Вижу.</h1>
+<p style="text-align: center;"><img src="images/shredinger.jpg"></p>
+<h1 style="text-align: center;">- И я вижу. А его нет!</h1>
+<p>&nbsp; Достаточно давно я заметил где-то фразу о том, что "docker is ready for production". С тех пор периодически вспоминаю её, каждый раз, когда сталкиваюсь с какими-либо проблемами разного масштаба, связанными с докером. Не поймите меня неправильно, мне нравится эта технология, но для меня странным остаётся тот набор детских заболеваний, которыми этот продукт страдает во вполне зрелом возрасте. Так же не понимаю этого дикого ажиотажа вокруг именно докера, когда всё что нужно и не нужно, пытаются затолкнуть в контейнер, не взирая на то, насколько это удобно и целесообразно в текущей ситуации. Создаётся впечатление, что во-первых, раньше не было никакой контейнеризации в принципе - ни jails на BSD, ни <a href="https://openvz.org/" target="_blank">OpenVZ</a>&nbsp;и <a href="https://linuxcontainers.org/lxc/introduction/" target="_blank">LXC</a> на линуксе, а во-вторых - и сейчас нет никаких иных технологий, кроме докера - ни <a href="https://snapcraft.io/" target="_blank">snap</a>/<a href="https://flatpak.org/" target="_blank">flatpack</a> (да-да, иксовые приложения для десктопа тоже пытаются завернуть в докер), ни virtualenv для пайтона - ничего подобного, ни пакетов, ни средств вроде puppet/ansible. Конечно, у докера есть удобные средства доставки, с этим никто не спорит, но не понятно, почему выстрелил в своё время именно он, что его сделало таким "модным, стильным, молодёжным". Скажем, OpenVZ мне нравился откровенно больше, чем LXC, но и тем и другим я пользовался задолго до того, как появился докер. Что помешало обрасти средствами доставки и прочими плюшечками тому же OpenVZ? Отсутствие нативной поддержки в ядре?</p>
+<p class="readmore"><a href="./ready-for-production.html">Читать дальше...</a></p>
+<p>Теги: <a href='tag_docker.html'>docker</a>, <a href='tag_админское.html'>админское</a></p>
 <h3><a class="ablack" href="pro-minimalistichnyj-minimalizm.html">
 Про минималистичный минимализм
 </a></h3>
@@ -186,19 +202,6 @@ Evgeniy Shumilov
 <p>&nbsp; Bashblog устроен таким образом, что он при каждом rebuild или посте переписывает&nbsp;даты и время публикации поста на время создание файла. То есть, вы сделали десяток постов, потом решили добавить ещё один, находясь за другим компьютером, сделали checkout, создали новый пост&nbsp;и все ваши посты получили сегодняшнюю дату и время, когда вы выгрузили содержимое репозитория. Нехорошо. Есть два пути решения этой проблемы - либо вмешаться в&nbsp;содержимое&nbsp;bashblog и изменить его логику работы со временем и датой постов, либо&nbsp;после выгрузки изменять дату и время создания файлов на необходимые. Путь менее очевидный, но я предпочёл его, поскольку не хочу менять код bashblog без особой на то необходимости (чтобы не было мучительно больно после обновления самого bashblog при необходимости).</p>
 <p class="readmore"><a href="./dorabatyvaem-bashblog-napilnikom-chast-tretya---ispravlyaem-tajmstempy.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_bashblog.html'>bashblog</a>, <a href='tag_shell.html'>shell</a></p>
-<h3><a class="ablack" href="pro-sobak.html">
-Про собак
-</a></h3>
-<!-- bashblog_timestamp: #201810311154.50# -->
-<div class="subtitle">2018-10-31 11:54:50 &mdash; 
-Evgeniy Shumilov
-</div>
-<!-- text begin -->
-
-<p style="text-align: center;"><img src="/images/veo.jpg"></p>
-<p>&nbsp;&nbsp;У нас с женой постоянные "качели" в отношении собак. И она и я хотим собаку. Периодически это желание приобретает острые формы и мы бьём друг-друга по рукам. У неё был когда-то русский спаниель, у меня - серьёзная восточноевропейская овчарка. Мы долго думали над вопросом заведения питомца, сошлись на том, что собака должна быть маленькой, иначе каждый день с ней придётся наматывать лишних +5 - +7 км (что совершенно замечательно в отношении здоровья при сидячем образе жизни, но совершенно паршиво в отношении времени, которого постоянно не хватает и на то, чтобы нормально высыпаться). Мы решили, что собака появится после того, как появятся дети и вырастут до сознательных лет 7-10, чтобы воспитывать в них ответственность, а заодно и выгул переложить на них. Ну и чтобы собан не утягивал ребёнка - опять таки он должен быть небольшой. Овчарку дитё (да и жена, которая весит меньше хорошей овчарки) в критической ситуации не удержит. Одним словом, решили, что у нас будет корги. :)<p>
-<p class="readmore"><a href="./pro-sobak.html">Читать дальше...</a></p>
-<p>Теги: <a href='tag_собаки.html'>собаки</a></p>
 <div id="all_posts">
 <a href="index10.html">&lt;&lt; В прошлое</a> &mdash; 
 <a href="all_posts.html">Все записи</a> &mdash; <a href="all_tags.html">Все теги</a> &mdash; <a href="">RSS</a>

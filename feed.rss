@@ -2,9 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Thu, 09 Apr 2020 01:36:10 +0500</lastBuildDate>
-<pubDate>Thu, 09 Apr 2020 01:36:10 +0500</pubDate>
+<lastBuildDate>Sat, 11 Apr 2020 16:45:32 +0500</lastBuildDate>
+<pubDate>Sat, 11 Apr 2020 16:45:32 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Обновление прошивки программатора USBASP с помощью Arduino UNO
+</title><description><![CDATA[
+
+<p style="text-align:center"><img alt="" src="images/usbasp/usbasp.jpg" style="height:451px; width:623px" /></p>
+
+<p>&nbsp; Когда-то давно я приобрёл китайскую копию программатора USBASP. При попытке перепрошивки микроконтроллеров через ISP я, как и многие другие, получал ошибку следующего вида:</p>
+
+<pre>
+<code>avrdude: warning: cannot set sck period, please check for usbasp firmware update</code></pre>
+
+<p>&nbsp; Инструкции, которые я обнаружил, были написаны с рассчётом на использование в Windows, а так же в некоторых статьях я заметил ошибки и несоответствия (например, неверно указан тип программатора для avrdude, из-за чего какое-то время пришлось побуксовать), так что решил написать для себя короткую статью, убрав всё лишнее.</p>
+
+<hr />
+<p>Теги: <a href='tag_avr.html'>avr</a></p>
+]]></description><link>https://shumiloff.ru/obnovlenie-proshivki-programmatora-usbasp-s-pomoshhyu-arduino-uno.html</link>
+<guid>https://shumiloff.ru/./obnovlenie-proshivki-programmatora-usbasp-s-pomoshhyu-arduino-uno.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Sat, 11 Apr 2020 16:43:32 +0500</pubDate></item>
 <item><title>
 Мракобесие без джаза и 5G
 </title><description><![CDATA[
@@ -134,18 +153,4 @@
 <guid>https://shumiloff.ru/./pro-fajl-prizrak-ili-kak-najti-suslika-kotorogo-net.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Tue, 24 Dec 2019 14:21:35 +0500</pubDate></item>
-<item><title>
-Про чувственные переживания, эмоциональный шум и точку душевного равновесия
-</title><description><![CDATA[
-
-<p style="text-align:center"><img alt="" src="images/meditation.jpg" /></p>
-
-<p>&nbsp; Недавно в чатике один человек задал вопрос - что такое для вас чувственное переживание? И мне вспомнился один момент из моей жизни. Мне было лет 15, я летом отдыхал в деревне у деда и однажды спонтанно взял небольшой рюкзак, закинул туда какое-то покрывало, нож, бутылку молока, немного хлеба, овощей и пошёл, куда глаза глядят. Глаза глядели в сторону дороги из посёлка. Пара километров, речка &quot;Бабка&quot;, мост через неё, переход через трассу и тропинка, уходящая вверх по холму и идущая чёрт знает, куда через поля мимо другого посёлка. Километр, другой, ярко светит солнце, не жарко и не холодно, дышится легко, идётся ещё легче, вокруг никого и как-то так хорошо на душе, светло. Шёл и шёл себе, а когда немного устал, раскинул на поляне покрывало, да и улёгся на спину. И тут меня посетило именно то, что я могу описать, как чувственное переживание.</p>
-
-<hr />
-<p>Теги: <a href='tag_ностальгия.html'>ностальгия</a>, <a href='tag_мысли-вслух.html'>мысли-вслух</a></p>
-]]></description><link>https://shumiloff.ru/pro-chuvstvennye-perezhivaniya-emocionalnyj-shum-i-tochku-dushevnogo-ravnovesiya.html</link>
-<guid>https://shumiloff.ru/./pro-chuvstvennye-perezhivaniya-emocionalnyj-shum-i-tochku-dushevnogo-ravnovesiya.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Sat, 14 Dec 2019 23:49:25 +0500</pubDate></item>
 </channel></rss>
