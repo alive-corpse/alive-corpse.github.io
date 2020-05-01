@@ -2,9 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Sat, 11 Apr 2020 16:45:32 +0500</lastBuildDate>
-<pubDate>Sat, 11 Apr 2020 16:45:32 +0500</pubDate>
+<lastBuildDate>Fri, 01 May 2020 16:58:02 +0500</lastBuildDate>
+<pubDate>Fri, 01 May 2020 16:58:02 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Про клиентоориентированность
+</title><description><![CDATA[
+
+<tyle="text-align:center"><img alt="" src="images/client.jpg" /></p>
+
+<p>&nbsp; Понадобилось мне заказать кресло-кровать. Так как в жизненном пространстве я достаточно ограничен, кресло-кровать должно было иметь оперделённые габариты и быть достаточно компактным. А так как двигать его придётся преимущественно жене, то и вес должен быть небольшим. Потратив неделю на поиски по Перми и ещё несколько дней на поиски по всей стране, нашли подходящее в Москве, но в полтора раза дороже ожидаемого, плюс доставка. Жаба истошно квакала, но в конце-концов, сон и удобство жены мне дороже. Пытался оформить заказ и в связи с этим пришлось столкнуться с парой занятных моментов.</p>
+
+<hr />
+<p>Теги: <a href='tag_подгорание.html'>подгорание</a>, <a href='tag_осадочек-остался.html'>осадочек-остался</a></p>
+]]></description><link>https://shumiloff.ru/pro-klientoorientirovannost.html</link>
+<guid>https://shumiloff.ru/./pro-klientoorientirovannost.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Fri, 01 May 2020 16:57:20 +0500</pubDate></item>
 <item><title>
 Обновление прошивки программатора USBASP с помощью Arduino UNO
 </title><description><![CDATA[
@@ -139,18 +153,4 @@
 <guid>https://shumiloff.ru/./alternativa-encfs-ili-prozrachnoe-shifrovanie-v-fonovom-rezhime-dlya-userspace.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Sat, 04 Jan 2020 02:51:16 +0500</pubDate></item>
-<item><title>
-Про файл-призрак или как найти суслика, которого нет
-</title><description><![CDATA[
-
-<p style="text-align:center"><img alt="" src="images/boromir.jpg" /></p>
-
-<p>&nbsp; Сегодня на работе столкнулся с интересным моментом. Ко мне подошёл разработчик и сказал, что на старом dev сервере закончилось место. Дело житейское, начал искать. Запустил <a href="https://dev.yorhel.nl/ncdu">ncdu</a>&nbsp;(кстати, незаменимая утилита, всем рекомендую) и попытался найти, что же занимает место. Не нашёл, да и визуально показалось, что занято не так уж много. В нижней строке ncdu показывал Total disk usage равный 29ти гб при общем размере диска в 200 гб. При этом при попытке создать любой файл, система говорила об ошибке в связи с нехваткой места.&nbsp;</p>
-
-<hr />
-<p>Теги: <a href='tag_админское.html'>админское</a>, <a href='tag_linux.html'>linux</a></p>
-]]></description><link>https://shumiloff.ru/pro-fajl-prizrak-ili-kak-najti-suslika-kotorogo-net.html</link>
-<guid>https://shumiloff.ru/./pro-fajl-prizrak-ili-kak-najti-suslika-kotorogo-net.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Tue, 24 Dec 2019 14:21:35 +0500</pubDate></item>
 </channel></rss>
