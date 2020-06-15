@@ -2,9 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Mon, 04 May 2020 12:44:05 +0500</lastBuildDate>
-<pubDate>Mon, 04 May 2020 12:44:05 +0500</pubDate>
+<lastBuildDate>Mon, 15 Jun 2020 23:17:02 +0500</lastBuildDate>
+<pubDate>Mon, 15 Jun 2020 23:17:02 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Про классический холивар
+</title><description><![CDATA[
+
+<p style="text-align:center"><img alt="" src="images/tux.jpg" /></p>
+
+<p>&nbsp; Тут пару дней назад общались в телеграме с товарищем (далее Т). И речь зашла о холиваре - мол, я вот, отщепенец/извращенец&nbsp;такой сижу на линуксе, а больше никому он никуда не сплющился и никто его не использует. Так смешно стало. Далее примерный диалог:</p>
+<hr />
+<p>Теги: <a href='tag_linux.html'>linux</a>, <a href='tag_жизненное.html'>жизненное</a></p>
+]]></description><link>https://shumiloff.ru/pro-klassicheskij-xolivar.html</link>
+<guid>https://shumiloff.ru/./pro-klassicheskij-xolivar.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Mon, 15 Jun 2020 23:14:44 +0500</pubDate></item>
 <item><title>
 Про силиконовых монстров, агрессию, сосульки и правильные вопросы к себе
 </title><description><![CDATA[
@@ -142,18 +155,4 @@
 <guid>https://shumiloff.ru/./prostaya-i-bystraya-nastrojka-mesh-vpn-s-pomoshhyu-tinc.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Thu, 30 Jan 2020 20:36:30 +0500</pubDate></item>
-<item><title>
-Сон 2020.01.27 07:46
-</title><description><![CDATA[
-
-<p style="text-align:center"><img alt="" src="images/jungle.png" /></p>
-
-<p>&nbsp; Надо сказать, что я крайне редко помню свои сны. Ещё реже они представляют из себя что-то связное и законченное. И ещё реже нечто, что можно смело рассказать любому человеку, не ожидая, что он сразу после этого вызовет для тебя&nbsp;скорую психиатрическую помощь, ну или в лучшем случае не решит держаться от тебя подальше. Сегодня же случилось нечто удивительное - мне приснился длинный связный сон с более-менее возможным в реальности сюжетом за исключением некоторых деталей. Но самое занятное - мне не просто снился сон, где я был действующим лицом или находился в гуще событий. Я просто лежал на своём&nbsp;диване и слушал аудиокнигу. С интересом слушал, надо сказать и мне нравилось.&nbsp;Перед тем, как проснуться, я даже специально встал с кровати, подош&euml;л к телефону. чтобы посмотреть название и автора книги - хотел рассказать жене, когда проснусь, что&nbsp; я слушал всю ночь. Книга называлась &quot;Хорошо обдуманные вещи&quot;, автор - некий Владимир Исаев.</p>
-
-<hr />
-<p>Теги: <a href='tag_dreams.html'>dreams</a></p>
-]]></description><link>https://shumiloff.ru/son-ot-20200127-0746.html</link>
-<guid>https://shumiloff.ru/./son-ot-20200127-0746.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Mon, 27 Jan 2020 14:14:29 +0500</pubDate></item>
 </channel></rss>
