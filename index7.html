@@ -58,6 +58,18 @@
 <div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
 </div>
 <div id="divbody"><div class="content">
+<h3><a class="ablack" href="vyzov-metoda-klassa-po-imeni-v-python.html">
+Вызов метода класса по имени в python
+</a></h3>
+<!-- bashblog_timestamp: #201901151850.43# -->
+<div class="subtitle">2019-01-15 18:50:43 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+<p style="text-align: center;"><img class="leftimg" src="images/micropython.webp" /></p>
+<p>&nbsp; Недавно столкнулся с одной простой задачей, с которой раньше cталкиваться не приходилось, поэтому оставлю себе здесь запись в качестве памятки. В <a href="http://micropython.org/" target="_blank">MicroPython</a> необходимо было для одного класса написать встроенный менеджер задач - некий аналог cron и таймера, который бы позволил микроконтроллеру в общем цикле вызывать методы этого же класса (например, проверка состояния GPIO, датчиков, подключения к WiFi, MQTT и т.п.) по расписанию или через заданное количество времени после наступления какого-либо события. В числе прочего планировалась возможность фильтровать задачи по имени для динамической расстановки их приоритетов и я счёл, что лучшим вариантом в этом случае будет хранение в структуре данных имени метода, затем, возможно, создание словаря, ключами которого будут имена методов. Заодно и имя метода в виде строки куда проще передавать в другой метод в качестве параметра плюс аттрибуты отдельным кортежем во втором параметре. Использовать для обратного преобразования (да и для практически любых других задач) eval&nbsp;- мягко говоря, дурной тон, поэтому пришлось мучать гугл. Решение оказалось не простым, а очень простым. Я уже устал удивляться подобному при программировании на python, но всё ещё продолжаю это делать.</p>
+<p class="readmore"><a href="./vyzov-metoda-klassa-po-imeni-v-python.html">Читать дальше...</a></p>
+<p>Теги: <a href='tag_python.html'>python</a></p>
 <h3><a class="ablack" href="otpravka-logov-s-openwrtlede-v-syslog-i-obrabotka-sobytij.html">
 Отправка логов с OpenWRT/LEDE в syslog и обработка событий
 </a></h3>
@@ -201,20 +213,6 @@ Evgeniy Shumilov
 
 
 <!-- text end -->
-<h3><a class="ablack" href="pro-ocherednoe-podgoranie-i-chyornuyu-magiyu-yablochnoj-kompanii.html">
-Про очередное подгорание и чёрную магию яблочной компании
-</a></h3>
-<!-- bashblog_timestamp: #201812211719.45# -->
-<div class="subtitle">2018-12-21 17:19:45 &mdash; 
-Evgeniy Shumilov
-</div>
-<!-- text begin -->
-
-<p>Другие части эпопеи можно найти <a href="tag_mac.html" target="_blank">тут</a>.</p>
-<p style="text-align: center;"><img src="images/podgoraet/mac1.jpg"></p>
-<p><img src="images/podgoraet/macvspc.jpg" class="leftimg">&nbsp; Думаете, у меня подгорает нижняя чакра? Не угадали. Подгорает, но у макбука. Порт зарядки. MagSafe2. Контакты обуглились. Слово Safe в названии как бы намекает, что обугливающиеся контакты и разъём, нагревающийся до 80+ градусов цельсия при зарядке - это безопасно. Наверное контакты обугливаются безопаснее в 2 раза по сравнению с предыдущим MagSafe. К слову, переходник с MagSafe на MagSafe2 стоит около тысячи рублей (не напрягаясь можно найти за полторы). Кусочек алюминия с четырьмя медными контактами и магнитиком. Адаптер этот весит примерно около 20-25 грамм. Вес одного грамма серербра сегодня составляет около 110 рублей за грамм. Одним словом, под видом адаптеров питания продаётся алюминий и медь по цене в половину цены серебра. Отличный способ экстремально дорого продавать самый распространённый на земле металл! Мне кажется, я в своей жизни занимаюсь чем-то не тем. Разъём для макбука с заменой (кусочек текстолита, четыре медных контакта, кусок металла, немного проводов и пластиковый коннектор - это три с половиной тысячи рублей. Три года ноутбуку, а в него уже вложено 1500 за профилактику + 7500 замена батареи + 3500 за разъём. Итого 12 тысяч рублей. Ноутбук, на котором я работаю дома последние полтора года, стоил мне чуть больше 12 тысяч рублей.</p>
-<p class="readmore"><a href="./pro-ocherednoe-podgoranie-i-chyornuyu-magiyu-yablochnoj-kompanii.html">Читать дальше...</a></p>
-<p>Теги: <a href='tag_mac.html'>mac</a></p>
 <div id="all_posts">
 <a href="index8.html">&lt;&lt; В прошлое</a> &mdash; 
 <a href="all_posts.html">Все записи</a> &mdash; <a href="all_tags.html">Все теги</a> &mdash; <a href="">RSS</a>
