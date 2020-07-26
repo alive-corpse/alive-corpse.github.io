@@ -2,9 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Tue, 21 Jul 2020 17:16:16 +0500</lastBuildDate>
-<pubDate>Tue, 21 Jul 2020 17:16:16 +0500</pubDate>
+<lastBuildDate>Sun, 26 Jul 2020 19:12:05 +0500</lastBuildDate>
+<pubDate>Sun, 26 Jul 2020 19:12:05 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Скрипт для быстрого перемещения python virtualenv
+</title><description><![CDATA[
+
+<p><img alt="" src="images/changeplace.png" /></p>
+
+<p>&nbsp; Уже в который раз сталкиваюсь с тем, что при перемещении какого-либо проекта из одной директории в другую при использовании virtualenv возникает проблема, связанная с тем, что при создании virtualenv в скрипты окружения прописываются абсолютные пути до интерпретаторов и всего прочего. Конечно, можно в старом окружении выгрузить список исопльзуемых библиотек через pip3 freeze &gt; requirements.txt и потом в новом поставить библиотеки из списка через pip3 install -r requirements.txt, но такой подход занимает время, особенно если его использовать на одноплатных компьютерах, не отличающихся ни наличием быстрого flash накопителя, ни быстрого процессора, ни быстрого интернета. Особенно это актуально, когда в проекте несколько десятков тяжёлых библиотек и env весит под несколько сотен мегабайт. Сегодня мне это понадобилось для переноса директории с Home Assistant на OrangePi Zero. Решил, что &quot;хватит это терпеть&quot; и написал простой скриптик, который из activate получает старое значение VIRTUAL_ENV, из текущего положения - новое и заменяет его во всех файлах, где это необходимо. Всё оказалось достаточно просто. Проверил - работает. Скрипт необходимо положить в директорию, где расположен activate (не забываем выставить исполняемый бит через chmod +x scriptname). Ниже его содержимое.</p>
+
+<hr />
+<p>Теги: <a href='tag_shell.html'>shell</a>, <a href='tag_python.html'>python</a></p>
+]]></description><link>https://shumiloff.ru/skript-dlya-bystrogo-peremeshheniya-python-virtualenv.html</link>
+<guid>https://shumiloff.ru/./skript-dlya-bystrogo-peremeshheniya-python-virtualenv.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Sun, 26 Jul 2020 19:11:28 +0500</pubDate></item>
+<item><title>
+</title><description><![CDATA[
+]]></description><link>https://shumiloff.ru/test.html</link>
+<guid>https://shumiloff.ru/./test.html</guid>
+<dc:creator></dc:creator>
+<pubDate>Tue, 21 Jul 2020 23:55:16 +0500</pubDate></item>
 <item><title>
 Топ вопросов о 3D печати и общие рекомендации начинающим
 </title><description><![CDATA[
@@ -35,12 +55,6 @@
 <guid>https://shumiloff.ru/./pro-prikruchivanie-skripta-galerei-k-blogu.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Tue, 21 Jul 2020 16:03:08 +0500</pubDate></item>
-<item><title>
-</title><description><![CDATA[
-]]></description><link>https://shumiloff.ru/test.html</link>
-<guid>https://shumiloff.ru/./test.html</guid>
-<dc:creator></dc:creator>
-<pubDate>Tue, 21 Jul 2020 15:48:08 +0500</pubDate></item>
 <item><title>
 Про умный дом, разношёрстность и закидывание деньгами
 </title><description><![CDATA[
@@ -133,20 +147,4 @@
 <guid>https://shumiloff.ru/./obnovlenie-proshivki-programmatora-usbasp-s-pomoshhyu-arduino-uno.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Sat, 11 Apr 2020 16:43:32 +0500</pubDate></item>
-<item><title>
-Мракобесие без джаза и 5G
-</title><description><![CDATA[
-
-<p style="text-align:center"><img alt="" src="images/mrakobesie.jpg" /></p>
-
-<p>&nbsp; Давно уже заметил, что статьи получаются лучше, когда то, о чём ты пишешь, тебя задевает и когда тебя переполняют эмоции. И вот, сегодня как раз такой случай.</p>
-
-<p>&nbsp; Недавно во второй раз уже наткнулся на видео под заголовком &quot;ОПАСНАЯ ТЕХНОЛОГИЯ 5G. Умная пыль. Для Чего На самом Деле Нужны Сети 5G?&quot;. Ссылку приводить не буду, так как youtube периодически удаляет сомнительный контент или понижает его рейтинг. Видео чаще всего из себя представляет статичную картинку, под трансляцию которой зачитывается один и тот же текст. Я приведу его здесь со своими комментариями:</p>
-
-<hr />
-<p>Теги: <a href='tag_жизненное.html'>жизненное</a></p>
-]]></description><link>https://shumiloff.ru/mrakobesie-bez-dzhaza-i-5g.html</link>
-<guid>https://shumiloff.ru/./mrakobesie-bez-dzhaza-i-5g.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Thu, 09 Apr 2020 01:21:02 +0500</pubDate></item>
 </channel></rss>
