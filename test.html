@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="main.css" type="text/css" />
+    <link rel="stylesheet" href="blog.css" type="text/css" />
+    <link rel="stylesheet" href="assets/highlight/styles/corpse.css" type="text/css" />
+    <script type="text/javascript" src="/assets/jquery.min.js"></script>
+
+
+    <script>
+      function dLoadScript(url){
+        var e = document.createElement("script");
+        e.src = url; e.type="text/javascript";
+        document.getElementsByTagName("head")[0].appendChild(e); 
+      }
+
+      function dLoadCSS(url){
+        var e = document.createElement("link");
+        e.href = url; e.rel = "stylesheet"; e.type = "text/css";
+        document.getElementsByTagName("head")[0].appendChild(e); 
+      }
+
+      onload = function() { 
+        var element = document.getElementById("ngy2p");
+        if(typeof(element) != 'undefined' && element != null){
+          dLoadCSS("/assets/nanogallery2/nanogallery2.min.css");
+          dLoadScript("/assets/nanogallery2/jquery.nanogallery2.min.js");
+        }
+      }
+    </script>
+
+
+  </head>
+  <body>
+
+    <h1>Gallery made with nanogallery2</h1>
+
+<!--    <div ID="ngy2p" name="g1" data-nanogallery2='{"itemsBaseURL": "/images/3d/", "thumbnailWidth": "200","thumbnailLabel": {"position": "overImageOnBottom"}, "thumbnailAlignment": "center", "thumbnailOpenImage": true}'>                                                                           
+-->
+    <div ID="ngy2p" data-nanogallery2='{
+        "itemsBaseURL": "/images/3d/",
+        "thumbnailWidth": "auto",
+        "thumbnailBorderVertical": 0,
+        "thumbnailBorderHorizontal": 0,
+        "colorScheme": {
+          "thumbnail": {
+            "background": "rgba(204,255,0,1)"
+          }
+        },
+        "thumbnailLabel": {
+          "position": "overImageOnBottom",
+          "titleMultiLine": true,
+          "descriptionMultiLine": true
+        },
+        "thumbnailHoverEffect2": "imageScaleIn80",
+        "thumbnailAlignment": "center",
+        "thumbnailLevelUp": true,
+        "thumbnailOpenImage": true
+      }'>
+
+        <a href="aukey1.jpg" data-ngthumb="aukey1_t.jpg" data-ngdesc="">aukey1</a>
+        <a href="aukey2.jpg" data-ngthumb="aukey2_t.jpg" data-ngdesc="">aukey2</a>
+        <a href="aukey3.jpg" data-ngthumb="aukey3_t.jpg" data-ngdesc="">aukey3</a>
+        <a href="aukey4.jpg" data-ngthumb="aukey4_t.jpg" data-ngdesc="">aukey4</a>
+        <a href="aukey5.jpg" data-ngthumb="aukey5_t.jpg" data-ngdesc="">aukey5</a>
+    </div>
+
+  <h1>Second gallery</h1>
+
+    <div ID="ngy2p4" name="g2" data-nanogallery2='{"itemsBaseURL": "/images/3d/", "thumbnailWidth": "200","thumbnailLabel": {"position": "overImageOnBottom"}, "thumbnailAlignment": "center", "thumbnailOpenImage": true}'>
+      <a href="box1.png" data-ngthumb="box1_t.png" data-ngdesc="">box1</a>
+      <a href="box2.png" data-ngthumb="box2_t.png" data-ngdesc="">box2</a>
+      <a href="box3.jpg" data-ngthumb="box3_t.jpg" data-ngdesc="">box3</a>
+      <a href="box4.jpg" data-ngthumb="box4_t.jpg" data-ngdesc="">box4</a>
+      <a href="box5.jpg" data-ngthumb="box5_t.jpg" data-ngdesc="">box5</a>
+    </div>
+
+  </body>
+</html>

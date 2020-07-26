@@ -2,9 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Tue, 30 Jun 2020 18:56:22 +0500</lastBuildDate>
-<pubDate>Tue, 30 Jun 2020 18:56:22 +0500</pubDate>
+<lastBuildDate>Tue, 21 Jul 2020 17:16:16 +0500</lastBuildDate>
+<pubDate>Tue, 21 Jul 2020 17:16:16 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Топ вопросов о 3D печати и общие рекомендации начинающим
+</title><description><![CDATA[
+
+<p style="text-align:center"><img alt="" src="/images/3d-printers.jpg" /></p>
+
+<p>&nbsp; Ко мне периодически обращаются разные люди из моего окружения с вопросами, касающимися 3d печати, поэтому у меня сформировался список наиболее часто задаваемых вопросов, я их сейчас озвучу и, наверняка, для многих это окажется полезным. В этой статье я попытаюсь спустить с небес на землю мечтающих заработать на 3д печати и печатать всякую дребедень, скачиваемую из интернета. В другой статье - напишу о преимуществах 3D печати и возможностях, которые она открывает.</p>
+
+<hr />
+<p>Теги: <a href='tag_3d-printing.html'>3d-printing</a></p>
+]]></description><link>https://shumiloff.ru/top-voprosov-o-3d-pechati-i-obshhie-rekomendacii-nachinayushhim.html</link>
+<guid>https://shumiloff.ru/./top-voprosov-o-3d-pechati-i-obshhie-rekomendacii-nachinayushhim.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Tue, 21 Jul 2020 17:16:12 +0500</pubDate></item>
+<item><title>
+Про прикручивание скрипта галереи к блогу
+</title><description><![CDATA[
+
+<p style="text-align:center"><img alt="" src="/images/galery.png" /></p>
+
+<p>&nbsp; Давно назревала необходимость прикрутить к блогу какой-нибудь генератор галерей, но всё как-то руки не доходили и вот, сегодня дошли. Скажу сразу - я ничерта не смыслю в JavaScript, вёрстке и web дизайне (думаю, по внешнему виду моего блога это нетрудно заметить :)). Главными критериями были простота использования и отсутствие лишних наворотов. После перебора нескольких вариантов, наткнулся на следующий: https://nanogallery2.nanostudio.org/</p>
+
+<p>Всё понравилось, решил попробовать. На странице проекта есть примеры и builder, который поможет подогнать значения параметров под требуемые.</p>
+
+<hr />
+<p>Теги: <a href='tag_web.html'>web</a>, <a href='tag_shell.html'>shell</a></p>
+]]></description><link>https://shumiloff.ru/pro-prikruchivanie-skripta-galerei-k-blogu.html</link>
+<guid>https://shumiloff.ru/./pro-prikruchivanie-skripta-galerei-k-blogu.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Tue, 21 Jul 2020 16:03:08 +0500</pubDate></item>
+<item><title>
+</title><description><![CDATA[
+]]></description><link>https://shumiloff.ru/test.html</link>
+<guid>https://shumiloff.ru/./test.html</guid>
+<dc:creator></dc:creator>
+<pubDate>Tue, 21 Jul 2020 15:48:08 +0500</pubDate></item>
 <item><title>
 Про умный дом, разношёрстность и закидывание деньгами
 </title><description><![CDATA[
@@ -113,46 +149,4 @@
 <guid>https://shumiloff.ru/./mrakobesie-bez-dzhaza-i-5g.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Thu, 09 Apr 2020 01:21:02 +0500</pubDate></item>
-<item><title>
-Про позитивный фидбек и мотивацию
-</title><description><![CDATA[
-
-<p style="text-align:center"><img alt="" src="images/motivation.jpg" /></p>
-
-<p>&nbsp; Как-то раз ко мне подошла начальница и попросила устроить собеседование одному молодому парню, её знакомому - мол, вдруг у нас под него найдутся какие-то задачи? Дело не сложное, собеседования я проводил не раз, да и пара тестовых заданий у меня припасена была. По результатам собеседования выяснилось, что парень совсем &quot;зелёный&quot;, опыта работы у него нет, но он кардинально отличался&nbsp;от большинства тех, кто ранее у меня проходил собеседования...</p>
-
-<hr />
-<p>Теги: <a href='tag_жизненное.html'>жизненное</a></p>
-]]></description><link>https://shumiloff.ru/pro-pozitivnyj-fidbek-i-motivaciyu.html</link>
-<guid>https://shumiloff.ru/./pro-pozitivnyj-fidbek-i-motivaciyu.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Fri, 03 Apr 2020 23:52:28 +0500</pubDate></item>
-<item><title>
-Про &quot;Вику&quot;
-</title><description><![CDATA[
-
-<p style="text-align:center"><img alt="" src="/images/izolon.jpg" /></p>
-
-<p>&nbsp; Купил я сушилку для овощей и фруктов для сушки &quot;неовощей&quot; и &quot;нефруктов&quot;. Так уж получилось, что эти устройства помимо своего основного предназначения отлично выполняют функцию сушки филамента (пластика) для 3d принтера. Веселуха началась прямо с момента покупки.</p>
-
-<hr />
-<p>Теги: <a href='tag_fun.html'>fun</a></p>
-]]></description><link>https://shumiloff.ru/pro-quotvikuquot.html</link>
-<guid>https://shumiloff.ru/./pro-quotvikuquot.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Fri, 20 Mar 2020 18:41:50 +0500</pubDate></item>
-<item><title>
-Использование отдельных различных SSH ключей для различных GIT репозиториев
-</title><description><![CDATA[
-
-<p style="text-align:center"><img alt="" src="/images/sshkey.png"></p>
-
-<p>&nbsp; Сегодня нашёл метод решения одной из небольших, но досадных проблем, которые меня мучали годами. Собственно, описание проблемы понятно из заголовка. Если чуть более подробно, то для того, чтобы использовать git pull/fetch/push&nbsp;и тому подобные команды с GitHub/GitLab, git может использовать либо подключение через ssh, в том числе использованием доступа по ключу, либо через https, что заставляет вас каждый раз вводить логин и пароль. В данном случае речь идёт не о средах разработки, где все учётные данные в этом случае прекрасно сохраняются, а о работе с консолью и использовании скриптов в автоматическом режиме например, для деплоя. В случае использования пары ключей конечно, можно создать ключ без пароля и всё будет прекрасно ровно до того момента, пока вам не понадобится использовать разные ключи для разных репозиториев. Например, в случае с разными учётными записями на GitHub/GitLab - домашней и рабочей. Или если вы получили так называемый deploy key от удалённого репозитория.</p>
-
-<hr />
-<p>Теги: <a href='tag_админское.html'>админское</a></p>
-]]></description><link>https://shumiloff.ru/ispolzovanie-otdelnyx-razlichnyx-ssh-klyuchej-dlya-razlichnyx-git-repozitoriev.html</link>
-<guid>https://shumiloff.ru/./ispolzovanie-otdelnyx-razlichnyx-ssh-klyuchej-dlya-razlichnyx-git-repozitoriev.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Fri, 06 Mar 2020 14:55:17 +0500</pubDate></item>
 </channel></rss>

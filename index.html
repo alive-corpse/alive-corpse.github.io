@@ -9,6 +9,29 @@
 <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 <script src="assets/jquery.min.js"></script>
+
+<script>
+  function dLoadScript(url){
+    var e = document.createElement("script");
+    e.src = url; e.type="text/javascript";
+    document.getElementsByTagName("head")[0].appendChild(e); 
+  }
+
+  function dLoadCSS(url){
+    var e = document.createElement("link");
+    e.href = url; e.rel = "stylesheet"; e.type = "text/css";
+    document.getElementsByTagName("head")[0].appendChild(e); 
+  }
+
+  onload = function() { 
+    var element = document.getElementById("ngy2p");
+    if(typeof(element) != 'undefined' && element != null){
+      dLoadCSS("/assets/nanogallery2/nanogallery2.min.css");
+      dLoadScript("/assets/nanogallery2/jquery.nanogallery2.min.js");
+    }
+  }
+</script>
+
 <script src="assets/jouele/jouele.min.js"></script>
 <link href="assets/jouele/jouele.min.css" rel="stylesheet"/>
 <script src="assets/highlight/highlight.pack.js"></script>
@@ -58,6 +81,38 @@
 <div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
 </div>
 <div id="divbody"><div class="content">
+<h3><a class="ablack" href="top-voprosov-o-3d-pechati-i-obshhie-rekomendacii-nachinayushhim.html">
+Топ вопросов о 3D печати и общие рекомендации начинающим
+</a></h3>
+<!-- bashblog_timestamp: #202007211716.12# -->
+<div class="subtitle">2020-07-21 17:16:12 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<p style="text-align:center"><img alt="" src="/images/3d-printers.jpg" /></p>
+
+<p>&nbsp; Ко мне периодически обращаются разные люди из моего окружения с вопросами, касающимися 3d печати, поэтому у меня сформировался список наиболее часто задаваемых вопросов, я их сейчас озвучу и, наверняка, для многих это окажется полезным. В этой статье я попытаюсь спустить с небес на землю мечтающих заработать на 3д печати и печатать всякую дребедень, скачиваемую из интернета. В другой статье - напишу о преимуществах 3D печати и возможностях, которые она открывает.</p>
+
+<p class="readmore"><a href="./top-voprosov-o-3d-pechati-i-obshhie-rekomendacii-nachinayushhim.html">Читать дальше...</a></p>
+<p>Теги: <a href='tag_3d-printing.html'>3d-printing</a></p>
+<h3><a class="ablack" href="pro-prikruchivanie-skripta-galerei-k-blogu.html">
+Про прикручивание скрипта галереи к блогу
+</a></h3>
+<!-- bashblog_timestamp: #202007211603.08# -->
+<div class="subtitle">2020-07-21 16:03:08 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<p style="text-align:center"><img alt="" src="/images/galery.png" /></p>
+
+<p>&nbsp; Давно назревала необходимость прикрутить к блогу какой-нибудь генератор галерей, но всё как-то руки не доходили и вот, сегодня дошли. Скажу сразу - я ничерта не смыслю в JavaScript, вёрстке и web дизайне (думаю, по внешнему виду моего блога это нетрудно заметить :)). Главными критериями были простота использования и отсутствие лишних наворотов. После перебора нескольких вариантов, наткнулся на следующий: https://nanogallery2.nanostudio.org/</p>
+
+<p>Всё понравилось, решил попробовать. На странице проекта есть примеры и builder, который поможет подогнать значения параметров под требуемые.</p>
+
+<p class="readmore"><a href="./pro-prikruchivanie-skripta-galerei-k-blogu.html">Читать дальше...</a></p>
+<p>Теги: <a href='tag_web.html'>web</a>, <a href='tag_shell.html'>shell</a></p>
 <h3><a class="ablack" href="pro-umnyj-dom-raznoshyorstnost-i-zakidyvanie-dengami.html">
 Про умный дом, разношёрстность и закидывание деньгами
 </a></h3>
@@ -173,51 +228,6 @@ Evgeniy Shumilov
 
 <p class="readmore"><a href="./mrakobesie-bez-dzhaza-i-5g.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_жизненное.html'>жизненное</a></p>
-<h3><a class="ablack" href="pro-pozitivnyj-fidbek-i-motivaciyu.html">
-Про позитивный фидбек и мотивацию
-</a></h3>
-<!-- bashblog_timestamp: #202004032352.28# -->
-<div class="subtitle">2020-04-03 23:52:28 &mdash; 
-Evgeniy Shumilov
-</div>
-<!-- text begin -->
-
-<p style="text-align:center"><img alt="" src="images/motivation.jpg" /></p>
-
-<p>&nbsp; Как-то раз ко мне подошла начальница и попросила устроить собеседование одному молодому парню, её знакомому - мол, вдруг у нас под него найдутся какие-то задачи? Дело не сложное, собеседования я проводил не раз, да и пара тестовых заданий у меня припасена была. По результатам собеседования выяснилось, что парень совсем &quot;зелёный&quot;, опыта работы у него нет, но он кардинально отличался&nbsp;от большинства тех, кто ранее у меня проходил собеседования...</p>
-
-<p class="readmore"><a href="./pro-pozitivnyj-fidbek-i-motivaciyu.html">Читать дальше...</a></p>
-<p>Теги: <a href='tag_жизненное.html'>жизненное</a></p>
-<h3><a class="ablack" href="pro-quotvikuquot.html">
-Про &quot;Вику&quot;
-</a></h3>
-<!-- bashblog_timestamp: #202003201841.50# -->
-<div class="subtitle">2020-03-20 18:41:50 &mdash; 
-Evgeniy Shumilov
-</div>
-<!-- text begin -->
-
-<p style="text-align:center"><img alt="" src="/images/izolon.jpg" /></p>
-
-<p>&nbsp; Купил я сушилку для овощей и фруктов для сушки &quot;неовощей&quot; и &quot;нефруктов&quot;. Так уж получилось, что эти устройства помимо своего основного предназначения отлично выполняют функцию сушки филамента (пластика) для 3d принтера. Веселуха началась прямо с момента покупки.</p>
-
-<p class="readmore"><a href="./pro-quotvikuquot.html">Читать дальше...</a></p>
-<p>Теги: <a href='tag_fun.html'>fun</a></p>
-<h3><a class="ablack" href="ispolzovanie-otdelnyx-razlichnyx-ssh-klyuchej-dlya-razlichnyx-git-repozitoriev.html">
-Использование отдельных различных SSH ключей для различных GIT репозиториев
-</a></h3>
-<!-- bashblog_timestamp: #202003061455.17# -->
-<div class="subtitle">2020-03-06 14:55:17 &mdash; 
-Evgeniy Shumilov
-</div>
-<!-- text begin -->
-
-<p style="text-align:center"><img alt="" src="/images/sshkey.png"></p>
-
-<p>&nbsp; Сегодня нашёл метод решения одной из небольших, но досадных проблем, которые меня мучали годами. Собственно, описание проблемы понятно из заголовка. Если чуть более подробно, то для того, чтобы использовать git pull/fetch/push&nbsp;и тому подобные команды с GitHub/GitLab, git может использовать либо подключение через ssh, в том числе использованием доступа по ключу, либо через https, что заставляет вас каждый раз вводить логин и пароль. В данном случае речь идёт не о средах разработки, где все учётные данные в этом случае прекрасно сохраняются, а о работе с консолью и использовании скриптов в автоматическом режиме например, для деплоя. В случае использования пары ключей конечно, можно создать ключ без пароля и всё будет прекрасно ровно до того момента, пока вам не понадобится использовать разные ключи для разных репозиториев. Например, в случае с разными учётными записями на GitHub/GitLab - домашней и рабочей. Или если вы получили так называемый deploy key от удалённого репозитория.</p>
-
-<p class="readmore"><a href="./ispolzovanie-otdelnyx-razlichnyx-ssh-klyuchej-dlya-razlichnyx-git-repozitoriev.html">Читать дальше...</a></p>
-<p>Теги: <a href='tag_админское.html'>админское</a></p>
 <div id="all_posts">
 <a href="index1.html">&lt;&lt; В прошлое</a> &mdash; 
 <a href="all_posts.html">Все записи</a> &mdash; <a href="all_tags.html">Все теги</a> &mdash; <a href="">RSS</a>

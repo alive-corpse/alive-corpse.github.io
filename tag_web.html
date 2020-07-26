@@ -9,6 +9,29 @@
 <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 <script src="assets/jquery.min.js"></script>
+
+<script>
+  function dLoadScript(url){
+    var e = document.createElement("script");
+    e.src = url; e.type="text/javascript";
+    document.getElementsByTagName("head")[0].appendChild(e); 
+  }
+
+  function dLoadCSS(url){
+    var e = document.createElement("link");
+    e.href = url; e.rel = "stylesheet"; e.type = "text/css";
+    document.getElementsByTagName("head")[0].appendChild(e); 
+  }
+
+  onload = function() { 
+    var element = document.getElementById("ngy2p");
+    if(typeof(element) != 'undefined' && element != null){
+      dLoadCSS("/assets/nanogallery2/nanogallery2.min.css");
+      dLoadScript("/assets/nanogallery2/jquery.nanogallery2.min.js");
+    }
+  }
+</script>
+
 <script src="assets/jouele/jouele.min.js"></script>
 <link href="assets/jouele/jouele.min.css" rel="stylesheet"/>
 <script src="assets/highlight/highlight.pack.js"></script>
@@ -58,6 +81,23 @@
 <div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
 </div>
 <div id="divbody"><div class="content">
+<h3><a class="ablack" href="pro-prikruchivanie-skripta-galerei-k-blogu.html">
+Про прикручивание скрипта галереи к блогу
+</a></h3>
+<!-- bashblog_timestamp: #202007211603.08# -->
+<div class="subtitle">2020-07-21 16:03:08 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<p style="text-align:center"><img alt="" src="/images/galery.png" /></p>
+
+<p>&nbsp; Давно назревала необходимость прикрутить к блогу какой-нибудь генератор галерей, но всё как-то руки не доходили и вот, сегодня дошли. Скажу сразу - я ничерта не смыслю в JavaScript, вёрстке и web дизайне (думаю, по внешнему виду моего блога это нетрудно заметить :)). Главными критериями были простота использования и отсутствие лишних наворотов. После перебора нескольких вариантов, наткнулся на следующий: https://nanogallery2.nanostudio.org/</p>
+
+<p>Всё понравилось, решил попробовать. На странице проекта есть примеры и builder, который поможет подогнать значения параметров под требуемые.</p>
+
+<p class="readmore"><a href="pro-prikruchivanie-skripta-galerei-k-blogu.html">Читать дальше...</a></p>
+<p>Теги: <a href='tag_web.html'>web</a>, <a href='tag_shell.html'>shell</a></p>
 <h3><a class="ablack" href="veb-server-odnim-fajlom-na-shellenbspv-24-kilobajta-s-shaxmatami-i-poetessami.html">
 Веб-сервер одним файлом на шелле в 24 килобайта с шахматами и поэтессами
 </a></h3>
@@ -68,7 +108,7 @@ Evgeniy Shumilov
 <!-- text begin -->
 <p style="text-align: center;"><img src="images/bbhttpd.png"></p>
 <p>&nbsp;&nbsp;Когда я начинал вести этот блог, у меня было стойкое ощущение, что писать мне будет не о чем, но снова и снова я нахожу какие-то интересные вещи, которыми хотелось бы поделиться.&nbsp; Иногда я нахожу их заброшенными,&nbsp;достаю из бекапов, причёсываю, привожу в более-менее нормальный вид, исправляю какие-то ошибки, пишу документацию, выкладываю на github. Вот так и сейчас. Для тестирования блога мне периодически нужен вебсервер. Вебсервер, который должен выполнять только одну функцию - отдавать браузеру HTML. Можно конечно открыть файл самим браузером из файловой системы, но тогда ломаются ссылки на графику и локальные ресуры вида /images/imagename.png. В качестве вебсервера я обычно запускал python c соответствующим модулем: python -m SimpleHTTPServer. В принципе, этого хватает, но дёргать за хвост целый интерпретатор пайтона ради отдачи HTML - это какой-то overkill. Тогда я и вспомнил, что когда-то написал веб-сервер на шелле. Кто сказал, что нельзя написать веб-сервер на шелле?</p>
-<p class="readmore"><a href="./veb-server-odnim-fajlom-na-shellenbspv-24-kilobajta-s-shaxmatami-i-poetessami.html">Читать дальше...</a></p>
+<p class="readmore"><a href="veb-server-odnim-fajlom-na-shellenbspv-24-kilobajta-s-shaxmatami-i-poetessami.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_shell.html'>shell</a>, <a href='tag_web.html'>web</a>, <a href='tag_minimalism.html'>minimalism</a></p>
 <h3><a class="ablack" href="dorabatyvaem-bashblog-napilnikom-chast-vtoraya---podsvetka-sintaksisa.html">
 Дорабатываем bashblog напильником, часть вторая - подсветка синтаксиса
@@ -80,7 +120,7 @@ Evgeniy Shumilov
 <!-- text begin -->
 
 <p>&nbsp;&nbsp;Думаю, следует сразу предупредить, что я далеко не специалист в html, вёрстке по сетке, css, javascript и прочем кунг-фу из области визуализации веб контента, так что всё, что здесь изложено может оказаться далёким от best practice. Итак, есть задача - получить возможность добавлять в посты блога секции с кодом. Из хотелок - подсветка синтаксиса для разных языков и опциональный скроллбар, если текст не входит в поле по ширине.</p>
-<p class="readmore"><a href="./dorabatyvaem-bashblog-napilnikom-chast-vtoraya---podsvetka-sintaksisa.html">Читать дальше...</a></p>
+<p class="readmore"><a href="dorabatyvaem-bashblog-napilnikom-chast-vtoraya---podsvetka-sintaksisa.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_bashblog.html'>bashblog</a>, <a href='tag_web.html'>web</a>, <a href='tag_shell.html'>shell</a></p>
 <h3><a class="ablack" href="dorabatyvaem-napilnikom-bashblog-chast-pervaya.html">
 Дорабатываем напильником bashblog, часть первая
@@ -92,7 +132,7 @@ Evgeniy Shumilov
 <!-- text begin -->
 
 <p>&nbsp;&nbsp;О том, что мне нужно от блога, я рассказывал в прошлой <a href="https://shumiloff.ru/pro-lyubov-k-minimalizmu-i-staticheskuyu-generaciyu-kontenta.html">записи</a>. Теперь небольшая заметка о том, как привести всё это к минимально рабочему виду. Для начала создадим новую директорию, скачаем туда скрипт и выдадим права на запуск.</p>
-<p class="readmore"><a href="./dorabatyvaem-napilnikom-bashblog-chast-pervaya.html">Читать дальше...</a></p>
+<p class="readmore"><a href="dorabatyvaem-napilnikom-bashblog-chast-pervaya.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_bashblog.html'>bashblog</a>, <a href='tag_web.html'>web</a>, <a href='tag_shell.html'>shell</a>, <a href='tag_rsync.html'>rsync</a></p>
 <h3><a class="ablack" href="pro-lyubov-k-minimalizmu-i-staticheskuyu-generaciyu-kontenta.html">
 Про любовь к минимализму и статическую генерацию контента
@@ -114,7 +154,7 @@ Evgeniy Shumilov
     <li>возможность подключения комментариев</li>
     <li>возможность подключения подсветки синтаксиса</li>
 </ul>
-<p class="readmore"><a href="./pro-lyubov-k-minimalizmu-i-staticheskuyu-generaciyu-kontenta.html">Читать дальше...</a></p>
+<p class="readmore"><a href="pro-lyubov-k-minimalizmu-i-staticheskuyu-generaciyu-kontenta.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_ностальгия.html'>ностальгия</a>, <a href='tag_minimalism.html'>minimalism</a>, <a href='tag_web.html'>web</a>, <a href='tag_shell.html'>shell</a>, <a href='tag_blog.html'>blog</a>, <a href='tag_bashblog.html'>bashblog</a></p>
 </div>
 <div id="footer">

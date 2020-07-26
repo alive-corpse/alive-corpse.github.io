@@ -9,6 +9,29 @@
 <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 <script src="assets/jquery.min.js"></script>
+
+<script>
+  function dLoadScript(url){
+    var e = document.createElement("script");
+    e.src = url; e.type="text/javascript";
+    document.getElementsByTagName("head")[0].appendChild(e); 
+  }
+
+  function dLoadCSS(url){
+    var e = document.createElement("link");
+    e.href = url; e.rel = "stylesheet"; e.type = "text/css";
+    document.getElementsByTagName("head")[0].appendChild(e); 
+  }
+
+  onload = function() { 
+    var element = document.getElementById("ngy2p");
+    if(typeof(element) != 'undefined' && element != null){
+      dLoadCSS("/assets/nanogallery2/nanogallery2.min.css");
+      dLoadScript("/assets/nanogallery2/jquery.nanogallery2.min.js");
+    }
+  }
+</script>
+
 <script src="assets/jouele/jouele.min.js"></script>
 <link href="assets/jouele/jouele.min.css" rel="stylesheet"/>
 <script src="assets/highlight/highlight.pack.js"></script>
@@ -58,6 +81,55 @@
 <div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
 </div>
 <div id="divbody"><div class="content">
+<h3><a class="ablack" href="pro-knigi-zapaxi-fleshbeki-i-estetiku.html">
+Про книги, запахи, флешбеки и эстетику
+</a></h3>
+<!-- bashblog_timestamp: #201912062049.11# -->
+<div class="subtitle">2019-12-06 20:49:11 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<p style="text-align:center"><img alt="" src="images/bioparox.jpg" /><img alt="" src="/images/boiparox.jpg" /></p>
+
+<p>&nbsp; Хорошая знакомая Настя написала <a href="https://vk.com/wall2779724_9024" target="_blank">пост о воздействии запахов на наши воспоминания и эмоциональное состояние</a>. Начал ей отвечать и как это иногда случается, понял, что мой ответ перерастает в микропост. Да будет так.</p>
+
+<div id="vk_post_2779724_9024">&nbsp; Помню, когда мне было лет 14, я болел ангиной и меня потчевали ингалятором под названием &quot;биопарокс&quot;. Во время той же болезни я прочитал книгу Джеймса Оливера Кервуда &quot;Бродяги Севера&quot; и она мне как-то очень тогда запала в душу. Как и множество других книг, которые я прочитал в своём детстве/юности, искренне считаю, что бОльшую часть из них уже лучше не перечитывать - за время взросления мировоззрение и вкусы порядочно могут измениться. Я даже нашёл фотографию именно того издания, которое у меня было и, наверняка, всё ещё стоит у мамы в шкафу.</div>
+
+<div style="text-align:center">
+<p class="readmore"><a href="./pro-knigi-zapaxi-fleshbeki-i-estetiku.html">Читать дальше...</a></p>
+<p>Теги: <a href='tag_мысли-вслух.html'>мысли-вслух</a>, <a href='tag_ностальгия.html'>ностальгия</a></p>
+<h3><a class="ablack" href="pro-progress-texnologii-i-fleshki.html">
+Про прогресс, технологии и флешки
+</a></h3>
+<!-- bashblog_timestamp: #201910251313.04# -->
+<div class="subtitle">2019-10-25 13:13:04 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+
+<p style="text-align:center"><img alt="" src="images/usb-drive.jpg" /></p>
+
+<p>&nbsp; На работе недавно одна девушка (Д)&nbsp;написала в чат, что ей нужна флешка и у нас состоялся следующий диалог:</p>
+
+<p class="readmore"><a href="./pro-progress-texnologii-i-fleshki.html">Читать дальше...</a></p>
+<p>Теги: <a href='tag_мысли-вслух.html'>мысли-вслух</a></p>
+<h3><a class="ablack" href="avtomaticheskaya-perezagruzka-openwrt-routera-pri-otsutstvii-interneta-n-sekund.html">
+Автоматическая перезагрузка OpenWRT роутера при отсутствии интернета N секунд
+</a></h3>
+<!-- bashblog_timestamp: #201910132315.08# -->
+<div class="subtitle">2019-10-13 23:15:08 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<p style="text-align:center"><img alt="" src="images/disconnected.jpg" /></p>
+
+<p>&nbsp; У меня дома подключен интернет от Beeline, но периодически с ним возникают проблемы. Что тому виной - не могу понять. Периодически коннект разрывается, роутеру выдаётся по DHCP новый IP адрес, l2tp отрабатывает, получает свой адрес, но до шлюза через l2tp интерфейс пакеты идут только в одну сторону. Обратно приходит порядка 60 байт чего-то (не успел поймать), затем тишина. Решил написать небольшой простой скрипт, который будет проверять интернет и если его нет более 5ти минут, будет перезагружать роутер.</p>
+
+<p class="readmore"><a href="./avtomaticheskaya-perezagruzka-openwrt-routera-pri-otsutstvii-interneta-n-sekund.html">Читать дальше...</a></p>
+<p>Теги: <a href='tag_shell.html'>shell</a>, <a href='tag_networking.html'>networking</a>, <a href='tag_openwrt.html'>openwrt</a></p>
 <h3><a class="ablack" href="reshenie-problemy-importa-chertezhej-iz-inkscape-vo-freecad.html">
 Решение проблемы импорта чертежей из Inkscape во FreeCAD
 </a></h3>
@@ -162,51 +234,6 @@ Evgeniy Shumilov
 
 <p class="readmore"><a href="./xolivara-post.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_android-soft.html'>android-soft</a>, <a href='tag_mac.html'>mac</a>, <a href='tag_мысли-вслух.html'>мысли-вслух</a></p>
-<h3><a class="ablack" href="pro-golubej-krysnbsptarakanov-i-kakaxi-ili-merzosti-post.html">
-Про голубей, крыс,&nbsp;тараканов и какахи или мерзости пост
-</a></h3>
-<!-- bashblog_timestamp: #201906041505.20# -->
-<div class="subtitle">2019-06-04 15:05:20 &mdash; 
-Evgeniy Shumilov
-</div>
-<!-- text begin -->
-
-<p style="text-align:center"><img alt="" src="/images/golub.jpg"/></p>
-
-<p>&nbsp; Как-то пару месяцев назад по пути из дома на работу видел в разных местах трёх бабушек, рассыпающих пшено или какую-то другую крупу на асфальт для голубей. Причём в пакетах и на земле суммарно&nbsp;было явно больше половины&nbsp;килограмма. В тот же день видел ещё пару куч зерна и скопления голубей. Как я заметил, позиция относительно подкармливания голубей преимущественно полярная. Кто-то сам кормит и считает, что творит добро, а кто-то люто против, причём выражается это порою в довольно радикальной форме. Вот <a href="https://www.city-n.ru/view/424997.html" target="_blank">тут</a> есть статья о том, как кто-то массово отравил голубей в Новокузнецке. Самое интересное - это комментарии под этой статьёй, прямо битва тех кто &quot;за&quot; и тех, кто &quot;против&quot;. В числе прочего даже спрашивают, где и какой отравы купить, чтобы гарантировано отправить пачку пернатых к праотцам.</p>
-
-<p class="readmore"><a href="./pro-golubej-krysnbsptarakanov-i-kakaxi-ili-merzosti-post.html">Читать дальше...</a></p>
-<p>Теги: <a href='tag_мысли-вслух.html'>мысли-вслух</a></p>
-<h3><a class="ablack" href="nbspkak-umenshit-razmer-kontejnera-s-python-proektom.html">
-Как уменьшить размер контейнера с python проектом
-</a></h3>
-<!-- bashblog_timestamp: #201905301859.31# -->
-<div class="subtitle">2019-05-30 18:59:31 &mdash; 
-Evgeniy Shumilov
-</div>
-<!-- text begin -->
-
-<p style="text-align:center"><img alt="" src="/images/docker-python.png" /></p>
-
-<p>&nbsp; Для многих небольших микросервисов и проектов я использую python. В то же время контейнеры с python внутри не отличаются компактностью. Сегодня на примере одного проекта попробую проиллюстрировать, как избавить контейнер от лишнего веса.</p>
-
-<p class="readmore"><a href="./nbspkak-umenshit-razmer-kontejnera-s-python-proektom.html">Читать дальше...</a></p>
-<p>Теги: <a href='tag_админское.html'>админское</a>, <a href='tag_containers.html'>containers</a>, <a href='tag_docker.html'>docker</a>, <a href='tag_python.html'>python</a></p>
-<h3><a class="ablack" href="ustanovka-ansistrano-na-debian-i-reshenie-problem.html">
-Установка Ansistrano на Debian и решение проблем
-</a></h3>
-<!-- bashblog_timestamp: #201905281803.06# -->
-<div class="subtitle">2019-05-28 18:03:06 &mdash; 
-Evgeniy Shumilov
-</div>
-<!-- text begin -->
-
-<p style="text-align:center"><img alt="" src="/images/ansible-debian.png" /></p>
-
-<p>&nbsp; Не так давно появилась необходимость реализовать CI/CD. Подумав, решил разбить это на две части - сборку и деплой контейнеров и отдельно - на деплой кода. Вторую часть решил реализовать с помощью <a href="https://github.com/ansistrano" target="_blank">ansistrano</a> - это аналог <a href="https://capistranorb.com/" target="_blank">capistrano</a>, только выполненный в виде модуля для <a href="https://ru.wikipedia.org/wiki/Ansible" target="_blank">ansible</a>. Почему не стал делать статические контейнеры с кодом? Хотя бы потому, что в случае использования ansistrano, роллбек проходит практически мгновенно, а это большой плюс. Когда-то я уже поднимал ansistrano, но на этот раз всё оказалось несколько сложнее.</p>
-
-<p class="readmore"><a href="./ustanovka-ansistrano-na-debian-i-reshenie-problem.html">Читать дальше...</a></p>
-<p>Теги: <a href='tag_админское.html'>админское</a>, <a href='tag_ansible.html'>ansible</a></p>
 <div id="all_posts">
 <a href="index3.html">&lt;&lt; В прошлое</a> &mdash; 
 <a href="all_posts.html">Все записи</a> &mdash; <a href="all_tags.html">Все теги</a> &mdash; <a href="">RSS</a>
