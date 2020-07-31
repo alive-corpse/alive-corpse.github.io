@@ -2,9 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Sun, 26 Jul 2020 19:12:05 +0500</lastBuildDate>
-<pubDate>Sun, 26 Jul 2020 19:12:05 +0500</pubDate>
+<lastBuildDate>Fri, 31 Jul 2020 14:55:36 +0500</lastBuildDate>
+<pubDate>Fri, 31 Jul 2020 14:55:36 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Повышение уровня интеллекта розеток дёшево и предельно сердито
+</title><description><![CDATA[
+
+<p style="text-align:center"><img alt="" src="images/sockets.jpg" /></p>
+
+<p>&nbsp; Вопрос: сколько может стоить блок из четырёх&nbsp;отдельно управляемых розеток, если в радиусе полуметра уже над чем-то трудится какой-нибудь одноплатный * Pi?</p>
+
+<p>&nbsp; Ответ: столько, сколько может стоить отрезок кабель канала, набор тупых розеток (зависит от того, что выберете), полметра провода и блок реле (примерно 200 рублей). У меня ориентировочно вышло около 650 рублей, причём бОльшая часть стоимости пришлась на розетки и рамку.</p>
+
+<hr />
+<p>Теги: <a href='tag_shell.html'>shell</a>, <a href='tag_smarthome.html'>smarthome</a>, <a href='tag_pi.html'>pi</a></p>
+]]></description><link>https://shumiloff.ru/povyshenie-urovnya-intellekta-rozetok-dyoshevo-i-predelno-serdito.html</link>
+<guid>https://shumiloff.ru/./povyshenie-urovnya-intellekta-rozetok-dyoshevo-i-predelno-serdito.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Thu, 30 Jul 2020 04:16:24 +0500</pubDate></item>
 <item><title>
 Скрипт для быстрого перемещения python virtualenv
 </title><description><![CDATA[
@@ -128,23 +144,4 @@
 <guid>https://shumiloff.ru/./pro-klientoorientirovannost.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Fri, 01 May 2020 16:57:20 +0500</pubDate></item>
-<item><title>
-Обновление прошивки программатора USBASP с помощью Arduino UNO
-</title><description><![CDATA[
-
-<p style="text-align:center"><img alt="" src="images/usbasp/usbasp.jpg" style="height:451px; width:623px" /></p>
-
-<p>&nbsp; Когда-то давно я приобрёл китайскую копию программатора USBASP. При попытке перепрошивки микроконтроллеров через ISP я, как и многие другие, получал ошибку следующего вида:</p>
-
-<pre>
-<code>avrdude: warning: cannot set sck period, please check for usbasp firmware update</code></pre>
-
-<p>&nbsp; Инструкции, которые я обнаружил, были написаны с рассчётом на использование в Windows, а так же в некоторых статьях я заметил ошибки и несоответствия (например, неверно указан тип программатора для avrdude, из-за чего какое-то время пришлось побуксовать), так что решил написать для себя короткую статью, убрав всё лишнее.</p>
-
-<hr />
-<p>Теги: <a href='tag_avr.html'>avr</a></p>
-]]></description><link>https://shumiloff.ru/obnovlenie-proshivki-programmatora-usbasp-s-pomoshhyu-arduino-uno.html</link>
-<guid>https://shumiloff.ru/./obnovlenie-proshivki-programmatora-usbasp-s-pomoshhyu-arduino-uno.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Sat, 11 Apr 2020 16:43:32 +0500</pubDate></item>
 </channel></rss>
