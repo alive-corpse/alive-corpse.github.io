@@ -2,9 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Fri, 31 Jul 2020 14:55:36 +0500</lastBuildDate>
-<pubDate>Fri, 31 Jul 2020 14:55:36 +0500</pubDate>
+<lastBuildDate>Sat, 12 Sep 2020 23:59:41 +0500</lastBuildDate>
+<pubDate>Sat, 12 Sep 2020 23:59:41 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Об осторожности, китайском наплевательстве и потенциальной угрозе взрыва
+</title><description><![CDATA[
+
+<p style="text-align:center"><img alt="" src="/images/timebomb.png" /></p>
+
+<p>&nbsp; Казалось бы, что может пойти не так, когда ты просто вставляешь аккумуляторы в пустой отсек, который ни к чему не подключен?</p>
+
+<p>&nbsp; Хочу предупредить всех, что что-либо заказывает из Китая (да и не только) об осторожности и возможных последствиях. Сегодня я потерял бдительность и чуть не поплатился за это. Для своего небольшого одноплатника, управляющего умным домом, я собирался сделать блок бесперебойного питания и для этого уже давно приобрёл на алиэкспресс блок на два аккумулятора. Жаль, перед тем как выкинуть то, что от него осталось, не догадался это сфотографировать...</p>
+
+<p>&nbsp; Вы знаете, как горит литий? Я слава богу знаю это только по видео. Кто не в курсе, вот вам <a href="https://www.youtube.com/watch?v=2J-h6fC1GrU">наглядные эксперименты от Креосана</a>. Помню ещё видео с камеры наблюдения, где <a href="https://www.youtube.com/watch?v=X3kEAHWuw18">бомбанул ноутбук, стоящий на зарядке</a> - очень впечатляет. Одним словом - никому не пожелаю возгорания литиевого аккумулятора, особенно дома.&nbsp;</p>
+
+<hr />
+<p>Теги: <a href='tag_подгорание.html'>подгорание</a>, <a href='tag_жизненное.html'>жизненное</a></p>
+]]></description><link>https://shumiloff.ru/ob-ostorozhnosti-kitajskom-naplevatelstve-i-potencialnoj-ugroze-vzryva.html</link>
+<guid>https://shumiloff.ru/./ob-ostorozhnosti-kitajskom-naplevatelstve-i-potencialnoj-ugroze-vzryva.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Sat, 12 Sep 2020 23:59:37 +0500</pubDate></item>
 <item><title>
 Повышение уровня интеллекта розеток дёшево и предельно сердито
 </title><description><![CDATA[
@@ -130,18 +148,4 @@
 <guid>https://shumiloff.ru/./pro-silikonovyx-monstrov-agressiyu-sosulki-i-pravilnye-voprosy-k-sebe.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Mon, 04 May 2020 12:36:50 +0500</pubDate></item>
-<item><title>
-Про клиентоориентированность
-</title><description><![CDATA[
-
-<tyle="text-align:center"><img alt="" src="images/client.jpg" /></p>
-
-<p>&nbsp; Понадобилось мне заказать кресло-кровать. Так как в жизненном пространстве я достаточно ограничен, кресло-кровать должно было иметь оперделённые габариты и быть достаточно компактным. А так как двигать его придётся преимущественно жене, то и вес должен быть небольшим. Потратив неделю на поиски по Перми и ещё несколько дней на поиски по всей стране, нашли подходящее в Москве, но в полтора раза дороже ожидаемого, плюс доставка. Жаба истошно квакала, но в конце-концов, сон и удобство жены мне дороже. Пытался оформить заказ и в связи с этим пришлось столкнуться с парой занятных моментов.</p>
-
-<hr />
-<p>Теги: <a href='tag_подгорание.html'>подгорание</a>, <a href='tag_осадочек-остался.html'>осадочек-остался</a></p>
-]]></description><link>https://shumiloff.ru/pro-klientoorientirovannost.html</link>
-<guid>https://shumiloff.ru/./pro-klientoorientirovannost.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Fri, 01 May 2020 16:57:20 +0500</pubDate></item>
 </channel></rss>
