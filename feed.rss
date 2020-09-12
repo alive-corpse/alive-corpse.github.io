@@ -2,9 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Sun, 13 Sep 2020 00:04:48 +0500</lastBuildDate>
-<pubDate>Sun, 13 Sep 2020 00:04:48 +0500</pubDate>
+<lastBuildDate>Sun, 13 Sep 2020 01:17:15 +0500</lastBuildDate>
+<pubDate>Sun, 13 Sep 2020 01:17:15 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Выпуск подкаста с моим участием о 3D печати
+</title><description><![CDATA[
+
+<p style="text-align: center;"><img src="/images/3d-printers.jpg"></p>
+
+<p>&nbsp; Относительно недавно я снова принял участие в подкасте <a href="http://www.ok-podcast.ru/" target="_blank">"Опытные на кухне"</a>. Ссылка на выпуск находится <a href="https://www.ok-podcast.ru/ok166-domashnij-3d-printing-chego-stoit-kakie-dayot-vozmozhnosti-i-pochemu-on-vam-ne-nuzhen-v-gostyax-e-shumilov/" target="_blank">тут</a>. Выпуск был сделан по мотивам <a href="/top-voprosov-o-3d-pechati-i-obshhie-rekomendacii-nachinayushhim.html">вот этого моего поста</a>. Особое спасибо пользователю с ником Sid за позитивную оценку моей деятельности в телеграм чате подкаста, было приятно.</p>
+<p><a href="/stuff/OK_166_finish.mp3" data-length="1:13:21" class="jouele">ОК #166. Опытные на кухне.</a></p>
+<p style="text-align: right;"><a href="/stuff/OK_166_finish.mp3" rel="nofollow" download="OK_166.mp3">Скачать (34мб)</a></p>
+
+<p>Теги: <a href='tag_подкасты.html'>подкасты</a>, <a href='tag_3d-printing.html'>3d-printing</a></p>
+<!-- text end -->
+]]></description><link>https://shumiloff.ru/vypusk-podkasta-s-moim-uchastiem-o-3d-pechati.html</link>
+<guid>https://shumiloff.ru/./vypusk-podkasta-s-moim-uchastiem-o-3d-pechati.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Sun, 13 Sep 2020 01:12:46 +0500</pubDate></item>
 <item><title>
 Об осторожности, китайском наплевательстве и потенциальной угрозе взрыва
 </title><description><![CDATA[
@@ -132,20 +148,4 @@
 <guid>https://shumiloff.ru/./pro-klassicheskij-xolivar.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Mon, 15 Jun 2020 23:14:44 +0500</pubDate></item>
-<item><title>
-Про силиконовых монстров, агрессию, сосульки и правильные вопросы к себе
-</title><description><![CDATA[
-
-<p style="text-align:center"><img alt="" src="images/muraveinik.jpg" /></p>
-
-<p>&nbsp; Интересно, почему подобные мысли приходят в голову именно в 4 часа ночи?<br />
-<br />
-&nbsp; Вспомнился случай, который произошёл со мной лет около 10 назад. Стоял я в супермаркете &quot;Семья&quot; на Борчанинова в очереди, когда передо мной бесцеремонно вклинилась с бутылкой пива некая особа лет на пять по виду меня постарше. Спортивный костюм, бейсболка, длинные прямые чёрные волосы, ногти длиной с треть карандаша, сантиметровые ресницы и две ботексные пельмехи на том месте, где у людей обычно расположен рот. Другими словами - классический силиконовый монстр (далее СМ) с альтернативными весьма представлениями о прекрасном. Я ей сказал, что её здесь не было и попросил переместиться в конец очереди. Вежливо и спокойно попросил. Если бы она в свою очередь попросила её пропустить - без проблем, мне не жалко, но терпеть не могу людей, которые считают, что мир крутится вокруг них и им все должны. Далее между нами произошёл примерно следующий диалог:</p>
-
-<hr />
-<p>Теги: <a href='tag_жизненное.html'>жизненное</a></p>
-]]></description><link>https://shumiloff.ru/pro-silikonovyx-monstrov-agressiyu-sosulki-i-pravilnye-voprosy-k-sebe.html</link>
-<guid>https://shumiloff.ru/./pro-silikonovyx-monstrov-agressiyu-sosulki-i-pravilnye-voprosy-k-sebe.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Mon, 04 May 2020 12:36:50 +0500</pubDate></item>
 </channel></rss>
