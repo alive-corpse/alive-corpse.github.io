@@ -2,9 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Sun, 13 Sep 2020 01:17:15 +0500</lastBuildDate>
-<pubDate>Sun, 13 Sep 2020 01:17:15 +0500</pubDate>
+<lastBuildDate>Wed, 23 Sep 2020 09:46:55 +0500</lastBuildDate>
+<pubDate>Wed, 23 Sep 2020 09:46:55 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Про упёртость, логику, бюрократию и внутреннее раздражение
+</title><description><![CDATA[
+
+<p style="text-align:center"><img alt="" src="images/kpp.jpg" /></p>
+
+<p>&nbsp; У вас бывает такое, что в силу определённых обстоятельств вам необходимо сделать что-то, что не укладывается в ваши представления о прекрасном / правильном / логичном? Насколько это вас раздражает и как вы с эти боретесь? Казалось бы, на работе тебе платят деньги за то, что ты решаешь определённые задачи. И решаешь их в той форме, в которой это нужно заказчику. Если заказчик требует, чтобы ты забил гвозди микроскопом - бери и забивай, ты ведь осознаёшь, ради чего ты выполняешь эти действия. Но микроскоп всё-равно жалко - вот он, новенький блестящий, только что с завода! И ладно, если бы забивать гвозди должен был гипотетический Вася, но нет - ты должен сделать это сам своими руками и это бесит больше всего.</p>
+
+<hr />
+<p>Теги: <a href='tag_админское.html'>админское</a>, <a href='tag_подгорание.html'>подгорание</a></p>
+]]></description><link>https://shumiloff.ru/pro-upyortost-logiku-byurokratiyu-i-vnutrennee-razdrazhenie.html</link>
+<guid>https://shumiloff.ru/./pro-upyortost-logiku-byurokratiyu-i-vnutrennee-razdrazhenie.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Wed, 23 Sep 2020 09:44:32 +0500</pubDate></item>
 <item><title>
 Выпуск подкаста с моим участием о 3D печати
 </title><description><![CDATA[
@@ -135,17 +149,4 @@
 <guid>https://shumiloff.ru/./pro-minimalizm-doker-home-assistant-i-resursy.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Tue, 23 Jun 2020 02:10:24 +0500</pubDate></item>
-<item><title>
-Про классический холивар
-</title><description><![CDATA[
-
-<p style="text-align:center"><img alt="" src="images/tux.jpg" /></p>
-
-<p>&nbsp; Тут пару дней назад общались в телеграме с товарищем (далее Т). И речь зашла о холиваре - мол, я вот, отщепенец/извращенец&nbsp;такой сижу на линуксе, а больше никому он никуда не сплющился и никто его не использует. Так смешно стало. Далее примерный диалог:</p>
-<hr />
-<p>Теги: <a href='tag_linux.html'>linux</a>, <a href='tag_жизненное.html'>жизненное</a></p>
-]]></description><link>https://shumiloff.ru/pro-klassicheskij-xolivar.html</link>
-<guid>https://shumiloff.ru/./pro-klassicheskij-xolivar.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Mon, 15 Jun 2020 23:14:44 +0500</pubDate></item>
 </channel></rss>
