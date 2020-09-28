@@ -81,6 +81,18 @@
 <div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
 </div>
 <div id="divbody"><div class="content">
+<h3><a class="ablack" href="veb-server-odnim-fajlom-na-shellenbspv-24-kilobajta-s-shaxmatami-i-poetessami.html">
+Веб-сервер одним файлом на шелле в 24 килобайта с шахматами и поэтессами
+</a></h3>
+<!-- bashblog_timestamp: #201811060050.24# -->
+<div class="subtitle">2018-11-06 00:50:24 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+<p style="text-align: center;"><img src="images/bbhttpd.png"></p>
+<p>&nbsp;&nbsp;Когда я начинал вести этот блог, у меня было стойкое ощущение, что писать мне будет не о чем, но снова и снова я нахожу какие-то интересные вещи, которыми хотелось бы поделиться.&nbsp; Иногда я нахожу их заброшенными,&nbsp;достаю из бекапов, причёсываю, привожу в более-менее нормальный вид, исправляю какие-то ошибки, пишу документацию, выкладываю на github. Вот так и сейчас. Для тестирования блога мне периодически нужен вебсервер. Вебсервер, который должен выполнять только одну функцию - отдавать браузеру HTML. Можно конечно открыть файл самим браузером из файловой системы, но тогда ломаются ссылки на графику и локальные ресуры вида /images/imagename.png. В качестве вебсервера я обычно запускал python c соответствующим модулем: python -m SimpleHTTPServer. В принципе, этого хватает, но дёргать за хвост целый интерпретатор пайтона ради отдачи HTML - это какой-то overkill. Тогда я и вспомнил, что когда-то написал веб-сервер на шелле. Кто сказал, что нельзя написать веб-сервер на шелле?</p>
+<p class="readmore"><a href="./veb-server-odnim-fajlom-na-shellenbspv-24-kilobajta-s-shaxmatami-i-poetessami.html">Читать дальше...</a></p>
+<p>Теги: <a href='tag_shell.html'>shell</a>, <a href='tag_web.html'>web</a>, <a href='tag_minimalism.html'>minimalism</a></p>
 <h3><a class="ablack" href="pro-pochtu-i-dedka.html">
 Про почту и дедка
 </a></h3>
@@ -231,23 +243,6 @@ Evgeniy Shumilov
 
 <p class="readmore"><a href="./aspekty-nastrojki-seti-v-qemu-obedinenie-interfejsov-na-kanalnom-urovne.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_virtualization.html'>virtualization</a>, <a href='tag_qemu.html'>qemu</a>, <a href='tag_networking.html'>networking</a>, <a href='tag_админское.html'>админское</a></p>
-<h3><a class="ablack" href="okna-v-okne---pro-evolyuciyu-virtualizacii.html">
-Окна в окне - про эволюцию виртуализации
-</a></h3>
-<!-- bashblog_timestamp: #201810161635.23# -->
-<div class="subtitle">2018-10-16 16:35:23 &mdash; 
-Evgeniy Shumilov
-</div>
-<!-- text begin -->
-
-<img src="/images/proxmox.png" class="leftimg">
-<p>&nbsp;&nbsp;Как гласит старая айтишная шутка - "чтобы понять, что такое рекурсия, сначала нужно понять, что такое рекурсия". Куча открытых окон одной операционной системы в окне другой уже очень давно перестали выглядеть фантастикой. Про виртуализацию сейчас знают все, кто так или иначе связан с IT. Но вот виртуализация чего-либо в окне браузера всё ещё выглядит как нечто особенное. Когда-то давно я наткнулся на один интересный <a href="https://copy.sh/v86/" target="_blank">ресурс</a>, который позволял запускать через эмулятор x86 различные некогда популярные и не очень операционные системы прямо в окне браузера. С этим можно развлекаться, но не долго. Есть возможность управлять размером выделяемой основной и видео памяти, возможность самому подгрузить образы CD/FDD/HDD или выбрать один из уже предустановленных. В том числе есть обрезанные версии Windows 1.01, 95, 98, Linux, пара BSD систем, ReactOS конечно же и несколько версий старых линуксов. Но так же присутствует и несколько более редких вещей. Самое интересное - всё это распространяется по одной из версий лицензии BSD, лежит на гитхабе и доступно для скачивания и установки. Конечно, такие комбаины как VirtualBox оно никогда не заменит в силу скорости и количества настроек, но как нечто, созданное в рамках proof of concept - вполне имеет право на жизнь, не более того. К сожалению, в силу неторопливости, практического применения оно не имеет.</p>
-<p>&nbsp;&nbsp;Недавно из <a href="https://telegra.ph/Haker---WWW-windows95--operacionka-iz-nashego-detstva-v-vide-desktopnogo-prilozheniya-10-12-2" target="_blank">телеграм рассылки Xakep</a> я узнал, что один товарищ ко всему вышеописанному добавил образ Windows 95, <a href="https://github.com/felixrieseberg/windows95" target="_blank">заботливо завернул это в электрон и выложил в виде приложения</a>. Я не особо надеялся, что это даст какой-то прирост в производительности, но ради эксперимента попробовал поставить на debian. Вообще, я достаточно предвзято отношусь ко всему, что заворачивают в электрон - зачастую веб приложение ест на порядок меньше ресурсов, чем его обёртка. Подобные решения вызывают у меня аллергию. Тем не менее, приложение я поставил и попробовал. На удивление всё работает ощутимо быстрее, но всё-же недостаточно. На рабочем столе с момента запуска открыто окно блокнота с приветствием и солитёр. Конечно, зачем же ещё вы могли запустить Windows 95, если не собираетесь играть в солитёр? Ну и столкнулся с рядом глюков. В числе прочего при попытке запустить консоль ms dos, обнаружил, что видимая область в электроне сжалась до размера пары кнопок пуск в центре окна, всё остальное - чёрное поле. Одним словом - неюзабельно.</p>
-<p>&nbsp;&nbsp;На том же ресурсе натолкнулся на статью о <a href="https://xakep.ru/2017/02/10/www-top5-browser-emulators/" target="_blank">эмуляции в вебинтерфейсе других платформ</a>. Лично для меня особый интерес представляет разве что эмуляция MESS (Multi Emulator Super System) - JS версия эмулятора множества старых игровых консолей и не только. Обязательно посмотрю, когда будет на то время, правда в текущий момент домен archive.org у меня недоступен, видимо, в связи с аллергией нашего государства на telegram (кого это останавливет?). Но вообще, MAME (Multiple Arcade Machine Emulator), MESS, как её часть, RetroArch и сборки вроде RetroPie в моих глазах являются вершиной эволюции в области эмуляции старых игровых платформ - за каких-нибудь 25$ можно получить всё и намного больше, об этом как-нибудь потом и отдельно.</p>
-
-<p>&nbsp;&nbsp;Но это всё развлечения, а что, если вам нужно иметь доступ к какой-то запущенной операционной системе, отличной от linux через браузер без установки дополнительных плагинов, приложений и всего прочего и чтобы при этом оно ещё и работало с приемлимой скоростью? Или вам нужен аналог облака на вашем железе для более рационального использования ресурсов и возможность управлять объединением вируальных машин в сети и прочее?</p>
-<p class="readmore"><a href="./okna-v-okne---pro-evolyuciyu-virtualizacii.html">Читать дальше...</a></p>
-<p>Теги: <a href='tag_virtualization.html'>virtualization</a>, <a href='tag_containers.html'>containers</a>, <a href='tag_qemu.html'>qemu</a>, <a href='tag_kvm.html'>kvm</a>, <a href='tag_lxc.html'>lxc</a>, <a href='tag_proxmox.html'>proxmox</a></p>
 <div id="all_posts">
 <a href="index12.html">&lt;&lt; В прошлое</a> &mdash; 
 <a href="all_posts.html">Все записи</a> &mdash; <a href="all_tags.html">Все теги</a> &mdash; <a href="">RSS</a>
