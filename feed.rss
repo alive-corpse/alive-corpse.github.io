@@ -2,9 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Mon, 28 Sep 2020 19:46:20 +0500</lastBuildDate>
-<pubDate>Mon, 28 Sep 2020 19:46:20 +0500</pubDate>
+<lastBuildDate>Wed, 30 Sep 2020 00:27:31 +0500</lastBuildDate>
+<pubDate>Wed, 30 Sep 2020 00:27:31 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Для чего нужны старые android смартфоны на самом деле
+</title><description><![CDATA[
+
+<p style="text-align:center"><img alt="" src="images/megafonlogin.jpg" /></p>
+
+<p>&nbsp; А теперь немного о нестандартном применении стандартных вещей. У моей маман как-то раз полгода тому отказал телефон (MegaFon Login +). Был он куплен в 2015-м году по акции мегафона за 2500 рублей, кажется. Точнее, по акции он продавался за 3990, а я купил у сотрудника мегафона за 2500. Был разлочен с мегафона, затем в корпусе вырезано было дополнительное отверстие, что позволило получить доступ ко второй симкарте. Мегафон просто взял один китайский OEM телефон с непроизводимым названием, заребрендил прошивку, закрыл один слот пластиковой панелью и выпустил это всё на рынок по рекордно низкой цене. В итоге за свои 2500 рублей телефон проработал 4 с лишним года, после чего у него отказал динамик (он и разговорный и не очень - просто меняется сила звука в зависимости от варианта использования). Для маман был приобретён новый телефон, а мегафон до поры/времени выложен на полку. Ремонтировать это чудо бессмысленно, динамик найти и поставить будет стоить почти столько же, за сколько я весь смартфон приобрёл новым, да и производительность у него уже давно не соответствует требованиям времени. Продать такой старый смартфон, с порядочно подсевшим аккумулятором, да ещё и неработающим динамиком тоже вряд ли получится, а если и получится, то за бесценок. Если за него и дадут, то рублей 500, не больше, да и то очень сомнительно.</p>
+
+<p>&nbsp; Но кролики - это не только ценный мех. В конце-концов, смартфон - это отличный ёмкостный дисплей, процессор, память и вообще среда выполнения приложений.</p>
+
+<hr />
+<p>Теги: <a href='tag_3d-printing.html'>3d-printing</a>, <a href='tag_android-soft.html'>android-soft</a>, <a href='tag_automatization.html'>automatization</a>, <a href='tag_hardware.html'>hardware</a>, <a href='tag_pi.html'>pi</a>, <a href='tag_shell.html'>shell</a></p>
+]]></description><link>https://shumiloff.ru/dlya-chego-nuzhny-starye-android-smartfony-na-samom-dele.html</link>
+<guid>https://shumiloff.ru/./dlya-chego-nuzhny-starye-android-smartfony-na-samom-dele.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Wed, 30 Sep 2020 00:25:56 +0500</pubDate></item>
 <item><title>
 Очередное рабочее
 </title><description><![CDATA[
@@ -136,18 +152,4 @@
 <guid>https://shumiloff.ru/./pro-prikruchivanie-skripta-galerei-k-blogu.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Tue, 21 Jul 2020 16:03:08 +0500</pubDate></item>
-<item><title>
-Про умный дом, разношёрстность и закидывание деньгами
-</title><description><![CDATA[
-
-<p style="text-align:center"><img alt="" src="/images/smarthome.jpg" /></p>
-
-<p>&nbsp; Я уже много тут писал про минимализм и попытки обойтись малым. Иногда стремление к этому выходит за рамки рационального. Скажем, мне намного дешевле с учётом стоимости моего времени купить какую-нибудь железку, чем пытаться сделать её самому, но иногда просто хочется сделать что-то именно своими руками, разобраться. К сожалению, в области радиоэлектроники и микроконтроллеров я дилетант и никак не могу найти времени чтобы в этом достичь хоть какого-то прогресса, но кое-что можно сделать и на этом уровне. Ещё меня постоянно кидает из стороны в сторону и я постоянно переключаюсь с умного дома на 3д печать, с 3д печати на моделирование, с моделирования на что-то ещё. Благо, что зачастую эти сферы соприкасаются друг с другом и навыки, полученные в одной оказываются полезными в иной там, где этого не ожидаешь.&nbsp;</p>
-
-<hr />
-<p>Теги: <a href='tag_smarthome.html'>smarthome</a>, <a href='tag_automatization.html'>automatization</a>, <a href='tag_lifehack.html'>lifehack</a>, <a href='tag_minimalism.html'>minimalism</a></p>
-]]></description><link>https://shumiloff.ru/pro-umnyj-dom-raznoshyorstnost-i-zakidyvanie-dengami.html</link>
-<guid>https://shumiloff.ru/./pro-umnyj-dom-raznoshyorstnost-i-zakidyvanie-dengami.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Tue, 30 Jun 2020 18:53:30 +0500</pubDate></item>
 </channel></rss>
