@@ -2,9 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Wed, 30 Sep 2020 00:27:31 +0500</lastBuildDate>
-<pubDate>Wed, 30 Sep 2020 00:27:31 +0500</pubDate>
+<lastBuildDate>Thu, 08 Oct 2020 16:44:20 +0500</lastBuildDate>
+<pubDate>Thu, 08 Oct 2020 16:44:20 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Про &quot;службу безопасности Сбербанка&quot;
+</title><description><![CDATA[
+
+<p style="text-align:center"><img alt="" src="images/fraud.jpg" style="height:434px; width:626px" /></p>
+
+<p>&nbsp; Как минимум, раз в месяц, как максимум пару-тройку раз в неделю мне звонят из &quot;службы безопасности Сбербанка&quot;. Я уже привык, я уже знаю всё наизусть и вот как обычно проходит наш диалог:</p>
+
+<blockquote>
+    <p>- Здравствуйте, меня зовут Дарья, я из службы безопасности Сбербанка...<br />
+    - Здравствуйте, Дарья! Я хочу сыграть с вами в одну игру. Спонсор нашей сегодняшней передачи статья 159 УК РФ, часть вторая. Внимание, вопрос - что выберет прокурор:</p>
+
+    <p>Вариант А: Штраф до трёхсот тысяч рублей.</p>
+
+    <p>Варинат B: исправительные работы на срок до двух лет.</p>
+
+    <p>Вариант С: Заработная плата или иной доход за период до двух лет.</p>
+
+    <p>Вариант D: Принудительные работы сроком до пяти лет с возможным ограничением свободы на срок до одного года.</p>
+
+    <p>Вариант Е: Лишение свободы на срок до пяти лет с ограничением свободы на срок до одного года.</p>
+
+    <p>И да, уважаемая Дарья, я могу рассказать вам, как вас можно найти... Кстати, карты сбербанка у меня нет и никогда не было.</p>
+</blockquote>
+
+<p>&nbsp; Что радует, многие дослушивают до конца, хотя кто-то сразу бросает трубку, когда диалог идёт не по сценарию и становится очевидно, что я не принял за чистую монету обращение из &quot;службы безопасности&quot;. Спасибо огромное Дмитрию Бачило за то, что он аггрегировал нужную информацию в одном видео. Очень хотелось бы, чтобы это видео увидело как можно больше людей, начиная от ваших родных и близких (особенно пожилых) до тех, кто &quot;работает&quot; в этих коллцентрах сотрудниками &quot;службы безопасности Сбербанка&quot;. Даже не буду убирать видео под кат.<br /></p>
+
+<p style="text-align:center"><iframe width="560" height="315" src="https://www.youtube.com/embed/wgOWQVVk1_M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+
+<p>Теги: <a href='tag_жизненное.html'>жизненное</a></p>
+<!-- text end -->
+]]></description><link>https://shumiloff.ru/pro-quotsluzhbu-bezopasnosti-sberbankaquot.html</link>
+<guid>https://shumiloff.ru/./pro-quotsluzhbu-bezopasnosti-sberbankaquot.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Thu, 08 Oct 2020 16:44:16 +0500</pubDate></item>
 <item><title>
 Для чего нужны старые android смартфоны на самом деле
 </title><description><![CDATA[
@@ -136,20 +171,4 @@
 <guid>https://shumiloff.ru/./top-voprosov-o-3d-pechati-i-obshhie-rekomendacii-nachinayushhim.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Tue, 21 Jul 2020 17:16:12 +0500</pubDate></item>
-<item><title>
-Про прикручивание скрипта галереи к блогу
-</title><description><![CDATA[
-
-<p style="text-align:center"><img alt="" src="/images/galery.png" /></p>
-
-<p>&nbsp; Давно назревала необходимость прикрутить к блогу какой-нибудь генератор галерей, но всё как-то руки не доходили и вот, сегодня дошли. Скажу сразу - я ничерта не смыслю в JavaScript, вёрстке и web дизайне (думаю, по внешнему виду моего блога это нетрудно заметить :)). Главными критериями были простота использования и отсутствие лишних наворотов. После перебора нескольких вариантов, наткнулся на следующий: https://nanogallery2.nanostudio.org/</p>
-
-<p>Всё понравилось, решил попробовать. На странице проекта есть примеры и builder, который поможет подогнать значения параметров под требуемые.</p>
-
-<hr />
-<p>Теги: <a href='tag_web.html'>web</a>, <a href='tag_shell.html'>shell</a></p>
-]]></description><link>https://shumiloff.ru/pro-prikruchivanie-skripta-galerei-k-blogu.html</link>
-<guid>https://shumiloff.ru/./pro-prikruchivanie-skripta-galerei-k-blogu.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Tue, 21 Jul 2020 16:03:08 +0500</pubDate></item>
 </channel></rss>

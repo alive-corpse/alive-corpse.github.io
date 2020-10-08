@@ -81,6 +81,27 @@
 <div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
 </div>
 <div id="divbody"><div class="content">
+<h3><a class="ablack" href="nemnogo-pro-bitkoiny.html">
+Немного про биткоины
+</a></h3>
+<!-- bashblog_timestamp: #201812221406.22# -->
+<div class="subtitle">2018-12-22 14:06:22 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+<p style="text-align: center;"><img src="images/bitcoin.jpg"></p>
+<p>&nbsp; Подкинули занятную <a href="http://www.yaplakal.com/forum7/topic1885940.html" target="_blank">ссылку на форум</a>.&nbsp;Там описано, как украли 350 тысяч долларов. Оплачивать биткоинами что-то очень удобно, но оплатить ими подобную сумму без оформления нотариально заверенных документов - идиотизм редкостный на мой взгляд.</p>
+<p>&nbsp; Меня вообще поражает то, как часто инфантилизм идёт рука об руку с желанием рискнуть большими суммами денег или вообще всем, что у тебя есть. А так же с нежеланием разобраться в механике тех процессов, в которые ты эти средства вкладываешь и хотя бы задуматься о том, что будет дальше, если что-то пойдёт не так, как ты задумал и события начнут развиваться не самым сказочно-прекрасным для тебя образом. Сколько таких людей, живущих в мире пони и радуг? Людей, не обладающих соответствующим образованием и уровнем подготовки и радостно сующих свой писюн в шестерёнки механизмов рынка ценных бумаг или криптовалют и ожидающих приятных ощущений? А потом боль и изумление - мол, как же это так произошло, ведь всё представлялось совсем не так?</p>
+<p>&nbsp; После бума на росте курса биткоина, я видел множество сообщений на форумах и в соцсетях, когда курс обвалился. Выглядели они примено следующим образом: "Я тут квартиру заложил, продал машину, взял кредит, позанимал денег у знакомых, а курс обвалился! Что же мне теперь делать?" Вариант "подумать заранее" очевидно, не рассматривался в принципе. Самый шедевральный вариант выхода из сложившейся ситуации, который я видел на форумах, заключался в том, чтобы написать петицию (даже не было указано кому и куда) и собрать под ней подписи, чтобы курс биткоина вернули обратно. Сказочные идиоты! Я думаю, в соответствии с полузабытой советской традицией нужно было написать в спортлото. Там точно помогут.</p>
+
+<p>Теги: <a href='tag_мысли-вслух.html'>мысли-вслух</a>, <a href='tag_идиоты.html'>идиоты</a></p>
+
+
+
+
+
+
+<!-- text end -->
 <h3><a class="ablack" href="pro-ocherednoe-podgoranie-i-chyornuyu-magiyu-yablochnoj-kompanii.html">
 Про очередное подгорание и чёрную магию яблочной компании
 </a></h3>
@@ -217,21 +238,6 @@ Evgeniy Shumilov
 
 
 <!-- text end -->
-<h3><a class="ablack" href="gde-mogut-prigoditsya-grafiki.html">
-Где могут пригодиться графики
-</a></h3>
-<!-- bashblog_timestamp: #201811212304.05# -->
-<div class="subtitle">2018-11-21 23:04:05 &mdash; 
-Evgeniy Shumilov
-</div>
-<!-- text begin -->
-
-<p style="text-align: center;"><img src="/images/gr1.png"></p>
-<p>&nbsp; Пару месяцев назад я нашёл для себя неожиданно полезное применение графиков в своей работе. И нет, это не мониторинг в классическом понимании этого слова. Это наколенные прогнозы.</p>
-<h4>Описание задачи</h4>
-<p>&nbsp; Есть у нас в jenkins одна джоба, которая производит довольно длительную операцию с базой данных. Размер базы около 100Гб, самый долгий этап - обработка таблицы почти в 60 миллионов записей. Иногда этот процесс проходил за 7 часов, иногда за 21 час и я пытался обнаружить причину, по которой получается такая разница во времени обработки данных. Проблема была в том, что понять, насколько быстро выполняется очередная ревизия джобы из километрового лога с цифрами было достаточно сложно. Скрипт раз в 30 секунд выдавал количество обработанных строк и приходилось брать разницу в этом количестве на каком-то временном периоде и затем сравнивать её с аналогичным прошлым, позапрошлым и, возможно, поза-поза-чёрт-знает-сколько-прошлым запуском. Ведь нет смысла ждать и нагружать мощности, если за час работы скрипта можно определить, сколько примерно он будет работать. Но всё оказалось не так просто. Зависимость количества обработанных строк за единицу времени оказалась нелинейной и чтобы понять характер работы, мне понадобился график.</p>
-<p class="readmore"><a href="./gde-mogut-prigoditsya-grafiki.html">Читать дальше...</a></p>
-<p>Теги: <a href='tag_shell.html'>shell</a>, <a href='tag_админское.html'>админское</a>, <a href='tag_aws.html'>aws</a></p>
 <div id="all_posts">
 <a href="index10.html">&lt;&lt; В прошлое</a> &mdash; 
 <a href="all_posts.html">Все записи</a> &mdash; <a href="all_tags.html">Все теги</a> &mdash; <a href="">RSS</a>
