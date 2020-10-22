@@ -2,14 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Thu, 08 Oct 2020 16:50:42 +0500</lastBuildDate>
-<pubDate>Thu, 08 Oct 2020 16:50:42 +0500</pubDate>
+<lastBuildDate>Thu, 22 Oct 2020 15:23:33 +0500</lastBuildDate>
+<pubDate>Thu, 22 Oct 2020 15:23:33 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Удобное использование TTS яндекс станции в скриптах при интеграции в Home Assistant
+</title><description><![CDATA[
+
+<p style="text-align:center"><img alt="" src="images/ys.jpg" /></p>
+
+<p>&nbsp; Я просто оставлю это здесь на всякий случай как шпаргалку. У меня периодически возникает необходимость оповещения о чём-то голосом. Например, о провале выполнения какого-нибудь процесса бекапа или об окончании процесса печати детали 3д принтером или о чём угодно другом.&nbsp;</p>
+
+<hr />
+<p>Теги: <a href='tag_3d-printing.html'>3d-printing</a>, <a href='tag_automatization.html'>automatization</a>, <a href='tag_smarthome.html'>smarthome</a>, <a href='tag_homeassistant.html'>homeassistant</a></p>
+]]></description><link>https://shumiloff.ru/udobnoe-ispolzovanie-tts-yandeks-stancii-v-skriptax-pri-integracii-v-home-assistant.html</link>
+<guid>https://shumiloff.ru/./udobnoe-ispolzovanie-tts-yandeks-stancii-v-skriptax-pri-integracii-v-home-assistant.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Thu, 22 Oct 2020 15:20:57 +0500</pubDate></item>
 <item><title>
 Про &quot;службу безопасности Сбербанка&quot;
 </title><description><![CDATA[
 
-<p style="text-align:center"><img alt="" src="images/fraud.jpg" style="height:434px; width:626px" /></p>
+<p style="text-align:center"><img alt="" src="images/fraud.jpg" /></p>
 
 <p>&nbsp; Как минимум, раз в месяц, как максимум пару-тройку раз в неделю мне звонят из &quot;службы безопасности Сбербанка&quot;. Я уже привык, я уже знаю всё наизусть и вот как обычно проходит наш диалог:</p>
 
@@ -157,18 +171,4 @@
 <guid>https://shumiloff.ru/./test.html</guid>
 <dc:creator></dc:creator>
 <pubDate>Tue, 21 Jul 2020 23:55:16 +0500</pubDate></item>
-<item><title>
-Топ вопросов о 3D печати и общие рекомендации начинающим
-</title><description><![CDATA[
-
-<p style="text-align:center"><img alt="" src="/images/3d-printers.jpg" /></p>
-
-<p>&nbsp; Ко мне периодически обращаются разные люди из моего окружения с вопросами, касающимися 3d печати, поэтому у меня сформировался список наиболее часто задаваемых вопросов, я их сейчас озвучу и, наверняка, для многих это окажется полезным. В этой статье я попытаюсь спустить с небес на землю мечтающих заработать на 3д печати и печатать всякую дребедень, скачиваемую из интернета. В другой статье - напишу о преимуществах 3D печати и возможностях, которые она открывает.</p>
-
-<hr />
-<p>Теги: <a href='tag_3d-printing.html'>3d-printing</a></p>
-]]></description><link>https://shumiloff.ru/top-voprosov-o-3d-pechati-i-obshhie-rekomendacii-nachinayushhim.html</link>
-<guid>https://shumiloff.ru/./top-voprosov-o-3d-pechati-i-obshhie-rekomendacii-nachinayushhim.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Tue, 21 Jul 2020 17:16:12 +0500</pubDate></item>
 </channel></rss>

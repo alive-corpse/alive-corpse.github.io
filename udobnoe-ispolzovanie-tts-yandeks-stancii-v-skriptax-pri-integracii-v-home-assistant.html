@@ -51,7 +51,7 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/52451890" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
-<title>Про &quot;службу безопасности Сбербанка&quot;</title>
+<title>Удобное использование TTS яндекс станции в скриптах при интеграции в Home Assistant</title>
 </head><body>
 <div id="divbodyholder">
 <div class="headerholder">
@@ -82,41 +82,102 @@
 </div>
 <div id="divbody"><div class="content">
 <!-- entry begin -->
-<h3><a class="ablack" href="pro-quotsluzhbu-bezopasnosti-sberbankaquot.html">
-Про &quot;службу безопасности Сбербанка&quot;
+<h3><a class="ablack" href="udobnoe-ispolzovanie-tts-yandeks-stancii-v-skriptax-pri-integracii-v-home-assistant.html">
+Удобное использование TTS яндекс станции в скриптах при интеграции в Home Assistant
 </a></h3>
-<!-- bashblog_timestamp: #202010081644.16# -->
-<div class="subtitle">2020-10-08 16:44:16 &mdash; 
+<!-- bashblog_timestamp: #202010221520.57# -->
+<div class="subtitle">2020-10-22 15:20:57 &mdash; 
 Evgeniy Shumilov
 </div>
 <!-- text begin -->
 
-<p style="text-align:center"><img alt="" src="images/fraud.jpg" /></p>
+<p style="text-align:center"><img alt="" src="images/ys.jpg" /></p>
 
-<p>&nbsp; Как минимум, раз в месяц, как максимум пару-тройку раз в неделю мне звонят из &quot;службы безопасности Сбербанка&quot;. Я уже привык, я уже знаю всё наизусть и вот как обычно проходит наш диалог:</p>
+<p>&nbsp; Я просто оставлю это здесь на всякий случай как шпаргалку. У меня периодически возникает необходимость оповещения о чём-то голосом. Например, о провале выполнения какого-нибудь процесса бекапа или об окончании процесса печати детали 3д принтером или о чём угодно другом.&nbsp;</p>
 
-<blockquote>
-    <p>- Здравствуйте, меня зовут Дарья, я из службы безопасности Сбербанка...<br />
-    - Здравствуйте, Дарья! Я хочу сыграть с вами в одну игру. Спонсор нашей сегодняшней передачи статья 159 УК РФ, часть вторая. Внимание, вопрос - что выберет прокурор:</p>
+<hr />
+<p>&nbsp; Интеграцию модуля управления станцией с HA я описывать не буду, она описана в <a href="https://github.com/AlexxIT/YandexStation">документации на сам модуль</a>. Но вот что позволило мне использовать TTS простым и удобным образом - это небольшая автоматизация для HA, которая ждёт отправки текста в определённый топик MQTT и затем уже воспроизводит на яндекс станции. Выглядит это следующим образом:</p>
 
-    <p>Вариант А: Штраф до трёхсот тысяч рублей.</p>
+<pre>
+<code> - id: '1595590318766'
+   alias: Yandex station tts by mqtt
+   description: ''
+   trigger:
+   - platform: mqtt
+     topic: /ys/tts
+   condition: []
+   action:
+   - data_template:
+       media_content_id: '{{ trigger.payload }}'
+       media_content_type: text
+     entity_id: media_player.yandex_station_94....70f # здесь нужно указать id станции, полученный после интеграции
+     service: media_player.play_media
+   mode: single
+</code></pre>
 
-    <p>Варинат B: Исправительные работы на срок до двух лет.</p>
+<p>&nbsp; Теперь можно отправить в mqtt топик &#39;/ys/tts&#39; текст и станция его произнесёт. Для этого на удалённых инстансах (домашний сервер, множество всяких PI для различных нужд и т.п.) существует скрипт sendtts:</p>
 
-    <p>Вариант С: Заработная плата или иной доход за период до двух лет.</p>
+<pre>
+<code class="language-bash">#!/bin/sh
+cd `dirname "$0"`
+[ -f "config" ] &amp;&amp; . ./config
 
-    <p>Вариант D: Принудительные работы сроком до пяти лет с возможным ограничением свободы на срок до одного года.</p>
+[ -z "$MQTT_HOST" ] &amp;&amp; echo "MQTT host is not configured, using 127.0.0.1 by default" &amp;&amp; MQTT_HOST=127.0.0.1
+[ -z "$MQTT_PORT" ] &amp;&amp; echo "MQTT port is not configured, using 127.0.0.1 by default" &amp;&amp; MQTT_PORT=127.0.0.1
+[ -z "$MQTT_TTSTOPIC" ] &amp;&amp; echo "MQTT tts topic is not defined, using /ys/tts by default" &amp;&amp; MQTT_TTSTOPIC='/ys/tts'
+mqtt="mosquitto_pub -h $MQTT_HOST -p $MQTT_PORT"
+[ -n "$MQTT_USER" ] &amp;&amp; mqtt="$mqtt -u $MQTT_USER"
+[ -n "$MQTT_PORT" ] &amp;&amp; mqtt="$mqtt -P $MQTT_PASS"
+mqtt="$mqtt -t $MQTT_TTSTOPIC -m "
 
-    <p>Вариант Е: Лишение свободы на срок до пяти лет с ограничением свободы на срок до одного года.</p>
+$mqtt "$1"</code></pre>
 
-    <p>И да, уважаемая Дарья, я могу рассказать вам, как вас можно найти... Кстати, карты сбербанка у меня нет и никогда не было.</p>
-</blockquote>
+<p>&nbsp; И файл с именем config, лежащий в той же директории:</p>
 
-<p>&nbsp; Что радует, многие дослушивают до конца, хотя кто-то сразу бросает трубку, когда диалог идёт не по сценарию и становится очевидно, что я не принял за чистую монету обращение из &quot;службы безопасности&quot;. Спасибо огромное Дмитрию Бачило за то, что он аггрегировал нужную информацию в одном видео. Очень хотелось бы, чтобы это видео увидело как можно больше людей, начиная от ваших родных и близких (особенно пожилых) до тех, кто &quot;работает&quot; в этих коллцентрах сотрудниками &quot;службы безопасности Сбербанка&quot;. Даже не буду убирать видео под кат.<br /></p>
+<pre>
+<code class="language-bash">MQTT_HOST=somehost # меняем на свой адрес
+MQTT_PORT=1883     
+MQTT_USER=user     # в случае наличия
+MQTT_PASS=pass     # в случае наличия
+MQTT_TTSTOPIC=/ys/tts 
+</code></pre>
 
-<p style="text-align:center"><iframe width="560" height="315" src="https://www.youtube.com/embed/wgOWQVVk1_M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p>&nbsp; Пример вызова:</p>
 
-<p>Теги: <a href='tag_жизненное.html'>жизненное</a></p>
+<pre>
+<code>./sendtts 'Мама мыла раму'</code></pre>
+
+<p>&nbsp; Один из моих сценариев&nbsp;использования - на одну из кнопок многоклавишного выключателя на стене рядом с диваном, на котором я последние полгода пандемии обитаю, подвешена функция прогрева стола и сопла 3D принтера. При нажатии на кнопку HA через SSH запускает скрипт на OrangePi PC, который подключен к 3D принтеру. Скрипт отправляет на TTS оповещение о включении принетра,&nbsp;включает блок питания принтера через модуль реле, ждёт, пока появится TTY устройство,&nbsp;пытается подключиться к принтеру, в случае успеха отправляет на TTS фразу &quot;доступ у управлению принтером получен&quot;, затем запускает прогрев с нужными параметрами и озвучивает их - температуру стола и экструдера.</p>
+
+<p>&nbsp; Выглядит это примерно так:</p>
+
+<pre>
+<code class="language-bash">#!/bin/sh
+EXTTEMP=225
+BEDTEMP=80
+
+[ -n "$1" ] &amp;&amp; EXTTEMP="$1"
+[ -n "$2" ] &amp;&amp; BEDTEMP="$2"
+
+cd `dirname "$0"`
+echo "Turning on the printer..."
+[ -f "sendtts" ] &amp;&amp; ./sendtts "Включение питания эндер 3"
+#.printer 1
+./api on
+echo "Waiting for powering on..."
+sleep 3
+echo "Waiting for connection..."
+./api connect
+while [ -z "$(./api stat | grep -F '"operational":true,')" ]; do
+	sleep 1
+done
+[ -f "sendtts" ] &amp;&amp; ./sendtts "Доступ к управлению эндер 3 получен, включение прогрева. Экструдер $EXTTEMP, стол $BEDTEMP."
+echo "Sending to home position, heating..."
+./api cmds "\"G28 R X Y Z\",\"M140 S$BEDTEMP\",\"M104 S$EXTTEMP\""</code></pre>
+
+<p>&nbsp; Нужно ещё дописать в скрипт статистики проверку выхода на рабочую температуру и добавить ещё одно опопвещение - об окончании нагрева. Пока просто не успел. Ничего в принципе сложного, но уже чувствуешь себя немного в будущем. Как-нибудь в другой раз напишу отдельно о скриптах для облегчения управления принтером.</p>
+
+<p>Теги: <a href='tag_3d-printing.html'>3d-printing</a>, <a href='tag_automatization.html'>automatization</a>, <a href='tag_smarthome.html'>smarthome</a>, <a href='tag_homeassistant.html'>homeassistant</a></p>
 <!-- text end -->
 <!-- entry end -->
 </div>
