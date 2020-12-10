@@ -81,6 +81,21 @@
 <div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
 </div>
 <div id="divbody"><div class="content">
+<h3><a class="ablack" href="malysham-o-mineralax.html">
+Малышам о минералах
+</a></h3>
+<!-- bashblog_timestamp: #201811092212.03# -->
+<div class="subtitle">2018-11-09 22:12:03 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<img src="images/ruby-logo.png" width="200px" height="175px" class="leftimg">
+<p>&nbsp; Так называлась одна из любимых книг моего детства. После неё я ещё несколько лет собирал по песочницам разные камни, коих у меня была целая коллекция. Она, как и многое другое, благополучно канула в лету. Но это так, лирическое отступление.</p>
+<p class="light">&nbsp; У нас было две версии руби из репозитория, 75 гемм, 2 версии thin сервера, ящик циклических зависимостей, пара попыток поставить отдельный environment и куча разных конфигов всех сортов и расцветок. Не то, чтобы этого было достаточно для того, чтобы поднять проект, но если связался с руби, уже трудно остановиться. Единственное, что вызывает у меня опасения - это пакеты из стока дистрибутива. Нет ничего более беспомощного, безответственного и испорченного, чем руби окружение, поставленное из стока, с установленными поверх геммами. Я знал, что рано или поздно мы перейдём на эту дрянь.</p>
+<p>&nbsp; Примерно так год назад выглядел мой отчёт начальнику на его вопрос - "как там у нас с переездом редмайна на свежее окружение?"</p>
+<p class="readmore"><a href="./malysham-o-mineralax.html">Читать дальше...</a></p>
+<p>Теги: <a href='tag_ruby.html'>ruby</a>, <a href='tag_админское.html'>админское</a>, <a href='tag_fun.html'>fun</a></p>
 <h3><a class="ablack" href="protrite-prizmu-vospriyatiya-eto-rasshirit-krugozor.html">
 Протрите призму восприятия, это расширит кругозор
 </a></h3>
@@ -215,23 +230,6 @@ Evgeniy Shumilov
 
 <p class="readmore"><a href="./pro-klaviatury-gryaznye-xaki-i-podgoranie-pyatoj-tochki.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_keyboards.html'>keyboards</a></p>
-<h3><a class="ablack" href="sam-sebe-xosting-ili-o-nedoocenyonnyx-utilitax.html">
-Сам себе хостинг или о недооценённых утилитах
-</a></h3>
-<!-- bashblog_timestamp: #201810210049.04# -->
-<div class="subtitle">2018-10-21 00:49:04 &mdash; 
-Evgeniy Shumilov
-</div>
-<!-- text begin -->
-
-<i>- Та-ак, а вы что, ещё и права на файлы за меня выдавать будете?<br/>
-- Ага-а-а!</i>
-<br/>
-<img src="/images/mss.png" class="rightimg">
-<p>&nbsp;&nbsp;О чём вы думаете, когда слышите аббревиатуру FTP? На меня накатывает ностальгия. Сразу вспоминаются всякие уютные ламповые локалочки, сетевые карты rtl8139, серенькие восьмипортовые коммутаторы D-Link в пластиковых корпусах, папки Public и Private, полные варезом - фильмы, музыка, софт, игры... Одним словом, машинка времени в моей голове телепортирует меня куда-то лет на 15 назад. Много воды утекло с тех пор, но когда кто-то просит совета, как построить себе миниатюрный хостинг, часто в числе прочего я в том или ином виде получаю вопрос: "как поднять FTP"? И каждый раз меня это удивляет. А чем sftp не угодил? Да, это медленнее, но во-первых, скорость интернет соединения сейчас уже не та, что была 15 лет тому, во-вторых, у sftp на борту шифрование и в-третьих, sftp практически всегда уже есть там, где присутствует openssh.</p>
-<p>&nbsp;&nbsp;Да, sftp, реализованный средствами OpenSSH не лишён ряда недостатков. Хотелось найти некое решение, которое бы позволило быстро и просто реализовать доступ к машине для разных пользователей, для каждого в свою папку, желательно с chroot. Всё заканчивалось длинными ролями на ансибле, которые переписывали конфиги openssh, добавляли пользователей в нужные гргуппы, ставили пакет управления расширенными правами доступа, дёргали всякие setfacl и прочее. И тут меня попросил мой хороший друг (Иван, спасибо тебе!) помочь ему настроить сервер, а пользователям в качестве шелла поставить MySecureShell. Ранее я с таким зверем не сталкивался, да и ни от кого из моих знакомых за те почти 15 лет, что я общаюсь с linux, не слышал. Судя по всему, это не особо популярное решение. Я бы сказал, незаслуженно обойдённое вниманием. Да вы только посмотрите на их логотип! Похоже, это пингвин, прямо поверх которого начали разводить печатную плату (что похоже, сказалось на его настроении), при этом он ещё кому-то угражает двумя логотипами OpenBSD! Интересно, на каких веществах сидел автор? Ладно, этот вопрос оставим наркологам. Лучше посмотрим в конфигурационный файл. Почитав, что там написано, я понял, что эта штука умеет всё, о чём я мечтал и многое из того, о чём я мечтать не смел.</p>
-<p class="readmore"><a href="./sam-sebe-xosting-ili-o-nedoocenyonnyx-utilitax.html">Читать дальше...</a></p>
-<p>Теги: <a href='tag_ssh.html'>ssh</a>, <a href='tag_shell.html'>shell</a>, <a href='tag_sftp.html'>sftp</a>, <a href='tag_админское.html'>админское</a></p>
 <div id="all_posts">
 <a href="index12.html">&lt;&lt; В прошлое</a> &mdash; 
 <a href="all_posts.html">Все записи</a> &mdash; <a href="all_tags.html">Все теги</a> &mdash; <a href="">RSS</a>
