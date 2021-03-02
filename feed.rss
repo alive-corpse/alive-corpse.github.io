@@ -2,9 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Thu, 10 Dec 2020 17:05:00 +0500</lastBuildDate>
-<pubDate>Thu, 10 Dec 2020 17:05:00 +0500</pubDate>
+<lastBuildDate>Wed, 03 Mar 2021 01:52:18 +0500</lastBuildDate>
+<pubDate>Wed, 03 Mar 2021 01:52:18 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Последовательное разворачивание словарей и списков в Python
+</title><description><![CDATA[
+
+<p style="text-align:center"><img alt="" src="images/dictlisttuple.png" /></p>
+
+<p>&nbsp; Бывают такие вещи, до которых постоянно не доходят руки и это одна из них. Если у нас есть объект большой вложенности, то мы не можем в python, как скажем, в java извлечь нужное значение, указав объект и последовательность его ключей. Нам приходится двигаться последовательно вглубь объекта, проверяя наличие нужного нам ключа на каждом уровне вложенности, а то и тип самого объекта. Решения существуют, но в виде отдельных библиотек -&nbsp;<a href="https://pydash.readthedocs.io/en/latest/" target="_blank">pydash</a>, <a href="https://pypi.org/project/dictor/">dictor</a> и, вероятно, каких-то иных, которые необходимо ставить отдельно. Не люблю лишние зависимости, если вместо них можно обойтись десятком строк.</p>
+
+<hr />
+<p>Теги: <a href='tag_python.html'>python</a></p>
+]]></description><link>https://shumiloff.ru/posledovatelnoe-razvorachivanie-slovarej-i-spiskov-v-python.html</link>
+<guid>https://shumiloff.ru/./posledovatelnoe-razvorachivanie-slovarej-i-spiskov-v-python.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Wed, 03 Mar 2021 01:50:40 +0500</pubDate></item>
 <item><title>
 Про мотивацию и удалёнку
 </title><description><![CDATA[
@@ -187,18 +201,4 @@
 <guid>https://shumiloff.ru/./povyshenie-urovnya-intellekta-rozetok-dyoshevo-i-predelno-serdito.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Thu, 30 Jul 2020 04:16:24 +0500</pubDate></item>
-<item><title>
-Скрипт для быстрого перемещения python virtualenv
-</title><description><![CDATA[
-
-<p><img alt="" src="images/changeplace.png" /></p>
-
-<p>&nbsp; Уже в который раз сталкиваюсь с тем, что при перемещении какого-либо проекта из одной директории в другую при использовании virtualenv возникает проблема, связанная с тем, что при создании virtualenv в скрипты окружения прописываются абсолютные пути до интерпретаторов и всего прочего. Конечно, можно в старом окружении выгрузить список исопльзуемых библиотек через pip3 freeze &gt; requirements.txt и потом в новом поставить библиотеки из списка через pip3 install -r requirements.txt, но такой подход занимает время, особенно если его использовать на одноплатных компьютерах, не отличающихся ни наличием быстрого flash накопителя, ни быстрого процессора, ни быстрого интернета. Особенно это актуально, когда в проекте несколько десятков тяжёлых библиотек и env весит под несколько сотен мегабайт. Сегодня мне это понадобилось для переноса директории с Home Assistant на OrangePi Zero. Решил, что &quot;хватит это терпеть&quot; и написал простой скриптик, который из activate получает старое значение VIRTUAL_ENV, из текущего положения - новое и заменяет его во всех файлах, где это необходимо. Всё оказалось достаточно просто. Проверил - работает. Скрипт необходимо положить в директорию, где расположен activate (не забываем выставить исполняемый бит через chmod +x scriptname). Ниже его содержимое.</p>
-
-<hr />
-<p>Теги: <a href='tag_shell.html'>shell</a>, <a href='tag_python.html'>python</a></p>
-]]></description><link>https://shumiloff.ru/skript-dlya-bystrogo-peremeshheniya-python-virtualenv.html</link>
-<guid>https://shumiloff.ru/./skript-dlya-bystrogo-peremeshheniya-python-virtualenv.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Sun, 26 Jul 2020 19:11:28 +0500</pubDate></item>
 </channel></rss>
