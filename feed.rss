@@ -2,9 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Wed, 03 Mar 2021 01:52:18 +0500</lastBuildDate>
-<pubDate>Wed, 03 Mar 2021 01:52:18 +0500</pubDate>
+<lastBuildDate>Sat, 12 Jun 2021 15:23:43 +0500</lastBuildDate>
+<pubDate>Sat, 12 Jun 2021 15:23:43 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Про профдеформацию
+</title><description><![CDATA[
+
+<p style="text-align:center"><img alt="" src="/images/zags.png" /></p>
+
+<p>&nbsp; Вчера мучался с настройкой сетевой связности между ЦОДом одной компании и подсетью телеком оператора на объекте. Бриджи, туннели, роутинг и вот это всё. Сегодня под утро уже приснился сон, перед тем, как жена разбудила. Решил поделиться с вами. :)</p>
+
+<p>&nbsp; Приходим мы с женой в ЗАГС регистрировать ребёнка, а нам тётка и говорит - выдадим вам тридцатую подсеть, будет у вас четыре айпишника - адрес сети, где ребёнок с мамой прописан, широковещательный и два айпишника как раз остаются маме и ребёнку.</p>
+
+<p>Я: - Эй, а я? А как же я?<br />
+Тётка: - А что ты? Много ты участия в этом процессе принимал? Она его вынашивала, рожала, ночами не спит. Может вам 29ю подсеть выделить? Куда ещё 3 адреса денете? Я не верю, что вы четверо детей планируете, а с адресами у нас и так дефицит. Ничего, за натом посидишь, сам себе там подсеть выдели серую, найдёшь оборудование.</p>
+
+<p>На этом моменте я проснулся.</p>
+
+<p>Теги: <a href='tag_fun.html'>fun</a>, <a href='tag_networking.html'>networking</a></p>
+<!-- text end -->
+]]></description><link>https://shumiloff.ru/pro-profdeformaciyu.html</link>
+<guid>https://shumiloff.ru/./pro-profdeformaciyu.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Sat, 12 Jun 2021 15:22:56 +0500</pubDate></item>
 <item><title>
 Последовательное разворачивание словарей и списков в Python
 </title><description><![CDATA[
@@ -185,20 +206,4 @@
 <guid>https://shumiloff.ru/./ob-ostorozhnosti-kitajskom-naplevatelstve-i-potencialnoj-ugroze-vzryva.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Sat, 12 Sep 2020 23:59:37 +0500</pubDate></item>
-<item><title>
-Повышение уровня интеллекта розеток дёшево и предельно сердито
-</title><description><![CDATA[
-
-<p style="text-align:center"><img alt="" src="images/sockets.jpg" /></p>
-
-<p>&nbsp; Вопрос: сколько может стоить блок из четырёх&nbsp;отдельно управляемых розеток, если в радиусе полуметра уже над чем-то трудится какой-нибудь одноплатный * Pi?</p>
-
-<p>&nbsp; Ответ: столько, сколько может стоить отрезок кабель канала, набор тупых розеток (зависит от того, что выберете), полметра провода и блок реле (примерно 200 рублей). У меня ориентировочно вышло около 650 рублей, причём бОльшая часть стоимости пришлась на розетки и рамку.</p>
-
-<hr />
-<p>Теги: <a href='tag_shell.html'>shell</a>, <a href='tag_smarthome.html'>smarthome</a>, <a href='tag_pi.html'>pi</a></p>
-]]></description><link>https://shumiloff.ru/povyshenie-urovnya-intellekta-rozetok-dyoshevo-i-predelno-serdito.html</link>
-<guid>https://shumiloff.ru/./povyshenie-urovnya-intellekta-rozetok-dyoshevo-i-predelno-serdito.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Thu, 30 Jul 2020 04:16:24 +0500</pubDate></item>
 </channel></rss>
