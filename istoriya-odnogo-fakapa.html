@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="main.css" type="text/css" />
+<link rel="stylesheet" href="blog.css" type="text/css" />
+<link rel="stylesheet" href="assets/highlight/styles/corpse.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="" href="feed.rss" />
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+<script src="assets/jquery.min.js"></script>
+<script src="assets/jouele/jouele.min.js"></script>
+<link href="assets/jouele/jouele.min.css" rel="stylesheet"/>
+<script src="assets/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(52451890, "init", {
+        id:52451890,
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/52451890" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<title>История одного факапа</title>
+</head><body>
+<div id="divbodyholder">
+<div class="headerholder">
+<a href="https://vk.com/evgeniy_shumilov" target="_blank"><img src="/images/logo.png" class="logo" height="106pt" style="float: left; margin-right: 20px;"></a>
+<div class="header">
+<div id="title">
+<h1 class="nomargin"><a class="ablack" href="https://shumiloff.ru/index.html">Зайчатки разума</a></h1>
+<div id="description">Записная книжка айтишника</div>
+</div></div>
+<ul class="full-width">
+    <li>
+        <a href="/pro-lyubov-k-minimalizmu-i-staticheskuyu-generaciyu-kontenta.html">О блоге</a>
+<!--
+        <ul>
+            <li><a href="#">Item1</a></li>
+            <li><a href="#">Item2</a></li>
+            <li><a href="#">Item3</a></li>
+        </ul>
+-->
+    </li>
+    <li><a href="/all_tags.html">Теги</a></li>
+    <li><a href="/all_posts.html">Все посты</a></li>
+    <li><a href="/tag_ностальгия.html">Ностальгическое</a></li>
+    <li><a href="/tag_мысли-вслух.html">Мысли вслух</a></li>
+</ul>
+
+<div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
+</div>
+<div id="divbody"><div class="content">
+<!-- entry begin -->
+<h3><a class="ablack" href="istoriya-odnogo-fakapa.html">
+История одного факапа
+</a></h3>
+<!-- bashblog_timestamp: #202109051814.18# -->
+<div class="subtitle">2021-09-05 18:14:18 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<p style="text-align:center"><img alt="" src="images/sudo-rm-rf.gif" /></p>
+
+<p>&nbsp; Послушал тут предпоследний 769-й выпуск подкаста Radio-T, в котором обсуждение технических ошибок напомнило мне примерно аналогичный случай из моей практики.</p>
+
+<p>&nbsp; Давным давно, когда я ещё работал в xsolla, которая ещё в то время носила название 2pay, у нас по большому счёту был всего один основной сервер в Московском датацентре, на котором крутился весь мир. Передо мной стояла задача написать скрипт, который зачищает старые логи, временные файлы и прочее, что может занимать много места.</p>
+
+<hr />
+<p>&nbsp; К этой задаче как я помню, я приступил уже под 3 часа ночи, ибо работы было как всегда - много, а времени как всегда - мало. Очень хотелось спать, но количество оставшегося свободного на продакшен хосте места неумолимо уменьшалось, что заставляло действовать в темпе. Я уж не помню, что спровоцировало рост логов - может быть кто-то из разработчиков не отключил какой-то внутренний дебаг при последнем деплое или это были попытки перебора - теперь уже не важно. Одним словом, ближе к половине пятого утра скрипт был готов и я решил его протестировать сначала в dry-run режиме. Выхлоп в логах оказался вполне ожидаемым и верным и я уже с квадратным мозгом и глазами цвета знамени советского союза запустил его на продакшен хосте. Всё прошло прекрасно, ощущение того, что вот прямо сейчас можно будет отрубиться и проспать хотя бы 4-5 часов вызывало нечто сродни ментальному оргазму. Но надо ведь было дёрнуть этот скрипт ещё раз.</p>
+
+<p>&nbsp; И тут я увидел то, что наверное боится увидеть любой DevOPS/системный администратор - как удаляется от корня весь рабочий хост, как быстро пролетели логи удаления /bin, как закончился /etc и началось удаление /dev... В этот момент тебя приподнимает над стулом на сантиметр, потому что волосы становятся дыбом аж на заднице. Непередаваемые ощущения. Сочетание Ctrl+C нажималось со скоростью пулемётной очереди, процесс удалось остановить. Мысль первая - писец, я уволен. Мысль вторая - что делать? Мысль третья - почему так произошло?</p>
+
+<p>&nbsp; Собственно, ошибка была просто хрестоматийная - в коде скрипта собирался список найденных директорий и файлов с тем, что можно было почистить, после чего пути для зачистки передавались в качестве переменной окружения команде rm -rfv /${src}. В первый раз всё отработало прекрасно, потому что было, что удалять. А вот во второй несколько файлов нашлись, а директория из одной секции - нет и ${src} оказался пуст, а привычки по умолчанию ставить set euxo в начале скрипта у меня тогда ещё не выработалось. Вот и запустился rm -rfv / в полный рост.</p>
+
+<p>&nbsp; Начал судорожно разбираться. На сервере я работал в сессии тмукса, в котором в одной из вкладок нашёлся открытый midnight commander. Поднял на своей локальной машине виртуалку, на которой раскрутил нужную версию FreeBSD, соответствующую той, на которой бежал боевой сервер, поставил nginx, php нужных версий и минимальный стек необходимых пакетов, чтобы было подобие прода. Разворачивать бекап времени не было. Я понимал, что если потеряю этот коннект, то это будет катастрофа. Реверс туннелем через ssh вывесил порт до ближайшего хоста с белым адресом, через mc на проде подцепился по ssh уже к FS виртуалки и начал перетаскивать руками bin, etc и всё прочее, что могло зацепить. Параллельно вытаскивал большой и тяжёлый монолитный бекап, из которого потом нужно было добыть уже боевые конфигурационные файлы, скрипты и прочее.</p>
+
+<p>&nbsp; Позвонил начальнику ближе к началу шестого, прямо по телефону через красноречивое молчание ощущалось, как меняется выражение его лица, пока я рассказывал, что натворил. Потом сразу перешёл к части о том, каким образом я решал проблему, какое рассчётное время решения и т.п.. Начальник спросил меня, какие выводы я могу сделать из сложившейся ситуации, я ответил, что похоже нам просто нужно больше людей и что я бы с радостью предпочёл решать текущую проблему в нормальном состоянии днём, а не ночью, но ситуация сложилась именно таким образом, что выбора у меня особого не было. Ну и если бы было время, то каждый тип логов можно было бы чистить с использованием sudo -u $USER.</p>
+
+<p>&nbsp; К половине девятого утра сервер был как новенький и мало кому бы в голову пришло, что над ним совершили такое непотребство. Все конфиги лежали на своих местах, все права на все файлы были выставлены где вручную, где в полуавтоматическом режиме, скрипт был дописан, в хранилище лились новые актуальные бекапы. В общем, всё обошлось, хотя я морально и был готов к тому, что меня уволят, но этого не случилось.</p>
+
+<p>&nbsp; После этого я написал обёртку над rm, которая при запуске переименовывала /usr/bin/rm (или иной путь, который получала от which rm) в /usr/bin/.rm, копировала себя на место бывшего rm и аккуратно передавала все входящие параметры .rm, но если в параметрах был путь, в котором пользователь пытался удалить какой-нибудь корневой каталог, скажем, /bin, обёртка выдавала в консоль &quot;A ne otorvat&#39; li tebe yaitsa, %username%&quot; и отправляла по почте сообщение об инцеденте. Саму обёртку я быстро не найду в закромах родины, ибо лет 10, как её не использовал. С тех пор я уже давно сменил место работы и не одно, но несколько лет назад, уже после моего ухода из xsolla мне написал один мой хороший товарищ с жалобой на то, что он написал какой-то скрипт для разворачивания кажется, рабочих окружений на виртуалках для пользователей, но при попытке его запустить столкнулся с десятками сообщений с угрозами отрыва яиц. У меня на душе прямо потеплело - прошло столько лет, а яйцеотрывательный скрипт всё ещё исправно работал. :) Как выяснилось, в корне виртуалки создавался некий временный файл, который затем были попытки удалить.</p>
+
+<p>&nbsp; К чему я решил обо всём этом рассказать? Ко мне сейчас приходят люди на собеседование - и разработчики и DevOPS&#39;ы. Все они довольно охотно рассказывают о своём положительном опыте, о том, чем они гордятся, о том, чего им удалось достичь. Но при этом практически никто не рассказывает об опыте отрицательном, по крайней мере по своей инициативе, а когда спрашиваешь, то зачастую так же делятся подобными вещами крайне неохотно. А ведь отрицательный опыт в нашем деле зачастую оказывается куда важнее, нежели положительный. Я помню, как изменилось тогда моё отношение к работе под рутом, к использованию неинициализированных переменных в скриптах, к команде RM в принципе. И с куда большей охотой я бы принял на работу человека, который уже накосячил и прочувствовал на своей шкуре, что это такое, а в идеале - смог исправить ситуацию с минимальными потерями. Нет людей, которые получили богатый жизненный и профессиональный опыт, не совершая ошибок, в конце-концов не ошибается тот, кто ничего не делает. Но очень хотелось бы, чтобы и работодатели и работники имели возможность более открыто об этом общаться друг с другом.</p>
+
+<p>P.S.: Не отрицаю, есть люди, которые встают по нескольку раз на одни и те же грабли, но они обычно в IT не задерживаются долго.</p>
+
+<p>Теги: <a href='tag_shell.html'>shell</a>, <a href='tag_админское.html'>админское</a>, <a href='tag_жизненное.html'>жизненное</a></p>
+<!-- text end -->
+<!-- entry end -->
+</div>
+<div id="disqus_thread"></div>
+            <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+               var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+            /* * * DONT EDIT BELOW THIS LINE * * */
+            (function() {
+            var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+            dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+            (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<div id="footer">
+<a href="https://vk.com/evgeniy_shumilov">Evgeniy Shumilov</a> &mdash; <a href="mailto:evgeniy&#46;shumilov&#64;gmail&#46;com">evgeniy&#46;shumilov&#64;gmail&#46;com</a><br/>
+Generated with <a href="https://github.com/cfenollosa/bashblog">bashblog</a>, a single bash script to easily create blogs like this one</div>
+</div></div>
+</div></div>
+<script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+        /* * * DONT EDIT BELOW THIS LINE * * */
+        (function () {
+        var s = document.createElement("script"); s.async = true;
+        s.type = "text/javascript";
+        s.src = "//" + disqus_shortname + ".disqus.com/count.js";
+        (document.getElementsByTagName("HEAD")[0] || document.getElementsByTagName("BODY")[0]).appendChild(s);
+    }());
+    </script>
+</body></html>

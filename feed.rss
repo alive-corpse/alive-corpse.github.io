@@ -2,9 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Sat, 12 Jun 2021 15:23:43 +0500</lastBuildDate>
-<pubDate>Sat, 12 Jun 2021 15:23:43 +0500</pubDate>
+<lastBuildDate>Sun, 05 Sep 2021 18:15:35 +0500</lastBuildDate>
+<pubDate>Sun, 05 Sep 2021 18:15:35 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+История одного факапа
+</title><description><![CDATA[
+
+<p style="text-align:center"><img alt="" src="images/sudo-rm-rf.gif" /></p>
+
+<p>&nbsp; Послушал тут предпоследний 769-й выпуск подкаста Radio-T, в котором обсуждение технических ошибок напомнило мне примерно аналогичный случай из моей практики.</p>
+
+<p>&nbsp; Давным давно, когда я ещё работал в xsolla, которая ещё в то время носила название 2pay, у нас по большому счёту был всего один основной сервер в Московском датацентре, на котором крутился весь мир. Передо мной стояла задача написать скрипт, который зачищает старые логи, временные файлы и прочее, что может занимать много места.</p>
+
+<hr />
+<p>Теги: <a href='tag_shell.html'>shell</a>, <a href='tag_админское.html'>админское</a>, <a href='tag_жизненное.html'>жизненное</a></p>
+]]></description><link>https://shumiloff.ru/istoriya-odnogo-fakapa.html</link>
+<guid>https://shumiloff.ru/./istoriya-odnogo-fakapa.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Sun, 05 Sep 2021 18:14:18 +0500</pubDate></item>
+<item><title>
+</title><description><![CDATA[
+]]></description><link>https://shumiloff.ru/test.html</link>
+<guid>https://shumiloff.ru/./test.html</guid>
+<dc:creator></dc:creator>
+<pubDate>Sun, 05 Sep 2021 18:03:58 +0500</pubDate></item>
 <item><title>
 Про профдеформацию
 </title><description><![CDATA[
@@ -172,38 +194,4 @@
 <guid>https://shumiloff.ru/./pro-upyortost-logiku-byurokratiyu-i-vnutrennee-razdrazhenie.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Wed, 23 Sep 2020 09:44:32 +0500</pubDate></item>
-<item><title>
-Выпуск подкаста с моим участием о 3D печати
-</title><description><![CDATA[
-
-<p style="text-align: center;"><img src="/images/3d-printers.jpg"></p>
-
-<p>&nbsp; Относительно недавно я снова принял участие в подкасте <a href="http://www.ok-podcast.ru/" target="_blank">"Опытные на кухне"</a>. Ссылка на выпуск находится <a href="https://www.ok-podcast.ru/ok166-domashnij-3d-printing-chego-stoit-kakie-dayot-vozmozhnosti-i-pochemu-on-vam-ne-nuzhen-v-gostyax-e-shumilov/" target="_blank">тут</a>. Выпуск был сделан по мотивам <a href="/top-voprosov-o-3d-pechati-i-obshhie-rekomendacii-nachinayushhim.html">вот этого моего поста</a>. Особое спасибо пользователю с ником Sid за позитивную оценку моей деятельности в телеграм чате подкаста, было приятно.</p>
-<p><a href="/stuff/OK_166_finish.mp3" data-length="1:13:21" class="jouele">ОК #166. Опытные на кухне.</a></p>
-<p style="text-align: right;"><a href="/stuff/OK_166_finish.mp3" rel="nofollow" download="OK_166.mp3">Скачать (34мб)</a></p>
-
-<p>Теги: <a href='tag_подкасты.html'>подкасты</a>, <a href='tag_3d-printing.html'>3d-printing</a></p>
-<!-- text end -->
-]]></description><link>https://shumiloff.ru/vypusk-podkasta-s-moim-uchastiem-o-3d-pechati.html</link>
-<guid>https://shumiloff.ru/./vypusk-podkasta-s-moim-uchastiem-o-3d-pechati.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Sun, 13 Sep 2020 01:12:46 +0500</pubDate></item>
-<item><title>
-Об осторожности, китайском наплевательстве и потенциальной угрозе взрыва
-</title><description><![CDATA[
-
-<p style="text-align:center"><img alt="" src="/images/timebomb.png" /></p>
-
-<p>&nbsp; Казалось бы, что может пойти не так, когда ты просто вставляешь аккумуляторы в пустой отсек, который ни к чему не подключен?</p>
-
-<p>&nbsp; Хочу предупредить всех, что что-либо заказывает из Китая (да и не только) об осторожности и возможных последствиях. Сегодня я потерял бдительность и чуть не поплатился за это. Для своего небольшого одноплатника, управляющего умным домом, я собирался сделать блок бесперебойного питания и для этого уже давно приобрёл на алиэкспресс блок на два аккумулятора. Жаль, перед тем как выкинуть то, что от него осталось, не догадался это сфотографировать...</p>
-
-<p>&nbsp; Вы знаете, как горит литий? Я слава богу знаю это только по видео. Кто не в курсе, вот вам <a href="https://www.youtube.com/watch?v=2J-h6fC1GrU">наглядные эксперименты от Креосана</a>. Помню ещё видео с камеры наблюдения, где <a href="https://www.youtube.com/watch?v=X3kEAHWuw18">бомбанул ноутбук, стоящий на зарядке</a> - очень впечатляет. Одним словом - никому не пожелаю возгорания литиевого аккумулятора, особенно дома.&nbsp;</p>
-
-<hr />
-<p>Теги: <a href='tag_подгорание.html'>подгорание</a>, <a href='tag_жизненное.html'>жизненное</a></p>
-]]></description><link>https://shumiloff.ru/ob-ostorozhnosti-kitajskom-naplevatelstve-i-potencialnoj-ugroze-vzryva.html</link>
-<guid>https://shumiloff.ru/./ob-ostorozhnosti-kitajskom-naplevatelstve-i-potencialnoj-ugroze-vzryva.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Sat, 12 Sep 2020 23:59:37 +0500</pubDate></item>
 </channel></rss>
