@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="main.css" type="text/css" />
+<link rel="stylesheet" href="blog.css" type="text/css" />
+<link rel="stylesheet" href="assets/highlight/styles/corpse.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="" href="feed.rss" />
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+<script src="assets/jquery.min.js"></script>
+<script src="assets/jouele/jouele.min.js"></script>
+<link href="assets/jouele/jouele.min.css" rel="stylesheet"/>
+<script src="assets/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(52451890, "init", {
+        id:52451890,
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/52451890" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<title>Небольшая проблема с софтовым рейд массивом</title>
+</head><body>
+<div id="divbodyholder">
+<div class="headerholder">
+<a href="https://vk.com/evgeniy_shumilov" target="_blank"><img src="/images/logo.png" class="logo" height="106pt" style="float: left; margin-right: 20px;"></a>
+<div class="header">
+<div id="title">
+<h1 class="nomargin"><a class="ablack" href="https://shumiloff.ru/index.html">Зайчатки разума</a></h1>
+<div id="description">Записная книжка айтишника</div>
+</div></div>
+<ul class="full-width">
+    <li>
+        <a href="/pro-lyubov-k-minimalizmu-i-staticheskuyu-generaciyu-kontenta.html">О блоге</a>
+<!--
+        <ul>
+            <li><a href="#">Item1</a></li>
+            <li><a href="#">Item2</a></li>
+            <li><a href="#">Item3</a></li>
+        </ul>
+-->
+    </li>
+    <li><a href="/all_tags.html">Теги</a></li>
+    <li><a href="/all_posts.html">Все посты</a></li>
+    <li><a href="/tag_ностальгия.html">Ностальгическое</a></li>
+    <li><a href="/tag_мысли-вслух.html">Мысли вслух</a></li>
+</ul>
+
+<div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
+</div>
+<div id="divbody"><div class="content">
+<!-- entry begin -->
+<h3><a class="ablack" href="nebolshaya-problema-s-softovym-rejd-massivom.html">
+Небольшая проблема с софтовым рейд массивом
+</a></h3>
+<!-- bashblog_timestamp: #202110182210.11# -->
+<div class="subtitle">2021-10-18 22:10:11 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<p style="text-align:center"><img alt="" src="/images/raid.png" /></p>
+
+<p>&nbsp; Преамбула банальна: Жил/был сервер с софтовым зеркалом. И вот, начинаются странные проблемы. То я фаил сохранить не могу и vim наглухо зависает, то считать что-то не могу. Полез первым делом в dmesg, а там красота нечеловеческая на два экрана, приведённая на скриншоте в заголовке.</p>
+
+<p>&nbsp; Прогнал smartctl, написал в службу техподдержки Selectel - мол, диску похоже пришёл северный зверь из семейства куньих. Можете ли заменить диск? И вот техподдержка селектела реально порадовала - мол, да-да, конечно, ошибок смарта не видим, но заменим обязательно, напишите, когда вам удобно и т.п.. Если честно, я такой оперативности и учтивости после гуглооблака и AWS прямо не ожидал. Уточнил детали - мол, поддерживает ли диск hotswap, можно работают ли они круглосуточно и т.п..</p>
+
+<hr />
+<p>&nbsp; После чего через</p>
+
+<pre>
+<code class="language-bash">mdadm --manage /dev/md0 --fail /dev/sdb2
+mdadm --manage /dev/md1 --fail /dev/sdb3
+mdadm --manage /dev/md0 --remove /dev/sdb2
+mdadm --manage /dev/md1 --remove /dev/sdb3
+hdparm -Y /dev/sdb
+</code></pre>
+
+<p>&nbsp; Вывел диск из рейда и остановил шпиндель. Отписал в техподдержку, мол, забирайте, остановлено. Буквально через полчаса диск заменили на новый, дали серийник, чтобы проверил, что видно. Диск виден, всё прекрасно. Создал те же разделы через</p>
+
+<pre>
+<code class="language-bash">sfdisk -d /dev/sda | sfdisk --force /dev/sdb
+</code></pre>
+
+<p>&nbsp; В процессе sfdisk матюгнулся на то, что якобы разделы с рейд уже были на подключенном диске. Я на это изначально внимания не обратил, а как оказалось, зря. Далее попытался добавить разделы sdb2 и sdb3 к md0 и md1 соответственно. С первым всё прошло прекрасно, а вот второй выдал, что диск уже используется, что ввело меня в ступор - только что пересоздал таблицу разделов на диске, а он уже используется, прогнал lsof - ничего нет.</p>
+
+<pre>
+<code class="language-bash">root@video [19:40:53]:/etc/mdadm# lsblk 
+NAME             MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINT
+sda                8:0    0 931.5G  0 disk  
+├─sda1             8:1    0     1M  0 part  
+├─sda2             8:2    0   977M  0 part  
+│ └─md0            9:0    0   976M  0 raid1 /boot
+└─sda3             8:3    0 930.6G  0 part  
+  └─md1            9:1    0 930.4G  0 raid1 
+    ├─vg0-swap_1 253:0    0   4.8G  0 lvm   [SWAP]
+    └─vg0-root   253:1    0 925.7G  0 lvm   /
+sdb                8:16   0 931.5G  0 disk  
+├─sdb1             8:17   0     1M  0 part  
+├─sdb2             8:18   0   977M  0 part  
+│ └─md0            9:0    0   976M  0 raid1 /boot
+└─sdb3             8:19   0 930.6G  0 part  
+sdc                8:32   0 931.5G  0 disk  
+sdd                8:48   0 931.5G  0 disk  
+root@video [19:40:54]:/etc/mdadm# cat /proc/mdstat 
+Personalities : [linear] [multipath] [raid0] [raid1] [raid6] [raid5] [raid4] [raid10] 
+md127 : inactive sdb3[0](S)
+      975627264 blocks super 1.2
+
+md1 : active raid1 sda3[0]
+      975627264 blocks super 1.2 [2/1] [U_]
+      bitmap: 7/8 pages [28KB], 65536KB chunk
+
+md0 : active raid1 sdb2[2] sda2[0]
+      999424 blocks super 1.2 [2/2] [UU]
+
+unused devices: &lt;none&gt;
+root@video [19:41:20]:/etc/mdadm# lsof /dev/sdb3
+root@video [19:41:28]:/etc/mdadm# mdadm --manage /dev/md1 --add /dev/sdb3
+mdadm: Cannot open /dev/sdb3: Device or resource busy
+</code></pre>
+
+<p>&nbsp; Так как софтовых рейдов я не собирал давно, пришлось копаться в манах и на форумах. Наткнулся на интересное - mdadm --examine /dev/sdb2 в строке Active device имел единичку, а sdb3 - нолик. Полный скан наконец-то прояснил ситуацию:</p>
+
+<pre>
+<code class="language-bash">root@video [19:19:46]:/etc/mdadm# mdadm --detail --scan --verbose
+ARRAY /dev/md/0 level=raid1 num-devices=2 metadata=1.2 name=Euclid:0 UUID=6027ff56:5efa666c:4bce5d3b:fb8e081d
+   devices=/dev/sda2,/dev/sdb2
+ARRAY /dev/md/1 level=raid1 num-devices=2 metadata=1.2 name=Euclid:1 UUID=92996745:e5f6c2aa:815782cc:202f3608
+   devices=/dev/sda3
+INACTIVE-ARRAY /dev/md127 num-devices=1 metadata=1.2 name=FilmOut:1 UUID=630ceea8:2fc2346e:cbd24dfe:8ad38b7f
+   devices=/dev/sdb3
+</code></pre>
+
+<p>&nbsp; Т.е. на новом для нас диске, который оказался старым, была уже существовавшая разметка раздела, который ранее был включен в рейд, а так как у провайдера скорее всего размеры разделов были типовыми, то метаданные раздела рейд сохранились, таблица же разделов была создана поверх и вот, у нас появился неведомый md127, которого ранее в системе не было. Проверил - действительно, есть такое. Теперь понятно, где используется раздел sdb3. При попытке удалить раздел из массива получил ошибку. Остановка массива прошла без ошибок, попытка удаления массива - снова ошибка.</p>
+
+<pre>
+<code class="language-bash">root@video [19:25:53]:/etc/mdadm# mdadm /dev/md127 -r /dev/sdb3
+mdadm: Cannot get array info for /dev/md127
+root@video [19:45:56]:/etc/mdadm# mdadm --stop /dev/md127
+mdadm: stopped /dev/md127
+root@video [19:47:38]:/etc/mdadm# mdadm --remove /dev/md127
+mdadm: error opening /dev/md127: No such file or directory
+</code></pre>
+
+<p>&nbsp; Тем не менее, после этих операций можно видеть, что лишнего неактивного массива уже нет:</p>
+
+<pre>
+<code class="language-bash">root@video [19:47:50]:/etc/mdadm# mdadm --detail --scan --verbose
+ARRAY /dev/md/0 level=raid1 num-devices=2 metadata=1.2 name=Euclid:0 UUID=6027ff56:5efa666c:4bce5d3b:fb8e081d
+   devices=/dev/sda2,/dev/sdb2
+ARRAY /dev/md/1 level=raid1 num-devices=2 metadata=1.2 name=Euclid:1 UUID=92996745:e5f6c2aa:815782cc:202f3608
+   devices=/dev/sda3
+</code></pre>
+
+<p>&nbsp; Теперь можно вернуть раздел на место:</p>
+
+<pre>
+<code class="language-bash">root@video [19:48:40]:/etc/mdadm# mdadm --manage /dev/md1 --add /dev/sdb3
+mdadm: added /dev/sdb3
+</code></pre>
+
+<p>&nbsp; Как видим, пошёл процесс восстановления рейда:</p>
+
+<pre>
+<code class="language-bash">root@video [19:52:20]:/etc/mdadm# cat /proc/mdstat
+Personalities : [linear] [multipath] [raid0] [raid1] [raid6] [raid5] [raid4] [raid10] 
+md1 : active raid1 sdb3[2] sda3[0]
+      975627264 blocks super 1.2 [2/1] [U_]
+      [&gt;....................]  recovery =  0.0% (561664/975627264) finish=2683.4min speed=6055K/sec
+      bitmap: 7/8 pages [28KB], 65536KB chunk
+
+md0 : active raid1 sdb2[2] sda2[0]
+      999424 blocks super 1.2 [2/2] [UU]
+
+unused devices: &lt;none&gt;
+</code></pre>
+
+<p>&nbsp; Что интересно, параллельно этому поднялся в одном линуксовом чате вопрос по тому, как скормить виртуальным машинам pve нужный диск, ибо имена дисков после старта меняются и система их именует по принципу &quot;кто первый встал, того и тапки&quot;. Подсказал человеку, что вместо блочного устройства можно подкинуть симлинк на него и путь будет постоянный. Нужный симлинк на debian-based системах достаточно просто можно найти так:</p>
+
+<pre>
+<code class="language-bash">$ ls -lah /dev/disk/by-id/
+total 0
+drwxr-xr-x 2 root root 220 Oct 18 07:45 .
+drwxr-xr-x 8 root root 160 Jul  2 21:12 ..
+lrwxrwxrwx 1 root root   9 Jul  2 21:12 ata-M4-CT512M4SSD2_00000000114903244A67 -&gt; ../../sdb
+lrwxrwxrwx 1 root root  10 Jul  2 21:12 ata-M4-CT512M4SSD2_00000000114903244A67-part1 -&gt; ../../sdb1
+lrwxrwxrwx 1 root root   9 Jul  2 21:12 ata-R5M480G8_07032220M0033 -&gt; ../../sda
+lrwxrwxrwx 1 root root  10 Jul  2 21:12 ata-R5M480G8_07032220M0033-part1 -&gt; ../../sda1
+lrwxrwxrwx 1 root root  10 Jul  2 21:12 ata-R5M480G8_07032220M0033-part2 -&gt; ../../sda2
+lrwxrwxrwx 1 root root   9 Oct  2 11:31 usb-Seagate_Expansion_NA8ZGYT4-0:0 -&gt; ../../sdd
+lrwxrwxrwx 1 root root  10 Oct  2 11:31 usb-Seagate_Expansion_NA8ZGYT4-0:0-part1 -&gt; ../../sdd1
+lrwxrwxrwx 1 root root   9 Jul  2 21:12 wwn-0x500a075103244a67 -&gt; ../../sdb
+lrwxrwxrwx 1 root root  10 Jul  2 21:12 wwn-0x500a075103244a67-part1 -&gt; ../../sdb1
+</code></pre>
+
+<p>&nbsp; Всё получилось, kvm успешно запустился с подсунутым симлинком.</p>
+
+<p>&nbsp; Всем добра.</p>
+
+<p>Теги: <a href='tag_админское.html'>админское</a>, <a href='tag_linux.html'>linux</a></p>
+<!-- text end -->
+<!-- entry end -->
+</div>
+<div id="disqus_thread"></div>
+            <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+               var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+            /* * * DONT EDIT BELOW THIS LINE * * */
+            (function() {
+            var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+            dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+            (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<div id="footer">
+<a href="https://vk.com/evgeniy_shumilov">Evgeniy Shumilov</a> &mdash; <a href="mailto:evgeniy&#46;shumilov&#64;gmail&#46;com">evgeniy&#46;shumilov&#64;gmail&#46;com</a><br/>
+Generated with <a href="https://github.com/cfenollosa/bashblog">bashblog</a>, a single bash script to easily create blogs like this one</div>
+</div></div>
+</div></div>
+<script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+        /* * * DONT EDIT BELOW THIS LINE * * */
+        (function () {
+        var s = document.createElement("script"); s.async = true;
+        s.type = "text/javascript";
+        s.src = "//" + disqus_shortname + ".disqus.com/count.js";
+        (document.getElementsByTagName("HEAD")[0] || document.getElementsByTagName("BODY")[0]).appendChild(s);
+    }());
+    </script>
+</body></html>
