@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="main.css" type="text/css" />
+<link rel="stylesheet" href="blog.css" type="text/css" />
+<link rel="stylesheet" href="assets/highlight/styles/corpse.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="" href="feed.rss" />
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+<script src="assets/jquery.min.js"></script>
+<script src="assets/jouele/jouele.min.js"></script>
+<link href="assets/jouele/jouele.min.css" rel="stylesheet"/>
+<script src="assets/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(52451890, "init", {
+        id:52451890,
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/52451890" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<title>Работа с GRE туннелями или история одного велосипеда</title>
+</head><body>
+<div id="divbodyholder">
+<div class="headerholder">
+<a href="https://vk.com/evgeniy_shumilov" target="_blank"><img src="/images/logo.png" class="logo" height="106pt" style="float: left; margin-right: 20px;"></a>
+<div class="header">
+<div id="title">
+<h1 class="nomargin"><a class="ablack" href="https://shumiloff.ru/index.html">Зайчатки разума</a></h1>
+<div id="description">Записная книжка айтишника</div>
+</div></div>
+<ul class="full-width">
+    <li>
+        <a href="/pro-lyubov-k-minimalizmu-i-staticheskuyu-generaciyu-kontenta.html">О блоге</a>
+<!--
+        <ul>
+            <li><a href="#">Item1</a></li>
+            <li><a href="#">Item2</a></li>
+            <li><a href="#">Item3</a></li>
+        </ul>
+-->
+    </li>
+    <li><a href="/all_tags.html">Теги</a></li>
+    <li><a href="/all_posts.html">Все посты</a></li>
+    <li><a href="/tag_ностальгия.html">Ностальгическое</a></li>
+    <li><a href="/tag_мысли-вслух.html">Мысли вслух</a></li>
+</ul>
+
+<div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
+</div>
+<div id="divbody"><div class="content">
+<!-- entry begin -->
+<h3><a class="ablack" href="rabota-s-gre-tunnelyami-ili-istoriya-odnogo-velosipeda.html">
+Работа с GRE туннелями или история одного велосипеда
+</a></h3>
+<!-- bashblog_timestamp: #202206011348.24# -->
+<div class="subtitle">2022-06-01 13:48:24 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<p style="text-align:center"><img alt="" src="/images/grescheme.png" style="height:321px; width:630px" /></p>
+
+<p>&nbsp; Почему периодически айтишники делают велосипеды? Ответ простой - потому что на своём велосипеде ездить удобнее. Ну кто хотя бы раз не написал свой модуль логирования для какого-нибудь языка?</p>
+
+<h4>Постановка задачи</h4>
+
+<p>&nbsp; На объекте есть какие-то подсети, в которых живут инженерные системы. И есть ряд хостов в датацентрах, с которых необходимо получить доступ до этих самых инженерных объектов. В качестве сетевого оборудования на объекте часто либо Cisco, либо Microtic, либо некая линуксовая машина (но на этот случай есть другие, более приятные и удобные для нас инструменты). Исторически так сложилось, что штатным для нас методом обеспечения связности являются <a href="https://ru.wikipedia.org/wiki/GRE_(%D0%BF%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB">GRE туннели</a>) с поднятием маршрутизации в нужные подсети через конечные точки туннеля с последующим закрытием доступа файрволом по белым адресам с обеих сторон. Вопросы шифрования туннелей пока не поднимаем, это возможно будет темой для отдельной статьи.</p>
+
+<hr />
+<p>&nbsp; Для начала предположим, что у нас есть как минимум два варианта:</p>
+
+<ul>
+	<li>Linux сервер &lt;--&gt; активное сетевое оборудование</li>
+	<li>Linux сервер &lt;--&gt; Linux server</li>
+</ul>
+
+<p>&nbsp; Реализация средствами сетевого оборудования будет зависеть от типа этого оборудования. В случае, если у нас два линуксовых сервера, то обе стороны настраиваются симметрично за исключением небольших правок в последнем октете адреса.</p>
+
+<p>&nbsp; Пусть у нас для туннелей используются подсети /30, т.к. для туннеля нам необходимо всего два адреса. В нашем примере это будет подсеть 10.99.99.0/24, соответственно, адреса конечных точек - 10.99.99.2/24 для Linux сервера и 10.99.99.3/24 для маршрутизатора. У линукс сервера будет белый статический адрес 123.1.1.1/32, у маршрутизатора - 234.1.1.1/32. За маршрутизатором - серая подсеть 192.168.99.0/24, в которую нужно будет получать доступ с нашего linux сервера. Чтобы не было путаницы, будем добавлять в имена туннелей название удалённого объекта. Например, это &quot;ЖК Чебурашка&quot; - будем называть туннель &quot;gre-che&quot;. В качестве наглядного примера схему поместил в начале данного поста.</p>
+
+<h4>Шпаргалка для Mikrotik</h4>
+
+<p>&nbsp; В качестве примера оставлю небольшую шпаргалку для настройки противоположной точки туннеля на mikrotik:</p>
+
+<pre>
+<code class="language-bash">/interface gre 
+add name="gre-che" mtu=1476 local-address=234.1.1.1 remote-address=123.1.1.1
+
+/ip address
+interface=gre-che add address=10.99.99.2/30
+</code></pre>
+
+<p>&nbsp; Предположим, что со стороны linux сервера у нас уже есть маршрутизация в другую подсеть с той же адресацией и нам нужна подмена. На стороне Mikrotik netmapping делается следующим образом:</p>
+
+<pre>
+<code class="language-bash">/ip firewall 
+nat add chain=dstnat action=netmap to-addresses=192.168.99.0/24 dst-address=172.16.99.0/24 in-interface=gre-che
+</code></pre>
+
+<p>&nbsp; При этом неизменным будет оставаться последний октет адреса и при обращении со стороны linux сервера к адресу 172.16.99.155 mikrotik перенаправит его на адрес 192.168.99.155.</p>
+
+<h4>Причины создания велосипеда</h4>
+
+<p>&nbsp; Теперь переходим к самому интересному. Зачем собственно нужен велосипед, если можно спокойно настроить роутинг, файрвол, бриджи и маршрутизацию средствами операционной системы? Причин несколько:</p>
+
+<ul>
+	<li>для создания нового туннеля (а у нас их много) требуется прописать много всего в разных местах;</li>
+	<li>cпособ настройки отличается для разных систем и для разных версий одной системы - где-то может быть установлен red hat based дистрибутив, где-то debian based, где-то alpine, а где-то вообще OpenWRT, где-то есть нетплан, где-то его нет;</li>
+	<li>нужен какой-то контроль за состоянием, даже если мы считаем, что операционная система должна поднять маршрут до узла, какие-то ручные действия в форсмажорной ситуации могут убить маршрут или бридж и система его не поднимет - одним словом, нужно быть уверенным в том, что при любых воздействиях поднимется всё, что нужно для коммуникации между узлами</li>
+	<li>нужна удобная точка входа для добавления метрик на случай тех самых форсмажорных ситуаций</li>
+</ul>
+
+<p>&nbsp; Последний пункт тоже выходит за рамки этой статьи, просто добавлю, что в случае, если у нас куда-то пропал туннель или мост или ещё что-то, можно в этих же точках добавить отправку курлом метрики в инфлюкс с именем вида &quot;gre-che-routefail&quot;, где che берётся из параметров к скрипту.</p>
+
+<h4>Сам велосипед</h4>
+
+<pre>
+<code class="language-bash">#!/bin/sh
+# Script for upping gre tunnel with routed networks
+# by Evgeniy Shumilov &lt;evgeniy.shumilov@gmail.com&gt;
+
+help() {
+    echo
+    echo "Usage: network_address remote_white_ip iface_postfix routednet1 [routednet2 ... routednetN] [info]"
+    echo "Example (apply): $0 10.99.103.0 95.128.142.211 platon 192.168.131.0/24 192.168.136.0/24"
+    echo "Example (only info): $0 10.99.103.0 95.128.142.211 platon 192.168.131.0/24 192.168.136.0/24"
+    echo
+}
+
+[ -z "$4" ] &amp;&amp; help 
+
+iface=gre$3
+mtu=1476
+diface=`ip r s | grep '^default ' | sed 's/^.* dev //;/secondary/d;s/ .*//'`
+local=`ip a s "$diface" | sed '/[ ]*inet /!d;s/^.*inet //;/secondary/d;s/\/.*//'`
+remote="$2"
+grenet="$1"/30
+routednets=`echo "$*" | sed 's/^.* '"$3"' //;s/ info$//'`
+greip1=`echo "$grenet" | tr '/' '.' | awk -F '.' '{ print $1"."$2"."$3"."$4+1"/"$5 }'`
+greip2=`echo "$grenet" | tr '/' '.' | awk -F '.' '{ print $1"."$2"."$3"."$4+2 }'`
+
+if [ -n "$(echo "$*"| grep ' info$')" ]; then
+    echo "GRE ext addresses: $local(loc) &lt;--&gt; $remote(rem)"
+    echo "GRE int addresses: $greip1(loc) &lt;--&gt; $greip2(rem)"
+    echo "GRE network:       $grenet"
+    echo "GRE iface name:    $iface"
+    echo "GRE iface mtu:     $mtu"
+    echo "Routed networks:   $routednets via $greip2"
+    exit 0
+fi 
+
+[ -z "$(ip t | grep -F "$iface:")" ] &amp;&amp; echo "Trying to up gre tunnel..." &amp;&amp; ip t a "$iface" mode gre local "$local" remote "$remote" ttl 255 &amp;&amp; ip link set "$iface" mtu "$mtu"
+sleep 0.5
+ip l s "$iface" up
+[ -z "$(ip a s dev "$iface" | grep -F "inet $greip1")" ] &amp;&amp; ip a a "$greip1" dev "$iface"
+#[ -z "$(ip r | grep -F "$grenet")" ] &amp;&amp; echo ip r a "$grenet" dev "$iface" proto kernel scope link src "$greip2"
+for routednet in $routednets; do
+    [ -z "$(ip r | grep -F "$routednet ")" ] &amp;&amp; ip r a "$routednet" via "$greip2"
+done
+</code></pre>
+
+<p>&nbsp; Для поднятия туннелей необходимо вызвать скрипт со следующими параметрами:</p>
+
+<pre>
+<code class="language-bash">/opt/bin/gretun 10.99.99.0 234.1.1.1 che 172.16.99.0/24
+</code></pre>
+
+<p>&nbsp; Где 10.99.99.0 - адрес нашей подсети /30, 234.1.1.1 - белый адрес удалённого маршрутизатора/сервера, che - это постфикс, который добавляется к имени интерфейса, а 172.16.99.0/24 - это маршрутизируемая подсеть.</p>
+
+<p>&nbsp; При запуске скрипт получит белый адрес текущего сервера, используя адрес интерфейса из маршрута по умолчанию, затем поднимет туннель со всеми необходимыми параметрами и добавит нужные маршруты, если их нет. При повторном запуске скрипт проверит наличие интерфейса и маршрутов и если чего-то не будет хватать - восстановит, если всё будет в порядке - не будет предпринимать никаких действий.</p>
+
+<p>&nbsp; Если нужно посмотреть данные о туннеле, который должен быть поднят с текущими параметрами, достаточно к строке запуска добавить последним параметром &quot;info&quot;:</p>
+
+<pre>
+<code class="language-bash">someuser@somehost:~$ sudo/opt/bin/gretun 10.99.99.0 234.1.1.1 platon 172.16.99.0/24 info
+GRE ext addresses: 123.1.1.1(loc) &lt;--&gt; 234.1.1.1(rem)
+GRE int addresses: 10.99.99.2/30(loc) &lt;--&gt; 10.99.99.1(rem)
+GRE network:       10.99.99.0/30
+GRE iface name:    greche
+GRE iface mtu:     1476
+Routed networks:   172.16.99.0/24 via 10.99.99.2
+</code></pre>
+
+<p>&nbsp; Также при запуске можно передать в параметрах несколько подсетей (в том числе и с параметром info для просмотра):</p>
+
+<pre>
+<code class="language-bash">someuser@somehost:~$ sudo/opt/bin/gretun 10.99.99.0 234.1.1.1 che 172.16.97.0/24 172.16.98.0/24 172.16.99.0/24
+</code></pre>
+
+<p>&nbsp; Обычно я сначала запускаю скрипт руками с параметром info, проверяю вывод, далее запускаю без параметра info, проверяю фактическую связность, если нужно - корректрирую параметры и далее просто ставлю скрипт в крон.</p>
+
+<p>&nbsp; Для того, чтобы посмотреть, какие туннели у меня построены с текущего хоста, достаточно сделать sudo crontab -l | grep gretun. Для нашего примера мы получаем следующую запись:</p>
+
+<pre>
+<code>* * * * * /opt/bin/gretun 10.99.99.0 234.1.1.1 che 172.16.99.0/24 2&amp;1 &gt; /dev/null
+</code></pre>
+
+<p>&nbsp; Если у нас два linux сервера, то для противоположной стороны необходимо запускать аналогичный скрипт, предварительно внеся в него измненения. Вот эту часть:</p>
+
+<pre>
+<code class="language-bash">greip1=`echo "$grenet" | tr '/' '.' | awk -F '.' '{ print $1"."$2"."$3"."$4+1"/"$5 }'`
+greip2=`echo "$grenet" | tr '/' '.' | awk -F '.' '{ print $1"."$2"."$3"."$4+2 }'`
+</code></pre>
+
+<p>нужно изменить следующим образом:</p>
+
+<pre>
+<code class="language-bash">greip1=`echo "$grenet" | tr '/' '.' | awk -F '.' '{ print $1"."$2"."$3"."$4+2"/"$5 }'`
+greip2=`echo "$grenet" | tr '/' '.' | awk -F '.' '{ print $1"."$2"."$3"."$4+1 }'`
+</code></pre>
+
+<p>&nbsp; Можно иметь два скрипта с различными именами, например, gretunlow и gretunhigh в зависимости от того, меньшее или большее значение должен принимать октет на текущем сервере.</p>
+
+<h4>Какие проблемы мы решили</h4>
+
+<p>&nbsp; Ранее был разброс и шатания, в отношении именования туннелей, стандартизации адресации, при выделении подсетей. Теперь достаточно дёрнуть греп кронлиста по постфиксу организации или gretun и получить стройный список, в котором будет видно сразу всё, что нужно и ничего лишнего - внешние адреса по постфиксу организации, адреса сетей туннелей, все маршрутизируемые подсети. Ну и скорость настройки новых туннелей увеличилась в десятки раз.</p>
+
+<p>Теги: <a href='tag_linux.html'>linux</a>, <a href='tag_networking.html'>networking</a>, <a href='tag_shell.html'>shell</a>, <a href='tag_админское.html'>админское</a></p>
+<!-- text end -->
+<!-- entry end -->
+</div>
+<div id="disqus_thread"></div>
+            <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+               var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+            /* * * DONT EDIT BELOW THIS LINE * * */
+            (function() {
+            var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+            dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+            (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<div id="footer">
+<a href="https://vk.com/evgeniy_shumilov">Evgeniy Shumilov</a> &mdash; <a href="mailto:evgeniy&#46;shumilov&#64;gmail&#46;com">evgeniy&#46;shumilov&#64;gmail&#46;com</a><br/>
+Generated with <a href="https://github.com/cfenollosa/bashblog">bashblog</a>, a single bash script to easily create blogs like this one</div>
+</div></div>
+</div></div>
+<script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+        /* * * DONT EDIT BELOW THIS LINE * * */
+        (function () {
+        var s = document.createElement("script"); s.async = true;
+        s.type = "text/javascript";
+        s.src = "//" + disqus_shortname + ".disqus.com/count.js";
+        (document.getElementsByTagName("HEAD")[0] || document.getElementsByTagName("BODY")[0]).appendChild(s);
+    }());
+    </script>
+</body></html>

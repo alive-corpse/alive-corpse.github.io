@@ -2,9 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Fri, 29 Oct 2021 23:26:49 +0500</lastBuildDate>
-<pubDate>Fri, 29 Oct 2021 23:26:49 +0500</pubDate>
+<lastBuildDate>Wed, 01 Jun 2022 13:49:03 +0500</lastBuildDate>
+<pubDate>Wed, 01 Jun 2022 13:49:03 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Работа с GRE туннелями или история одного велосипеда
+</title><description><![CDATA[
+
+<p style="text-align:center"><img alt="" src="/images/grescheme.png" style="height:321px; width:630px" /></p>
+
+<p>&nbsp; Почему периодически айтишники делают велосипеды? Ответ простой - потому что на своём велосипеде ездить удобнее. Ну кто хотя бы раз не написал свой модуль логирования для какого-нибудь языка?</p>
+
+<h4>Постановка задачи</h4>
+
+<p>&nbsp; На объекте есть какие-то подсети, в которых живут инженерные системы. И есть ряд хостов в датацентрах, с которых необходимо получить доступ до этих самых инженерных объектов. В качестве сетевого оборудования на объекте часто либо Cisco, либо Microtic, либо некая линуксовая машина (но на этот случай есть другие, более приятные и удобные для нас инструменты). Исторически так сложилось, что штатным для нас методом обеспечения связности являются <a href="https://ru.wikipedia.org/wiki/GRE_(%D0%BF%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB">GRE туннели</a>) с поднятием маршрутизации в нужные подсети через конечные точки туннеля с последующим закрытием доступа файрволом по белым адресам с обеих сторон. Вопросы шифрования туннелей пока не поднимаем, это возможно будет темой для отдельной статьи.</p>
+
+<hr />
+<p>Теги: <a href='tag_linux.html'>linux</a>, <a href='tag_networking.html'>networking</a>, <a href='tag_shell.html'>shell</a>, <a href='tag_админское.html'>админское</a></p>
+]]></description><link>https://shumiloff.ru/rabota-s-gre-tunnelyami-ili-istoriya-odnogo-velosipeda.html</link>
+<guid>https://shumiloff.ru/./rabota-s-gre-tunnelyami-ili-istoriya-odnogo-velosipeda.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Wed, 01 Jun 2022 13:48:24 +0500</pubDate></item>
 <item><title>
 Как понять, где слонику стало тяжело
 </title><description><![CDATA[
@@ -158,39 +176,4 @@
 <guid>https://shumiloff.ru/./udobnoe-ispolzovanie-tts-yandeks-stancii-v-skriptax-pri-integracii-v-home-assistant.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Thu, 22 Oct 2020 15:20:57 +0500</pubDate></item>
-<item><title>
-Про &quot;службу безопасности Сбербанка&quot;
-</title><description><![CDATA[
-
-<p style="text-align:center"><img alt="" src="images/fraud.jpg" /></p>
-
-<p>&nbsp; Как минимум, раз в месяц, как максимум пару-тройку раз в неделю мне звонят из &quot;службы безопасности Сбербанка&quot;. Я уже привык, я уже знаю всё наизусть и вот как обычно проходит наш диалог:</p>
-
-<blockquote>
-    <p>- Здравствуйте, меня зовут Дарья, я из службы безопасности Сбербанка...<br />
-    - Здравствуйте, Дарья! Я хочу сыграть с вами в одну игру. Спонсор нашей сегодняшней передачи статья 159 УК РФ, часть вторая. Внимание, вопрос - что выберет прокурор:</p>
-
-    <p>Вариант А: Штраф до трёхсот тысяч рублей.</p>
-
-    <p>Варинат B: Исправительные работы на срок до двух лет.</p>
-
-    <p>Вариант С: Заработная плата или иной доход за период до двух лет.</p>
-
-    <p>Вариант D: Принудительные работы сроком до пяти лет с возможным ограничением свободы на срок до одного года.</p>
-
-    <p>Вариант Е: Лишение свободы на срок до пяти лет с ограничением свободы на срок до одного года.</p>
-
-    <p>И да, уважаемая Дарья, я могу рассказать вам, как вас можно найти... Кстати, карты сбербанка у меня нет и никогда не было.</p>
-</blockquote>
-
-<p>&nbsp; Что радует, многие дослушивают до конца, хотя кто-то сразу бросает трубку, когда диалог идёт не по сценарию и становится очевидно, что я не принял за чистую монету обращение из &quot;службы безопасности&quot;. Спасибо огромное Дмитрию Бачило за то, что он аггрегировал нужную информацию в одном видео. Очень хотелось бы, чтобы это видео увидело как можно больше людей, начиная от ваших родных и близких (особенно пожилых) до тех, кто &quot;работает&quot; в этих коллцентрах сотрудниками &quot;службы безопасности Сбербанка&quot;. Даже не буду убирать видео под кат.<br /></p>
-
-<p style="text-align:center"><iframe width="560" height="315" src="https://www.youtube.com/embed/wgOWQVVk1_M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-
-<p>Теги: <a href='tag_жизненное.html'>жизненное</a></p>
-<!-- text end -->
-]]></description><link>https://shumiloff.ru/pro-quotsluzhbu-bezopasnosti-sberbankaquot.html</link>
-<guid>https://shumiloff.ru/./pro-quotsluzhbu-bezopasnosti-sberbankaquot.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Thu, 08 Oct 2020 16:44:16 +0500</pubDate></item>
 </channel></rss>
