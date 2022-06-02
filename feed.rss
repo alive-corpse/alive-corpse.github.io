@@ -2,9 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Wed, 01 Jun 2022 13:49:03 +0500</lastBuildDate>
-<pubDate>Wed, 01 Jun 2022 13:49:03 +0500</pubDate>
+<lastBuildDate>Fri, 03 Jun 2022 00:14:33 +0500</lastBuildDate>
+<pubDate>Fri, 03 Jun 2022 00:14:33 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Про два года и сискуль
+</title><description><![CDATA[
+
+<p style="text-align:center"><img alt="" src="/images/andrey.png" /></p>
+
+<p>&nbsp; Много раз слышал о том, что чужие дети растут быстро, а свои ещё быстрее. И это похоже одна из тех вещей, о которых можно сто раз услышать, знать об этом, но понять - только прочувствовав на себе. Все эти &quot;вот появятся свои, тогда поймёшь&quot; - как ни удивительно, в большинстве своём правда.</p>
+
+<hr />
+<p>Теги: <a href='tag_жизненное.html'>жизненное</a>, <a href='tag_детёныш.html'>детёныш</a></p>
+]]></description><link>https://shumiloff.ru/pro-dva-goda-i-siskul.html</link>
+<guid>https://shumiloff.ru/./pro-dva-goda-i-siskul.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Fri, 03 Jun 2022 00:13:34 +0500</pubDate></item>
 <item><title>
 Работа с GRE туннелями или история одного велосипеда
 </title><description><![CDATA[
@@ -162,18 +176,4 @@
 <guid>https://shumiloff.ru/./pro-motivaciyu-i-udalyonku.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Thu, 10 Dec 2020 17:01:53 +0500</pubDate></item>
-<item><title>
-Удобное использование TTS яндекс станции в скриптах при интеграции в Home Assistant
-</title><description><![CDATA[
-
-<p style="text-align:center"><img alt="" src="images/ys.jpg" /></p>
-
-<p>&nbsp; Я просто оставлю это здесь на всякий случай как шпаргалку. У меня периодически возникает необходимость оповещения о чём-то голосом. Например, о провале выполнения какого-нибудь процесса бекапа или об окончании процесса печати детали 3д принтером или о чём угодно другом.&nbsp;</p>
-
-<hr />
-<p>Теги: <a href='tag_3d-printing.html'>3d-printing</a>, <a href='tag_automatization.html'>automatization</a>, <a href='tag_smarthome.html'>smarthome</a>, <a href='tag_homeassistant.html'>homeassistant</a></p>
-]]></description><link>https://shumiloff.ru/udobnoe-ispolzovanie-tts-yandeks-stancii-v-skriptax-pri-integracii-v-home-assistant.html</link>
-<guid>https://shumiloff.ru/./udobnoe-ispolzovanie-tts-yandeks-stancii-v-skriptax-pri-integracii-v-home-assistant.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Thu, 22 Oct 2020 15:20:57 +0500</pubDate></item>
 </channel></rss>

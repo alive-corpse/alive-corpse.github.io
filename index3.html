@@ -58,6 +58,21 @@
 <div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
 </div>
 <div id="divbody"><div class="content">
+<h3><a class="ablack" href="ispolzovanie-otdelnyx-razlichnyx-ssh-klyuchej-dlya-razlichnyx-git-repozitoriev.html">
+Использование отдельных различных SSH ключей для различных GIT репозиториев
+</a></h3>
+<!-- bashblog_timestamp: #202003061455.17# -->
+<div class="subtitle">2020-03-06 14:55:17 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<p style="text-align:center"><img alt="" src="/images/sshkey.png"></p>
+
+<p>&nbsp; Сегодня нашёл метод решения одной из небольших, но досадных проблем, которые меня мучали годами. Собственно, описание проблемы понятно из заголовка. Если чуть более подробно, то для того, чтобы использовать git pull/fetch/push&nbsp;и тому подобные команды с GitHub/GitLab, git может использовать либо подключение через ssh, в том числе использованием доступа по ключу, либо через https, что заставляет вас каждый раз вводить логин и пароль. В данном случае речь идёт не о средах разработки, где все учётные данные в этом случае прекрасно сохраняются, а о работе с консолью и использовании скриптов в автоматическом режиме например, для деплоя. В случае использования пары ключей конечно, можно создать ключ без пароля и всё будет прекрасно ровно до того момента, пока вам не понадобится использовать разные ключи для разных репозиториев. Например, в случае с разными учётными записями на GitHub/GitLab - домашней и рабочей. Или если вы получили так называемый deploy key от удалённого репозитория.</p>
+
+<p class="readmore"><a href="./ispolzovanie-otdelnyx-razlichnyx-ssh-klyuchej-dlya-razlichnyx-git-repozitoriev.html">Читать дальше...</a></p>
+<p>Теги: <a href='tag_админское.html'>админское</a></p>
 <h3><a class="ablack" href="skazka-pro-boksberri.html">
 Сказка про боксберри.
 </a></h3>
@@ -201,21 +216,6 @@ Evgeniy Shumilov
 
 <p class="readmore"><a href="./pro-progress-texnologii-i-fleshki.html">Читать дальше...</a></p>
 <p>Теги: <a href='tag_мысли-вслух.html'>мысли-вслух</a></p>
-<h3><a class="ablack" href="avtomaticheskaya-perezagruzka-openwrt-routera-pri-otsutstvii-interneta-n-sekund.html">
-Автоматическая перезагрузка OpenWRT роутера при отсутствии интернета N секунд
-</a></h3>
-<!-- bashblog_timestamp: #201910132315.08# -->
-<div class="subtitle">2019-10-13 23:15:08 &mdash; 
-Evgeniy Shumilov
-</div>
-<!-- text begin -->
-
-<p style="text-align:center"><img alt="" src="images/disconnected.jpg" /></p>
-
-<p>&nbsp; У меня дома подключен интернет от Beeline, но периодически с ним возникают проблемы. Что тому виной - не могу понять. Периодически коннект разрывается, роутеру выдаётся по DHCP новый IP адрес, l2tp отрабатывает, получает свой адрес, но до шлюза через l2tp интерфейс пакеты идут только в одну сторону. Обратно приходит порядка 60 байт чего-то (не успел поймать), затем тишина. Решил написать небольшой простой скрипт, который будет проверять интернет и если его нет более 5ти минут, будет перезагружать роутер.</p>
-
-<p class="readmore"><a href="./avtomaticheskaya-perezagruzka-openwrt-routera-pri-otsutstvii-interneta-n-sekund.html">Читать дальше...</a></p>
-<p>Теги: <a href='tag_shell.html'>shell</a>, <a href='tag_networking.html'>networking</a>, <a href='tag_openwrt.html'>openwrt</a></p>
 <div id="all_posts">
 <a href="index4.html">&lt;&lt; В прошлое</a> &mdash; 
 <a href="all_posts.html">Все записи</a> &mdash; <a href="all_tags.html">Все теги</a> &mdash; <a href="">RSS</a>
