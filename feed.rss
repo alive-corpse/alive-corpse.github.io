@@ -2,9 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Sat, 27 May 2023 13:44:50 +0500</lastBuildDate>
-<pubDate>Sat, 27 May 2023 13:44:50 +0500</pubDate>
+<lastBuildDate>Sat, 27 May 2023 14:12:43 +0500</lastBuildDate>
+<pubDate>Sat, 27 May 2023 14:12:43 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Статья на cnews
+</title><description><![CDATA[
+
+<p style="text-align:center"><img alt="" src="images/rukovoditel.jpg" /></p>
+
+<p>&nbsp; Почти три года назад у меня родился замечательный сын. Потом я получил должность технического директора в нашей компании, потом случилась ипотека и переезд, который растянулся практически на полгода и, как и любой переезд, сопровождался миллионом дел и забот - одним словом, количество свободного времени устремилось не то что к нулю, а в пространство отрицательных чисел. Это можно заметить и по количеству статей, которые появлялись на моём блоге ранее по нескольку штук в неделю, а теперь раз в год. Это печально, хотелось бы больше времени посвящать и блогу, но пока к сожалению, это нереально.</p>
+
+<p><br />
+&nbsp; А между тем произошло множество событий в моей жизни, о которых я почти забыл, но хотелось бы помнить. Например, я заслужил звание &quot;Руководитель года&quot;, а 31го января 2023го года вышла <a href="https://cnews.ru/link/a19175" target="_blank">моя статья на cnews</a>, которую я хотел бы привести и тут.</p>
+
+<hr />
+<p>Теги: <a href='tag_work.html'>work</a></p>
+]]></description><link>https://shumiloff.ru/statya-na-cnews.html</link>
+<guid>https://shumiloff.ru/./statya-na-cnews.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Sat, 27 May 2023 14:12:18 +0500</pubDate></item>
 <item><title>
 Скрипт для поиска распухших логов докера
 </title><description><![CDATA[
@@ -133,25 +150,4 @@
 <guid>https://shumiloff.ru/./test.html</guid>
 <dc:creator></dc:creator>
 <pubDate>Sun, 05 Sep 2021 18:03:58 +0500</pubDate></item>
-<item><title>
-Про профдеформацию
-</title><description><![CDATA[
-
-<p style="text-align:center"><img alt="" src="/images/zags.png" /></p>
-
-<p>&nbsp; Вчера мучался с настройкой сетевой связности между ЦОДом одной компании и подсетью телеком оператора на объекте. Бриджи, туннели, роутинг и вот это всё. Сегодня под утро уже приснился сон, перед тем, как жена разбудила. Решил поделиться с вами. :)</p>
-
-<p>&nbsp; Приходим мы с женой в ЗАГС регистрировать ребёнка, а нам тётка и говорит - выдадим вам тридцатую подсеть, будет у вас четыре айпишника - адрес сети, где ребёнок с мамой прописан, широковещательный и два айпишника как раз остаются маме и ребёнку.</p>
-
-<p>Я: - Эй, а я? А как же я?<br />
-Тётка: - А что ты? Много ты участия в этом процессе принимал? Она его вынашивала, рожала, ночами не спит. Может вам 29ю подсеть выделить? Куда ещё 3 адреса денете? Я не верю, что вы четверо детей планируете, а с адресами у нас и так дефицит. Ничего, за натом посидишь, сам себе там подсеть выдели серую, найдёшь оборудование.</p>
-
-<p>На этом моменте я проснулся.</p>
-
-<p>Теги: <a href='tag_fun.html'>fun</a>, <a href='tag_networking.html'>networking</a></p>
-<!-- text end -->
-]]></description><link>https://shumiloff.ru/pro-profdeformaciyu.html</link>
-<guid>https://shumiloff.ru/./pro-profdeformaciyu.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Sat, 12 Jun 2021 15:22:56 +0500</pubDate></item>
 </channel></rss>
