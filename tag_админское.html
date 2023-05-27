@@ -58,6 +58,21 @@
 <div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
 </div>
 <div id="divbody"><div class="content">
+<h3><a class="ablack" href="skript-dlya-poiska-raspuxshix-logov-dokera.html">
+Скрипт для поиска распухших логов докера
+</a></h3>
+<!-- bashblog_timestamp: #202305271344.08# -->
+<div class="subtitle">2023-05-27 13:44:08 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<p style="text-align:center"><img alt="" src="images/docker-logs.png" /></p>
+
+<p>&nbsp; В который раз уже сталкиваюсь с этой ситуацией. Субботнее утро, хочется немного попрокрастинировать (что при загрузке 60-70 часов в неделю просто жизненно необходимо) и тут начинают сыпаться алерты - заканчивается место на диске одного из рабочих серверов. Как всегда запускаем в <a href="https://sourceforge.net/projects/tmux.mirror/" target="_blank">tmux</a> команду sudo ncdu -x / и ждём. Пришлось ждать минут 40, так как количество файлов на хосте действительно велико, в основном за счёт кешей npm и node modules. И опять ожидаемо обнаружилось, что несколько сотен гигабайт съели логи новых докер контейнеров, запущенных разработчиками на хосте разработки.</p>
+
+<p class="readmore"><a href="skript-dlya-poiska-raspuxshix-logov-dokera.html">Читать дальше...</a></p>
+<p>Теги: <a href='tag_docker.html'>docker</a>, <a href='tag_админское.html'>админское</a></p>
 <h3><a class="ablack" href="rabota-s-gre-tunnelyami-ili-istoriya-odnogo-velosipeda.html">
 Работа с GRE туннелями или история одного велосипеда
 </a></h3>

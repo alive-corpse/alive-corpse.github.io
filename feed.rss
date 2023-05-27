@@ -2,9 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Wed, 31 Aug 2022 00:17:58 +0500</lastBuildDate>
-<pubDate>Wed, 31 Aug 2022 00:17:58 +0500</pubDate>
+<lastBuildDate>Sat, 27 May 2023 13:44:50 +0500</lastBuildDate>
+<pubDate>Sat, 27 May 2023 13:44:50 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Скрипт для поиска распухших логов докера
+</title><description><![CDATA[
+
+<p style="text-align:center"><img alt="" src="images/docker-logs.png" /></p>
+
+<p>&nbsp; В который раз уже сталкиваюсь с этой ситуацией. Субботнее утро, хочется немного попрокрастинировать (что при загрузке 60-70 часов в неделю просто жизненно необходимо) и тут начинают сыпаться алерты - заканчивается место на диске одного из рабочих серверов. Как всегда запускаем в <a href="https://sourceforge.net/projects/tmux.mirror/" target="_blank">tmux</a> команду sudo ncdu -x / и ждём. Пришлось ждать минут 40, так как количество файлов на хосте действительно велико, в основном за счёт кешей npm и node modules. И опять ожидаемо обнаружилось, что несколько сотен гигабайт съели логи новых докер контейнеров, запущенных разработчиками на хосте разработки.</p>
+
+<hr />
+<p>Теги: <a href='tag_docker.html'>docker</a>, <a href='tag_админское.html'>админское</a></p>
+]]></description><link>https://shumiloff.ru/skript-dlya-poiska-raspuxshix-logov-dokera.html</link>
+<guid>https://shumiloff.ru/./skript-dlya-poiska-raspuxshix-logov-dokera.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Sat, 27 May 2023 13:44:08 +0500</pubDate></item>
 <item><title>
 Про выигрыш и победу
 </title><description><![CDATA[
@@ -140,18 +154,4 @@
 <guid>https://shumiloff.ru/./pro-profdeformaciyu.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Sat, 12 Jun 2021 15:22:56 +0500</pubDate></item>
-<item><title>
-Последовательное разворачивание словарей и списков в Python
-</title><description><![CDATA[
-
-<p style="text-align:center"><img alt="" src="images/dictlisttuple.png" /></p>
-
-<p>&nbsp; Бывают такие вещи, до которых постоянно не доходят руки и это одна из них. Если у нас есть объект большой вложенности, то мы не можем в python, как скажем, в java извлечь нужное значение, указав объект и последовательность его ключей. Нам приходится двигаться последовательно вглубь объекта, проверяя наличие нужного нам ключа на каждом уровне вложенности, а то и тип самого объекта. Решения существуют, но в виде отдельных библиотек -&nbsp;<a href="https://pydash.readthedocs.io/en/latest/" target="_blank">pydash</a>, <a href="https://pypi.org/project/dictor/">dictor</a> и, вероятно, каких-то иных, которые необходимо ставить отдельно. Не люблю лишние зависимости, если вместо них можно обойтись десятком строк.</p>
-
-<hr />
-<p>Теги: <a href='tag_python.html'>python</a></p>
-]]></description><link>https://shumiloff.ru/posledovatelnoe-razvorachivanie-slovarej-i-spiskov-v-python.html</link>
-<guid>https://shumiloff.ru/./posledovatelnoe-razvorachivanie-slovarej-i-spiskov-v-python.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Wed, 03 Mar 2021 01:50:40 +0500</pubDate></item>
 </channel></rss>
