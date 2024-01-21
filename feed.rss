@@ -2,9 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Sat, 27 May 2023 14:12:43 +0500</lastBuildDate>
-<pubDate>Sat, 27 May 2023 14:12:43 +0500</pubDate>
+<lastBuildDate>Sun, 21 Jan 2024 23:33:18 +0500</lastBuildDate>
+<pubDate>Sun, 21 Jan 2024 23:33:18 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Про недооценённые утилиты - dufs
+</title><description><![CDATA[
+
+<p style="text-align:center"><img alt="" src="images/dufs.png" style="height:527px; width:800px" /></p>
+
+<p>&nbsp; Иногда бывает такое, что тебе для конкретной задачи не хватает определённого инструмента. Ты его ищешь, ищешь, ищешь, потом уже устаёшь и перестаёшь искать, а спустя несколько лет случайно натыкаешься на него и понимаешь - вот оно! Именно то, что нужно и именно в том виде, который и требовалось. И тогда радость от обретения куда больше, чем если бы ты нашёл его сразу.</p>
+
+<p>&nbsp; Из таких случаев мне навскидку вспомнилось несколько - <a href="https://shumiloff.ru/sam-sebe-xosting-ili-o-nedoocenyonnyx-utilitax.html">MySecureShell</a> и <a href="https://shumiloff.ru/prostaya-i-bystraya-nastrojka-mesh-vpn-s-pomoshhyu-tinc.html">tinc</a>, о которых я уже писал , lnav, о котором я возможно ещё напишу, mosh и вот, недавно - <a href="https://github.com/sigoden/dufs">dufs</a>.</p>
+
+<hr />
+<p>Теги: <a href='tag_shell.html'>shell</a>, <a href='tag_instruments.html'>instruments</a></p>
+]]></description><link>https://shumiloff.ru/pro-nedoocenyonnye-utility---dufs.html</link>
+<guid>https://shumiloff.ru/./pro-nedoocenyonnye-utility---dufs.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Sun, 21 Jan 2024 23:31:04 +0500</pubDate></item>
+<item><title>
+</title><description><![CDATA[
+]]></description><link>https://shumiloff.ru/test.html</link>
+<guid>https://shumiloff.ru/./test.html</guid>
+<dc:creator></dc:creator>
+<pubDate>Sun, 21 Jan 2024 22:39:37 +0500</pubDate></item>
 <item><title>
 Статья на cnews
 </title><description><![CDATA[
@@ -128,26 +150,4 @@
 <guid>https://shumiloff.ru/./pro-perexod-budushhego-v-nastoyashhee-i-degradaciyu-chelovekov.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Wed, 22 Sep 2021 21:44:37 +0500</pubDate></item>
-<item><title>
-История одного факапа
-</title><description><![CDATA[
-
-<p style="text-align:center"><img alt="" src="images/sudo-rm-rf.gif" /></p>
-
-<p>&nbsp; Послушал тут предпоследний 769-й выпуск подкаста Radio-T, в котором обсуждение технических ошибок напомнило мне примерно аналогичный случай из моей практики.</p>
-
-<p>&nbsp; Давным давно, когда я ещё работал в xsolla, которая ещё в то время носила название 2pay, у нас по большому счёту был всего один основной сервер в Московском датацентре, на котором крутился весь мир. Передо мной стояла задача написать скрипт, который зачищает старые логи, временные файлы и прочее, что может занимать много места.</p>
-
-<hr />
-<p>Теги: <a href='tag_shell.html'>shell</a>, <a href='tag_админское.html'>админское</a>, <a href='tag_жизненное.html'>жизненное</a></p>
-]]></description><link>https://shumiloff.ru/istoriya-odnogo-fakapa.html</link>
-<guid>https://shumiloff.ru/./istoriya-odnogo-fakapa.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Sun, 05 Sep 2021 18:14:18 +0500</pubDate></item>
-<item><title>
-</title><description><![CDATA[
-]]></description><link>https://shumiloff.ru/test.html</link>
-<guid>https://shumiloff.ru/./test.html</guid>
-<dc:creator></dc:creator>
-<pubDate>Sun, 05 Sep 2021 18:03:58 +0500</pubDate></item>
 </channel></rss>
