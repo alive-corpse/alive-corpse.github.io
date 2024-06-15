@@ -2,9 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Sun, 21 Jan 2024 23:33:18 +0500</lastBuildDate>
-<pubDate>Sun, 21 Jan 2024 23:33:18 +0500</pubDate>
+<lastBuildDate>Sun, 16 Jun 2024 02:59:48 +0500</lastBuildDate>
+<pubDate>Sun, 16 Jun 2024 02:59:48 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Про идентификацию одинаковых подключаемых USB устройств в Linux
+</title><description><![CDATA[
+
+<p><img alt="" src="images/linux_usb_identification.jpg" /></p>
+
+<p>Возникла у меня идея - подключить к одному перепрошитому под linux TV Box&#39;у три 3D принтера, чтобы он один управлял с помощью трёх сессий octoprint ими всеми, ещё и транслировал изображение с камер. Возник ряд сложностей - как идентифицировать конкретное устройство, чтобы назначить на него определённый octoprint?</p>
+
+<p>Дело в том, что Linux создаёт tty устройства в /dev/ в порядке их подключения, т.е. первым подключенным/включенным будет /dev/ttyUSB0, вторым - /dev/ttyUSB1 и так далее. Включением/выключением устройств управляет система умного дома. Закончилась печать - принтер выключился. Нужно что-то напечатать - включился через умную розетку. Ещё и энергопотребление попутно логируется. И в различные моменты времени один и тот же принтер может быть подключен и к /dev/ttyUSB0 и к /dev/USB2, например, если /dev/ttyUSB0 и /dev/ttyUSB1 уже заняты.</p>
+
+<hr />
+<p>Теги: <a href='tag_3d-printing.html'>3d-printing</a>, <a href='tag_linux.html'>linux</a></p>
+]]></description><link>https://shumiloff.ru/pro-identifikaciyu-odinakovyx-podklyuchaemyx-usb-ustrojstv-v-linux.html</link>
+<guid>https://shumiloff.ru/./pro-identifikaciyu-odinakovyx-podklyuchaemyx-usb-ustrojstv-v-linux.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Sun, 16 Jun 2024 02:57:32 +0500</pubDate></item>
 <item><title>
 Про недооценённые утилиты - dufs
 </title><description><![CDATA[
@@ -134,20 +150,4 @@
 <guid>https://shumiloff.ru/./nebolshaya-problema-s-softovym-rejd-massivom.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Mon, 18 Oct 2021 22:10:11 +0500</pubDate></item>
-<item><title>
-Про переход будущего в настоящее и деградацию человеков
-</title><description><![CDATA[
-
-<p style="text-align:center"><img alt="" src="images/leaf/leaf-front.jpeg" /></p>
-
-<p>&nbsp; Как это уже не раз бывало, Костя Шагинян (привет тебе огромный) из 100+8 выложил пост, на который я начал отвечать и в процессе понял, что мой ответ лучше будет оформить в виде отдельного поста.</p>
-
-<p>&nbsp; Костя писал про электромобили, противопоставляя их ДВС, а у меня как раз есть что рассказать по этому поводу.</p>
-
-<hr/>
-<p>Теги: <a href='tag_auto.html'>auto</a></p>
-]]></description><link>https://shumiloff.ru/pro-perexod-budushhego-v-nastoyashhee-i-degradaciyu-chelovekov.html</link>
-<guid>https://shumiloff.ru/./pro-perexod-budushhego-v-nastoyashhee-i-degradaciyu-chelovekov.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Wed, 22 Sep 2021 21:44:37 +0500</pubDate></item>
 </channel></rss>

@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="main.css" type="text/css" />
+<link rel="stylesheet" href="blog.css" type="text/css" />
+<link rel="stylesheet" href="assets/highlight/styles/corpse.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="" href="feed.rss" />
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+<script src="assets/jquery.min.js"></script>
+<script src="assets/jouele/jouele.min.js"></script>
+<link href="assets/jouele/jouele.min.css" rel="stylesheet"/>
+<script src="assets/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(52451890, "init", {
+        id:52451890,
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/52451890" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<title>Про идентификацию одинаковых подключаемых USB устройств в Linux</title>
+</head><body>
+<div id="divbodyholder">
+<div class="headerholder">
+<a href="https://vk.com/evgeniy_shumilov" target="_blank"><img src="/images/logo.png" class="logo" height="106pt" style="float: left; margin-right: 20px;"></a>
+<div class="header">
+<div id="title">
+<h1 class="nomargin"><a class="ablack" href="https://shumiloff.ru/index.html">Зайчатки разума</a></h1>
+<div id="description">Записная книжка айтишника</div>
+</div></div>
+<ul class="full-width">
+    <li>
+        <a href="/pro-lyubov-k-minimalizmu-i-staticheskuyu-generaciyu-kontenta.html">О блоге</a>
+<!--
+        <ul>
+            <li><a href="#">Item1</a></li>
+            <li><a href="#">Item2</a></li>
+            <li><a href="#">Item3</a></li>
+        </ul>
+-->
+    </li>
+    <li><a href="/all_tags.html">Теги</a></li>
+    <li><a href="/all_posts.html">Все посты</a></li>
+    <li><a href="/tag_ностальгия.html">Ностальгическое</a></li>
+    <li><a href="/tag_мысли-вслух.html">Мысли вслух</a></li>
+</ul>
+
+<div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'#b2b525','fontsize':12,'fg':'#000000','language':'ru','logo':'rw','publicname':'Поиск по shumiloff.ru','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2336348,'input_fg':'#999999','input_bg':'#222222','input_fontStyle':'normal','input_fontWeight':'bold','input_placeholder':'Поиск живёт тут','input_placeholderColor':'#787A19','input_borderColor':'#999999'}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2336348"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value=""/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
+</div>
+<div id="divbody"><div class="content">
+<!-- entry begin -->
+<h3><a class="ablack" href="pro-identifikaciyu-odinakovyx-podklyuchaemyx-usb-ustrojstv-v-linux.html">
+Про идентификацию одинаковых подключаемых USB устройств в Linux
+</a></h3>
+<!-- bashblog_timestamp: #202406160257.32# -->
+<div class="subtitle">2024-06-16 02:57:32 &mdash; 
+Evgeniy Shumilov
+</div>
+<!-- text begin -->
+
+<p><img alt="" src="images/linux_usb_identification.jpg" /></p>
+
+<p>Возникла у меня идея - подключить к одному перепрошитому под linux TV Box&#39;у три 3D принтера, чтобы он один управлял с помощью трёх сессий octoprint ими всеми, ещё и транслировал изображение с камер. Возник ряд сложностей - как идентифицировать конкретное устройство, чтобы назначить на него определённый octoprint?</p>
+
+<p>Дело в том, что Linux создаёт tty устройства в /dev/ в порядке их подключения, т.е. первым подключенным/включенным будет /dev/ttyUSB0, вторым - /dev/ttyUSB1 и так далее. Включением/выключением устройств управляет система умного дома. Закончилась печать - принтер выключился. Нужно что-то напечатать - включился через умную розетку. Ещё и энергопотребление попутно логируется. И в различные моменты времени один и тот же принтер может быть подключен и к /dev/ttyUSB0 и к /dev/USB2, например, если /dev/ttyUSB0 и /dev/ttyUSB1 уже заняты.</p>
+
+<hr />
+<p>Вторая сложность заключается в том, что все платы принтеров имеют одну и ту же китайскую микросхему CH340/CH341, которая обеспечивает коммуникацию с принтером через серийный порт:</p>
+
+<pre>
+<code class="language-bash">Bus 002 Device 006: ID 1a86:7523 QinHeng Electronics CH340 serial converter
+Bus 002 Device 008: ID 1a86:7523 QinHeng Electronics CH340 serial converter
+Bus 002 Device 007: ID 1a86:7523 QinHeng Electronics CH340 serial converter
+</code></pre>
+
+<p>Мало того, 2 из трёх принтеров - это одна и та же модель. В связи с этим я искал способ идентификации принтеров по номеру порта на USB хабе. Т.е. конкретный octoprint просто будет подключаться к принетру, подключенному в конкретное гнездо USB хаба и никакой путаницы не будет.</p>
+
+<p>Сначала я попытался написать набор правил для UDEV:</p>
+
+<pre>
+<code class="language-bash">SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", ATTRS{devpath}=="2.1.1", SYMLINK+="e3v3se01"
+SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", ATTRS{devpath}=="2.1.2", SYMLINK+="e3v3se02"
+SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", ATTRS{devpath}=="2.1.4", SYMLINK+="fbg5"
+</code></pre>
+
+<p>Выполнил udevadm control --reload и udevadm trigger, после чего в /dev/ должны были появиться симлинки вида /dev/e3v3se01, /dev/e3v302, /dev/fbg5, но по неизвестной мне причине этого не произошло. Затем я попытался проверить срабатывание правил с помощью следующего способа:</p>
+
+<pre>
+<code class="language-bash">SUBSYSTEM=="tty", ACTION="add", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", ATTRS{devpath}=="2.1.1", RUN+="/opt/bin/addlink.sh e3v3se01 %k"
+SUBSYSTEM=="tty", ACTION="add", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", ATTRS{devpath}=="2.1.2", RUN+="/opt/bin/addlink.sh e3v3se02 %k"
+SUBSYSTEM=="tty", ACTION="add", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", ATTRS{devpath}=="2.1.4", RUN+="/opt/bin/addlink.sh fbg5 %k"
+</code></pre>
+
+<p>Скрипт addlink.sh просто должен был дописывать полученное содержимое в файл. Но и это не сработало. systemctl reload udev и перезагрузка системы в целом не принесла результата.</p>
+
+<p>И тогда я нашёл решение куда проще. Запускаем монитор событий UDEV и включаем питание принтера:</p>
+
+<pre>
+<code class="language-bash">root@octoprint:~# udevadm monitor
+monitor will print the received events for:
+UDEV - the event which udev sends out after rule processing
+KERNEL - the kernel uevent
+
+KERNEL[1847.830213] add      /devices/platform/ff600000.usb/xhci-hcd.0.auto/usb2/2-1/2-1.1 (usb)
+KERNEL[1847.890497] add      /devices/platform/ff600000.usb/xhci-hcd.0.auto/usb2/2-1/2-1.1/2-1.1:1.0 (usb)
+KERNEL[1847.890682] add      /devices/platform/ff600000.usb/xhci-hcd.0.auto/usb2/2-1/2-1.1/2-1.1:1.0/ttyUSB1 (usb-serial)
+KERNEL[1847.895520] add      /devices/platform/ff600000.usb/xhci-hcd.0.auto/usb2/2-1/2-1.1/2-1.1:1.0/ttyUSB1/tty/ttyUSB1 (tty)
+KERNEL[1847.895839] bind     /devices/platform/ff600000.usb/xhci-hcd.0.auto/usb2/2-1/2-1.1/2-1.1:1.0/ttyUSB1 (usb-serial)
+KERNEL[1847.896191] bind     /devices/platform/ff600000.usb/xhci-hcd.0.auto/usb2/2-1/2-1.1/2-1.1:1.0 (usb)
+KERNEL[1847.896605] bind     /devices/platform/ff600000.usb/xhci-hcd.0.auto/usb2/2-1/2-1.1 (usb)
+UDEV  [1847.902870] add      /devices/platform/ff600000.usb/xhci-hcd.0.auto/usb2/2-1/2-1.1 (usb)
+UDEV  [1847.907928] add      /devices/platform/ff600000.usb/xhci-hcd.0.auto/usb2/2-1/2-1.1/2-1.1:1.0 (usb)
+UDEV  [1847.910245] add      /devices/platform/ff600000.usb/xhci-hcd.0.auto/usb2/2-1/2-1.1/2-1.1:1.0/ttyUSB1 (usb-serial)
+UDEV  [1847.919392] add      /devices/platform/ff600000.usb/xhci-hcd.0.auto/usb2/2-1/2-1.1/2-1.1:1.0/ttyUSB1/tty/ttyUSB1 (tty)
+UDEV  [1847.922316] bind     /devices/platform/ff600000.usb/xhci-hcd.0.auto/usb2/2-1/2-1.1/2-1.1:1.0/ttyUSB1 (usb-serial)
+UDEV  [1847.927072] bind     /devices/platform/ff600000.usb/xhci-hcd.0.auto/usb2/2-1/2-1.1/2-1.1:1.0 (usb)
+UDEV  [1847.933550] bind     /devices/platform/ff600000.usb/xhci-hcd.0.auto/usb2/2-1/2-1.1 (usb)
+</code></pre>
+
+<p>Видим, что наше серийное устройство подключено к /dev/ttyUSB1. Далее смотрим информацию о девайсе:</p>
+
+<pre>
+<code class="language-bash">root@octoprint:/opt/bin# udevadm info /dev/ttyUSB1
+P: /devices/platform/ff600000.usb/xhci-hcd.0.auto/usb2/2-1/2-1.1/2-1.1:1.0/ttyUSB1/tty/ttyUSB1
+M: ttyUSB1
+R: 1
+U: tty
+D: c 188:1
+N: ttyUSB1
+L: 0
+S: serial/by-path/platform-xhci-hcd.0.auto-usb-0:1.1:1.0-port0
+S: serial/by-id/usb-1a86_USB_Serial-if00-port0
+E: DEVPATH=/devices/platform/ff600000.usb/xhci-hcd.0.auto/usb2/2-1/2-1.1/2-1.1:1.0/ttyUSB1/tty/ttyUSB1
+E: DEVNAME=/dev/ttyUSB1
+E: MAJOR=188
+E: MINOR=1
+E: SUBSYSTEM=tty
+E: USEC_INITIALIZED=1847918269
+E: ID_BUS=usb
+E: ID_MODEL=USB_Serial
+E: ID_MODEL_ENC=USB\x20Serial
+E: ID_MODEL_ID=7523
+E: ID_SERIAL=1a86_USB_Serial
+E: ID_VENDOR=1a86
+E: ID_VENDOR_ENC=1a86
+E: ID_VENDOR_ID=1a86
+E: ID_REVISION=0264
+E: ID_TYPE=generic
+E: ID_USB_MODEL=USB_Serial
+E: ID_USB_MODEL_ENC=USB\x20Serial
+E: ID_USB_MODEL_ID=7523
+E: ID_USB_SERIAL=1a86_USB_Serial
+E: ID_USB_VENDOR=1a86
+E: ID_USB_VENDOR_ENC=1a86
+E: ID_USB_VENDOR_ID=1a86
+E: ID_USB_REVISION=0264
+E: ID_USB_TYPE=generic
+E: ID_USB_INTERFACES=:ff0102:
+E: ID_USB_INTERFACE_NUM=00
+E: ID_USB_DRIVER=ch341
+E: ID_USB_CLASS_FROM_DATABASE=Vendor Specific Class
+E: ID_VENDOR_FROM_DATABASE=QinHeng Electronics
+E: ID_MODEL_FROM_DATABASE=CH340 serial converter
+E: ID_PATH=platform-xhci-hcd.0.auto-usb-0:1.1:1.0
+E: ID_PATH_TAG=platform-xhci-hcd_0_auto-usb-0_1_1_1_0
+E: DEVLINKS=/dev/serial/by-path/platform-xhci-hcd.0.auto-usb-0:1.1:1.0-port0 /dev/serial/by-id/usb-1a86_USB_Serial-if00-port0
+E: TAGS=:systemd:
+E: CURRENT_TAGS=:systemd:
+</code></pre>
+
+<p>Нас интересует первое значение из строки DEVLINKS: /dev/serial/by-path/platform-xhci-hcd.0.auto-usb-0:1.1:1.0-port0. Как раз его мы можем использовать в качестве пути к девайсу, подключенному к первому порту USB хаба. Аналогично на четвёртом порту у меня сейчас подключен другой принтер:</p>
+
+<pre>
+<code class="language-bash">root@octoprint:/opt/bin# ls -lah /dev/serial/by-path/platform-xhci-hcd.0.auto-usb-0\:1.*
+lrwxrwxrwx 1 root root 13 июн 16 01:16 /dev/serial/by-path/platform-xhci-hcd.0.auto-usb-0:1.1:1.0-port0 -&gt; ../../ttyUSB1
+lrwxrwxrwx 1 root root 13 июн 16 00:53 /dev/serial/by-path/platform-xhci-hcd.0.auto-usb-0:1.4:1.0-port0 -&gt; ../../ttyUSB0
+</code></pre>
+
+<p>Таким образом, можно ещё проще находить устройства, подключенные к конкретному порту - выполняем <code>ls -lah /dev/serial/by-path/*</code>, затем подключаем устройство к USB, после чего снова выполняем ту же команду и смотрим, что появилось, далее используем это для своих целей.</p>
+
+<p>В octoprint, например, можно добавить данный путь в Settings -&gt; Printer -&gt; Serial Connection -&gt; Additional serial ports. Либо подключать скриптом после включения питания принтера автоматически:</p>
+
+<pre>
+<code class="language-bash">#!/bin/sh
+
+cd `dirname "$0"`
+
+# Отдельный скрипт, включающий питание принтера
+./e3v3se01_on.sh 
+
+# Время, необходимое для инициализации принтера до момента готовности принять подключение через серийный порт
+sleep 4
+
+# API key for your OctoPrint instance
+API_KEY="139CA....................10" # API ключ, необходимо получить в разделе Features -&gt; API
+
+# URL for your OctoPrint instance
+OCTOPRINT_URL="http://localhost:5002/api"
+
+# Check if the printer is connected
+connected="$(curl -s -H "X-Api-Key: $API_KEY" "$OCTOPRINT_URL/connection" | jq -r '.current.state' | grep "Operational")"
+
+if [ -z "$connected" ]; then
+    echo "Printer is not connected, trying to connect"
+    curl -s -X POST -H "X-Api-Key: $API_KEY" -H "Content-Type: application/json" -d '{"command": "connect", "port": "/dev/serial/by-path/platform-xhci-hcd.0.auto-usb-0:1.1:1.0-port0", "baudrate": 115200}' "$OCTOPRINT_URL/connection"
+    echo "Printer connected"
+else
+    echo "Printer already connected"
+fi
+</code></pre>
+
+<p>P.S.: Уже после того, как успешно всё настроил, вспомнил, что решал подобную проблему в отношении подключения блочного устройства - различные флешки, USB SSD / HDD и прочее можно подключать тем же точно образом, используя <code>ls -lah /dev/disk/by-path/*</code>, <code>ls -lah /dev/disk/by-uuid/*</code>, <code>ls -lah /dev/disk/by-partlabel/*</code> и т.д..</p>
+
+
+<p>Теги: <a href='tag_3d-printing.html'>3d-printing</a>, <a href='tag_linux.html'>linux</a></p>
+<!-- text end -->
+<!-- entry end -->
+</div>
+<div id="disqus_thread"></div>
+            <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+               var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+            /* * * DONT EDIT BELOW THIS LINE * * */
+            (function() {
+            var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+            dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+            (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<div id="footer">
+<a href="https://vk.com/evgeniy_shumilov">Evgeniy Shumilov</a> &mdash; <a href="mailto:evgeniy&#46;shumilov&#64;gmail&#46;com">evgeniy&#46;shumilov&#64;gmail&#46;com</a><br/>
+Generated with <a href="https://github.com/cfenollosa/bashblog">bashblog</a>, a single bash script to easily create blogs like this one</div>
+</div></div>
+</div></div>
+<script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'shumiloff'; // required: replace example with your forum shortname
+
+        /* * * DONT EDIT BELOW THIS LINE * * */
+        (function () {
+        var s = document.createElement("script"); s.async = true;
+        s.type = "text/javascript";
+        s.src = "//" + disqus_shortname + ".disqus.com/count.js";
+        (document.getElementsByTagName("HEAD")[0] || document.getElementsByTagName("BODY")[0]).appendChild(s);
+    }());
+    </script>
+</body></html>
