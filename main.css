@@ -23,7 +23,8 @@ body{font-family:"FixedsysExcelsior",,monospace;margin:0;padding:0;background-co
         .content{margin-bottom:5%;color:#6A847A;font-family:FixedsysExcelsior;}
         .nomargin{margin:0;}
         .description{margin-top:10px;border-top:solid 1px #666;padding:10px 0;}
-        h3{font-size:20pt;width:100%;font-weight:normal;margin-top:32px;margin-bottom:0;}
+        h2{font-size:20pt;width:100%;font-weight:normal;margin-top:32px;margin-bottom:0;color:#e8bf6a}
+        h3{font-size:18pt;width:100%;font-weight:normal;margin-top:32px;margin-bottom:0;color:#e8bf6a}
         .clear{clear:both;}
         #footer{padding-top:10px;border-top:solid 1px #B2B525;color:#87B676;text-align:center;font-size:small;font-family:"FixedsysExcelsior";}
         a{text-decoration:none;color:#B2B525;}

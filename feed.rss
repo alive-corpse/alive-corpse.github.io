@@ -2,9 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Зайчатки разума</title><link>https://shumiloff.ru/index.html</link>
 <description>Записная книжка айтишника</description><language>en</language>
-<lastBuildDate>Sun, 16 Jun 2024 02:59:48 +0500</lastBuildDate>
-<pubDate>Sun, 16 Jun 2024 02:59:48 +0500</pubDate>
+<lastBuildDate>Thu, 22 Aug 2024 16:54:38 +0500</lastBuildDate>
+<pubDate>Thu, 22 Aug 2024 16:54:38 +0500</pubDate>
 <atom:link href="https://shumiloff.ru/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Полезные советы по работе с GPT моделями
+</title><description><![CDATA[
+
+<p style="text-align:center"><img alt="" src="images/gpt.png" /></p>
+
+<p>GPT модели &mdash; это мощные инструменты, способные генерировать текст и код на основе предоставленного промта. Составление эффективных промтов &mdash; ключевой фактор для получения желаемых результатов.</p>
+
+<p>Для эффективного взаимодействия с GPT требуется:</p>
+
+<ul>
+	<li>понимание функциональных возможностей текущего используемого инструмента;</li>
+	<li>использование нескольких сервисов и нейросетей для получения наиболее релевантного результата;</li>
+	<li>соблюдение основных принципов построения промтов;</li>
+	<li>использование простых стратегий для достижения результата;</li>
+	<li>применение так называемых tricks (фокусов/уловок).</li>
+</ul>
+
+<p>Хорошим вариантом повышения эффективности работы с GPT моделями будет хранение полезных и/или часто используемых промтов в отдельном документе с возможностью быстрого доступа и поиска.</p>
+
+<hr />
+<p>Теги: <a href='tag_gpt.html'>gpt</a></p>
+]]></description><link>https://shumiloff.ru/poleznye-sovety-po-rabote-s-gpt-modelyami.html</link>
+<guid>https://shumiloff.ru/./poleznye-sovety-po-rabote-s-gpt-modelyami.html</guid>
+<dc:creator>Evgeniy Shumilov</dc:creator>
+<pubDate>Thu, 22 Aug 2024 16:44:04 +0500</pubDate></item>
 <item><title>
 Про идентификацию одинаковых подключаемых USB устройств в Linux
 </title><description><![CDATA[
@@ -134,20 +160,4 @@
 <guid>https://shumiloff.ru/./kak-ponyat-gde-sloniku-stalo-tyazhelo.html</guid>
 <dc:creator>Evgeniy Shumilov</dc:creator>
 <pubDate>Fri, 29 Oct 2021 23:25:50 +0500</pubDate></item>
-<item><title>
-Небольшая проблема с софтовым рейд массивом
-</title><description><![CDATA[
-
-<p style="text-align:center"><img alt="" src="/images/raid.png" /></p>
-
-<p>&nbsp; Преамбула банальна: Жил/был сервер с софтовым зеркалом. И вот, начинаются странные проблемы. То я фаил сохранить не могу и vim наглухо зависает, то считать что-то не могу. Полез первым делом в dmesg, а там красота нечеловеческая на два экрана, приведённая на скриншоте в заголовке.</p>
-
-<p>&nbsp; Прогнал smartctl, написал в службу техподдержки Selectel - мол, диску похоже пришёл северный зверь из семейства куньих. Можете ли заменить диск? И вот техподдержка селектела реально порадовала - мол, да-да, конечно, ошибок смарта не видим, но заменим обязательно, напишите, когда вам удобно и т.п.. Если честно, я такой оперативности и учтивости после гуглооблака и AWS прямо не ожидал. Уточнил детали - мол, поддерживает ли диск hotswap, можно работают ли они круглосуточно и т.п..</p>
-
-<hr />
-<p>Теги: <a href='tag_админское.html'>админское</a>, <a href='tag_linux.html'>linux</a></p>
-]]></description><link>https://shumiloff.ru/nebolshaya-problema-s-softovym-rejd-massivom.html</link>
-<guid>https://shumiloff.ru/./nebolshaya-problema-s-softovym-rejd-massivom.html</guid>
-<dc:creator>Evgeniy Shumilov</dc:creator>
-<pubDate>Mon, 18 Oct 2021 22:10:11 +0500</pubDate></item>
 </channel></rss>
